@@ -3,7 +3,7 @@ import React, { useState, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Typography, Checkbox } from '@material-ui/core'
-import { Misc } from '@hackjunction/shared'
+import { Misc } from '@novel.systems/shared'
 import FilterItem from './FilterItem'
 
 import * as RecruitmentSelectors from 'redux/recruitment/selectors'

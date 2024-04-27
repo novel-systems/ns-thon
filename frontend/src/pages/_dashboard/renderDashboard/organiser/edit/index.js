@@ -1,6 +1,6 @@
 import React from 'react'
 
-import yupSchema from '@hackjunction/shared/schemas/validation/eventSchema'
+import yupSchema from '@novel.systems/shared/schemas/validation/eventSchema'
 
 import { Formik } from 'formik'
 import { useSelector, useDispatch } from 'react-redux'

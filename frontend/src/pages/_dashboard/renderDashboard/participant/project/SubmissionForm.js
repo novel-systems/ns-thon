@@ -3,7 +3,7 @@ import React, { useMemo, useState, useEffect } from 'react'
 import * as yup from 'yup'
 import { useSelector, useDispatch } from 'react-redux'
 import { Formik } from 'formik'
-import { ProjectSchema, EventTypes } from '@hackjunction/shared'
+import { ProjectSchema, EventTypes } from '@novel.systems/shared'
 import { Grid, Box, Typography } from '@material-ui/core'
 import GradientBox from 'components/generic/GradientBox'
 import PageWrapper from 'components/layouts/PageWrapper'
@@ -206,11 +206,11 @@ const SubmissionForm = props => {
                                     sectionAnswers={
                                         project &&
                                         project.submissionFormAnswers.length >
-                                            0 &&
+                                        0 &&
                                         project.submissionFormAnswers.find(
                                             answer =>
                                                 answer.section ===
-                                                    section.name &&
+                                                section.name &&
                                                 answer.value,
                                         )
                                     }

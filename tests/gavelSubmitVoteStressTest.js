@@ -80,7 +80,7 @@ export default async function () {
     const project1 = "6550859db8d7d037d378be7e"
     const project2 = "654fed54c79f444a8114f921"
     //let res = _axios.post(`${BASE_ROUTE}/${slug}/annotator`, {}, config(idToken))
-    let res = await http.post("http://localhost:2222/api/reviewing/gavel/junction-2023/vote/6550859db8d7d037d378be7e", {}, {
+    let res = await http.post("http://localhost:2222/api/reviewing/gavel/placeholder-1-2023/vote/6550859db8d7d037d378be7e", {}, {
         headers: {
             Authorization: `Bearer ${idToken}`,
         }

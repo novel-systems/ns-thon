@@ -2,7 +2,7 @@ const express = require('express')
 
 const router = express.Router()
 const asyncHandler = require('express-async-handler')
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const UserProfileController = require('./controller')
 const TeamController = require('../team/controller')
 

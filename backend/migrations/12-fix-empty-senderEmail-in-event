@@ -4,7 +4,7 @@ const Promise = require('bluebird')
 module.exports = {
     index: 12,
     name: '12-fix-empty-senderEmail-in-event',
-    description: 'Replace empty senderEmail with noreply@hackjunction.com',
+    description: 'Replace empty senderEmail with noreply@novel.systems',
     run: async () => {
         // Update emailConfig.senderEmail field for documents with an empty senderEmail
         const resSenderEmail = await mongoose
@@ -13,7 +13,7 @@ module.exports = {
                 { 'emailConfig.senderEmail': { $in: [null, ""] } },
                 {
                     $set: {
-                        'emailConfig.senderEmail': "noreply@hackjunction.com"
+                        'emailConfig.senderEmail': "noreply@novel.systems"
                     }
                 }
             )

@@ -19,10 +19,10 @@ import {
     Typography,
 } from '@material-ui/core'
 import FormControl from 'components/inputs/FormControl'
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 
 export default () => {
-    const classes = junctionStyle()
+    const classes = placeholder - 1Style()
     const dispatch = useDispatch()
     const event = useSelector(DashboardSelectors.event)
     const { slug } = event
@@ -225,78 +225,78 @@ export default () => {
                             <div className="tw-rounded-lg tw-shadow-md tw-bg-white tw-p-8 tw-flex tw-flex-col tw-gap-12 tw-mb-4">
                                 {candidateSelectedData.rolesApplied?.length >
                                     0 && (
-                                    <div className="tw-flex tw-flex-col tw-gap-4 tw-w-full">
-                                        <form onSubmit={formik.handleSubmit}>
-                                            <FormControl
-                                                component="fieldset"
-                                                className="tw-w-full"
-                                            >
-                                                <FormLabel
-                                                    component="legend"
-                                                    className="tw-mb-4 tw-tracking-tight tw-font-medium tw-text-black tw-text-2xl"
+                                        <div className="tw-flex tw-flex-col tw-gap-4 tw-w-full">
+                                            <form onSubmit={formik.handleSubmit}>
+                                                <FormControl
+                                                    component="fieldset"
+                                                    className="tw-w-full"
                                                 >
-                                                    Applied for
-                                                </FormLabel>
+                                                    <FormLabel
+                                                        component="legend"
+                                                        className="tw-mb-4 tw-tracking-tight tw-font-medium tw-text-black tw-text-2xl"
+                                                    >
+                                                        Applied for
+                                                    </FormLabel>
 
-                                                <RadioGroup
-                                                    aria-label="roles"
-                                                    name="roles"
-                                                    value={formik.values.roles}
-                                                    onChange={
-                                                        formik.handleChange
-                                                    }
-                                                    className="tw-flex tw-flex-col tw-gap-4"
-                                                >
-                                                    {candidateSelectedData.rolesApplied.map(
-                                                        role => (
-                                                            <FormControlLabel
-                                                                value={
-                                                                    role.role
-                                                                }
-                                                                control={
-                                                                    <Radio
-                                                                        className="tw-p-0"
-                                                                        checkedIcon={
-                                                                            <div className="tw-flex tw-items-center tw-justify-center tw-bg-gray-300 tw-w-8 tw-h-8 tw-rounded-full">
+                                                    <RadioGroup
+                                                        aria-label="roles"
+                                                        name="roles"
+                                                        value={formik.values.roles}
+                                                        onChange={
+                                                            formik.handleChange
+                                                        }
+                                                        className="tw-flex tw-flex-col tw-gap-4"
+                                                    >
+                                                        {candidateSelectedData.rolesApplied.map(
+                                                            role => (
+                                                                <FormControlLabel
+                                                                    value={
+                                                                        role.role
+                                                                    }
+                                                                    control={
+                                                                        <Radio
+                                                                            className="tw-p-0"
+                                                                            checkedIcon={
+                                                                                <div className="tw-flex tw-items-center tw-justify-center tw-bg-gray-300 tw-w-8 tw-h-8 tw-rounded-full">
+                                                                                    <span
+                                                                                        className={`tw-w-5 tw-h-5 tw-rounded-full ${classes.bgPrimary}`}
+                                                                                    ></span>
+                                                                                </div>
+                                                                            }
+                                                                            icon={
                                                                                 <span
-                                                                                    className={`tw-w-5 tw-h-5 tw-rounded-full ${classes.bgPrimary}`}
-                                                                                ></span>
-                                                                            </div>
-                                                                        }
-                                                                        icon={
-                                                                            <span
-                                                                                className={
-                                                                                    classes.icon
-                                                                                }
-                                                                            />
-                                                                        }
-                                                                    />
-                                                                }
-                                                                label={
-                                                                    role.role
-                                                                }
-                                                                className="tw-m-0 tw-border tw-border-gray-300 tw-border-solid tw-rounded-lg hover:tw-bg-gray-100 tw-p-4 tw-flex tw-items-center tw-gap-x-4"
-                                                            />
-                                                        ),
-                                                    )}
-                                                </RadioGroup>
-                                            </FormControl>
-                                        </form>
-                                        <Button
-                                            variant="jContained"
-                                            onClick={formik.submitForm}
-                                        >
-                                            Accept
-                                        </Button>
-                                        <Button
-                                            onClick={handleDecline}
-                                            color="outlined_button"
-                                            variant="jOutlined"
-                                        >
-                                            Decline
-                                        </Button>
-                                    </div>
-                                )}
+                                                                                    className={
+                                                                                        classes.icon
+                                                                                    }
+                                                                                />
+                                                                            }
+                                                                        />
+                                                                    }
+                                                                    label={
+                                                                        role.role
+                                                                    }
+                                                                    className="tw-m-0 tw-border tw-border-gray-300 tw-border-solid tw-rounded-lg hover:tw-bg-gray-100 tw-p-4 tw-flex tw-items-center tw-gap-x-4"
+                                                                />
+                                                            ),
+                                                        )}
+                                                    </RadioGroup>
+                                                </FormControl>
+                                            </form>
+                                            <Button
+                                                variant="jContained"
+                                                onClick={formik.submitForm}
+                                            >
+                                                Accept
+                                            </Button>
+                                            <Button
+                                                onClick={handleDecline}
+                                                color="outlined_button"
+                                                variant="jOutlined"
+                                            >
+                                                Decline
+                                            </Button>
+                                        </div>
+                                    )}
                             </div>
                         </Profile>
                     </>

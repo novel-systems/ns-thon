@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react'
 import { useSelector } from 'react-redux'
-import { FilterHelpers, FilterValues } from '@hackjunction/shared'
+import { FilterHelpers, FilterValues } from '@novel.systems/shared'
 
 import * as OrganiserSelectors from 'redux/organiser/selectors'
 

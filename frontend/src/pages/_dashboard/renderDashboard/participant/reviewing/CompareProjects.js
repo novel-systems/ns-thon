@@ -103,7 +103,7 @@ export default ({ annotator, prevId, nextId, isFirstChoice }) => {
                     <Markdown
                         source={
                             event.eventType === 'physical' ||
-                            event.eventType === 'hybrid'
+                                event.eventType === 'hybrid'
                                 ? t('Gavel_compare_projects_physical_')
                                 : t('Gavel_compare_projects_online_')
                         }
@@ -128,7 +128,7 @@ export default ({ annotator, prevId, nextId, isFirstChoice }) => {
                     <Markdown
                         source={
                             event.eventType === 'physical' ||
-                            event.eventType === 'hybrid'
+                                event.eventType === 'hybrid'
                                 ? t('Gavel_compare_projects_physical2_')
                                 : t('Gavel_compare_projects_online2_')
                         }
@@ -204,7 +204,7 @@ export default ({ annotator, prevId, nextId, isFirstChoice }) => {
                                     {t('Current_')}
                                 </Button>
                             </Grid>
-                            {/* commented out for Junction 2021
+                            {/* commented out for Placeholder-1 2021
                             {event.eventType === 'physical' && (
                                 <Grid item xs={12}>
                                     <Box
@@ -229,7 +229,7 @@ export default ({ annotator, prevId, nextId, isFirstChoice }) => {
                 <ConfirmDialog
                     open={confirmOpen}
                     onClose={() => setConfirmOpen(false)}
-                    onCancel={() => {}}
+                    onCancel={() => { }}
                     onOk={handleSkip}
                     title="Are you sure?"
                     message="Have you looked around carefully for the project? Try to check nearby tables if you can find the team there. If you really can't find them, you can skip the project."

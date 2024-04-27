@@ -4,7 +4,7 @@ import PageWrapper from 'components/layouts/PageWrapper'
 import GlobalNavBar from 'components/navbars/GlobalNavBar'
 import Footer from 'components/layouts/Footer'
 
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 import {
     AppBar,
     Avatar,
@@ -38,7 +38,7 @@ import { useMutation } from '@apollo/client'
 import ConfigureTab from './configure'
 import { UPDATE_EVENT } from 'graphql/mutations/eventOps'
 import { forOwn } from 'lodash-es'
-import yupSchema from '@hackjunction/shared/schemas/validation/eventSchema'
+import yupSchema from '@novel.systems/shared/schemas/validation/eventSchema'
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
@@ -51,7 +51,7 @@ import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
 import BottomBar from 'components/inputs/BottomBar'
 import Filter from 'components/Team/Filter'
 import ProjectDetail from 'components/projects/ProjectDetail'
-import { EventHelpers } from '@hackjunction/shared'
+import { EventHelpers } from '@novel.systems/shared'
 import moment from 'moment-timezone'
 import EvaluationForm from './EvaluationForm'
 
@@ -147,7 +147,7 @@ export default () => {
         message: '',
     })
     const [selected, setSelected] = useState(false)
-    const classes = junctionStyle()
+    const classes = placeholder - 1Style()
     return (
         <PageWrapper
             // loading={loading}

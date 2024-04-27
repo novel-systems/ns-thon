@@ -10,7 +10,7 @@ import {
     IconButton,
     Chip,
 } from '@material-ui/core'
-import { FilterTypes } from '@hackjunction/shared'
+import { FilterTypes } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     inline: {

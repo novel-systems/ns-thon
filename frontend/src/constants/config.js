@@ -21,7 +21,7 @@ const settings = {
         required: false,
         value:
             process.env.REACT_APP_CALENDAR_URL ||
-            'https://hackjunction.com/calendar',
+            'https://novel.systems/calendar',
     },
     CLOUDINARY_CLOUD_NAME: {
         required: true,
@@ -38,7 +38,7 @@ const settings = {
     ID_TOKEN_NAMESPACE: {
         required: true,
         value:
-            process.env.REACT_APP_ID_TOKEN_NAMESPACE || 'https://eu.junctionplatform.com/',
+            process.env.REACT_APP_ID_TOKEN_NAMESPACE || 'https://eu.placeholder-1platform.com/',
     },
     IS_DEBUG: {
         default: process.env.REACT_APP_IS_DEBUG === 'true',
@@ -49,18 +49,18 @@ const settings = {
         required: true,
         value:
             process.env.REACT_APP_LOGO_DARK_URL ||
-            //'https://res.cloudinary.com/hackjunction/image/upload/c_scale,w_500/v1581419636/Junction%20Logos/wordmark_black.png',
-            'https://res.cloudinary.com/hackjunction/image/upload/v1606900986/Junction%20Logos/app.svg',
+            //'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419636/Placeholder-1%20Logos/wordmark_black.png',
+            'https://res.cloudinary.com/novel.systems/image/upload/v1606900986/Placeholder-1%20Logos/app.svg',
     },
     LOGO_LIGHT_URL: {
         required: true,
         value:
             process.env.REACT_APP_LOGO_LIGHT_URL ||
-            'https://res.cloudinary.com/hackjunction/image/upload/c_scale,w_500/v1581419635/Junction%20Logos/wordmark_white.png',
+            'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419635/Placeholder-1%20Logos/wordmark_white.png',
     },
     EMBLEM_DARK_URL: {
         required: true,
-        value: 'https://res.cloudinary.com/hackjunction/image/upload/v1581419640/Junction%20Logos/emblem_black.png',
+        value: 'https://res.cloudinary.com/novel.systems/image/upload/v1581419640/Placeholder-1%20Logos/emblem_black.png',
     },
     LOGROCKET_ID: {
         required: false,
@@ -68,35 +68,35 @@ const settings = {
     },
     PLATFORM_OWNER_NAME: {
         required: true,
-        value: process.env.REACT_APP_PLATFORM_OWNER_NAME || 'Junction',
+        value: process.env.REACT_APP_PLATFORM_OWNER_NAME || 'Placeholder-1',
     },
     PLATFORM_OWNER_NAME_CAPS: {
         required: true,
-        value: process.env.REACT_APP_PLATFORM_OWNER_NAME || 'JUNCTION',
+        value: process.env.REACT_APP_PLATFORM_OWNER_NAME || 'PLACEHOLDER-1',
     },
     PLATFORM_OWNER_WEBSITE: {
         required: true,
         value:
             process.env.REACT_APP_PLATFORM_OWNER_WEBSITE ||
-            'https://hackjunction.com',
+            'https://novel.systems',
     },
     PRIVACY_URL: {
         required: false,
         value:
             process.env.REACT_APP_PRIVACY_URL ||
-            'https://hackjunction.com/privacy',
+            'https://novel.systems/privacy',
     },
     SEO_IMAGE_URL: {
         required: false,
         value:
             process.env.REACT_APP_SEO_IMAGE_URL ||
-            'https://res.cloudinary.com/hackjunction/image/upload/c_fill,g_center,h_630,w_1200/rqn6uonv2nuzmkyanrqj',
+            'https://res.cloudinary.com/novel.systems/image/upload/c_fill,g_center,h_630,w_1200/rqn6uonv2nuzmkyanrqj',
     },
     SEO_PAGE_DESCRIPTION: {
         required: true,
         value:
             process.env.REACT_APP_SEO_PAGE_DESCRIPTION ||
-            'Organized in the Helsinki Area, Finland, Junction is a meeting place for thousands of developers, designers, and entrepreneurs. A weekend-long experience, gathering tech enthusiasts from all over the world to create with the latest technology in a unique environment and atmosphere.',
+            'Organized in the Helsinki Area, Finland, Placeholder-1 is a meeting place for thousands of developers, designers, and entrepreneurs. A weekend-long experience, gathering tech enthusiasts from all over the world to create with the latest technology in a unique environment and atmosphere.',
     },
     SEO_PAGE_TITLE: {
         required: true,
@@ -106,12 +106,12 @@ const settings = {
     },
     SEO_TWITTER_HANDLE: {
         required: false,
-        value: process.env.REACT_APP_SEO_TWITTER_HANDLE || '@hackJunction',
+        value: process.env.REACT_APP_SEO_TWITTER_HANDLE || '@hackPlaceholder-1',
     },
     TERMS_URL: {
         required: false,
         value:
-            process.env.REACT_APP_TERMS_URL || 'https://hackjunction.com/terms',
+            process.env.REACT_APP_TERMS_URL || 'https://novel.systems/terms',
     },
     SEO_PAGE_LOGIN_DESCRIPTION: {
         required: true,

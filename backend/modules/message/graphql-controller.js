@@ -1,4 +1,4 @@
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const { v4: uuid } = require('uuid')
 const PermissionUtils = require('../../utils/permissions')
 const { Message } = require('./model')

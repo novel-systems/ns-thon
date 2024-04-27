@@ -14,8 +14,8 @@ Regarding your development environment: _I highly recommend you to use VSCode wi
 ## Clone the repository
 
 ```
-git clone https://github.com/hackjunction/JunctionApp.git
-cd JunctionApp
+git clone https://github.com/novel-systems/placeholder-1.git
+cd Placeholder-1 App
 ```
 
 ## Install dependencies
@@ -29,7 +29,7 @@ npm run setup
 
 ## Auth0 tenant set up
 
-JunctionApp uses Auth0 for user authentication and authorization. To set up Auth0 for local development:
+Placeholder-1 App uses Auth0 for user authentication and authorization. To set up Auth0 for local development:
 
 1. Create an Auth0 account
 2. Follow [this](https://auth0.com/docs/deploy/deploy-cli-tool/create-and-configure-the-deploy-cli-application) tutorial to create a `auth0-deploy-cli-extension` in Auth0
@@ -52,21 +52,21 @@ JunctionApp uses Auth0 for user authentication and authorization. To set up Auth
 
 -   In your auth0 tenant there should be now 5 new applications.
 
-7. Copy and paste Junction App SSO Client ID to every `applicationId` field in `authzExtConfig.json`
+7. Copy and paste Placeholder-1 App SSO Client ID to every `applicationId` field in `authzExtConfig.json`
 8. Import `authzExtConfig.json` file to the Authorization Extensions
 9. In Authorization Extension click PUBLISH RULES
 
-![img 1. authz extension](https://res.cloudinary.com/hackjunction/image/upload/v1623838367/github/documentation/121153778-07935600-c84f-11eb-80b1-447a71449b28.png) [img. 1.]
+![img 1. authz extension](https://res.cloudinary.com/novel.systems/image/upload/v1623838367/github/documentation/121153778-07935600-c84f-11eb-80b1-447a71449b28.png) [img. 1.]
 
-![img 2. auth0-extension](https://res.cloudinary.com/hackjunction/image/upload/v1623838367/github/documentation/2021-06-16_12-33.png) [img. 2]
+![img 2. auth0-extension](https://res.cloudinary.com/novel.systems/image/upload/v1623838367/github/documentation/2021-06-16_12-33.png) [img. 2]
 
-![img 3. authz-url](https://res.cloudinary.com/hackjunction/image/upload/v1623838367/github/documentation/2021-06-16_12-35.png) [img. 3]
+![img 3. authz-url](https://res.cloudinary.com/novel.systems/image/upload/v1623838367/github/documentation/2021-06-16_12-35.png) [img. 3]
 
 ## Set up your environment variables
 
 ### Environment variables for development usage
 
-Here are working environment variables for all of the services we use in the Junction App. These environment variables are connected to sandbox accounts, which can be used while developing the platform. The accounts used in production are entirely separate, and should not be used in development, as a general rule of thumb.
+Here are working environment variables for all of the services we use in the Placeholder-1 App. These environment variables are connected to sandbox accounts, which can be used while developing the platform. The accounts used in production are entirely separate, and should not be used in development, as a general rule of thumb.
 
 ### Frontend environment variables
 
@@ -75,7 +75,7 @@ Put these environment variables in `./frontend/.env` - you'll need to create the
 ```
 # The port where frontend runs locally
 PORT=3000
-REACT_APP_CLOUDINARY_CLOUD_NAME=hackjunction-dev
+REACT_APP_CLOUDINARY_CLOUD_NAME=novel.systems-dev
 # Auth0 domain name. This can be found in the Auth0 dashboard in applications and selecting SSO
 REACT_APP_AUTH0_DOMAIN=
 REACT_APP_AUTH0_CLIENT_ID=
@@ -105,7 +105,7 @@ AUTH0_DOMAIN=
 AUTH0_CLIENT_ID=
 AUTH0_CLIENT_SECRET=
 AUTH0_AUTHORIZATION_EXTENSION_URL=
-ID_TOKEN_NAMESPACE=https://app.hackjunction.com/
+ID_TOKEN_NAMESPACE=https://placeholder-1.novel.systems/
 CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=

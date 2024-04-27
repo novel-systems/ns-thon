@@ -4,7 +4,7 @@ import PageWrapper from 'components/layouts/PageWrapper'
 import GlobalNavBar from 'components/navbars/GlobalNavBar'
 import Footer from 'components/layouts/Footer'
 
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 import {
     AppBar,
     Card,
@@ -34,7 +34,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useMutation } from '@apollo/client'
 import { UPDATE_EVENT } from 'graphql/mutations/eventOps'
 import { forOwn } from 'lodash-es'
-import yupSchema from '@hackjunction/shared/schemas/validation/eventSchema'
+import yupSchema from '@novel.systems/shared/schemas/validation/eventSchema'
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
@@ -97,7 +97,7 @@ export default () => {
     }
 
     // const [events, loading] = useMyEvents()
-    const classes = junctionStyle()
+    const classes = placeholder - 1Style()
     return (
         <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 1440: 3 }}

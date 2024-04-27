@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useSelector } from 'react-redux'
 import { Box, Typography } from '@material-ui/core'
-import { Misc } from '@hackjunction/shared'
+import { Misc } from '@novel.systems/shared'
 import { useTranslation } from 'react-i18next'
 import * as RecruitmentSelectors from 'redux/recruitment/selectors'
 

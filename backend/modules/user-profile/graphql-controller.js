@@ -1,4 +1,4 @@
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const _ = require('lodash')
 const DataLoader = require('dataloader')
 

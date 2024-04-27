@@ -17,7 +17,7 @@ import * as UserSelectors from 'redux/user/selectors'
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 import * as DashboardActions from 'redux/dashboard/actions'
 import * as SnackbarActions from 'redux/snackbar/actions'
-import { TravelGrantDetailsValidationSchema as schema } from '@hackjunction/shared'
+import { TravelGrantDetailsValidationSchema as schema } from '@novel.systems/shared'
 
 export default () => {
     const dispatch = useDispatch()

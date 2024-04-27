@@ -9,7 +9,7 @@ const {
     RegistrationTravelGrantStatuses,
     EventTypes,
     TravelGrantDetailsValidationSchema,
-} = require('@hackjunction/shared')
+} = require('@novel.systems/shared')
 const yup = require('yup')
 const Registration = require('./model')
 const { NotFoundError, ForbiddenError } = require('../../common/errors/errors')

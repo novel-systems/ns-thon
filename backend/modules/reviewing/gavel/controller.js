@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const mongoose = require('mongoose')
 const moment = require('moment-timezone')
-const { EventHelpers } = require('@hackjunction/shared')
+const { EventHelpers } = require('@novel.systems/shared')
 const GavelAnnotator = require('./Annotator')
 const GavelDecision = require('./Decision')
 const GavelProject = require('./Project')

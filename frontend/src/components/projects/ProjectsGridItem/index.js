@@ -15,7 +15,7 @@ import {
 import Image from 'components/generic/Image'
 import Button from 'components/generic/Button'
 import _ from 'lodash'
-import { EventHelpers } from '@hackjunction/shared'
+import { EventHelpers } from '@novel.systems/shared'
 import moment from 'moment-timezone'
 
 import ProjectReviewModal from 'components/modals/ProjectReviewModal'

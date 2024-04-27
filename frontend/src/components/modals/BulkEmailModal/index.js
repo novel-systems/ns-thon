@@ -115,10 +115,10 @@ export default ({ visible, userIds = [], onClose }) => {
         if (!validate()) return
         setLoading(true)
         const fromObject = {
-            email: event.emailConfig.senderEmail ? event.emailConfig.senderEmail : 'noreply@hackjunction.com',
-            name: event.emailConfig.senderName ? event.emailConfig.senderName : 'Junction',
+            email: event.emailConfig.senderEmail ? event.emailConfig.senderEmail : 'noreply@novel.systems',
+            name: event.emailConfig.senderName ? event.emailConfig.senderName : 'Placeholder-1',
         }
-        EmailService.sendPreviewEmail({ idToken: idToken, slug: event.slug, to: user.email, params: params, from: fromObject})
+        EmailService.sendPreviewEmail({ idToken: idToken, slug: event.slug, to: user.email, params: params, from: fromObject })
             .then(() => {
                 dispatch(
                     SnackbarActions.success(

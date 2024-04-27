@@ -4,7 +4,7 @@ const _ = require('lodash')
 const {
     ReviewingMethods,
     OverallReviewingMethods,
-} = require('@hackjunction/shared')
+} = require('@novel.systems/shared')
 const Rankings = require('./model')
 
 const WinnerVoteController = require('../winner-votes/controller')

@@ -4,7 +4,7 @@ import {
     ReviewingMethods,
     OverallReviewingMethods,
     EventTypes,
-} from '@hackjunction/shared'
+} from '@novel.systems/shared'
 import { Grid, Box } from '@material-ui/core'
 import { FastField, Field } from 'formik'
 
@@ -255,10 +255,10 @@ export default () => {
                         <FormControl
                             label="Overall winner method"
                             //TODO: test and fix Finals, public voting
-                            //*Finals, public voting*: Winners are selected by voting in the JunctionApp, finalists are auto-generated from the top-ranked projects in each challenge.
+                            //*Finals, public voting*: Winners are selected by voting in the Placeholder-1 App, finalists are auto-generated from the top-ranked projects in each challenge.
                             hint={`Which method should be used to determine the overall winner?
 
-*Finals, manual voting*: Winners are selected by voting in the JunctionApp, finalists are hand picked by organisers in the "Finalist selection" tab in "Projects".
+*Finals, manual voting*: Winners are selected by voting in the Placeholder-1 App, finalists are hand picked by organisers in the "Finalist selection" tab in "Projects".
 
 *No overall winner*: There is no single overall winner for this event and no voting happens for overall results.
 `}
@@ -290,7 +290,7 @@ export default () => {
                     name="allowVoteOnOwnProject"
                     render={({ field, form }) =>
                         form.values.reviewMethod ===
-                        ReviewingMethods.gavelPeerReview.id ? (
+                            ReviewingMethods.gavelPeerReview.id ? (
                             <FormControl
                                 label="Allow vote on own projects"
                                 hint="Can user vote on their own projects (consider this for events with few participants and multiple submissions per team)"

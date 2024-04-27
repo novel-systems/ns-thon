@@ -3,7 +3,7 @@ const yup = require('yup')
 const {
     RegistrationFields,
     RegistrationFieldsCustom,
-} = require('@hackjunction/shared')
+} = require('@novel.systems/shared')
 
 const RegistrationHelpers = {
     validateAnswers: (data, event) => {

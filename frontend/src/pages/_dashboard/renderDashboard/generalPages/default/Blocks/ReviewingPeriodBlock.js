@@ -4,7 +4,7 @@ import { Typography, Grid, Box } from '@material-ui/core'
 import { push } from 'connected-react-router'
 import moment from 'moment-timezone'
 import { useDispatch, useSelector } from 'react-redux'
-import { EventHelpers } from '@hackjunction/shared'
+import { EventHelpers } from '@novel.systems/shared'
 
 import Button from 'components/generic/Button'
 import GradientBox from 'components/generic/GradientBox'

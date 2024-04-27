@@ -43,8 +43,8 @@ export default () => {
     const body2 = [
         'Event registration and organization through platform',
         'Tech Support during event',
-        'Full Access to the Junction App',
-        'Consulting from the Junction Team',
+        'Full Access to the Placeholder-1 App',
+        'Consulting from the Placeholder-1 Team',
         'Statistics',
         'Price is negotiable',
     ]
@@ -86,7 +86,7 @@ export default () => {
                             <PricingCard
                                 topic="Enterprise"
                                 body={body2}
-                                price="Ask: hello@hackjunction.com"
+                                price="Ask: hello@novel.systems"
                             />
                             <Divider size={4} />
                             <Typography variant="body1" justify="center">

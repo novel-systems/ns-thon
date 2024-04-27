@@ -3,7 +3,7 @@ const mongooseSlugPlugin = require('mongoose-slug-plugin')
 
 const _ = require('lodash')
 
-const CloudinaryImageSchema = require('@hackjunction/shared/schemas/CloudinaryImage')
+const CloudinaryImageSchema = require('@novel.systems/shared/schemas/CloudinaryImage')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
 
 const BannerSchema = new mongoose.Schema({

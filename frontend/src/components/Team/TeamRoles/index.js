@@ -2,10 +2,10 @@ import { Typography } from '@material-ui/core'
 import Button from 'components/generic/Button'
 import React from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import theme from 'junctionTheme'
+import theme from 'placeholder-1Theme'
 
 export default ({
-    onRoleClick = () => {},
+    onRoleClick = () => { },
     maxRoles = 2,
     profileView = false,
     teamRoles = [
@@ -16,17 +16,17 @@ export default ({
 }) => {
     const styling = profileView
         ? {
-              masonryColumns: {
-                  350: 1,
-                  900: 2,
-                  1440: 3,
-              },
-          }
+            masonryColumns: {
+                350: 1,
+                900: 2,
+                1440: 3,
+            },
+        }
         : {
-              masonryColumns: {
-                  350: 1,
-              },
-          }
+            masonryColumns: {
+                350: 1,
+            },
+        }
 
     const hiddenRolesCount = teamRoles?.length - maxRoles
 
@@ -77,9 +77,8 @@ export default ({
                                     variant="body1"
                                     component="p"
                                 >
-                                    {`${hiddenRolesCount} more role${
-                                        hiddenRolesCount === 1 ? '' : 's'
-                                    } available`}
+                                    {`${hiddenRolesCount} more role${hiddenRolesCount === 1 ? '' : 's'
+                                        } available`}
                                 </Typography>
                             </div>
                         </Button>

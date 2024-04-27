@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField, MenuItem, Chip, ListItemText } from '@material-ui/core'
-import { SelectOptions } from '@hackjunction/shared'
+import { SelectOptions } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     chips: {

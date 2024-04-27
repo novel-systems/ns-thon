@@ -7,7 +7,7 @@ import {
     RegistrationStatuses,
     ReviewingMethods,
     EventHelpers,
-} from '@hackjunction/shared'
+} from '@novel.systems/shared'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 

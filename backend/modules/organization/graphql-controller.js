@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const DataLoader = require('dataloader')
 const Organization = require('./model')
 const PermissionUtils = require('../../utils/permissions')

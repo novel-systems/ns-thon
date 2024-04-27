@@ -229,7 +229,7 @@ export default () => {
                                     form.setFieldValue(field.name, value)
                                 }
                                 onBlur={() => form.setFieldTouched(field.name)}
-                                placeholder="https://www.hackjunction.com/challenges"
+                                placeholder="https://www.novel.systems/challenges"
                             />
                         </FormControl>
                     )}
@@ -251,7 +251,7 @@ export default () => {
                                     form.setFieldValue(field.name, value)
                                 }
                                 onBlur={() => form.setFieldTouched(field.name)}
-                                placeholder="https://www.hackjunction.com/faq"
+                                placeholder="https://www.novel.systems/faq"
                             />
                         </FormControl>
                     )}
@@ -273,7 +273,7 @@ export default () => {
                                     form.setFieldValue(field.name, value)
                                 }
                                 onBlur={() => form.setFieldTouched(field.name)}
-                                placeholder="https://www.hackjunction.com/demos"
+                                placeholder="https://www.novel.systems/demos"
                             />
                         </FormControl>
                     )}
@@ -295,7 +295,7 @@ export default () => {
                                     form.setFieldValue(field.name, value)
                                 }
                                 onBlur={() => form.setFieldTouched(field.name)}
-                                placeholder="https://www.hackjunction.com/privacy"
+                                placeholder="https://www.novel.systems/privacy"
                             />
                         </FormControl>
                     )}
@@ -317,7 +317,7 @@ export default () => {
                                     form.setFieldValue(field.name, value)
                                 }
                                 onBlur={() => form.setFieldTouched(field.name)}
-                                placeholder="https://www.hackjunction.com/terms"
+                                placeholder="https://www.novel.systems/terms"
                             />
                         </FormControl>
                     )}
@@ -328,7 +328,7 @@ export default () => {
                     {({ field, form }) => (
                         <FormControl
                             label="Newsletter subscription link"
-                            hint="Set this if you want a subscription button to appear when people register. It will appear after the Junction newsletter and should link to an external subscription form."
+                            hint="Set this if you want a subscription button to appear when people register. It will appear after the Placeholder-1 newsletter and should link to an external subscription form."
                             error={form.errors[field.name]}
                             touched={form.touched[field.name]}
                         >

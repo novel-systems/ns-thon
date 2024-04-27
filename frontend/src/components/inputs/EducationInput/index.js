@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo, useCallback } from 'react'
 
-import { Universities, Countries } from '@hackjunction/shared'
+import { Universities, Countries } from '@novel.systems/shared'
 import { Grid } from '@material-ui/core'
 
 import TextInput from 'components/inputs/TextInput'

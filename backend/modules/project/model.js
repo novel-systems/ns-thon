@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const _ = require('lodash')
-const { ReviewingMethods } = require('@hackjunction/shared')
-const CloudinaryImageSchema = require('@hackjunction/shared/schemas/CloudinaryImage')
+const { ReviewingMethods } = require('@novel.systems/shared')
+const CloudinaryImageSchema = require('@novel.systems/shared/schemas/CloudinaryImage')
 const AchievementSchema = require('../../common/schemas/Achievement')
 const GavelController = require('../reviewing/gavel/controller')
 const WebhookService = require('../../common/services/webhook')
-const CustomAnswer = require('@hackjunction/shared/schemas/CustomAnswer')
-// const ProjectDefaultFields = require('@hackjunction/shared/constants/project-default-fields')
-// const AnswersSchema = require('@hackjunction/shared/schemas/Answers')
+const CustomAnswer = require('@novel.systems/shared/schemas/CustomAnswer')
+// const ProjectDefaultFields = require('@novel.systems/shared/constants/project-default-fields')
+// const AnswersSchema = require('@novel.systems/shared/schemas/Answers')
 
 const ProjectSchema = new mongoose.Schema({
     event: {

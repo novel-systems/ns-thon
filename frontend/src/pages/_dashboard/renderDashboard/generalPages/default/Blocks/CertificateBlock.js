@@ -6,7 +6,7 @@ import { Grid, CircularProgress } from '@material-ui/core'
 
 import GradientBox from 'components/generic/GradientBox'
 import { Typography } from '@material-ui/core'
-import { RegistrationStatuses, EventHelpers } from '@hackjunction/shared'
+import { RegistrationStatuses, EventHelpers } from '@novel.systems/shared'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 import * as UserSelectors from 'redux/user/selectors'
@@ -25,7 +25,7 @@ export default () => {
     if (!EventHelpers.isEventOver(event, moment)) return null
     if (registration?.status !== RegistrationStatuses.asObject.checkedIn.id)
         return null
-    if (event.slug == "junction-2023" || ('certificate' in event && event.certificate.url !== '')) {//TODO: fix certificate upload
+    if (event.slug == "placeholder-1-2023" || ('certificate' in event && event.certificate.url !== '')) {//TODO: fix certificate upload
         return (
             <Grid item xs={12}>
                 <GradientBox p={3} color="secondary">
@@ -44,7 +44,7 @@ export default () => {
                         <Button
                             onClick={() => {
                                 modifyPdf(
-                                    'https://res.cloudinary.com/hackjunction/image/upload/v1699734274/junctionapp/events/junction-2023/hubqdmfoo1xcy5a2jl8c.pdf',
+                                    'https://res.cloudinary.com/novel.systems/image/upload/v1699734274/placeholder-1-app/events/placeholder-1-2023/hubqdmfoo1xcy5a2jl8c.pdf',
                                     0,
                                     0,
                                     `${userProfile.firstName} ${userProfile.lastName}`,

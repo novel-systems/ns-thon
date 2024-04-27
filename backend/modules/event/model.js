@@ -4,33 +4,33 @@ const {
     EventTypes,
     ReviewingMethods,
     OverallReviewingMethods,
-} = require('@hackjunction/shared')
-// const AddressSchema = require('@hackjunction/shared/schemas/Address')
-const ChallengeSchema = require('@hackjunction/shared/schemas/Challenge')
-const HackerpackSchema = require('@hackjunction/shared/schemas/Hackerpack')
-const CloudinaryImageSchema = require('@hackjunction/shared/schemas/CloudinaryImage')
-const Certificate = require('@hackjunction/shared/schemas/Certificate')
-const mongoFile = require('@hackjunction/shared/schemas/MongoFile')
-const RegistrationSectionSchema = require('@hackjunction/shared/schemas/RegistrationSection')
-const TrackSchema = require('@hackjunction/shared/schemas/Track')
-const EventRecruitersSchema = require('@hackjunction/shared/schemas/Recruiter')
-const TravelGrantConfigSchema = require('@hackjunction/shared/schemas/TravelGrantConfig')
-const UserDetailsConfigSchema = require('@hackjunction/shared/schemas/UserDetailsConfig')
-const EventTagSchema = require('@hackjunction/shared/schemas/EventTag')
-const RegistrationConfigSchema = require('@hackjunction/shared/schemas/RegistrationConfig')
-const AddressSchema = require('@hackjunction/shared/schemas/Address')
-const WebhookSchema = require('@hackjunction/shared/schemas/Webhook')
-const EventThemeSchema = require('@hackjunction/shared/schemas/EventTheme')
-const EventTimelineSchema = require('@hackjunction/shared/schemas/EventTimeline')
-const MeetingRoomSchema = require('@hackjunction/shared/schemas/MeetingRoom')
-const EventPageScriptSchema = require('@hackjunction/shared/schemas/EventPageScript')
+} = require('@novel.systems/shared')
+// const AddressSchema = require('@novel.systems/shared/schemas/Address')
+const ChallengeSchema = require('@novel.systems/shared/schemas/Challenge')
+const HackerpackSchema = require('@novel.systems/shared/schemas/Hackerpack')
+const CloudinaryImageSchema = require('@novel.systems/shared/schemas/CloudinaryImage')
+const Certificate = require('@novel.systems/shared/schemas/Certificate')
+const mongoFile = require('@novel.systems/shared/schemas/MongoFile')
+const RegistrationSectionSchema = require('@novel.systems/shared/schemas/RegistrationSection')
+const TrackSchema = require('@novel.systems/shared/schemas/Track')
+const EventRecruitersSchema = require('@novel.systems/shared/schemas/Recruiter')
+const TravelGrantConfigSchema = require('@novel.systems/shared/schemas/TravelGrantConfig')
+const UserDetailsConfigSchema = require('@novel.systems/shared/schemas/UserDetailsConfig')
+const EventTagSchema = require('@novel.systems/shared/schemas/EventTag')
+const RegistrationConfigSchema = require('@novel.systems/shared/schemas/RegistrationConfig')
+const AddressSchema = require('@novel.systems/shared/schemas/Address')
+const WebhookSchema = require('@novel.systems/shared/schemas/Webhook')
+const EventThemeSchema = require('@novel.systems/shared/schemas/EventTheme')
+const EventTimelineSchema = require('@novel.systems/shared/schemas/EventTimeline')
+const MeetingRoomSchema = require('@novel.systems/shared/schemas/MeetingRoom')
+const EventPageScriptSchema = require('@novel.systems/shared/schemas/EventPageScript')
 const allowPublishPlugin = require('../../common/plugins/allowPublish')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
 const uploadHelper = require('../upload/helper')
-const ProjectDefaultFields = require('@hackjunction/shared/constants/project-default-fields')
-const SubmissionDefaultFieldsSchema = require('@hackjunction/shared/schemas/SubmissionDefaultFields')
-const SubmissionDefaultFields = require('@hackjunction/shared/constants/submission-default-fields')
-const ScoreCriteriaSettingsSchema = require('@hackjunction/shared/schemas/ScoreCriteriaSettings')
+const ProjectDefaultFields = require('@novel.systems/shared/constants/project-default-fields')
+const SubmissionDefaultFieldsSchema = require('@novel.systems/shared/schemas/SubmissionDefaultFields')
+const SubmissionDefaultFields = require('@novel.systems/shared/constants/submission-default-fields')
+const ScoreCriteriaSettingsSchema = require('@novel.systems/shared/schemas/ScoreCriteriaSettings')
 
 const EventSchema = new mongoose.Schema({
     /** Event info */
@@ -317,7 +317,7 @@ const EventSchema = new mongoose.Schema({
     emailConfig: {
         senderEmail: {
             type: String,
-            default: 'noreply@hackjunction.com',
+            default: 'noreply@novel.systems',
             trim: true,
             validate: {
                 validator: function (v) {
@@ -329,7 +329,7 @@ const EventSchema = new mongoose.Schema({
         },
         senderName: {
             type: String,
-            default: 'Junction team',
+            default: 'Placeholder-1 team',
             trim: true,
             maxLength: 100,
         },

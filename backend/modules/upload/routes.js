@@ -4,7 +4,7 @@ const { GridFsStorage } = require('multer-gridfs-storage')
 const ObjectId = require('mongodb').ObjectId
 
 const router = express.Router()
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const helper = require('./helper')
 
 const { hasPermission } = require('../../common/middleware/permissions')

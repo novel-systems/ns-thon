@@ -1,5 +1,5 @@
 const moment = require('moment-timezone')
-const Shared = require('@hackjunction/shared')
+const Shared = require('@novel.systems/shared')
 const bcrypt = require('bcrypt')
 const Promise = require('bluebird')
 

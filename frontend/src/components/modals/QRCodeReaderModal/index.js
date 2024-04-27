@@ -10,7 +10,7 @@ import {
     CircularProgress,
 } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
-import { RegistrationStatuses } from '@hackjunction/shared'
+import { RegistrationStatuses } from '@novel.systems/shared'
 
 import Modal from 'components/generic/Modal'
 import StatusBadge from 'components/generic/StatusBadge'

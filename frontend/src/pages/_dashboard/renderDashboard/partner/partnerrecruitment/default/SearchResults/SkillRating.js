@@ -4,7 +4,7 @@ import { withStyles, makeStyles } from '@material-ui/core/styles'
 import { Typography, Tooltip, Grid } from '@material-ui/core/'
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord'
 import PropTypes from 'prop-types'
-import { Skills } from '@hackjunction/shared'
+import { Skills } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     inline: {

@@ -11,7 +11,7 @@ import EventsService from 'services/events'
 import VotingTokenService from 'services/votingToken'
 import EventDetailContext from '../context'
 import * as SnackbarActions from 'redux/snackbar/actions'
-import { EventHelpers } from '@hackjunction/shared'
+import { EventHelpers } from '@novel.systems/shared'
 import moment from 'moment'
 
 const useStyles = makeStyles(theme => ({

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useRouteMatch, useLocation } from 'react-router'
 import { Typography, Box } from '@material-ui/core'
-import { EventTypes } from '@hackjunction/shared'
+import { EventTypes } from '@novel.systems/shared'
 import TuneIcon from '@material-ui/icons/Tune'
 import SettingsIcon from '@material-ui/icons/Settings'
 import EqualizerIcon from '@material-ui/icons/Equalizer'
@@ -111,7 +111,7 @@ export default () => {
                                 <>
                                     The event will be published once approved by
                                     admins. Questions about the approval process
-                                    can be directed to hello@hackjunction.com
+                                    can be directed to hello@novel.systems
                                 </>
                             </Alert>
                         ) : null}

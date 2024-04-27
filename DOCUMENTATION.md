@@ -1,14 +1,14 @@
 <!-- TOC ignore:true -->
 
-# Junction App event organizer guidebook
+# Placeholder-1 App event organizer guidebook
 
-This is a work-in-progress documentation on how to use Junction App. This guidebook is open-source and we hope that you comment and create additions to the content here.
+This is a work-in-progress documentation on how to use Placeholder-1 App. This guidebook is open-source and we hope that you comment and create additions to the content here.
 
 **Table of contents**
 
 <!-- TOC -->
 
--   [Junction App event organizer guidebook](#junction-app-event-organizer-guidebook)
+-   [Placeholder-1 App event organizer guidebook](#placeholder-1-app-event-organizer-guidebook)
 -   [Creating an event](#creating-an-event)
 -   [Managing an event](#managing-an-event)
 -   [Editing an event](#editing-an-event)
@@ -28,7 +28,7 @@ This is a work-in-progress documentation on how to use Junction App. This guideb
 
 # Terminology
 
-In Junction App, there are a lot of different stakeholders with different permissions and roles in the event.
+In Placeholder-1 App, there are a lot of different stakeholders with different permissions and roles in the event.
 
 -   Participant
 -   Partner
@@ -104,7 +104,7 @@ Red ones are required, green are optional and white ones are hidden.
 
 ## Stats
 
-This feature is currently under construction. If you need detailed information dumps from the database, please contact hello@hackjunction.com.
+This feature is currently under construction. If you need detailed information dumps from the database, please contact hello@novel.systems.
 
 ## Participants
 

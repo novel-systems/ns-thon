@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { meanBy, countBy, groupBy, mapValues, sumBy } from 'lodash-es'
-import { RegistrationStatuses } from '@hackjunction/shared'
+import { RegistrationStatuses } from '@novel.systems/shared'
 import * as AuthSelectors from 'redux/auth/selectors'
 import moment from 'moment'
 

@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import { Roles } from '@hackjunction/shared'
+import { Roles } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     radios: {

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Promise = require('bluebird')
-const { AchievementTypes } = require('@hackjunction/shared')
+const { AchievementTypes } = require('@novel.systems/shared')
 const Team = require('../team/model')
 const Project = require('../project/model')
 

@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail')
 const sgClient = require('@sendgrid/client')
-const { EventTypes } = require('@hackjunction/shared')
+const { EventTypes } = require('@novel.systems/shared')
 const _ = require('lodash')
 const moment = require('moment-timezone')
 const logger = require('../../misc/logger')
@@ -302,7 +302,7 @@ const SendgridService = {
                 <br/>
                 Now the processing moves on to the next step, confirming your payment information. There is no more action
                 required from you, and we are currently on track to be able to initiate the transactions on 15 December. 
-                Please reach out to finance@hackjunction.com (by replying to this email) with any further questions on the matter.
+                Please reach out to finance@novel.systems (by replying to this email) with any further questions on the matter.
             `,
             },
         )
@@ -335,11 +335,11 @@ const SendgridService = {
                 If you don't do this, we will not be able to pay your travel grant.
                 <br />
                 <br />
-                Please refer to finance@hackjunction.com (by replying to this email) with any further questions on the matter.
+                Please refer to finance@novel.systems (by replying to this email) with any further questions on the matter.
             `,
                 cta_link: `${global.gConfig.FRONTEND_URL}/dashboard/event/${event.slug}/travel-grant`,
                 cta_text: 'Edit your details',
-                reply_to: 'finance@hackjunction.com',
+                reply_to: 'finance@novel.systems',
             },
         )
 
@@ -348,7 +348,7 @@ const SendgridService = {
     sendRecruiterMessageEmail: (recruiter, user, organization, message) => {
         const params = {
             header_image:
-                'https://res.cloudinary.com/hackjunction/image/upload/c_scale,w_600/v1573050918/wordmark_black.png',
+                'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_600/v1573050918/wordmark_black.png',
             subject: `${global.gConfig.PLATFORM_OWNER_NAME}: You have a message from a recruiter!`,
             subtitle: `${recruiter.firstName} ${recruiter.lastName} messaged you on ${global.gConfig.SENDGRID_FROM_NAME} Recruitment.`,
             body: `

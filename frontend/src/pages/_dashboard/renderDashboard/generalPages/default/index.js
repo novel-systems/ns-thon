@@ -18,7 +18,7 @@ import SocialMediaBlock from './Blocks/SocialMediaBlock'
 // import TimeLineBlock from './Blocks/TimeLineBlock'
 import AlertBlock from './Blocks/AlertBlock'
 import EventPageScriptIFrame from 'components/events/EventPageScriptIFrame'
-import { EventPageScripts } from '@hackjunction/shared'
+import { EventPageScripts } from '@novel.systems/shared'
 import { useSelector } from 'react-redux'
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 // import * as AuthSelectors from 'redux/auth/selectors'
@@ -31,17 +31,17 @@ export default ({ alerts }) => {
             <PageHeader heading="Dashboard" />
 
             <Helmet>
-                <title>Junction App || Dashboard</title>
+                <title>Placeholder-1 App || Dashboard</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Junction, junction dashboard"
+                    content="Hackathon, hackathon platform, Placeholder-1, placeholder-1 dashboard"
                 />
-                <meta name="title" content="Junction App || Dashboard" />
-                <meta property="og:title" content="Junction App || Dashboard" />
+                <meta name="title" content="Placeholder-1 App || Dashboard" />
+                <meta property="og:title" content="Placeholder-1 App || Dashboard" />
 
                 <meta
                     name="twitter:title"
-                    content="Junction App || Dashboard"
+                    content="Placeholder-1 App || Dashboard"
                 />
                 <meta
                     name="description"

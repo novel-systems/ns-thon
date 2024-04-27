@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useSelector } from 'react-redux'
 import { Typography, Grid } from '@material-ui/core'
-import { RegistrationStatuses, EventTypes } from '@hackjunction/shared'
+import { RegistrationStatuses, EventTypes } from '@novel.systems/shared'
 import GradientBox from 'components/generic/GradientBox'
 import Button from 'components/generic/Button'
 

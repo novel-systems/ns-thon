@@ -7,7 +7,7 @@ import {
     EventTypes,
     RegistrationStatuses,
     ReviewingMethods,
-} from '@hackjunction/shared'
+} from '@novel.systems/shared'
 
 export const event = state => state.dashboard.event.data
 export const eventLoading = state => state.dashboard.event.loading

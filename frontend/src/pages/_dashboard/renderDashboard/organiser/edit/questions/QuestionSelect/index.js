@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { RegistrationFields } from '@hackjunction/shared'
+import { RegistrationFields } from '@novel.systems/shared'
 import { groupBy } from 'lodash-es'
 import {
     FormControl,

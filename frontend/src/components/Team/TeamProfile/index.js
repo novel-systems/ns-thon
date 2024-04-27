@@ -6,7 +6,7 @@ import TeamDescription from '../TeamDescription'
 import TeamRoles from '../TeamRoles'
 import TeamMembers from '../TeamMembers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 import { popupCenter } from 'utils/misc'
 import { Email } from '@material-ui/icons'
 import { objToArr } from 'utils/dataModifiers'
@@ -26,7 +26,7 @@ export default ({
     const teamMembersArr = [...objToArr(teamData.meta)]
     const membersCount = teamData.members.length
 
-    const classes = junctionStyle()
+    const classes = placeholder - 1Style()
     return (
         <PageWrapper loading={loading}>
             <div className="tw-flex tw-flex-col tw-gap-12">

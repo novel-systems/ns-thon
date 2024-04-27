@@ -155,12 +155,12 @@ export default () => {
                                                 now only tested inside the
                                                 platform, but should be used so
                                                 that you take everything after
-                                                "app.hackjunction.com",
+                                                "placeholder-1.novel.systems",
                                                 including the last slash, and
                                                 add it there. For example
                                                 "/pricing" at the push
                                                 destiation would lead to
-                                                app.hackjunction.com/pricing
+                                                placeholder-1.novel.systems/pricing
                                             </Typography>
                                         </Grid>
                                     </Grid>
@@ -179,8 +179,8 @@ export default () => {
                                                     value={
                                                         field.value
                                                             ? {
-                                                                  url: field.value,
-                                                              }
+                                                                url: field.value,
+                                                            }
                                                             : undefined
                                                     }
                                                     onChange={value =>

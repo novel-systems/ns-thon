@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 
-import { RegistrationStatuses } from '@hackjunction/shared'
+import { RegistrationStatuses } from '@novel.systems/shared'
 import { makeStyles } from '@material-ui/core/styles'
 import {
     ExpansionPanel,

@@ -1,5 +1,5 @@
 {
-    "name": "junctionapp-frontend",
+    "name": "placeholder-1-app-frontend",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -8,7 +8,7 @@
         "@fortawesome/free-brands-svg-icons": "^5.14.0",
         "@fortawesome/free-solid-svg-icons": "^5.14.0",
         "@fortawesome/react-fontawesome": "^0.1.11",
-        "@hackjunction/shared": "file:../shared",
+        "@novel.systems/shared": "file:../shared",
         "@material-ui/core": "^4.10.1",
         "@material-ui/icons": "^4.9.1",
         "@material-ui/lab": "^4.0.0-alpha.55",

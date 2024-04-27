@@ -40,20 +40,20 @@ export default () => {
     return (
         <>
             <Helmet>
-                <title>Junction App || Dashboard</title>
+                <title>Placeholder-1 App || Dashboard</title>
                 <meta
                     name="keywords"
-                    content={`Redeem hackepack, junction, hackjunction, hackerpack`}
+                    content={`Redeem hackepack, placeholder-1, novel.systems, hackerpack`}
                 />
-                <meta name="title" content="Junction App || Hackerpack" />
+                <meta name="title" content="Placeholder-1 App || Hackerpack" />
                 <meta
                     property="og:title"
-                    content="Junction App || Hackerpack"
+                    content="Placeholder-1 App || Hackerpack"
                 />
 
                 <meta
                     name="twitter:title"
-                    content="Junction App || Hackerpack"
+                    content="Placeholder-1 App || Hackerpack"
                 />
                 <meta
                     name="description"

@@ -25,7 +25,7 @@ import Button from 'components/generic/Button'
 import { makeStyles } from '@material-ui/core/styles'
 import { useFormField } from 'hooks/formHooks'
 import TextAreaInput from 'components/inputs/TextAreaInput'
-import { EventPageScripts } from '@hackjunction/shared'
+import { EventPageScripts } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     errorMessage: {
@@ -123,15 +123,14 @@ export default ({ value = [], fieldName, setFieldValue }) => {
                 <ListItemText
                     primary={
                         <TextAreaInput
-                            label={`Page script: ${
-                                EventPageScripts
+                            label={`Page script: ${EventPageScripts
                                     .ALLOWED_PAGE_SCRIPT_LOCATIONS_DICTIONARY[
                                     item.page
                                 ]?.label
-                            }`}
+                                }`}
                             disabled={true}
                             value={item.script}
-                            onChange={() => {}}
+                            onChange={() => { }}
                         />
                     }
                     secondary={
@@ -151,8 +150,8 @@ export default ({ value = [], fieldName, setFieldValue }) => {
                                 }
                                 label={
                                     item.approved
-                                        ? 'This script was approved by Junction'
-                                        : 'This script is not yet approved by Junction. Request approval by getting in touch with the platform maintainers..'
+                                        ? 'This script was approved by Placeholder-1'
+                                        : 'This script is not yet approved by Placeholder-1. Request approval by getting in touch with the platform maintainers..'
                                 }
                             />
                         </FormGroup>

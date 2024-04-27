@@ -18,7 +18,7 @@ import {
     Button,
     Grid,
 } from '@material-ui/core'
-import { RegistrationFields } from '@hackjunction/shared'
+import { RegistrationFields } from '@novel.systems/shared'
 import { push } from 'connected-react-router'
 import { useSelector } from 'react-redux'
 
@@ -46,7 +46,7 @@ import EventDetailContext from '../context'
 
 import { useTranslation } from 'react-i18next'
 import EventPageScriptIFrame from 'components/events/EventPageScriptIFrame'
-import { EventPageScripts } from '@hackjunction/shared'
+import { EventPageScripts } from '@novel.systems/shared'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -249,16 +249,16 @@ export default RequiresPermission(() => {
         (nextStep, values, path) => {
             const newFormData = path
                 ? {
-                      ...formData,
-                      [path]: {
-                          ...formData[path],
-                          ...values,
-                      },
-                  }
+                    ...formData,
+                    [path]: {
+                        ...formData[path],
+                        ...values,
+                    },
+                }
                 : {
-                      ...formData,
-                      ...values,
-                  }
+                    ...formData,
+                    ...values,
+                }
             editRegistration(newFormData)
             setFormData(newFormData)
             setActiveStep(nextStep)
@@ -385,7 +385,7 @@ export default RequiresPermission(() => {
         })
     }
 
-    const shareurl = 'https://app.hackjunction.com/events/' + event.slug // TODO: remove hard coded base URL
+    const shareurl = 'https://placeholder-1.novel.systems/events/' + event.slug // TODO: remove hard coded base URL
     const sharetext = `I just applied to ${event.name}!`
 
     return (

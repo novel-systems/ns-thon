@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 
-import { Misc } from '@hackjunction/shared'
+import { Misc } from '@novel.systems/shared'
 import { Grid, Typography } from '@material-ui/core'
 
 import Select from 'components/inputs/Select'

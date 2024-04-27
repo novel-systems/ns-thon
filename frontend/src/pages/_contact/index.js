@@ -19,7 +19,7 @@ import config from 'constants/config'
 import * as SnackbarActions from 'redux/snackbar/actions'
 import * as AuthActions from 'redux/auth/actions'
 import EmailService from 'services/email'
-import Shared from '@hackjunction/shared'
+import Shared from '@novel.systems/shared'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 
@@ -118,20 +118,20 @@ export default () => {
                         <title>{config.PLATFORM_OWNER_NAME}</title>
                         <meta
                             name="keywords"
-                            content="Hackathon, hackathon platform, Junction"
+                            content="Hackathon, hackathon platform, Placeholder-1"
                         />
                         <meta
                             name="title"
-                            content="Junction App || Contact us"
+                            content="Placeholder-1 App || Contact us"
                         />
                         <meta
                             property="og:title"
-                            content="Junction App || Contact us"
+                            content="Placeholder-1 App || Contact us"
                         />
 
                         <meta
                             name="twitter:title"
-                            content="Junction App || Contact us"
+                            content="Placeholder-1 App || Contact us"
                         />
                         <meta
                             name="description"

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import ShowIfPermission from 'hocs/ShowIfPermission'
-import { Auth as AuthConstants } from '@hackjunction/shared'
+import { Auth as AuthConstants } from '@novel.systems/shared'
 import ExternalLink from 'components/generic/ExternalLink'
 import { useSelector } from 'react-redux'
 import * as AuthSelectors from 'redux/auth/selectors'

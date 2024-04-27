@@ -5,7 +5,7 @@ import * as DashboardSelectors from 'redux/dashboard/selectors'
 import * as UserSelectors from 'redux/user/selectors'
 import * as AuthSelectors from 'redux/auth/selectors'
 import Button from 'components/generic/Button'
-import { Auth } from '@hackjunction/shared'
+import { Auth } from '@novel.systems/shared'
 
 export default () => {
     const event = useSelector(DashboardSelectors.event)
@@ -29,7 +29,7 @@ export default () => {
             </Button>
             TODO: change this img to be generic and updatable
             <img 
-            src="https://res.cloudinary.com/hackjunction/image/upload/v1667494674/misc_assets/meeting_area.png"
+            src="https://res.cloudinary.com/novel.systems/image/upload/v1667494674/misc_assets/meeting_area.png"
             /> */
             }
 

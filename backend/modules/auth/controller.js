@@ -1,5 +1,5 @@
 const { ManagementClient } = require('auth0')
-const Shared = require('@hackjunction/shared')
+const Shared = require('@novel.systems/shared')
 
 const AuthConstants = Shared.Auth
 const axios = require('axios')

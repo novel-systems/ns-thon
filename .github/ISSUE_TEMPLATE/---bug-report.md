@@ -1,16 +1,15 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Create a report to help Junction App improve
+about: Create a report to help Placeholder-1 App improve
 title: 'BUG: '
 labels: bug
 assignees: ''
-
 ---
 
 ## 🐛 Bug Report
 
 <!--
-    Thank you for using Junction App and taking time to report a bug.
+    Thank you for using Placeholder-1 App and taking time to report a bug.
 
     Please try to spend some time to understand the bug and reproduce it.
     Take a look at our template and try to add as much detail as possible.
@@ -74,8 +73,6 @@ assignees: ''
     If possible screenshots would be helpful.
     Especially if the bug is UI related
 -->
-
-
 
 <!--
     Thank you for taking your time to report the issue! Appreciate your help.

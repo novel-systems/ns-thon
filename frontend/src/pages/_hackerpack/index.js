@@ -56,17 +56,17 @@ export default () => {
                 <title>{config.PLATFORM_OWNER_NAME}</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Junction, hackerpack, hackjunction"
+                    content="Hackathon, hackathon platform, Placeholder-1, hackerpack, novel.systems"
                 />
-                <meta name="title" content="Junction App || Hackerpack" />
+                <meta name="title" content="Placeholder-1 App || Hackerpack" />
                 <meta
                     property="og:title"
-                    content="Junction App || Hackerpack"
+                    content="Placeholder-1 App || Hackerpack"
                 />
 
                 <meta
                     name="twitter:title"
-                    content="Junction App || Hackerpack"
+                    content="Placeholder-1 App || Hackerpack"
                 />
                 <meta
                     name="description"
@@ -113,7 +113,7 @@ export default () => {
                 <Box p={2}>
                     <Typography color="textSecondary" variant="subtitle1">
                         Anything you would like to see here in the future?
-                        Contact us at partnerships@hackjunction.com with your
+                        Contact us at partnerships@novel.systems with your
                         suggestion.
                     </Typography>
                 </Box>

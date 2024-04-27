@@ -1,5 +1,5 @@
 
-const { Auth } = require('@hackjunction/shared')
+const { Auth } = require('@novel.systems/shared')
 const DataLoader = require('dataloader')
 const Meeting = require('./model')
 const PermissionUtils = require('../../utils/permissions')
@@ -97,10 +97,10 @@ class MeetingContorller {
             organizerEmail: partnerEmail,
             location: meeting.location || '',
             title:
-                meeting.title || `Junction: ${challenge.name} partner meeting`,
+                meeting.title || `Placeholder-1: ${challenge.name} partner meeting`,
             description:
                 meeting.description ||
-                `Junction: ${challenge.name}\nmeeting between participants and partner, ${challenge.partner}. `,
+                `Placeholder-1: ${challenge.name}\nmeeting between participants and partner, ${challenge.partner}. `,
             attendees: [],
             startTime: meeting.startTime,
             endTime: meeting.endTime,
@@ -233,9 +233,9 @@ class MeetingContorller {
                 : roomBookedSuccessfully
                     ? location
                     : ''
-        console.log("meetingToBook.description",meetingToBook.description)
+        console.log("meetingToBook.description", meetingToBook.description)
         const newDescription = meetingToBook.description.concat(...attendeeProfiles.map(a => ` ${a.firstName} ${a.lastName},`)).replace(/.$/, ".")
-        console.log("newDescription",newDescription)
+        console.log("newDescription", newDescription)
         const googleEvent = {
             title: meetingToBook.title,
             description: newDescription,

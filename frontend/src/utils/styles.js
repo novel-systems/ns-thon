@@ -1,7 +1,7 @@
-import theme from 'junctionTheme'
+import theme from 'placeholder-1Theme'
 import { makeStyles } from '@material-ui/core/styles'
 
-const junctionStyle = makeStyles({
+const placeholder-1Style = makeStyles({
     socialIcon: {
         color: theme.palette.primary.main,
         width: 'auto',
@@ -62,4 +62,4 @@ const junctionStyle = makeStyles({
     },
 })
 
-export default junctionStyle
+export default placeholder - 1Style

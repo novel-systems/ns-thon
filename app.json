@@ -1,6 +1,6 @@
 {
-    "name": "Junction App",
-    "description": "Junction all-in-one hackathon platform",
+    "name": "Placeholder-1 App",
+    "description": "Placeholder-1 all-in-one hackathon platform",
     "buildpacks": [
         {
             "url": "heroku/nodejs"

@@ -157,27 +157,27 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: '70pt',
     },
-    junction: {
-        fontWeight: 600,
-    },
+    placeholder- 1: {
+    fontWeight: 600,
+},
     upperRings: {
-        position: 'absolute',
-        height: 250,
+    position: 'absolute',
+    height: 250,
 
-        objectFit: 'contain',
-        left: -22,
-        top: 0,
-        zIndex: 10,
-    },
+    objectFit: 'contain',
+    left: -22,
+    top: 0,
+    zIndex: 10,
+},
     lowerRings: {
-        position: 'absolute',
-        height: 250,
+    position: 'absolute',
+    height: 250,
 
-        objectFit: 'contain',
-        right: -22,
-        bottom: -8,
-        zIndex: 10,
-    },
+    objectFit: 'contain',
+    right: -22,
+    bottom: -8,
+    zIndex: 10,
+},
 })
 
 // TODO make this agnostic to PLATFORM_OWNER_CONFIG
@@ -196,7 +196,7 @@ const ParticipationCertificate = ({ event, project, userProfile }) => {
                 <View style={styles.outer} wrap={false}>
                     <View style={styles.outer2} wrap={false}>
                         <View style={styles.upperRings}>
-                            <Image src="https://res.cloudinary.com/hackjunction/image/upload/v1603370284/misc_assets/Group.png" />
+                            <Image src="https://res.cloudinary.com/novel.systems/image/upload/v1603370284/misc_assets/Group.png" />
                         </View>
                         <Text style={styles.title}>
                             Certificate of Participation
@@ -205,7 +205,7 @@ const ParticipationCertificate = ({ event, project, userProfile }) => {
                         {/* <Text style={styles.eventName}>{event.name}</Text> */}
                         <View style={styles.connected}>
                             <Image
-                                src="https://res.cloudinary.com/hackjunction/image/upload/v1603284923/misc_assets/logo.png"
+                                src="https://res.cloudinary.com/novel.systems/image/upload/v1603284923/misc_assets/logo.png"
                                 style={styles.image}
                             />
                         </View>
@@ -228,7 +228,7 @@ const ParticipationCertificate = ({ event, project, userProfile }) => {
                             />
                         </View>
                         <Text style={styles.footer}>
-                            <strong style={styles.junction}>Junction</strong> is
+                            <strong style={styles.placeholder - 1}>Placeholder-1</strong> is
                             the world’s leading hackathon organizer and a global
                             community of hackers. Our mission is to bridge the
                             gap between creators by making everyone fall in love
@@ -237,11 +237,11 @@ const ParticipationCertificate = ({ event, project, userProfile }) => {
 
                         <View style={styles.lowerRings}>
                             <Image
-                                src="https://res.cloudinary.com/hackjunction/image/upload/v1603370284/misc_assets/Groupsecond.png"
+                                src="https://res.cloudinary.com/novel.systems/image/upload/v1603370284/misc_assets/Groupsecond.png"
                                 style={styles.image}
                             />
                         </View>
-                        {/* <Text style={styles.footerLink}>hackjunction.com</Text> */}
+                        {/* <Text style={styles.footerLink}>novel.systems</Text> */}
                     </View>
                 </View>
             </Page>

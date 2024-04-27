@@ -20,7 +20,7 @@ import Container from 'components/generic/Container'
 import { Helmet } from 'react-helmet'
 import EventDetailContext from '../context'
 import EventPageScriptIFrame from 'components/events/EventPageScriptIFrame'
-import { EventPageScripts } from '@hackjunction/shared'
+import { EventPageScripts } from '@novel.systems/shared'
 import EventButtons from './EventButtons'
 
 const useStyles = makeStyles({

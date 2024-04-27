@@ -11,7 +11,7 @@ const {
 const { GraphQLDateTime } = require('graphql-iso-date')
 
 const moment = require('moment-timezone')
-const { EventHelpers } = require('@hackjunction/shared')
+const { EventHelpers } = require('@novel.systems/shared')
 const { OrganizationType } = require('../organization/graphql')
 const dateUtils = require('../../common/utils/dateUtils')
 

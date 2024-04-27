@@ -2,12 +2,12 @@ import { FormControl, FormLabel, Radio, RadioGroup } from '@material-ui/core'
 import _ from 'lodash'
 import { toInteger } from 'lodash-es'
 import React, { useState } from 'react'
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 
 const scoreArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 export default ({ category, label, onSelectionChange, value = null }) => {
-    const classes = junctionStyle()
+    const classes = placeholder - 1Style()
     const [selectedValue, setSelectedValue] = useState(value)
     const [selectedIndex, setSelectedIndex] = useState(null)
 

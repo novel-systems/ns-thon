@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import junctionStyle from 'utils/styles'
+import placeholder-1Style from 'utils/styles'
 import {
     Card,
     CardContent,
@@ -21,8 +21,8 @@ import { useFormik } from 'formik'
 import { useDispatch, useSelector } from 'react-redux'
 import ParticipantPreview from 'components/Participant/ParticipantPreview'
 
-function CandidateCard({ candidateData = {}, onViewApplication = () => {} }) {
-    const classes = junctionStyle()
+function CandidateCard({ candidateData = {}, onViewApplication = () => { } }) {
+    const classes = placeholder - 1Style()
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(false)
 
@@ -165,10 +165,9 @@ function CandidateCard({ candidateData = {}, onViewApplication = () => {} }) {
                                         variant="body1"
                                         component="p"
                                     >
-                                        {`Applied to ${
-                                            candidateData.roles?.length -
+                                        {`Applied to ${candidateData.roles?.length -
                                             maxRolesToRender
-                                        } more roles`}
+                                            } more roles`}
                                     </Typography>
                                 </div>
                             </Button>

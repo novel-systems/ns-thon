@@ -23,7 +23,7 @@ router.route('/anonymize-db').get(async (req, res) => {
                     $set: {
                         'answers.email': `juuso.lappalainen+${Math.floor(
                             Math.random() * 1000000
-                        )}@hackjunction.com`,
+                        )}@novel.systems`,
                     },
                 },
             },
@@ -44,7 +44,7 @@ router.route('/anonymize-db').get(async (req, res) => {
                     $set: {
                         email: `juuso.lappalainen+${Math.floor(
                             Math.random() * 1000000
-                        )}@hackjunction.com`,
+                        )}@novel.systems`,
                     },
                 },
             },
