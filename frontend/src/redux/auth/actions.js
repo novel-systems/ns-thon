@@ -6,14 +6,14 @@ import Auth0Service from 'services/auth0'
 
 export const login =
     (params, nextRoute = '/') =>
-    dispatch => {
-        dispatch({
-            type: ActionTypes.SET_NEXT_ROUTE,
-            payload: nextRoute,
-        })
-        console.log('loggin in with', params)
-        Auth0Service.authorize(params)
-    }
+        dispatch => {
+            dispatch({
+                type: ActionTypes.SET_NEXT_ROUTE,
+                payload: nextRoute,
+            })
+            console.log('loggin in with', params)
+            Auth0Service.authorize(params)
+        }
 
 export const pushNextRoute = () => (dispatch, getState) => {
     const nextRoute = AuthSelectors.getNextRoute(getState())
@@ -60,6 +60,7 @@ export const renewSession = () => dispatch => {
 }
 
 export const handleAuthentication = () => async dispatch => {
+    console.log(Auth0Service.getAuth0())
     return Auth0Service.parseHash()
         .then(authResult => {
             dispatch(setSession(authResult))

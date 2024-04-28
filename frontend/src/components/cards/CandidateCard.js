@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import placeholder-1Style from 'utils/styles'
+import placeholderStyle from 'utils/styles'
 import {
     Card,
     CardContent,
@@ -22,7 +22,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import ParticipantPreview from 'components/Participant/ParticipantPreview'
 
 function CandidateCard({ candidateData = {}, onViewApplication = () => { } }) {
-    const classes = placeholder - 1Style()
+    const classes = placeholderStyle()
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(false)
 
@@ -45,7 +45,7 @@ function CandidateCard({ candidateData = {}, onViewApplication = () => { } }) {
             .finally(() => {
                 setLoading(false)
             })
-    }, [candidateData])
+    }, [candidateData, candidateProfile.profile, dispatch])
 
     const event = useSelector(DashboardSelectors.event)
     const team = useSelector(DashboardSelectors.team)
@@ -73,7 +73,7 @@ function CandidateCard({ candidateData = {}, onViewApplication = () => { } }) {
                 ),
             )
         },
-        [dispatch, candidateProfile],
+        [dispatch, slug, code, candidateProfile.profile.userId],
     )
 
     const handleDecline = () => {

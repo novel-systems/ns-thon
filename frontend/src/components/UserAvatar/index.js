@@ -3,14 +3,14 @@ import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useRouteMatch } from 'react-router'
 import { Avatar, Box, IconButton } from '@material-ui/core'
-import Placeholder-1Theme from 'placeholder-1Theme.js'
+import PlaceholderTheme from 'PlaceholderTheme.js'
 import { useMyProfilePreview } from 'graphql/queries/userProfile'
 
 export default () => {
     const match = useRouteMatch()
     const [profile] = useMyProfilePreview()
     const dispatch = useDispatch()
-    const color = Placeholder - 1Theme.palette
+    const color = PlaceholderTheme.palette
 
     const handleClick = () => {
         if (match.url === '/home') {

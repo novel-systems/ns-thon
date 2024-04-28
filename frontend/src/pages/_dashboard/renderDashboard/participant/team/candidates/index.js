@@ -19,10 +19,10 @@ import {
     Typography,
 } from '@material-ui/core'
 import FormControl from 'components/inputs/FormControl'
-import placeholder-1Style from 'utils/styles'
+import placeholderStyle from 'utils/styles'
 
 export default () => {
-    const classes = placeholder - 1Style()
+    const classes = placeholderStyle()
     const dispatch = useDispatch()
     const event = useSelector(DashboardSelectors.event)
     const { slug } = event

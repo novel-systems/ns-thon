@@ -609,5 +609,3 @@ branding:
 prompts:
   universal_login_experience: new
   identifier_first: false
-migrations:
-  legacy_tls: true

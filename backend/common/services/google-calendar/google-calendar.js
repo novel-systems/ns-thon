@@ -1,21 +1,26 @@
 /* eslint-disable camelcase */
 const fs = require('fs')
 const { google } = require('googleapis')
-const uuidv4 = require('uuid/v4')
+const { v4 } = require('uuid')
 const { updateMeetingGoogleInfo } = require('../../../modules/meeting/helpers')
 
 const TOKEN_PATH = `${__dirname}/token.json`
 const install = {
-    client_id: "752565208443-0g0ui7afokfi2b1t1von4qankq1vh62h.apps.googleusercontent.com",//"758477701769-hasb17jt161beprjr34kgqjma0sb815h.apps.googleusercontent.com",//global.gConfig.GOOGLE_CLIENT_ID,
-    project_id: "prod-calendar-386407",//"placeholder-1-calendar-375014",//global.gConfig.GOOGLE_PROJECT_ID,
-    auth_uri: "https://accounts.google.com/o/oauth2/auth",//"https://accounts.google.com/o/oauth2/auth", //global.gConfig.GOOGLE_AUTH_URI,
-    token_uri: "https://oauth2.googleapis.com/token",//"https://oauth2.googleapis.com/token", //global.gConfig.GOOGLE_TOKEN_URI,
-    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",//"https://www.googleapis.com/oauth2/v1/certs", //global.gConfig.GOOGLE_AUTH_PROVIDER,
-    client_secret: "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",//"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", //global.gConfig.GOOGLE_CLIENT_SECRET,
-    redirect_uris: ["http://localhost", "https://placeholder-1.novel.systems", "https://eu.placeholder-1platform.com"]//["http://localhost","https://placeholder-1.novel.systems"], //[ global.gConfig.GOOGLE_REDIRECT]
+    client_id:
+        '752565208443-0g0ui7afokfi2b1t1von4qankq1vh62h.apps.googleusercontent.com', // "758477701769-hasb17jt161beprjr34kgqjma0sb815h.apps.googleusercontent.com",//global.gConfig.GOOGLE_CLIENT_ID,
+    project_id: 'prod-calendar-386407', // "placeholder-1-calendar-375014",//global.gConfig.GOOGLE_PROJECT_ID,
+    auth_uri: 'https://accounts.google.com/o/oauth2/auth', // "https://accounts.google.com/o/oauth2/auth", //global.gConfig.GOOGLE_AUTH_URI,
+    token_uri: 'https://oauth2.googleapis.com/token', // "https://oauth2.googleapis.com/token", //global.gConfig.GOOGLE_TOKEN_URI,
+    auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs', // "https://www.googleapis.com/oauth2/v1/certs", //global.gConfig.GOOGLE_AUTH_PROVIDER,
+    client_secret: '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', // "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", //global.gConfig.GOOGLE_CLIENT_SECRET,
+    redirect_uris: [
+        'http://localhost',
+        'https://placeholder-1.novel.systems',
+        'https://eu.placeholder-1platform.com',
+    ], // ["http://localhost","https://placeholder-1.novel.systems"], //[ global.gConfig.GOOGLE_REDIRECT]
 }
 const credentialsJ = {
-    installed: install
+    installed: install,
 }
 
 /**
@@ -25,7 +30,7 @@ const credentialsJ = {
  * @param {function} callback The callback to call with the authorized client.
  */
 function authorize(credentials, callback, callbackParameter = null) {
-    console.log("authorizing")
+    console.log('authorizing')
     const { client_secret, client_id, redirect_uris } = credentials.installed
     const oAuth2Client = new google.auth.OAuth2(
         client_id,
@@ -60,7 +65,6 @@ function authorize(credentials, callback, callbackParameter = null) {
 }
 
 const insertEvent = (auth, eventInfo) => {
-
     const calendar = google.calendar({ version: 'v3', auth })
     calendar.events.insert(
         {
@@ -72,7 +76,8 @@ const insertEvent = (auth, eventInfo) => {
         (err, res) => {
             if (err) {
                 console.log(
-                    `There was an error contacting the Calendar service: ${err}`, res
+                    `There was an error contacting the Calendar service: ${err}`,
+                    res,
                 )
                 // cancelMeeting(eventInfo.meetingId)
             } else {
@@ -105,7 +110,7 @@ const deleteEvent = (auth, eventId) => {
 const deleteGoogleEvent = eventId => {
     try {
         // Load client secrets from a local file.
-        /*fs.readFile(`${__dirname}/credentials.json`, (err, content) => {
+        /* fs.readFile(`${__dirname}/credentials.json`, (err, content) => {
             if (err) {
                 console.log('Error loading client secret file:', err)
                 return false
@@ -113,21 +118,26 @@ const deleteGoogleEvent = eventId => {
             // Authorize a client with credentials, then call the Google Calendar API.
             authorize(JSON.parse(content), deleteEvent, eventId)
             return true
-        })*/
+        }) */
 
-        authorize(JSON.parse(JSON.stringify(credentialsJ)), deleteEvent, eventId)
+        authorize(
+            JSON.parse(JSON.stringify(credentialsJ)),
+            deleteEvent,
+            eventId,
+        )
         return true
-
     } catch (err) {
         return false
     }
 }
 
 const createGoogleEvent = event => {
-    console.log("creating google event")
+    console.log('creating google event')
     try {
         const googleEvent = {
-            summary: event.title + " ||  " + event.desc || 'Placeholder-1: meeting with challenge partner',
+            summary:
+                `${event.title} ||  ${event.desc}` ||
+                'Placeholder-1: meeting with challenge partner',
             location: event.location || '',
             description: event.description || '',
             start: event.start,
@@ -138,7 +148,7 @@ const createGoogleEvent = event => {
                     conferenceSolutionKey: {
                         type: 'hangoutsMeet',
                     },
-                    requestId: uuidv4(),
+                    requestId: v4(),
                 },
             },
             reminders: {
@@ -155,7 +165,7 @@ const createGoogleEvent = event => {
         }
 
         // Load client secrets from a local file.
-        /*fs.readFile(`${__dirname}/credentials.json`, (err, content) => {
+        /* fs.readFile(`${__dirname}/credentials.json`, (err, content) => {
             if (err) {
                 console.log('Error loading client secret file:', err)
                 return false
@@ -164,13 +174,17 @@ const createGoogleEvent = event => {
             authorize(JSON.parse(content), insertEvent, eventInfo)
             return true
         
-        })*/
+        }) */
 
-        authorize(JSON.parse(JSON.stringify(credentialsJ)), insertEvent, eventInfo)
-        console.log("success")
+        authorize(
+            JSON.parse(JSON.stringify(credentialsJ)),
+            insertEvent,
+            eventInfo,
+        )
+        console.log('success')
         return true
     } catch (err) {
-        console.log("no meets for you")
+        console.log('no meets for you')
         return false
     }
 }

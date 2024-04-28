@@ -1,7 +1,7 @@
-import theme from 'placeholder-1Theme'
+import theme from 'PlaceholderTheme'
 import { makeStyles } from '@material-ui/core/styles'
 
-const placeholder-1Style = makeStyles({
+const placeholderStyle = makeStyles({
     socialIcon: {
         color: theme.palette.primary.main,
         width: 'auto',
@@ -62,4 +62,4 @@ const placeholder-1Style = makeStyles({
     },
 })
 
-export default placeholder - 1Style
+export default placeholderStyle

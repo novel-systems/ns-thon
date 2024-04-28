@@ -74,6 +74,7 @@
         "speakingurl": "^14.0.1",
         "tailwindcss": "^1.9.6",
         "webfontloader": "^1.6.28",
+        "jsonwebtoken": "^8.1.0",
         "yup": "^0.29.1"
     },
     "scripts": {

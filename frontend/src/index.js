@@ -15,7 +15,7 @@ import Notifier from './notifier'
 import configureStore, { history } from 'redux/configureStore'
 import config from 'constants/config'
 // import theme from './material-ui-theme'
-import theme from './placeholder-1Theme'
+import theme from './PlaceholderTheme'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'

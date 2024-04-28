@@ -5,7 +5,7 @@ import PageWrapper from 'components/layouts/PageWrapper'
 import GlobalNavBar from 'components/navbars/GlobalNavBar'
 import Footer from 'components/layouts/Footer'
 
-import placeholder-1Style from 'utils/styles'
+import placeholderStyle from 'utils/styles'
 import {
     AppBar,
     Card,
@@ -105,7 +105,7 @@ export default () => {
     }
 
     // const [events, loading] = useMyEvents()
-    const classes = placeholder - 1Style()
+    const classes = placeholderStyle()
     return (
         <PageWrapper
             // loading={loading}

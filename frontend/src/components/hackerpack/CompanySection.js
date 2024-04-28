@@ -5,7 +5,7 @@ import { Box, Typography, Grid } from '@material-ui/core'
 import Markdown from 'components/generic/Markdown'
 
 import Button from 'components/generic/Button'
-import defaultLogo from 'assets/logos/Placeholder-1Platform_Emblem_Black.svg'
+import defaultLogo from 'assets/logos/JunctionPlatform_Emblem_Black.svg'
 import { OutboundLink } from 'react-ga'
 
 const useStyles = makeStyles(theme => ({
@@ -44,12 +44,11 @@ export default ({ name, logo, partner, description, link, redeemable }) => {
                             />
                         ) : (
                             <img
-                                alt='default logo'
+                                alt="default logo"
                                 src={defaultLogo}
                                 className={classes.companyLogo}
                             />
-                        )
-                        }
+                        )}
                     </Box>
                 </Grid>
                 <Grid item xs={8}>
@@ -79,5 +78,3 @@ export default ({ name, logo, partner, description, link, redeemable }) => {
         </Box>
     )
 }
-
-

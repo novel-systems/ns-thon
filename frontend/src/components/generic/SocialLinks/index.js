@@ -3,10 +3,10 @@ import { IconButton, Typography } from '@material-ui/core'
 import { Email } from '@material-ui/icons'
 import React from 'react'
 import { popupCenter } from 'utils/misc'
-import placeholder-1Style from 'utils/styles'
+import placeholderStyle from 'utils/styles'
 
 export default ({ viewMode = '' }) => {
-    const classes = placeholder - 1Style()
+    const classes = placeholderStyle()
 
     const styling = {
         displayHeader: true,
