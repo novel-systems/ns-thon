@@ -4,7 +4,6 @@ const Shared = require('@novel-systems/shared')
 const AuthConstants = Shared.Auth
 const axios = require('axios')
 const _ = require('lodash')
-const request = require('request')
 
 /* Auth0 management api config */
 const auth0 = new ManagementClient({
@@ -30,13 +29,13 @@ function getAuthorizationToken() {
     }
 
     return new Promise((resolve, reject) => {
-        request(options, (error, response, body) => {
-            if (error) {
+        axios(options)
+            .then(response => {
+                resolve(response.data)
+            })
+            .catch(error => {
                 reject(error)
-            } else {
-                resolve(JSON.parse(body))
-            }
-        })
+            })
     })
 }
 
