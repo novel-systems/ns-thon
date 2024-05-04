@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Promise = require('bluebird')
-const { AchievementTypes } = require('@novel.systems/shared')
+const { AchievementTypes } = require('@novel-systems/shared')
 const Team = require('../team/model')
 const Project = require('../project/model')
 
@@ -37,7 +37,7 @@ AchievementSchema.index({
 
 AchievementSchema.set('timestamps', true)
 
-AchievementSchema.statics.clearTrackPlacementAchievements = async function(
+AchievementSchema.statics.clearTrackPlacementAchievements = async function (
     event
 ) {
     return Achievement.remove({
@@ -45,7 +45,7 @@ AchievementSchema.statics.clearTrackPlacementAchievements = async function(
         type: AchievementTypes.trackPlacement.id,
     })
 }
-AchievementSchema.statics.createTrackPlacementAchievements = async function(
+AchievementSchema.statics.createTrackPlacementAchievements = async function (
     event,
     projectId,
     track,
@@ -68,7 +68,7 @@ AchievementSchema.statics.createTrackPlacementAchievements = async function(
     })
 }
 
-AchievementSchema.statics.clearOverallPlacementAchievements = async function(
+AchievementSchema.statics.clearOverallPlacementAchievements = async function (
     event
 ) {
     return Achievement.remove({
@@ -76,7 +76,7 @@ AchievementSchema.statics.clearOverallPlacementAchievements = async function(
         type: AchievementTypes.overallPlacement.id,
     })
 }
-AchievementSchema.statics.createOverallPlacementAchievements = async function(
+AchievementSchema.statics.createOverallPlacementAchievements = async function (
     event,
     projectId,
     placement

@@ -6,7 +6,7 @@ import { Grid, CircularProgress } from '@material-ui/core'
 
 import GradientBox from 'components/generic/GradientBox'
 import { Typography } from '@material-ui/core'
-import { RegistrationStatuses, EventHelpers } from '@novel.systems/shared'
+import { RegistrationStatuses, EventHelpers } from '@novel-systems/shared'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 import * as UserSelectors from 'redux/user/selectors'

@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { ReviewingMethods } = require('@novel.systems/shared')
+const { ReviewingMethods } = require('@novel-systems/shared')
 const Event = require('./model')
 const { NotFoundError } = require('../../common/errors/errors')
 

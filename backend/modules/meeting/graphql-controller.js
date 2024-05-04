@@ -1,5 +1,5 @@
 
-const { Auth } = require('@novel.systems/shared')
+const { Auth } = require('@novel-systems/shared')
 const DataLoader = require('dataloader')
 const Meeting = require('./model')
 const PermissionUtils = require('../../utils/permissions')

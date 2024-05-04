@@ -3,7 +3,7 @@ import React from 'react'
 import moment from 'moment-timezone'
 import { useSelector } from 'react-redux'
 import { Grid, Typography, Box } from '@material-ui/core'
-import { RegistrationStatuses, EventHelpers } from '@novel.systems/shared'
+import { RegistrationStatuses, EventHelpers } from '@novel-systems/shared'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Roles, Misc } from '@novel.systems/shared'
+import { Roles, Misc } from '@novel-systems/shared'
 import { Box, Chip, Typography, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import GradientBox from 'components/generic/GradientBox'

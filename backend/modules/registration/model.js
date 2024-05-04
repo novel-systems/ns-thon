@@ -3,10 +3,10 @@ const _ = require('lodash')
 const {
     RegistrationStatuses,
     RegistrationTravelGrantStatuses,
-} = require('@novel.systems/shared')
-const AnswersSchema = require('@novel.systems/shared/schemas/Answers')
-const TravelGrantDetailsSchema = require('@novel.systems/shared/schemas/TravelGrantDetails')
-const ChecklistSchema = require('@novel.systems/shared/schemas/Checklist')
+} = require('@novel-systems/shared')
+const AnswersSchema = require('@novel-systems/shared/schemas/Answers')
+const TravelGrantDetailsSchema = require('@novel-systems/shared/schemas/TravelGrantDetails')
+const ChecklistSchema = require('@novel-systems/shared/schemas/Checklist')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
 const WebhookService = require('../../common/services/webhook')
 const EmailTaskController = require('../email-task/controller')

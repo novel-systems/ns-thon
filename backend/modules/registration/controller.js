@@ -9,7 +9,7 @@ const {
     RegistrationTravelGrantStatuses,
     EventTypes,
     TravelGrantDetailsValidationSchema,
-} = require('@novel.systems/shared')
+} = require('@novel-systems/shared')
 const yup = require('yup')
 const Registration = require('./model')
 const { NotFoundError, ForbiddenError } = require('../../common/errors/errors')
@@ -457,7 +457,7 @@ controller.rejectPendingTravelGrants = eventId => {
 controller.getFullRegistration = (eventId, registrationId) => {
     const query =
         mongoose.Types.ObjectId.isValid(registrationId) &&
-        registrationId.indexOf('|') === -1
+            registrationId.indexOf('|') === -1
             ? { _id: registrationId }
             : { user: registrationId }
     return Registration.findOne(query)

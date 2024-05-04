@@ -1,5 +1,5 @@
 {
-    "name": "@novel.systems/shared",
+    "name": "@novel-systems/shared",
     "version": "1.1.45",
     "description": "",
     "main": "index.js",
@@ -70,9 +70,5 @@
         "eslint-plugin-import": "^2.20.2",
         "eslint-plugin-prettier": "^3.1.3",
         "prettier": "^2.0.5"
-    },
-    "engines": {
-        "node": "12.3.1",
-        "npm": "6.9.0"
     }
 }

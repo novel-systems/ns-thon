@@ -1,4 +1,4 @@
-const { Auth } = require('@novel.systems/shared')
+const { Auth } = require('@novel-systems/shared')
 const { v4: uuid } = require('uuid')
 const PermissionUtils = require('../../utils/permissions')
 const { Message } = require('./model')
@@ -19,11 +19,11 @@ class MessageController {
         const query = {
             ...(recipients
                 ? {
-                      recipients: {
-                          $size: recipients.length,
-                          $all: recipients,
-                      },
-                  }
+                    recipients: {
+                        $size: recipients.length,
+                        $all: recipients,
+                    },
+                }
                 : { recipients: requesterId }),
             ...(read && { readAt: { $ne: null } }),
         }

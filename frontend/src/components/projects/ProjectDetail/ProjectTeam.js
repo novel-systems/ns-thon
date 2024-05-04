@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import ShowIfPermission from 'hocs/ShowIfPermission'
-import { Auth as AuthConstants } from '@novel.systems/shared'
+import { Auth as AuthConstants } from '@novel-systems/shared'
 import ExternalLink from 'components/generic/ExternalLink'
 import { useSelector } from 'react-redux'
 import * as AuthSelectors from 'redux/auth/selectors'
@@ -60,7 +60,7 @@ const ProjectTeam = React.memo(({ hiddenUsers, teamId, showFullTeam }) => {
                     data.filter(i => !hiddenUsers.includes(i.userId)),
                 )
             }
-        } catch (err) {}
+        } catch (err) { }
         setLoading(false)
     }, [hasRecruiterAccess, hiddenUsers, idToken, teamId])
 
@@ -82,9 +82,8 @@ const ProjectTeam = React.memo(({ hiddenUsers, teamId, showFullTeam }) => {
 
     const secondaryText = member => {
         if (!showFullTeam) return null
-        return `${member.email} // ${
-            member.phoneNumber ? member.phoneNumber.countryCode : ''
-        } ${member.phoneNumber ? member.phoneNumber.number : ''}`
+        return `${member.email} // ${member.phoneNumber ? member.phoneNumber.countryCode : ''
+            } ${member.phoneNumber ? member.phoneNumber.number : ''}`
     }
     return (
         <List>

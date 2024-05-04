@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Box, Typography, Checkbox } from '@material-ui/core'
-import { Misc } from '@novel.systems/shared'
+import { Misc } from '@novel-systems/shared'
 import FilterItem from './FilterItem'
 
 import * as RecruitmentSelectors from 'redux/recruitment/selectors'

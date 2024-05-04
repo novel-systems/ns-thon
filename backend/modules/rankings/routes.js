@@ -1,5 +1,5 @@
 const express = require('express')
-const { Auth } = require('@novel.systems/shared')
+const { Auth } = require('@novel-systems/shared')
 const asyncHandler = require('express-async-handler')
 
 const {

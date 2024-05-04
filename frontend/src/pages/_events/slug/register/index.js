@@ -18,7 +18,7 @@ import {
     Button,
     Grid,
 } from '@material-ui/core'
-import { RegistrationFields } from '@novel.systems/shared'
+import { RegistrationFields } from '@novel-systems/shared'
 import { push } from 'connected-react-router'
 import { useSelector } from 'react-redux'
 
@@ -46,7 +46,7 @@ import EventDetailContext from '../context'
 
 import { useTranslation } from 'react-i18next'
 import EventPageScriptIFrame from 'components/events/EventPageScriptIFrame'
-import { EventPageScripts } from '@novel.systems/shared'
+import { EventPageScripts } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FilterTypes, FilterValues } from '@novel.systems/shared'
+import { FilterTypes, FilterValues } from '@novel-systems/shared'
 
 import TextInput from 'components/inputs/TextInput'
 import Select from 'components/inputs/SelectOld'

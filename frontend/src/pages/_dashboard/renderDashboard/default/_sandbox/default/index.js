@@ -38,7 +38,7 @@ import { useMutation } from '@apollo/client'
 import ConfigureTab from './configure'
 import { UPDATE_EVENT } from 'graphql/mutations/eventOps'
 import { forOwn } from 'lodash-es'
-import yupSchema from '@novel.systems/shared/schemas/validation/eventSchema'
+import yupSchema from '@novel-systems/shared/schemas/validation/eventSchema'
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
@@ -51,7 +51,7 @@ import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
 import BottomBar from 'components/inputs/BottomBar'
 import Filter from 'components/Team/Filter'
 import ProjectDetail from 'components/projects/ProjectDetail'
-import { EventHelpers } from '@novel.systems/shared'
+import { EventHelpers } from '@novel-systems/shared'
 import moment from 'moment-timezone'
 import EvaluationForm from './EvaluationForm'
 

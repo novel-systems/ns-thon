@@ -25,7 +25,7 @@ import Button from 'components/generic/Button'
 import { makeStyles } from '@material-ui/core/styles'
 import { useFormField } from 'hooks/formHooks'
 import TextAreaInput from 'components/inputs/TextAreaInput'
-import { EventPageScripts } from '@novel.systems/shared'
+import { EventPageScripts } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({
     errorMessage: {
@@ -124,9 +124,9 @@ export default ({ value = [], fieldName, setFieldValue }) => {
                     primary={
                         <TextAreaInput
                             label={`Page script: ${EventPageScripts
-                                    .ALLOWED_PAGE_SCRIPT_LOCATIONS_DICTIONARY[
-                                    item.page
-                                ]?.label
+                                .ALLOWED_PAGE_SCRIPT_LOCATIONS_DICTIONARY[
+                                item.page
+                            ]?.label
                                 }`}
                             disabled={true}
                             value={item.script}

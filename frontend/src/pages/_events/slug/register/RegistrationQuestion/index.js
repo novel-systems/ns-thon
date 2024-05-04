@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box } from '@material-ui/core'
-import { RegistrationFields } from '@novel.systems/shared'
+import { RegistrationFields } from '@novel-systems/shared'
 import TextInput from 'components/inputs/TextInput'
 import TextAreaInput from 'components/inputs/TextAreaInput'
 import PhoneNumberInput from 'components/inputs/PhoneNumberInput'

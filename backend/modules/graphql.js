@@ -5,7 +5,7 @@ const { GraphQLSchema, printSchema } = require('graphql')
 const { Server: WebSocketServer } = require('ws')
 const { useServer } = require('graphql-ws/lib/use/ws')
 const { createServer } = require('http')
-// const { SharedSchema } = require('@novel.systems/shared/schemas')
+// const { SharedSchema } = require('@novel-systems/shared/schemas')
 /** Schemas */
 const Registration = require('./registration/graphql')
 const Event = require('./event/graphql')

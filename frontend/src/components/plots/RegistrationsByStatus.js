@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 import { Box, Typography } from '@material-ui/core'
 import { groupBy } from 'lodash-es'
 import {

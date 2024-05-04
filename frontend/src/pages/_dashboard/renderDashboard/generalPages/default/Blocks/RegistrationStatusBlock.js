@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 import moment from 'moment-timezone'
 import {
     Dialog,

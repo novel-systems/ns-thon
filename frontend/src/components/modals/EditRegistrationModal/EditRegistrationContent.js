@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { RegistrationFields } from '@novel.systems/shared'
+import { RegistrationFields } from '@novel-systems/shared'
 import { groupBy, sortBy, find } from 'lodash-es'
 import {
     ExpansionPanel,
@@ -90,8 +90,8 @@ export default React.memo(({ registration }) => {
                                             content={
                                                 customAnswers[section.name]
                                                     ? customAnswers[
-                                                          section.name
-                                                      ][question.name]
+                                                    section.name
+                                                    ][question.name]
                                                     : null
                                             }
                                         />

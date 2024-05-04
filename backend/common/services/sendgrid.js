@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail')
 const sgClient = require('@sendgrid/client')
-const { EventTypes } = require('@novel.systems/shared')
+const { EventTypes } = require('@novel-systems/shared')
 const _ = require('lodash')
 const moment = require('moment-timezone')
 const logger = require('../../misc/logger')

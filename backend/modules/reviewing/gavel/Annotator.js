@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const _ = require('lodash')
 const moment = require('moment-timezone')
-const { EventHelpers } = require('@novel.systems/shared')
+const { EventHelpers } = require('@novel-systems/shared')
 const Settings = require('./settings')
 const Maths = require('./maths')
 

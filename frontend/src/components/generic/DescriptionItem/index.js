@@ -9,7 +9,7 @@ import {
     ListItem,
     ListItemText,
 } from '@material-ui/core'
-import { Skills, Roles, Misc } from '@novel.systems/shared'
+import { Skills, Roles, Misc } from '@novel-systems/shared'
 import { Yes, No, NotAvailable } from 'components/generic/Tag/Variants'
 import moment from 'moment'
 

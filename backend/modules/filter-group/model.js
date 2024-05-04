@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { FilterTypes } = require('@novel.systems/shared')
+const { FilterTypes } = require('@novel-systems/shared')
 
 const FilterGroupSchema = new mongoose.Schema({
     label: {

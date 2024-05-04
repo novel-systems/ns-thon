@@ -13,7 +13,7 @@ import GradientBox from 'components/generic/GradientBox'
 import {
     RegistrationTravelGrantStatuses as Statuses,
     EventHelpers,
-} from '@novel.systems/shared'
+} from '@novel-systems/shared'
 
 export default () => {
     const event = useSelector(DashboardSelectors.event)
@@ -133,8 +133,8 @@ export default () => {
                             is the total sum of your eligible travel costs
                             according to the receipts you provided, up to the
                             amount of your travel grant allowance. Don't
-                            hesitate to reach out to us at
-                            finance@novel.systems if you have any questions!
+                            hesitate to reach out to us at finance@novel.systems
+                            if you have any questions!
                         </Typography>
                         <Typography variant="body1" paragraph>
                             In case we still need to clarify some of your

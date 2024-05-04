@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useContext } from 'react'
 import ReactDOM from 'react-dom'
-import { RegistrationFields } from '@novel.systems/shared'
+import { RegistrationFields } from '@novel-systems/shared'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Grid } from '@material-ui/core'
 import { Formik, FastField } from 'formik'

@@ -20,9 +20,6 @@
         "db-sync:prod-to-dev": "sh ./scripts/sync-production-to-dev.sh",
         "db-sync:prod-to-staging": "sh ./scripts/sync-production-to-staging.sh",
         "db-sync:dev-to-local": "sh ./scripts/sync-dev-to-local.sh",
-        "pre-commit:frontend": "cd frontend && npm run precommit",
-        "pre-commit:backend": "cd backend && npm run precommit",
-        "pre-commit:shared": "cd shared && npm run precommit",
         "auth0": "a0deploy import -c ./auth0/config.json -i ./auth0/tenant.yaml",
         "tailwind": "cd frontend && npm run build:tailwind"
     },
@@ -37,37 +34,11 @@
         "forever:prod": "cd backend && npm run prod",
         "build": "rm -rf ./backend/build && cd frontend && npm run build && cp -r ./build ../backend/build"
     },
-    "pre-commit": [
-        "pre-commit:frontend",
-        "pre-commit:backend",
-        "pre-commit:shared"
-    ],
     "author": "Juuso Lappalainen",
     "license": "ISC",
     "devDependencies": {
-        "npm-run-all": "^4.1.5",
-        "pre-commit": "^1.2.2"
-    },
-    "dependencies": {
-        "@fontsource/hanken-grotesk": "^5.0.3",
-        "@fontsource/inter": "^5.0.3",
-        "@google-cloud/local-auth": "^2.1.0",
         "auth0-deploy-cli": "^7.14.0",
-        "better-npm-run": "^0.1.1",
-        "forever": "^4.0.3",
-        "googleapis": "^105.0.0",
-        "graphql-redis-subscriptions": "^2.5.0",
-        "if-env": "^1.0.4",
-        "next-auth": "^4.22.1",
-        "pino": "^6.3.1",
-        "pino-pretty": "^4.0.0",
-        "react-helmet": "^6.1.0",
-        "react-pdf": "^4.1.0",
-        "yup": "^0.29.1"
-    },
-    "engines": {
-        "node": "12.3.1",
-        "npm": "6.9.0"
+        "better-npm-run": "^0.1.1"
     },
     "type": "module"
 }

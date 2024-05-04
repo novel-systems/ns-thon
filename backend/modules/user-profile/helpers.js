@@ -1,4 +1,4 @@
-const { RegistrationFields } = require('@novel.systems/shared')
+const { RegistrationFields } = require('@novel-systems/shared')
 const yup = require('yup')
 
 const UserProfileHelpers = {

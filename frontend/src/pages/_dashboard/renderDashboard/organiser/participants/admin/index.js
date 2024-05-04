@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { groupBy, filter } from 'lodash-es'
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 import { Grid, Paper, Typography } from '@material-ui/core'
 import StatusBadge from 'components/generic/StatusBadge'
 import Statistic from 'components/generic/Statistic'

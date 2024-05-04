@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 import Select from 'components/inputs/Select'
 
 const RegistrationStatusSelect = ({

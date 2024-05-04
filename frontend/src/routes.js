@@ -1,6 +1,6 @@
 import { lazy } from 'react'
 
-import { Auth as AuthConstants } from '@novel.systems/shared'
+import { Auth as AuthConstants } from '@novel-systems/shared'
 
 import DefaultPage from './pages/_index/index'
 import HomePage from './pages/_home/index'

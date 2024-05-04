@@ -4,7 +4,7 @@ import {
     ReviewingMethods,
     OverallReviewingMethods,
     EventTypes,
-} from '@novel.systems/shared'
+} from '@novel-systems/shared'
 import { Grid, Box } from '@material-ui/core'
 import { FastField, Field } from 'formik'
 

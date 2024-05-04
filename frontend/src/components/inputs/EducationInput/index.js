@@ -1,6 +1,6 @@
 import React, { useRef, useState, useMemo, useCallback } from 'react'
 
-import { Universities, Countries } from '@novel.systems/shared'
+import { Universities, Countries } from '@novel-systems/shared'
 import { Grid } from '@material-ui/core'
 
 import TextInput from 'components/inputs/TextInput'
@@ -67,11 +67,11 @@ const EducationInput = ({ value = {}, onChange, onBlur, autoFocus }) => {
     const universityOptions = useMemo(() => {
         const baseOptions = value.university
             ? [
-                  {
-                      label: value.university,
-                      value: value.university,
-                  },
-              ]
+                {
+                    label: value.university,
+                    value: value.university,
+                },
+            ]
             : []
         const countryOptions = Universities.getByAlpha2Code(
             Countries.alpha2CodeFromName(country),

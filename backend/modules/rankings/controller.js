@@ -4,7 +4,7 @@ const _ = require('lodash')
 const {
     ReviewingMethods,
     OverallReviewingMethods,
-} = require('@novel.systems/shared')
+} = require('@novel-systems/shared')
 const Rankings = require('./model')
 
 const WinnerVoteController = require('../winner-votes/controller')

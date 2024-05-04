@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import { useTranslation } from 'react-i18next'
-import { Skills } from '@novel.systems/shared'
+import { Skills } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({
     radios: {

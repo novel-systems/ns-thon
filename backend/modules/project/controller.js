@@ -2,7 +2,7 @@ const _ = require('lodash')
 const yup = require('yup')
 const bcrypt = require('bcrypt')
 const Promise = require('bluebird')
-const { ProjectSchema } = require('@novel.systems/shared')
+const { ProjectSchema } = require('@novel-systems/shared')
 const Project = require('./model')
 const { ForbiddenError } = require('../../common/errors/errors')
 const TeamController = require('../team/controller')
@@ -75,9 +75,8 @@ controller.generateChallengeLink = async (event, challengeSlug) => {
     const hashed = await bcrypt.hash(challengeSlug, global.gConfig.HASH_SALT)
     return {
         hash: hashed,
-        link: `${global.gConfig.FRONTEND_URL}/projects/${
-            event.slug
-        }/challenge/${encodeURIComponent(hashed)}`,
+        link: `${global.gConfig.FRONTEND_URL}/projects/${event.slug
+            }/challenge/${encodeURIComponent(hashed)}`,
     }
 }
 
@@ -86,9 +85,8 @@ controller.generateTrackLink = async (event, trackSlug) => {
     //    console.log('inhere track  :>> ')
     return {
         hash: hashed,
-        link: `${global.gConfig.FRONTEND_URL}/projects/${
-            event.slug
-        }/tracks/${encodeURIComponent(hashed)}`,
+        link: `${global.gConfig.FRONTEND_URL}/projects/${event.slug
+            }/tracks/${encodeURIComponent(hashed)}`,
     }
 }
 

@@ -6,7 +6,7 @@ import {
     FilterTypes,
     FilterValues,
     FilterHelpers,
-} from '@novel.systems/shared'
+} from '@novel-systems/shared'
 import { makeStyles } from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import {

@@ -1,4 +1,4 @@
-import theme from 'PlaceholderTheme'
+import theme from '../PlaceholderTheme'
 import { makeStyles } from '@material-ui/core/styles'
 
 const placeholderStyle = makeStyles({

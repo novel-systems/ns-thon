@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Box, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Formik, FastField, Field } from 'formik'
-import { RegistrationFields } from '@novel.systems/shared'
+import { RegistrationFields } from '@novel-systems/shared'
 import * as yup from 'yup'
 import config from 'constants/config'
 

@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 const mongooseSlugPlugin = require('mongoose-slug-plugin')
 
 const _ = require('lodash')
-const Shared = require('@novel.systems/shared')
-const CloudinaryImageSchema = require('@novel.systems/shared/schemas/CloudinaryImage')
+const Shared = require('@novel-systems/shared')
+const CloudinaryImageSchema = require('@novel-systems/shared/schemas/CloudinaryImage')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
 const AuthController = require('../auth/controller')
 

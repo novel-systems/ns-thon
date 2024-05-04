@@ -3,7 +3,7 @@ const yup = require('yup')
 const {
     RegistrationFields,
     RegistrationFieldsCustom,
-} = require('@novel.systems/shared')
+} = require('@novel-systems/shared')
 
 const RegistrationHelpers = {
     validateAnswers: (data, event) => {
@@ -89,7 +89,7 @@ const RegistrationHelpers = {
 
         const schema = yup.object().shape(validationSchema)
 
-        const data = schema.validate(d, { stripUknown: true }).catch(e => {})
+        const data = schema.validate(d, { stripUknown: true }).catch(e => { })
         return data
     },
     buildAggregation: (eventId, userId, qp) => {

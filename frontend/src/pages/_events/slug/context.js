@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useRouteMatch } from 'react-router'
 import { useSelector } from 'react-redux'
-import { EventStatuses } from '@novel.systems/shared'
+import { EventStatuses } from '@novel-systems/shared'
 
 import * as AuthSelectors from 'redux/auth/selectors'
 import RegistrationsService from 'services/registrations'

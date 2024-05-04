@@ -13,7 +13,7 @@ import {
     ListItemSecondaryAction,
     Divider,
 } from '@material-ui/core'
-import { Roles } from '@novel.systems/shared'
+import { Roles } from '@novel-systems/shared'
 import { find } from 'lodash-es'
 import { useDispatch } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'

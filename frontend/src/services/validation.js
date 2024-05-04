@@ -1,6 +1,6 @@
 import moment from 'moment'
 import { isEmpty } from 'lodash-es'
-import Shared from '@novel.systems/shared'
+import Shared from '@novel-systems/shared'
 
 export const None = () => value => {
     return

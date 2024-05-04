@@ -6,7 +6,7 @@ import PageWrapper from 'components/layouts/PageWrapper'
 import ProjectDetail from 'components/projects/ProjectDetail'
 import ShareProject from 'components/projects/ProjectDetail/ShareProject'
 import moment from 'moment-timezone'
-import { EventHelpers } from '@novel.systems/shared'
+import { EventHelpers } from '@novel-systems/shared'
 import ProjectsService from 'services/projects'
 import _ from 'lodash'
 

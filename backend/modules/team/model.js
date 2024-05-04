@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 const shortid = require('shortid')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
-const TeamRole = require('@novel.systems/shared/schemas/TeamRole')
-const Candidate = require('@novel.systems/shared/schemas/Candidate')
+const TeamRole = require('@novel-systems/shared/schemas/TeamRole')
+const Candidate = require('@novel-systems/shared/schemas/Candidate')
 
 const TeamSchema = new mongoose.Schema({
     event: {

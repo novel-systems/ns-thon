@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { reduce, difference } from 'lodash-es'
-import { Auth } from '@novel.systems/shared'
+import { Auth } from '@novel-systems/shared'
 import config from 'constants/config'
 
 const namespace = config.ID_TOKEN_NAMESPACE

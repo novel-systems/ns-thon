@@ -3,7 +3,7 @@ import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { CircularProgress, Typography, Grid } from '@material-ui/core'
 
-import { RegistrationStatuses, EventTypes } from '@novel.systems/shared'
+import { RegistrationStatuses, EventTypes } from '@novel-systems/shared'
 import GradientBox from 'components/generic/GradientBox'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'

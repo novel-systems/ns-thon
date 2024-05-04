@@ -19,7 +19,7 @@ import config from 'constants/config'
 import * as SnackbarActions from 'redux/snackbar/actions'
 import * as AuthActions from 'redux/auth/actions'
 import EmailService from 'services/email'
-import Shared from '@novel.systems/shared'
+import Shared from '@novel-systems/shared'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 

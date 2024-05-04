@@ -3,7 +3,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useRouteMatch } from 'react-router'
-import { EventStatuses } from '@novel.systems/shared'
+import { EventStatuses } from '@novel-systems/shared'
 import { Typography, Grid } from '@material-ui/core'
 
 import Button from 'components/generic/Button'

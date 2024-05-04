@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { useRouteMatch, useLocation } from 'react-router'
-import { OverallReviewingMethods } from '@novel.systems/shared'
+import { OverallReviewingMethods } from '@novel-systems/shared'
 
 import PageWrapper from 'components/layouts/PageWrapper'
 import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'

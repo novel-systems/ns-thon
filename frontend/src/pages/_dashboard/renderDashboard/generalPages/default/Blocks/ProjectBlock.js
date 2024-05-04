@@ -5,7 +5,7 @@ import Countdown from 'react-countdown-now'
 import { push } from 'connected-react-router'
 import { useSelector, useDispatch } from 'react-redux'
 import { Grid, Typography } from '@material-ui/core'
-import { RegistrationStatuses, EventHelpers } from '@novel.systems/shared'
+import { RegistrationStatuses, EventHelpers } from '@novel-systems/shared'
 
 import * as DashboardSelectors from 'redux/dashboard/selectors'
 

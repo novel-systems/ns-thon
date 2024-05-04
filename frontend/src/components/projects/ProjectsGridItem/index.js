@@ -15,7 +15,7 @@ import {
 import Image from 'components/generic/Image'
 import Button from 'components/generic/Button'
 import _ from 'lodash'
-import { EventHelpers } from '@novel.systems/shared'
+import { EventHelpers } from '@novel-systems/shared'
 import moment from 'moment-timezone'
 
 import ProjectReviewModal from 'components/modals/ProjectReviewModal'
@@ -156,10 +156,10 @@ const ProjectsGridItem = ({
                                     previewImage
                                         ? previewImage
                                         : event?.coverImage?.publicId
-                                        ? event?.coverImage.publicId
-                                        : event?.logo?.publicId
-                                        ? event?.logo.publicId
-                                        : false
+                                            ? event?.coverImage.publicId
+                                            : event?.logo?.publicId
+                                                ? event?.logo.publicId
+                                                : false
                                 }
                                 defaultImage={require('assets/images/default_cover_image.png')}
                             />
@@ -257,17 +257,15 @@ const ProjectsGridItem = ({
                                         return (
                                             <Tooltip
                                                 key={index}
-                                                title={`Reviewed by ${
-                                                    project?.scoreData
+                                                title={`Reviewed by ${project?.scoreData
                                                         ?.reviewers?.length - 1
-                                                } more ${
-                                                    project?.scoreData
+                                                    } more ${project?.scoreData
                                                         ?.reviewers?.length -
                                                         1 >
-                                                    1
+                                                        1
                                                         ? 'people'
                                                         : 'person'
-                                                }`}
+                                                    }`}
                                             >
                                                 <Avatar>
                                                     +
@@ -282,11 +280,10 @@ const ProjectsGridItem = ({
                                     return (
                                         <Tooltip
                                             key={index}
-                                            title={`Reviewed by ${
-                                                reviewer?.userFirstname
+                                            title={`Reviewed by ${reviewer?.userFirstname
                                                     ? reviewer.userFirstname
                                                     : 'judge'
-                                            }`}
+                                                }`}
                                         >
                                             {reviewer?.avatar ? (
                                                 <Avatar src={reviewer.avatar} />
@@ -294,8 +291,8 @@ const ProjectsGridItem = ({
                                                 <Avatar>
                                                     {reviewer?.userFirstname
                                                         ? reviewer?.userFirstname.charAt(
-                                                              0,
-                                                          )
+                                                            0,
+                                                        )
                                                         : 'R'}
                                                 </Avatar>
                                             )}

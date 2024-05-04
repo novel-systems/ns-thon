@@ -8,11 +8,10 @@
         "@fortawesome/free-brands-svg-icons": "^5.14.0",
         "@fortawesome/free-solid-svg-icons": "^5.14.0",
         "@fortawesome/react-fontawesome": "^0.1.11",
-        "@novel.systems/shared": "file:../shared",
+        "@novel-systems/shared": "file:../shared",
         "@material-ui/core": "^4.10.1",
         "@material-ui/icons": "^4.9.1",
         "@material-ui/lab": "^4.0.0-alpha.55",
-        "@mui/x-data-grid": "^4.0.2",
         "@react-pdf/renderer": "^2.0.0-beta.6",
         "@welldone-software/why-did-you-render": "^4.2.5",
         "antd": "^4.3.1",
@@ -84,7 +83,6 @@
         "eject": "node --expose-gc --max-old-space-size=8192 node_modules/react-scripts/scripts/eject.js",
         "lint": "eslint ./src",
         "lint-fix": "eslint ./src --fix",
-        "depcheck": "depcheck .",
         "eslint-check": "eslint --print-config path/to/main.js | eslint-config-prettier-check",
         "precommit": "echo \"Frontend: running pre-commit checks\" && npm run lint",
         "build:tailwind": "npx tailwindcss build src/styles/index.css -o src/styles/tailwind.css",
@@ -96,18 +94,12 @@
         "maintained node versions"
     ],
     "proxy": "http://localhost:2222",
-    "engines": {
-        "node": "12.3.1",
-        "npm": "6.9.0"
-    },
     "devDependencies": {
-        "depcheck": "^0.9.2",
         "eslint-config-prettier": "^8.3.0",
         "eslint-config-react-app": "^6.0.0",
         "eslint-plugin-import": "^2.23.4",
         "eslint-plugin-jsx-a11y": "^6.4.1",
         "eslint-plugin-prettier": "^3.4.0",
-        "postcss-cli": "^10.1.0",
         "prettier": "^2.3.2"
     }
 }

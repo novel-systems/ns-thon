@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, CircularProgress, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 
 import PageHeader from 'components/generic/PageHeader'
 import Button from 'components/generic/Button'
@@ -116,7 +116,7 @@ export default () => {
                     <Box display="flex" flexDirection="column">
                         <Box mr={1} mt={1}>
                             {registration.status ===
-                            RegistrationStatuses.asObject.checkedIn.id ? (
+                                RegistrationStatuses.asObject.checkedIn.id ? (
                                 <Typography color="primary">
                                     Already checked in
                                 </Typography>

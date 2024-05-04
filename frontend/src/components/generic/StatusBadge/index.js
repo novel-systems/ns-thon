@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { makeStyles, lighten } from '@material-ui/core/styles'
 import { Chip } from '@material-ui/core'
 
-import { RegistrationStatuses } from '@novel.systems/shared'
+import { RegistrationStatuses } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({
     root: ({ color }) => ({
