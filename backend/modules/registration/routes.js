@@ -17,7 +17,7 @@ const {
 
 const getUserRegistrations = asyncHandler(async (req, res) => {
     const registrations = await RegistrationController.getUserRegistrations(
-        req.user,
+        req.auth,
     )
     return res.status(200).json(registrations)
 })
@@ -25,7 +25,7 @@ const getUserRegistrations = asyncHandler(async (req, res) => {
 const getRegistration = asyncHandler(async (req, res) => {
     const event = await EventController.getPublicEventBySlug(req.params.slug)
     const registration = await RegistrationController.getRegistration(
-        req.user.sub,
+        req.auth.sub,
         event._id.toString(),
     )
     return res.status(200).json(registration)
@@ -34,7 +34,7 @@ const getRegistration = asyncHandler(async (req, res) => {
 const createRegistration = asyncHandler(async (req, res) => {
     console.log('creating registration from routes')
     const registration = await RegistrationController.createRegistration(
-        req.user,
+        req.auth,
         req.event,
         req.body,
     )
@@ -44,7 +44,7 @@ const createRegistration = asyncHandler(async (req, res) => {
 
 const updateRegistration = asyncHandler(async (req, res) => {
     const registration = await RegistrationController.updateRegistration(
-        req.user,
+        req.auth,
         req.event,
         req.body,
     )
@@ -52,7 +52,7 @@ const updateRegistration = asyncHandler(async (req, res) => {
     if (registration) {
         UserProfileController.updateUserProfile(
             registration.answers,
-            req.user.sub,
+            req.auth.sub,
         )
         return res.status(200).json(registration)
     }
@@ -61,7 +61,7 @@ const updateRegistration = asyncHandler(async (req, res) => {
 
 const finishRegistration = asyncHandler(async (req, res) => {
     const registration = await RegistrationController.finishRegistration(
-        req.user,
+        req.auth,
         req.event,
         req.body,
     )
@@ -69,7 +69,7 @@ const finishRegistration = asyncHandler(async (req, res) => {
     if (registration) {
         UserProfileController.updateUserProfile(
             registration.answers,
-            req.user.sub,
+            req.auth.sub,
         )
         return res.status(200).json(registration)
     }
@@ -78,7 +78,7 @@ const finishRegistration = asyncHandler(async (req, res) => {
 
 const confirmRegistration = asyncHandler(async (req, res) => {
     const registration = await RegistrationController.confirmRegistration(
-        req.user,
+        req.auth,
         req.event,
     )
     return res.status(200).json(registration)
@@ -86,7 +86,7 @@ const confirmRegistration = asyncHandler(async (req, res) => {
 
 const cancelRegistration = asyncHandler(async (req, res) => {
     const registration = await RegistrationController.cancelRegistration(
-        req.user,
+        req.auth,
         req.event,
     )
     return res.status(200).json(registration)
@@ -95,7 +95,7 @@ const cancelRegistration = asyncHandler(async (req, res) => {
 const setTravelGrantDetails = asyncHandler(async (req, res) => {
     const registration =
         await RegistrationController.setTravelGrantDetailsForRegistration(
-            req.user,
+            req.auth,
             req.event,
             req.body.data,
         )
@@ -138,7 +138,7 @@ const editRegistration = asyncHandler(async (req, res) => {
         req.params.registrationId,
         req.event,
         req.body,
-        req.user,
+        req.auth,
     )
     return res.status(200).json(registration)
 })
@@ -154,7 +154,7 @@ const selfAssignRegistrationsForEvent = asyncHandler(async (req, res) => {
     const registrations =
         await RegistrationController.selfAssignRegistrationsForEvent(
             req.event._id.toString(),
-            req.user.sub,
+            req.auth.sub,
         )
 
     return res.status(200).json(registrations)
@@ -180,7 +180,7 @@ const bulkEditRegistrations = asyncHandler(async (req, res) => {
         req.event._id.toString(),
         req.body.userIds,
         req.body.edits,
-        req.user,
+        req.auth,
     )
     return res.status(200).json([])
 })
@@ -216,7 +216,7 @@ const bulkRejectRegistrations = asyncHandler(async (req, res) => {
 
 const addPartnerToRegistrated = asyncHandler(async (req, res) => {
     console.log('addPartnerToRegistrated', req.body)
-    //TODO: should check if the user is registered already first
+    // TODO: should check if the user is registered already first
     try {
         const hasRegistration = await RegistrationController.getRegistration(
             req.body.userId,
@@ -227,13 +227,13 @@ const addPartnerToRegistrated = asyncHandler(async (req, res) => {
         console.log('hasRegistration', e)
         const registration =
             await RegistrationController.createPartnerRegistration(
-                req.body.userId, //switch to actual user
-                req.event, //slug
-                req.body.profile /*data: {
+                req.body.userId, // switch to actual user
+                req.event, // slug
+                req.body.profile /* data: {
                     firstName: 'seppo',
                     lastName: 'pykälä',
                     email: 'samu.rotko@gmail.com'
-                  }*/,
+                  } */,
             )
         return res.status(200).json(registration)
     }

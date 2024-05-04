@@ -55,14 +55,14 @@ const QueryType = new GraphQLObjectType({
 const Resolvers = {
     Query: {
         myProfile: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             return context.controller('UserProfile').getByUserId(userId)
         },
         userProfileById: async (parent, args, context) => {
             return context.controller('UserProfile').getByUserId(args.userId)
         },
         userProfiles: (parent, args, context) => {
-            if (context.req.user) {
+            if (context.req.auth) {
                 return context.controller('UserProfile').getAll()
             }
         },

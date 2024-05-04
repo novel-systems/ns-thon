@@ -60,7 +60,7 @@
 // const Resolvers = {
 //     Query: {
 //         myTeam: async (parent, args, context) => {
-//             const userId = context.req.user ? context.req.user.sub : null
+//             const userId = context.req.auth ? context.req.auth.sub : null
 //             const eventId = context.req.event ? context.req.event._id : null
 //             return context.controller('Team').getTeam(eventId, userId)
 //         },

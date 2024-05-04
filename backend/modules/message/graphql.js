@@ -9,13 +9,12 @@ const {
     GraphQLNonNull,
     GraphQLInputObjectType,
 } = require('graphql')
-const { GraphQLDate } = require('graphql-iso-date')
+const { GraphQLDate } = require('graphql-scalars')
 const Redis = require('ioredis')
-
 
 const pubsub = new RedisPubSub({
     publisher: new Redis(process.env.REDISCLOUD_URL),
-    subscriber: new Redis(process.env.REDISCLOUD_URL)
+    subscriber: new Redis(process.env.REDISCLOUD_URL),
 })
 const MessageInput = new GraphQLInputObjectType({
     name: 'MessageInput',
@@ -108,7 +107,7 @@ const SubscriptionType = new GraphQLObjectType({
 const Resolvers = {
     Query: {
         messages: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             return context.controller('Message').find(args, userId)
@@ -116,7 +115,7 @@ const Resolvers = {
     },
     Mutation: {
         sendMessage: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             pubsub.publish('MESSAGE_SENT', {
@@ -130,13 +129,13 @@ const Resolvers = {
             return context.controller('Message').send(args.message, userId)
         },
         readMessage: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             return context.controller('Message').read(args.id, userId)
         },
         readMany: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             return context.controller('Message').readMany(args.ids, userId)

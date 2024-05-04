@@ -22,7 +22,7 @@ function userHasPermission(user, permission) {
 const PermissionMiddleware = {
     hasRole: role => {
         return (req, res, next) => {
-            if (userHasRole(req.user, role)) {
+            if (userHasRole(req.auth, role)) {
                 next()
             } else {
                 next(new InsufficientPrivilegesError())
@@ -32,7 +32,7 @@ const PermissionMiddleware = {
     hasOneOfRoles: (roles = []) => {
         return (req, res, next) => {
             roles.forEach(role => {
-                if (userHasRole(req.user, role)) {
+                if (userHasRole(req.auth, role)) {
                     next()
                 }
             })
@@ -42,7 +42,7 @@ const PermissionMiddleware = {
     hasAllOfRoles: (roles = []) => {
         return (req, res, next) => {
             roles.forEach(role => {
-                if (!userHasRole(req.user, role)) {
+                if (!userHasRole(req.auth, role)) {
                     next(new InsufficientPrivilegesError())
                 }
             })
@@ -51,7 +51,7 @@ const PermissionMiddleware = {
     },
     hasPermission: permission => {
         return (req, res, next) => {
-            if (userHasPermission(req.user, permission)) {
+            if (userHasPermission(req.auth, permission)) {
                 next()
             } else {
                 next(new InsufficientPrivilegesError())
@@ -61,7 +61,7 @@ const PermissionMiddleware = {
     hasOneOfPermissions: (permissions = []) => {
         return (req, res, next) => {
             permissions.forEach(permission => {
-                if (userHasPermission(req.user, permission)) {
+                if (userHasPermission(req.auth, permission)) {
                     next()
                 }
             })
@@ -71,7 +71,7 @@ const PermissionMiddleware = {
     hasAllOfPermissions: (permissions = []) => {
         return (req, res, next) => {
             permissions.forEach(permission => {
-                if (!userHasPermission(req.user, permission)) {
+                if (!userHasPermission(req.auth, permission)) {
                     next(new InsufficientPrivilegesError())
                 }
             })

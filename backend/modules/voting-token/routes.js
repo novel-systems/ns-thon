@@ -29,7 +29,7 @@ router
             const token = await VotingTokenController.generateToken(
                 req.body.name,
                 req.event._id,
-                req.user.sub,
+                req.auth.sub,
             )
             return res.status(200).json(token)
         }),

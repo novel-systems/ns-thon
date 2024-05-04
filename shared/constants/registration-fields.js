@@ -1,8 +1,4 @@
-const {
-    GraphQLDate,
-    GraphQLTime,
-    GraphQLDateTime,
-} = require('graphql-iso-date')
+const { GraphQLDate } = require('graphql-scalars')
 
 const yup = require('yup')
 const _ = require('lodash')

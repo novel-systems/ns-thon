@@ -1,4 +1,6 @@
-const mongodb = require('mongodb')
+const {
+    Types: { ObjectId },
+} = require('mongoose')
 const mongoose = require('mongoose')
 const _ = require('lodash')
 
@@ -13,7 +15,7 @@ const MongoUtils = {
                     return MongoUtils.ensureObjectId(field)
                 })
             }
-        } else if (value.length === 24 && mongodb.ObjectID.isValid(value)) {
+        } else if (value.length === 24 && ObjectId.isValid(value)) {
             return mongoose.Types.ObjectId(value)
         }
         return value

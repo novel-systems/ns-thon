@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const jwkRsa = require('jwks-rsa')
-const ejwt = require('express-jwt')
+const { expressjwt } = require('express-jwt')
 const jwt = require('jsonwebtoken')
 
 const idTokenNamespace = global.gConfig.ID_TOKEN_NAMESPACE
@@ -13,7 +13,7 @@ const jwksClient = jwkRsa({
 })
 
 /* Verify JWT from client requests */
-const verifyToken = ejwt({
+const verifyToken = expressjwt({
     secret: jwkRsa.expressJwtSecret({
         cache: true,
         rateLimit: true,
@@ -40,9 +40,9 @@ const verifyToken = ejwt({
 
 /** Parse the namespaced fields in token */
 const parseToken = (req, res, next) => {
-    if (req.user) {
-        req.user = _.reduce(
-            req.user,
+    if (req.auth) {
+        req.auth = _.reduce(
+            req.auth,
             (obj, value, key) => {
                 if (key.indexOf(idTokenNamespace) !== -1) {
                     obj[key.replace(idTokenNamespace, '')] = value
@@ -70,7 +70,7 @@ const verifyWsToken = async token => {
     const header = JSON.parse(
         Buffer.from(headerBase64, 'base64').toString('utf-8'),
     )
-    const key = await jwksClient.getSigningKeyAsync(header.kid)
+    const key = await jwksClient.getSigningKey(header.kid)
     const publicKey = key.getPublicKey()
 
     const test = jwt.verify(token, publicKey)

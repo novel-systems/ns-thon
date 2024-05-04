@@ -82,7 +82,7 @@ router
         asyncHandler(async (req, res) => {
             const annotator = await GavelController.getAnnotator(
                 req.event,
-                req.user.sub,
+                req.auth.sub,
             )
             return res.status(200).json(annotator)
         }),
@@ -95,7 +95,7 @@ router
             try {
                 const annotator = await GavelController.initAnnotator(
                     req.event,
-                    req.user.sub,
+                    req.auth.sub,
                 )
                 return res.status(200).json(annotator)
             } catch (err) {
@@ -112,7 +112,7 @@ router
         hasRegisteredToEvent,
         asyncHandler(async (req, res) => {
             const annotator = await GavelAnnotator.findOne({
-                user: req.user.sub,
+                user: req.auth.sub,
                 event: req.event._id,
             })
 
@@ -129,7 +129,7 @@ router
         hasRegisteredToEvent,
         asyncHandler(async (req, res) => {
             const annotator = await GavelAnnotator.findOne({
-                user: req.user.sub,
+                user: req.auth.sub,
                 event: req.event._id,
             })
 
@@ -148,7 +148,7 @@ router
         asyncHandler(async (req, res) => {
             const annotator = await GavelController.submitVote(
                 req.event,
-                req.user.sub,
+                req.auth.sub,
                 req.params.winnerId,
             )
             return res.status(200).json(annotator)

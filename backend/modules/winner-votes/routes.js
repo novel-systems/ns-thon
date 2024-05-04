@@ -23,7 +23,7 @@ const getProjectsWithVotesForEvent = asyncHandler(async (req, res) => {
 const getVote = asyncHandler(async (req, res) => {
     const vote = await WinnerVote.findOne({
         event: req.event._id,
-        user: req.user.sub,
+        user: req.auth.sub,
     })
 
     return res.status(200).json(vote)
@@ -32,7 +32,7 @@ const getVote = asyncHandler(async (req, res) => {
 const submitVote = asyncHandler(async (req, res) => {
     const vote = await WinnerVote.findOne({
         event: req.event._id,
-        user: req.user.sub,
+        user: req.auth.sub,
     })
     if (vote) {
         vote.project = req.body.projectId
@@ -41,7 +41,7 @@ const submitVote = asyncHandler(async (req, res) => {
     }
     const newVote = new WinnerVote({
         event: req.event._id,
-        user: req.user.sub,
+        user: req.auth.sub,
         project: req.body.projectId,
     })
     const result = await newVote.save()
@@ -57,7 +57,7 @@ router
         // asyncHandler(async (req, res) => {
         //     const vote = await WinnerVote.findOne({
         //         event: req.event._id,
-        //         user: req.user.sub,
+        //         user: req.auth.sub,
         //     })
 
         //     return res.status(200).json(vote)
@@ -70,7 +70,7 @@ router
         // asyncHandler(async (req, res) => {
         //     const vote = await WinnerVote.findOne({
         //         event: req.event._id,
-        //         user: req.user.sub,
+        //         user: req.auth.sub,
         //     })
         //     if (vote) {
         //         vote.project = req.body.projectId
@@ -79,7 +79,7 @@ router
         //     }
         //     const newVote = new WinnerVote({
         //         event: req.event._id,
-        //         user: req.user.sub,
+        //         user: req.auth.sub,
         //         project: req.body.projectId,
         //     })
         //     const result = await newVote.save()

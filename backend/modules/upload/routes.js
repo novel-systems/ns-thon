@@ -1,7 +1,9 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const { GridFsStorage } = require('multer-gridfs-storage')
-const ObjectId = require('mongodb').ObjectId
+const {
+    Types: { ObjectId },
+} = require('mongoose')
 
 const router = express.Router()
 const { Auth } = require('@novel-systems/shared')
@@ -11,8 +13,8 @@ const { hasPermission } = require('../../common/middleware/permissions')
 const { hasToken } = require('../../common/middleware/token')
 const { ForbiddenError, NotFoundError } = require('../../common/errors/errors')
 
-const storage = require('../../misc/gridfs').storage
-const upload = require('../../misc/gridfs').upload
+const { storage } = require('../../misc/gridfs')
+const { upload } = require('../../misc/gridfs')
 
 // console.log(mongoose.connections[0].db)
 // let gfs = new mongoose.mongo.GridFSBucket(mongoose.connections[0].db, {
@@ -29,7 +31,7 @@ const {
  * Upload a new avatar for a user
  */
 router.post('/users/avatar', hasToken, (req, res, next) => {
-    helper.uploadUserAvatar(req.user.sub)(req, res, function (err) {
+    helper.uploadUserAvatar(req.auth.sub)(req, res, function (err) {
         if (err) {
             if (err.code === 'LIMIT_FILE_SIZE') {
                 next(new ForbiddenError(err.message))
@@ -105,7 +107,7 @@ router.post(
     hasToken,
     hasRegisteredToEvent,
     (req, res, next) => {
-        helper.uploadTravelGrantReceipt(req.event.slug, req.user.sub)(
+        helper.uploadTravelGrantReceipt(req.event.slug, req.auth.sub)(
             req,
             res,
             function (err) {
@@ -132,7 +134,7 @@ router.post(
     hasPermission(Auth.Permissions.MANAGE_EVENT),
     isEventOrganiser,
     (req, res, next) => {
-        helper.uploadEventCertificate(req.event.slug, req.user.sub)(
+        helper.uploadEventCertificate(req.event.slug, req.auth.sub)(
             req,
             res,
             function (err) {
@@ -297,8 +299,8 @@ router.post('/organization/:slug/icon', (req, res, next) => {
     })
 })
 
-//Upload, download and delete general files over 16mb
-//TODO: add hasToken for all calls. Left out for testing with postman
+// Upload, download and delete general files over 16mb
+// TODO: add hasToken for all calls. Left out for testing with postman
 router.post('/files', hasToken, upload.single('file'), (req, res, next) => {
     console.log('Routes: Upload > POST > /files > file data', req.file)
     // console.log('Res', res)
@@ -315,7 +317,7 @@ router.post('/files', hasToken, upload.single('file'), (req, res, next) => {
 
 router.get('/files/:id', hasToken, (req, res, next) => {
     console.log('Routes: Upload > GET > /files/:id > data', req)
-    var gfs = new mongoose.mongo.GridFSBucket(mongoose.connections[0].db, {
+    const gfs = new mongoose.mongo.GridFSBucket(mongoose.connections[0].db, {
         bucketName: 'uploads',
     })
 
@@ -331,17 +333,17 @@ router.get('/files/:id', hasToken, (req, res, next) => {
             gfs.openDownloadStream(ObjectId(req.params.id)).pipe(res)
         })
 })
-//TODO: make periodic delete function calling this
+// TODO: make periodic delete function calling this
 router.delete('/files/:id', hasToken, (req, res, next) => {
     console.log('Routes: Upload > DELETE > /files/:id > data', req)
 
-    var gfs = new mongoose.mongo.GridFSBucket(mongoose.connections[0].db, {
+    const gfs = new mongoose.mongo.GridFSBucket(mongoose.connections[0].db, {
         bucketName: 'uploads',
     })
     console.log(req.params.id)
     gfs.delete(ObjectId(req.params.id), (err, data) => {
         if (err) {
-            return res.status(404).json({ err: err })
+            return res.status(404).json({ err })
         }
 
         res.status(200).json({

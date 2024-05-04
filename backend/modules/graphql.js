@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server-express')
 const { ApolloServerPluginDrainHttpServer } = require('apollo-server-core')
-const { mergeSchemas, makeExecutableSchema } = require('graphql-tools')
+const { mergeSchemas, makeExecutableSchema } = require('@graphql-tools/schema')
 const { GraphQLSchema, printSchema } = require('graphql')
 const { Server: WebSocketServer } = require('ws')
 const { useServer } = require('graphql-ws/lib/use/ws')
@@ -84,7 +84,7 @@ module.exports = app => {
         context: ({ req, res }) => ({
             req,
             res,
-            userId: req.user ? req.user.sub : null,
+            userId: req.auth ? req.auth.sub : null,
             controller: buildGetController(),
         }),
         plugins: [
@@ -104,6 +104,9 @@ module.exports = app => {
         ],
     })
 
-    server.applyMiddleware({ app })
+    server.start().then(() => {
+        console.log('Apollo Server started')
+        server.applyMiddleware({ app })
+    })
     return httpServer
 }

@@ -5,7 +5,7 @@ const {
     GraphQLNonNull,
     GraphQLInputObjectType,
 } = require('graphql')
-const { GraphQLDate } = require('graphql-iso-date')
+const { GraphQLDate } = require('graphql-scalars')
 const mongoose = require('mongoose')
 
 const EventTimelineSchema = new mongoose.Schema({

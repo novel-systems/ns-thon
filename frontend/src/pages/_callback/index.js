@@ -32,6 +32,7 @@ export default () => {
                 if (err.response.status === 404) {
                     dispatch(push('/login/welcome'))
                 } else {
+                    console.error('Login error', err)
                     dispatch(push('/error', { error: 'Login failed' }))
                 }
             }

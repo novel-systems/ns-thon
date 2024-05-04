@@ -196,8 +196,8 @@ const EventMiddleware = {
     isEventOrganiser: async (req, res, next) => {
         // TODO this method is called quite often. Not really problem here, but a reminder to run a profiler on the frontend at some point
         const event = await getEventFromParams(req.params)
-        const superAdminError = isSuperAdmin(req.user)
-        const error = isOrganiser(req.user, event)
+        const superAdminError = isSuperAdmin(req.auth)
+        const error = isOrganiser(req.auth, event)
         if (error && superAdminError) {
             next(error)
         } else {
@@ -209,8 +209,8 @@ const EventMiddleware = {
         console.log('isEventPartner running')
         // TODO this method is called quite often. Not really problem here, but a reminder to run a profiler on the frontend at some point
         const event = await getEventFromParams(req.params)
-        const superAdminError = isSuperAdmin(req.user)
-        const error = isPartner(req.user, event)
+        const superAdminError = isSuperAdmin(req.auth)
+        const error = isPartner(req.auth, event)
         if (error && superAdminError) {
             next(error)
         } else {
@@ -220,8 +220,8 @@ const EventMiddleware = {
     },
     isEventOwner: async (req, res, next) => {
         const event = await getEventFromParams(req.params)
-        const superAdminError = isSuperAdmin(req.user)
-        const error = isOwner(req.user, event)
+        const superAdminError = isSuperAdmin(req.auth)
+        const error = isOwner(req.auth, event)
         if (error && superAdminError) {
             next(error)
         } else {
@@ -231,7 +231,7 @@ const EventMiddleware = {
     },
     canRegisterToEvent: async (req, res, next) => {
         const event = await getEventFromParams(req.params)
-        const error = canRegister(req.user, event)
+        const error = canRegister(req.auth, event)
         if (error) {
             next(error)
         } else {
@@ -241,7 +241,7 @@ const EventMiddleware = {
     },
     hasRegisteredToEvent: async (req, res, next) => {
         const event = await getEventFromParams(req.params)
-        const registration = await getRegistration(req.user, event)
+        const registration = await getRegistration(req.auth, event)
         const error = hasRegistered(event, registration)
         if (error) {
             next(error)
@@ -254,8 +254,8 @@ const EventMiddleware = {
     canSubmitProject: async (req, res, next) => {
         const event = await getEventFromParams(req.params)
         const [registration, team] = await Promise.all([
-            getRegistration(req.user, event),
-            getTeamWithMeta(req.user, event),
+            getRegistration(req.auth, event),
+            getTeamWithMeta(req.auth, event),
         ])
         const error = canSubmitProject(event, registration, team)
         if (error) {
@@ -270,13 +270,13 @@ const EventMiddleware = {
     isOrganiserOrCanSubmitProject: async (req, res, next) => {
         const event = await getEventFromParams(req.params)
         const [registration, team] = await Promise.all([
-            getRegistration(req.user, event),
-            getTeamWithMeta(req.user, event),
+            getRegistration(req.auth, event),
+            getTeamWithMeta(req.auth, event),
         ])
-        const superAdminError = isSuperAdmin(req.user)
-        const organiserError = isOrganiser(req.user, event)
+        const superAdminError = isSuperAdmin(req.auth)
+        const organiserError = isOrganiser(req.auth, event)
         const projectError = canSubmitProject(event, registration, team)
-        if ((organiserError && superAdminError) && projectError) {
+        if (organiserError && superAdminError && projectError) {
             next(error)
         } else {
             req.event = event

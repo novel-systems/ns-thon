@@ -10,7 +10,7 @@ const { hasToken } = require('../../common/middleware/token')
 const { hasPermission } = require('../../common/middleware/permissions')
 
 const getUserProfile = asyncHandler(async (req, res) => {
-    const userProfile = await UserProfileController.getUserProfile(req.user.sub)
+    const userProfile = await UserProfileController.getUserProfile(req.auth.sub)
     return res.status(200).json(userProfile)
 })
 
@@ -28,7 +28,6 @@ const getUserProfilesPublic = asyncHandler(async (req, res) => {
     )
     return res.status(200).json(userProfiles)
 })
-
 
 const getUserProfilesByTeamPublic = asyncHandler(async (req, res) => {
     const teamMembers = await TeamController.getTeamMembers(req.params.teamId)
@@ -50,7 +49,7 @@ const getUserProfilesByTeamId = asyncHandler(async (req, res) => {
 const createUserProfile = asyncHandler(async (req, res) => {
     const userProfile = await UserProfileController.createUserProfile(
         req.body,
-        req.user.sub,
+        req.auth.sub,
     )
     return res.status(201).json(userProfile)
 })
@@ -58,7 +57,7 @@ const createUserProfile = asyncHandler(async (req, res) => {
 const updateUserProfile = asyncHandler(async (req, res) => {
     const updatedUserProfile = await UserProfileController.updateUserProfile(
         req.body,
-        req.user.sub,
+        req.auth.sub,
     )
     return res.status(200).json(updatedUserProfile)
 })
@@ -72,7 +71,6 @@ const getRecruiters = asyncHandler(async (req, res) => {
     const users = await UserProfileController.getRecruiters()
     return res.status(200).json(users)
 })
-
 
 const updateRecruiter = asyncHandler(async (req, res) => {
     const user = await UserProfileController.updateRecruiter(
@@ -118,7 +116,6 @@ router.route('/:userId').get(hasToken, getUserPublicProfileById)
 
 router.route('/public/profiles').get(getUserProfilesPublic)
 
-
 router.route('/public/team/:teamId').get(getUserProfilesByTeamPublic)
 
 router.get(
@@ -129,7 +126,6 @@ router.get(
 )
 
 router.get('/search/:terms', hasToken, searchUsers)
-
 
 router
     .get(
@@ -150,7 +146,6 @@ router
         hasPermission(Auth.Permissions.MANAGE_EVENT),
         deleteRecruiter,
     )
-
 
 router
     .get(
@@ -179,6 +174,5 @@ router
         hasPermission(Auth.Permissions.MANAGE_RECRUITMENT),
         deleteRecruitersAdmin,
     )
-
 
 module.exports = router

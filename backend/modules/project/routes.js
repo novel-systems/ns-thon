@@ -1,4 +1,5 @@
 const express = require('express')
+
 const router = express.Router()
 const asyncHandler = require('express-async-handler')
 
@@ -46,7 +47,7 @@ router
         asyncHandler(async (req, res) => {
             const data = await ProjectController.getDataForPartnerReviewing(
                 req.event,
-                req.user,
+                req.auth,
             )
             return res.status(200).json(data)
         }),

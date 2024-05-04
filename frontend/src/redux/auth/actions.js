@@ -63,6 +63,7 @@ export const handleAuthentication = () => async dispatch => {
     console.log(Auth0Service.getAuth0())
     return Auth0Service.parseHash()
         .then(authResult => {
+            console.log('authResult', authResult)
             dispatch(setSession(authResult))
             return authResult.idToken
         })

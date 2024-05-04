@@ -9,7 +9,7 @@ const { UnauthorizedError } = require('../errors/errors')
 
 module.exports = {
     hasToken: (req, res, next) => {
-        if (!req.user) {
+        if (!req.auth) {
             throw new UnauthorizedError('Authentication required')
         } else {
             next()

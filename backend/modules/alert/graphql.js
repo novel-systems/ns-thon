@@ -8,19 +8,17 @@ const {
     GraphQLNonNull,
     GraphQLInputObjectType,
 } = require('graphql')
-const { GraphQLDate } = require('graphql-iso-date')
+const { GraphQLDate } = require('graphql-scalars')
+const Redis = require('ioredis')
 const RegistrationController = require('../registration/controller')
 const Event = require('../event/model')
-const Redis = require('ioredis')
-//const client = new Redis("rediss://default:JSVhlHFiXTnFo1Z1IVok05TOQqccA2qB@redis-11912.c226.eu-west-1-3.ec2.cloud.redislabs.com:11912");
-//console.log(client,"##")
-
+// const client = new Redis("rediss://default:JSVhlHFiXTnFo1Z1IVok05TOQqccA2qB@redis-11912.c226.eu-west-1-3.ec2.cloud.redislabs.com:11912");
+// console.log(client,"##")
 
 const pubsub = new RedisPubSub({
     publisher: new Redis(process.env.REDISCLOUD_URL),
-    subscriber: new Redis(process.env.REDISCLOUD_URL)
+    subscriber: new Redis(process.env.REDISCLOUD_URL),
 })
-
 
 const AlertInput = new GraphQLInputObjectType({
     name: 'AlertInput',
@@ -101,7 +99,7 @@ const SubscriptionType = new GraphQLObjectType({
 const Resolvers = {
     Query: {
         alerts: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             await RegistrationController.getRegistration(userId, args.eventId)
@@ -111,7 +109,7 @@ const Resolvers = {
     },
     Mutation: {
         sendAlert: async (parent, args, context) => {
-            const userId = context.req.user ? context.req.user.sub : null
+            const userId = context.req.auth ? context.req.auth.sub : null
             if (!userId) return null
 
             const event = await Event.findById(args.alert.eventId)
@@ -137,7 +135,7 @@ const Resolvers = {
                 () => {
                     return pubsub.asyncIterator('ALERT_SENT')
                 },
-                async ({newAlert}, { eventId, slug }, { user }) => {
+                async ({ newAlert }, { eventId, slug }, { user }) => {
                     // Check authentication from context
                     const userId = user ? user.sub : null
                     if (!userId) {

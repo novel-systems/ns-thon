@@ -44,7 +44,7 @@ const getPublicEventById = asyncHandler(async (req, res) => {
 })
 
 const createEvent = asyncHandler(async (req, res) => {
-    const event = await EventController.createEvent(req.body, req.user)
+    const event = await EventController.createEvent(req.body, req.auth)
     return res.status(201).json(event)
 })
 
@@ -59,7 +59,7 @@ const getEventAsOrganiser = asyncHandler(async (req, res) => {
 })
 
 const getEventsAsOrganiser = asyncHandler(async (req, res) => {
-    const events = await EventController.getEventsByOrganiser(req.user)
+    const events = await EventController.getEventsByOrganiser(req.auth)
     return res.status(200).json(events)
 })
 
@@ -68,17 +68,22 @@ const deleteEvent = asyncHandler(async (req, res) => {
     return res.status(200).json(deletedEvent)
 })
 
-
 const getRecruiters = asyncHandler(async (req, res) => {
     const event = await EventController.getEventBySlug(req.params.slug)
-    const recruiterIds = event.recruiters.map(recruiter => recruiter.recruiterId)
-    const userProfiles = await UserProfileController.getUserProfiles(recruiterIds)
+    const recruiterIds = event.recruiters.map(
+        recruiter => recruiter.recruiterId,
+    )
+    const userProfiles = await UserProfileController.getUserProfiles(
+        recruiterIds,
+    )
     return res.status(200).json(userProfiles)
 })
 
 const addRecruiter = asyncHandler(async (req, res) => {
     const eventData = await EventController.getEventBySlug(req.params.slug)
-    const authRole = await AuthController.grantRecruiterPermission(req.params.recruiterId)
+    const authRole = await AuthController.grantRecruiterPermission(
+        req.params.recruiterId,
+    )
 
     const event = await EventController.addRecruiter(
         eventData,
@@ -90,7 +95,7 @@ const addRecruiter = asyncHandler(async (req, res) => {
 
 const removeRecruiter = asyncHandler(async (req, res) => {
     const eventData = await EventController.getEventBySlug(req.params.slug)
-    await AuthController.revokeRecruiterPermission(req.params.recruiterId)//TODO: remove roles and permissions from app_metadata
+    await AuthController.revokeRecruiterPermission(req.params.recruiterId) // TODO: remove roles and permissions from app_metadata
     const event = await EventController.removeRecruiter(
         eventData,
         req.params.recruiterId,
@@ -338,11 +343,7 @@ router.get(
 /** Add or remove recruiters from event */
 router
     .route('/recruiters/:slug/:recruiterId')
-    .post(
-        hasToken,
-        hasPermission(Auth.Permissions.MANAGE_EVENT),
-        addRecruiter,
-    )
+    .post(hasToken, hasPermission(Auth.Permissions.MANAGE_EVENT), addRecruiter)
     .delete(
         hasToken,
         hasPermission(Auth.Permissions.MANAGE_EVENT),

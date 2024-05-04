@@ -8,7 +8,7 @@ const MeetingController = require('./meeting/graphql-controller')
 // const TeamController = require('./team/graphql-controller')
 
 function buildController(key, context) {
-    const user = context.req && context.req.user
+    const user = context.req && context.req.auth
     switch (key) {
         case 'UserProfile':
             return new UserProfileController(user)
