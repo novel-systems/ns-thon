@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const { FilterTypes } = require('@novel-systems/shared')
 
 const FilterGroupSchema = new mongoose.Schema({

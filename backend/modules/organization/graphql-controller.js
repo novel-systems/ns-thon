@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const { Auth } = require('@novel-systems/shared')
 const DataLoader = require('dataloader')
 const Organization = require('./model')

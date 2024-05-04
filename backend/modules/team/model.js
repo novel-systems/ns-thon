@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const shortid = require('shortid')
 const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
 const TeamRole = require('@novel-systems/shared/schemas/TeamRole')

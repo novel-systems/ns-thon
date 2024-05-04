@@ -1,5 +1,5 @@
 const express = require('express')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const { GridFsStorage } = require('multer-gridfs-storage')
 const {
     Types: { ObjectId },

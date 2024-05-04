@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const ScoreCriteriaSchema = require('@novel-systems/shared/schemas/ScoreCriteria')
 
 const STATUS_TYPES = ['submitted', 'evaluating', 'evaluated']

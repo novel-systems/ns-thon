@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const _ = require('lodash')
 const moment = require('moment-timezone')
 const { EventHelpers } = require('@novel-systems/shared')

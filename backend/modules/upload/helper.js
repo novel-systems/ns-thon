@@ -2,20 +2,20 @@ const cloudinary = require('cloudinary')
 const cloudinaryStorage = require('multer-storage-cloudinary')
 const multer = require('multer')
 
-const { AlreadyExistsError, NotFoundError } = require("../../common/errors/errors")
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
+const {
+    AlreadyExistsError,
+    NotFoundError,
+} = require('../../common/errors/errors')
 const File = require('../files/model')
-
-
 
 // initialize stream
 // let gfs = new mongoose.mongo.GridFSBucket(mongoose.connection, {
 //     bucketName: "uploads"
 // })
 
-const storage = require('../../misc/gridfs').storage
-const upload = require('../../misc/gridfs').upload
-
+const { storage } = require('../../misc/gridfs')
+const { upload } = require('../../misc/gridfs')
 
 cloudinary.config({
     cloud_name: global.gConfig.CLOUDINARY_CLOUD_NAME,
@@ -288,29 +288,23 @@ const UploadHelper = {
     },
 
     uploadOneFile: (caption, file) => {
-
-
         File.findOne({
-            caption: caption
-        })
-            .then((file) => {
-                console.log("file", file)
-                if (file) {
-                    return new AlreadyExistsError(
-                        `File ${file} already exist`
-                    )
-                }
+            caption,
+        }).then(file => {
+            console.log('file', file)
+            if (file) {
+                return new AlreadyExistsError(`File ${file} already exist`)
+            }
 
-                let newFile = new File({
-                    caption: caption,
-                    filename: file.filename,
-                    fileId: file.id,
-                })
-
-                newFile.save()
+            const newFile = new File({
+                caption,
+                filename: file.filename,
+                fileId: file.id,
             })
 
-    }
+            newFile.save()
+        })
+    },
 }
 
 module.exports = UploadHelper

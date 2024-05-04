@@ -1,6 +1,6 @@
 const { resolve } = require('bluebird')
 const { reject } = require('lodash')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Promise = require('bluebird')
 const multer = require('multer')
 const { GridFsStorage } = require('multer-gridfs-storage')

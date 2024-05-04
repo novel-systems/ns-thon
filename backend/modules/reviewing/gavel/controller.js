@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const moment = require('moment-timezone')
 const { EventHelpers } = require('@novel-systems/shared')
 const GavelAnnotator = require('./Annotator')

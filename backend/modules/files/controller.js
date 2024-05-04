@@ -1,5 +1,5 @@
 const { AlreadyExistsError, NotFoundError } = require("../../common/errors/errors")
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const File = require('./model')
 
 

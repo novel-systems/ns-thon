@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 const _ = require('lodash')
 const Promise = require('bluebird')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const {
     RegistrationStatuses,
     RegistrationFields,

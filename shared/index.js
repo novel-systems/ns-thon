@@ -31,4 +31,5 @@ module.exports = {
     Universities: require('./constants/universities'),
     Utils: require('./helpers/utils'),
     GradientList: require('./constants/gradient-list'),
+    mongoose: require('mongoose'),
 }

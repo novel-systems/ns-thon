@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 
 const EmailTaskSchema = new mongoose.Schema({
     params: {

@@ -34,7 +34,7 @@
  *  event model.
  */
 
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Promise = require('bluebird')
 const logger = require('../misc/logger')
 

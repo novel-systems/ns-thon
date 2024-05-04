@@ -1,6 +1,6 @@
 const express = require('express')
 const _ = require('lodash')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const { Auth, EventHelpers } = require('@novel-systems/shared')
 const asyncHandler = require('express-async-handler')
 const moment = require('moment-timezone')

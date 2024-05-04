@@ -1,7 +1,7 @@
 const {
     Types: { ObjectId },
 } = require('mongoose')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const _ = require('lodash')
 
 const MongoUtils = {

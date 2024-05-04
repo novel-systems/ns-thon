@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const _ = require('lodash')
 const { ReviewingMethods } = require('@novel-systems/shared')
 const CloudinaryImageSchema = require('@novel-systems/shared/schemas/CloudinaryImage')

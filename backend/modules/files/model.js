@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Schema = mongoose.Schema
 
 const FileSchema = new Schema({

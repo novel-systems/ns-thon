@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Promise = require('bluebird')
 const { AchievementTypes } = require('@novel-systems/shared')
 const Team = require('../team/model')

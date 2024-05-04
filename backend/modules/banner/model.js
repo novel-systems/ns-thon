@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const mongooseSlugPlugin = require('mongoose-slug-plugin')
 
 const _ = require('lodash')

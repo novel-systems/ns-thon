@@ -1,5 +1,5 @@
 const axios = require('axios')
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const logger = require('../../misc/logger')
 
 const WebhookService = {
@@ -15,7 +15,7 @@ const WebhookService = {
                     hook.enabled &&
                     hook.action === triggerAction &&
                     hook.resource === triggerResource,
-            ))
+                ))
 
             if (!webhooks || !webhooks.length) {
                 return
@@ -33,7 +33,7 @@ const WebhookService = {
                 }
             })
         } catch (e) {
-            console.error(e);
+            console.error(e)
             logger.error(
                 `Error triggering webhooks for ${triggerResource}-${triggerAction}-${eventId}: `,
                 e.message,

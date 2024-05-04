@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Promise = require('bluebird')
 const { checklistItemsPhysical } = require('../modules/registration/checklists')
 const { checklistItemsOnline } = require('../modules/registration/checklists')

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const { mongoose } = require('@novel-systems/shared')
 const Promise = require('bluebird')
 
 // const GavelController = require('../modules/reviewing/gavel/controller')
