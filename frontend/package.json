@@ -72,7 +72,7 @@
         "redux-thunk": "^2.3.0",
         "rehype-raw": "^7.0.0",
         "remark-breaks": "^4.0.0",
-        "reselect": "^4.0.0",
+        "reselect": "^5.1.0",
         "speakingurl": "^14.0.1",
         "webfontloader": "^1.6.28",
         "yup": "^0.29.1"
