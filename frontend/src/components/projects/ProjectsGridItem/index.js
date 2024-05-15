@@ -12,13 +12,14 @@ import {
     Typography,
 } from '@material-ui/core'
 
-import Image from 'components/generic/Image'
-import Button from 'components/generic/Button'
+import Image from '@/components/generic/Image'
+import Button from '@/components/generic/Button'
 import _ from 'lodash'
 import { EventHelpers } from '@novel-systems/shared'
 import moment from 'moment-timezone'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
-import ProjectReviewModal from 'components/modals/ProjectReviewModal'
+import ProjectReviewModal from '@/components/modals/ProjectReviewModal'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -161,7 +162,7 @@ const ProjectsGridItem = ({
                                                 ? event?.logo.publicId
                                                 : false
                                 }
-                                defaultImage={require('assets/images/default_cover_image.png')}
+                                defaultImage={CoverImage}
                             />
                         </div>
                         <div className="tw-flex tw-flex-col tw-gap-2 tw-p-4 tw-z-10">
@@ -258,7 +259,7 @@ const ProjectsGridItem = ({
                                             <Tooltip
                                                 key={index}
                                                 title={`Reviewed by ${project?.scoreData
-                                                        ?.reviewers?.length - 1
+                                                    ?.reviewers?.length - 1
                                                     } more ${project?.scoreData
                                                         ?.reviewers?.length -
                                                         1 >
@@ -281,8 +282,8 @@ const ProjectsGridItem = ({
                                         <Tooltip
                                             key={index}
                                             title={`Reviewed by ${reviewer?.userFirstname
-                                                    ? reviewer.userFirstname
-                                                    : 'judge'
+                                                ? reviewer.userFirstname
+                                                : 'judge'
                                                 }`}
                                         >
                                             {reviewer?.avatar ? (

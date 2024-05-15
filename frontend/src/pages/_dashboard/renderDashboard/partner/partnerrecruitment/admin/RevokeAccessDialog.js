@@ -12,13 +12,13 @@ import {
 
 import { useSelector, useDispatch } from 'react-redux'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { useTranslation } from 'react-i18next'
 
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
 
 export default ({ userId, onClose }) => {
     const { t } = useTranslation()

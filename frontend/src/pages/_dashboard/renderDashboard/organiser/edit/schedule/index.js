@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Grid } from '@material-ui/core'
 import { FastField, Field } from 'formik'
-import Select from 'components/inputs/Select'
-import FormControl from 'components/inputs/FormControl'
-import DateTimeInput from 'components/inputs/DateTimeInput'
+import Select from '@/components/inputs/Select'
+import FormControl from '@/components/inputs/FormControl'
+import DateTimeInput from '@/components/inputs/DateTimeInput'
 
 export default () => {
     return (

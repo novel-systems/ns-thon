@@ -17,8 +17,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import EditIcon from '@material-ui/icons/Edit'
 import SaveIcon from '@material-ui/icons/Save'
 import CloseIcon from '@material-ui/icons/Close'
-import Button from 'components/generic/Button'
-import DateTimeInput from 'components/inputs/DateTimeInput'
+import Button from '@/components/generic/Button'
+import DateTimeInput from '@/components/inputs/DateTimeInput'
 
 export default ({ value, onChange }) => {
     const [reserved, setReserved] = useState(false)

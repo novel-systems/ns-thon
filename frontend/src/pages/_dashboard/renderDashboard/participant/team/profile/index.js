@@ -1,11 +1,11 @@
-import NoTeam from 'components/Team/NoTeam'
-import TeamProfile from 'components/Team/TeamProfile'
+import NoTeam from '@/components/Team/NoTeam'
+import TeamProfile from '@/components/Team/TeamProfile'
 import React, { useMemo, useState, useEffect, useCallback } from 'react'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 import { useDispatch, useSelector } from 'react-redux'
-import TeamCreateEditForm from 'components/Team/TeamCreateEditForm'
+import TeamCreateEditForm from '@/components/Team/TeamCreateEditForm'
 
 export default () => {
     const dispatch = useDispatch()
@@ -158,16 +158,16 @@ export default () => {
                 ))}
             {((!hasTeam && status === 'create') ||
                 (hasTeam && status === 'edit')) && (
-                <div className="tw-mb-16">
-                    <TeamCreateEditForm
-                        initialData={teamData}
-                        formikSubmitAction={formikSubmitAction}
-                        onBack={() => setStatus('')}
-                        challengeOptions={challengeOptions}
-                        key={`${status}-team`}
-                    />
-                </div>
-            )}
+                    <div className="tw-mb-16">
+                        <TeamCreateEditForm
+                            initialData={teamData}
+                            formikSubmitAction={formikSubmitAction}
+                            onBack={() => setStatus('')}
+                            challengeOptions={challengeOptions}
+                            key={`${status}-team`}
+                        />
+                    </div>
+                )}
         </>
     )
 }

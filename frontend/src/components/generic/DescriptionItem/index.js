@@ -10,7 +10,7 @@ import {
     ListItemText,
 } from '@material-ui/core'
 import { Skills, Roles, Misc } from '@novel-systems/shared'
-import { Yes, No, NotAvailable } from 'components/generic/Tag/Variants'
+import { Yes, No, NotAvailable } from '@/components/generic/Tag/Variants'
 import moment from 'moment'
 
 const useStyles = makeStyles(theme => ({

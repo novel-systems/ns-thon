@@ -2,10 +2,10 @@ import React from 'react'
 import { useRouteMatch, useLocation } from 'react-router'
 import CandidatesPage from './candidates'
 import ProfilePage from './profile'
-import Container from 'components/generic/Container'
+import Container from '@/components/generic/Container'
 import TeamsPage from './teams'
-import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
-import PageHeader from 'components/generic/PageHeader'
+import MaterialTabsLayout from '@/components/layouts/MaterialTabsLayout'
+import PageHeader from '@/components/generic/PageHeader'
 
 export default () => {
     const match = useRouteMatch()

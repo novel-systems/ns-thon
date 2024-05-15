@@ -7,8 +7,9 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import { Button, Typography } from '@material-ui/core'
-import Image from 'components/generic/Image'
-import Container from 'components/generic/Container'
+import Image from '@/components/generic/Image'
+import Container from '@/components/generic/Container'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -100,7 +101,7 @@ export default ({
                         <Image
                             className={classes.image}
                             publicId={event?.coverImage?.publicId}
-                            defaultImage={require('assets/images/default_cover_image.png')}
+                            defaultImage={CoverImage}
                             transformation={{
                                 width: 1920,
                                 height: 1080,

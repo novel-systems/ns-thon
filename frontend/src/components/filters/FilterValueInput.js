@@ -1,8 +1,8 @@
 import React from 'react'
 import { FilterTypes, FilterValues } from '@novel-systems/shared'
 
-import TextInput from 'components/inputs/TextInput'
-import Select from 'components/inputs/SelectOld'
+import TextInput from '@/components/inputs/TextInput'
+import Select from '@/components/inputs/SelectOld'
 
 const MULTI_TYPES = [
     FilterTypes.filterTypes.ONE_OF.id,

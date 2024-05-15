@@ -19,11 +19,11 @@ import {
     PersonAdd
 } from '@material-ui/icons'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import Button from 'components/generic/Button'
-import TextInput from 'components/inputs/TextInput'
-import UserProfilesService from 'services/userProfiles'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import Button from '@/components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import UserProfilesService from '@/services/userProfiles'
 
 export default ({ isOpen, onClose, onAdded, organisers, slug }) => {
     const dispatch = useDispatch()

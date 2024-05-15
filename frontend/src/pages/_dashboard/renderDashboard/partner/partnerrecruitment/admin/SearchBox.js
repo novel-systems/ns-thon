@@ -9,12 +9,12 @@ import {
     ListItemText,
     ListItemSecondaryAction,
 } from '@material-ui/core'
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
 import { useTranslation } from 'react-i18next'
 
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
 
 export default ({ onGrant, onRevoke }) => {
     const dispatch = useDispatch()
@@ -59,7 +59,7 @@ export default ({ onGrant, onRevoke }) => {
                         />
                         <ListItemSecondaryAction>
                             {user.recruiterEvents &&
-                            user.recruiterEvents.length > 0 ? (
+                                user.recruiterEvents.length > 0 ? (
                                 <Button
                                     color="secondary"
                                     onClick={() => onRevoke(user.userId)}

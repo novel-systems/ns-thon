@@ -10,9 +10,9 @@ import TableRow from '@material-ui/core/TableRow'
 import Paper from '@material-ui/core/Paper'
 import Chip from '@material-ui/core/Chip'
 
-import RankingsService from 'services/rankings'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
+import RankingsService from '@/services/rankings'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 export default () => {
     const idToken = useSelector(AuthSelectors.getIdToken)

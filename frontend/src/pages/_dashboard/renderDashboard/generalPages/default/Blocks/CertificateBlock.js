@@ -4,17 +4,17 @@ import { useSelector } from 'react-redux'
 import moment from 'moment-timezone'
 import { Grid, CircularProgress } from '@material-ui/core'
 
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 import { Typography } from '@material-ui/core'
 import { RegistrationStatuses, EventHelpers } from '@novel-systems/shared'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as UserSelectors from 'redux/user/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
 
-import Button from 'components/generic/Button'
-//import ParticipationCertificate from 'components/pdfs/ParticipationCertificate'
-import modifyPdf from 'utils/modifyPdf'
-import config from 'constants/config'
+import Button from '@/components/generic/Button'
+//import ParticipationCertificate from '@/components/pdfs/ParticipationCertificate'
+import modifyPdf from '@/utils/modifyPdf'
+import config from '@/constants/config'
 
 export default () => {
     const event = useSelector(DashboardSelectors.event)

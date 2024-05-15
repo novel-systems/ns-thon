@@ -1,13 +1,13 @@
 import React from 'react'
 import { Formik, Form, Field } from 'formik'
 import { Box, Typography } from '@material-ui/core'
-import RadioScore from 'components/generic/RadioScore'
-import TextAreaInput from 'components/inputs/TextAreaInput'
-import FormControl from 'components/inputs/FormControl'
-import BottomBar from 'components/inputs/BottomBar'
+import RadioScore from '@/components/generic/RadioScore'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
+import FormControl from '@/components/inputs/FormControl'
+import BottomBar from '@/components/inputs/BottomBar'
 import _ from 'lodash'
 
-const EvaluationForm = ({ submit = () => {}, score, scoreCriteria }) => {
+const EvaluationForm = ({ submit = () => { }, score, scoreCriteria }) => {
     const allScoresSet = evalScores => {
         const scoreList = evalScores.map(value => {
             return value?.score ? value.score : null
@@ -89,10 +89,10 @@ const EvaluationForm = ({ submit = () => {}, score, scoreCriteria }) => {
                                                                             index
                                                                         ]
                                                                             ? field
-                                                                                  .value[
-                                                                                  index
-                                                                              ]
-                                                                                  .score
+                                                                                .value[
+                                                                                index
+                                                                            ]
+                                                                                .score
                                                                             : null
                                                                     }
                                                                     onSelectionChange={score => {
@@ -103,16 +103,16 @@ const EvaluationForm = ({ submit = () => {}, score, scoreCriteria }) => {
                                                                             field.value
                                                                         if (
                                                                             !updatedField[
-                                                                                index
+                                                                            index
                                                                             ]
                                                                         ) {
                                                                             updatedField[
                                                                                 index
                                                                             ] =
-                                                                                {
-                                                                                    criteria,
-                                                                                    label,
-                                                                                }
+                                                                            {
+                                                                                criteria,
+                                                                                label,
+                                                                            }
                                                                         }
                                                                         updatedField[
                                                                             index

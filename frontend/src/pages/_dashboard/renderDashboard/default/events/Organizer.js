@@ -6,17 +6,17 @@ import { useTranslation } from 'react-i18next'
 import { Box, Grid, makeStyles } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
 
-import PageHeader from 'components/generic/PageHeader'
-import NewEventCard from 'components/events/NewEventCard'
-import Button from 'components/generic/Button'
+import PageHeader from '@/components/generic/PageHeader'
+import NewEventCard from '@/components/events/NewEventCard'
+import Button from '@/components/generic/Button'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserSelectors from 'redux/user/selectors'
-import * as UserActions from 'redux/user/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as UserActions from '@/redux/user/actions'
 
 import CreateEventCard from './CreateEventCard'
 import TextInput from '../../../../../components/inputs/TextInput'
-import { debugGroup } from 'utils/debuggingTools'
+import { debugGroup } from '@/utils/debuggingTools'
 
 //TODO: make this to use theme colors and make prettier
 const useStyles = makeStyles({

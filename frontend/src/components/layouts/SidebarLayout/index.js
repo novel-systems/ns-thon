@@ -5,7 +5,7 @@ import { findIndex } from 'lodash-es'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { push } from 'connected-react-router'
 
-import Container from 'components/generic/Container/index'
+import Container from '@/components/generic/Container/index'
 import MenuIcon from '@material-ui/icons/Menu'
 import LockIcon from '@material-ui/icons/Lock'
 import StorageIcon from '@material-ui/icons/Storage'
@@ -22,12 +22,12 @@ import {
     Box,
 } from '@material-ui/core'
 
-import PlatformLogo from 'assets/logos/JO_wordmark_white.png'
-import IconButton from 'components/generic/IconButton'
-import EventsPage from 'pages/_dashboard/renderDashboard/default/events'
-import ProfilePage from 'pages/_account/profile' //TODO: fix the profile view
+import PlatformLogo from '@/assets/logos/JO_wordmark_white.png'
+import IconButton from '@/components/generic/IconButton'
+import EventsPage from '@/pages/_dashboard/renderDashboard/default/events'
+import ProfilePage from '@/pages/_account/profile' //TODO: fix the profile view
 
-import config from 'constants/config'
+import config from '@/constants/config'
 
 const SIDEBAR_WIDTH = 300
 

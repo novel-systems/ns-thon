@@ -12,20 +12,20 @@ import {
     DialogActions,
 } from '@material-ui/core'
 import Rating from '@material-ui/lab/Rating'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import OrganiserSelectModal from 'components/modals/OrganiserSelectModal'
-import OrganiserListItem from 'components/generic/UserListItem/OrganiserListItem'
-import EventTagsSelect from 'components/inputs/EventTagsSelect'
-import RegistrationStatusSelect from 'components/inputs/RegistrationStatusSelect'
-import ConfirmDialog from 'components/generic/ConfirmDialog'
-import Button from 'components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import OrganiserSelectModal from '@/components/modals/OrganiserSelectModal'
+import OrganiserListItem from '@/components/generic/UserListItem/OrganiserListItem'
+import EventTagsSelect from '@/components/inputs/EventTagsSelect'
+import RegistrationStatusSelect from '@/components/inputs/RegistrationStatusSelect'
+import ConfirmDialog from '@/components/generic/ConfirmDialog'
+import Button from '@/components/generic/Button'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import { useFormField } from 'hooks/formHooks'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import { useFormField } from '@/hooks/formHooks'
 import { useTranslation } from 'react-i18next'
 export default ({ visible, userIds = [], onClose }) => {
     const { t } = useTranslation()
@@ -147,7 +147,7 @@ export default ({ visible, userIds = [], onClose }) => {
                                         >
                                             {rating.value
                                                 ? 'Set rating to ' +
-                                                  rating.value
+                                                rating.value
                                                 : 'Clear rating'}
                                         </Typography>
                                     ) : (
@@ -250,7 +250,7 @@ export default ({ visible, userIds = [], onClose }) => {
                                         >
                                             {tags.value && tags.value.length
                                                 ? 'Set tags to ' +
-                                                  tags.value.join(', ')
+                                                tags.value.join(', ')
                                                 : 'Clear tags'}
                                         </Typography>
                                     ) : (

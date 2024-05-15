@@ -6,8 +6,8 @@ import { useRouteMatch } from 'react-router'
 import { EventStatuses } from '@novel-systems/shared'
 import { Typography, Grid } from '@material-ui/core'
 
-import Button from 'components/generic/Button'
-import * as AuthSelectors from 'redux/auth/selectors'
+import Button from '@/components/generic/Button'
+import * as AuthSelectors from '@/redux/auth/selectors'
 import { useTranslation } from 'react-i18next'
 
 export default ({ event, registration }) => {

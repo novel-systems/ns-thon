@@ -3,9 +3,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { useSelector } from 'react-redux'
 
-import UserMenu from 'components/UserMenu'
+import UserMenu from '@/components/UserMenu'
 
-import * as UserSelectors from 'redux/user/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

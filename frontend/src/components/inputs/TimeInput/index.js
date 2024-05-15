@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 
 import { Grid } from '@material-ui/core'
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 
 const HOURS = Array.apply(null, Array(24)).map((value, index) => {
     if (index < 10) {

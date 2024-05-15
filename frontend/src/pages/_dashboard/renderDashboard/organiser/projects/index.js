@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useRouteMatch, useLocation } from 'react-router'
 import { OverallReviewingMethods } from '@novel-systems/shared'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
-import PageHeader from 'components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import MaterialTabsLayout from '@/components/layouts/MaterialTabsLayout'
+import PageHeader from '@/components/generic/PageHeader'
 
 import DefaultTab from './default'
 import ChallengesTab from './by-challenge'
@@ -16,8 +16,8 @@ import TracksTab from './by-track'
 import WinnersTab from './winners'
 import FinalistSelectionTab from './finalist-selection'
 import VotingTokensTab from './votingTokens'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
 
 export default () => {
     const dispatch = useDispatch()

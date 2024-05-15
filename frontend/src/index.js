@@ -1,9 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import './i18n'
-import './styles/tailwind.css'
+import './styles/index.css'
 import { CssBaseline } from '@material-ui/core'
 import { StylesProvider, ThemeProvider } from '@material-ui/styles'
 import { Provider } from 'react-redux'
@@ -12,8 +12,8 @@ import { CloudinaryContext } from 'cloudinary-react'
 import { SnackbarProvider } from 'notistack'
 import WebFont from 'webfontloader'
 import Notifier from './notifier'
-import configureStore, { history } from 'redux/configureStore'
-import config from 'constants/config'
+import configureStore, { history } from '@/redux/configureStore'
+import config from '@/constants/config'
 // import theme from './material-ui-theme'
 import theme from './PlaceholderTheme'
 
@@ -33,11 +33,6 @@ if (!config.IS_DEBUG) {
     console.warn = noop
 }
 
-if (process.env.NODE_ENV === 'development') {
-    const whyDidYouRender = require('@welldone-software/why-did-you-render')
-    whyDidYouRender(React)
-}
-
 WebFont.load({
     google: {
         families: [
@@ -48,7 +43,10 @@ WebFont.load({
     },
 })
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container)
+
+root.render(
     <Provider store={store}>
         <PersistGate
             loading={<div className="Preload" />}
@@ -76,8 +74,7 @@ ReactDOM.render(
                 </StylesProvider>
             </CloudinaryContext>
         </PersistGate>
-    </Provider>,
-    document.getElementById('root'),
+    </Provider>
 )
 
 // If you want your app to work offline and load faster, you can change

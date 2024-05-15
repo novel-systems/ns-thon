@@ -3,8 +3,8 @@ import React, { useRef, useState, useMemo, useCallback } from 'react'
 import { Universities, Countries } from '@novel-systems/shared'
 import { Grid } from '@material-ui/core'
 
-import TextInput from 'components/inputs/TextInput'
-import Select from 'components/inputs/Select'
+import TextInput from '@/components/inputs/TextInput'
+import Select from '@/components/inputs/Select'
 
 const LEVEL_OPTIONS = [
     {

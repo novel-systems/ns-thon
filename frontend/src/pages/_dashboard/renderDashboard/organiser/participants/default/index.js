@@ -2,11 +2,11 @@ import React, { useState, useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { FilterHelpers, FilterValues } from '@novel-systems/shared'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
-import Divider from 'components/generic/Divider'
-import AttendeeTable from 'components/tables/AttendeeTable'
-import FilterGroupMenu from 'components/filters/FilterGroupMenu'
+import Divider from '@/components/generic/Divider'
+import AttendeeTable from '@/components/tables/AttendeeTable'
+import FilterGroupMenu from '@/components/filters/FilterGroupMenu'
 
 /**
  * Creates a filter expression for the given custom question filter.

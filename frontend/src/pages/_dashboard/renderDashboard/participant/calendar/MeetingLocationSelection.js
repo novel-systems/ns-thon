@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 
 
-import Button from 'components/generic/Button'
-import Switch from 'components/generic/Switch'
+import Button from '@/components/generic/Button'
+import Switch from '@/components/generic/Switch'
 
 import {
     FormControl,
@@ -12,8 +12,8 @@ import {
     Select,
     makeStyles,
 } from '@material-ui/core'
-import { getMeetingRooms } from 'graphql/queries/meetings'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import { getMeetingRooms } from '@/graphql/queries/meetings'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 
 const useStyles = makeStyles(theme => ({

@@ -1,15 +1,15 @@
 import React from 'react'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import Footer from 'components/layouts/Footer'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import Footer from '@/components/layouts/Footer'
 
-import Container from 'components/generic/Container'
+import Container from '@/components/generic/Container'
 
 import NewEventForm from './NewEventForm'
 import EventsList from './EventsList'
 
-import { useMyEvents } from 'graphql/queries/events'
+import { useMyEvents } from '@/graphql/queries/events'
 
 export default () => {
     const [events, loading] = useMyEvents()

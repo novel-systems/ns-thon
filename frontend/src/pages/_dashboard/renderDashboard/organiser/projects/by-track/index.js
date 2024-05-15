@@ -9,9 +9,9 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
-import ProjectsTable from 'components/tables/ProjectsTable'
+import ProjectsTable from '@/components/tables/ProjectsTable'
 import TrackLink from './TrackLink'
 
 export default () => {

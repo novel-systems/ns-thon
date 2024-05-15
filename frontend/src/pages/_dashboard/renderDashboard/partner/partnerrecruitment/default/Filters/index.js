@@ -5,10 +5,10 @@ import SearchIcon from '@material-ui/icons/Search'
 import { motion } from 'framer-motion'
 import { useSelector, useDispatch } from 'react-redux'
 
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
 
-import { useDebounce } from 'hooks/customHooks'
+import { useDebounce } from '@/hooks/customHooks'
 
 import RecruitmentStatusFilter from './RecruitmentStatusFilter'
 import CountryOfResidenceFilter from './CountryOfResidenceFilter'
@@ -18,7 +18,7 @@ import SkillsFilter from './SkillsFilter'
 import RolesFilter from './RolesFilter'
 import FilteredBy from './FilteredBy'
 import LoadingCard from '../SearchResults/LoadingCard'
-import TextInput from 'components/inputs/TextInput'
+import TextInput from '@/components/inputs/TextInput'
 
 export default () => {
     const dispatch = useDispatch()

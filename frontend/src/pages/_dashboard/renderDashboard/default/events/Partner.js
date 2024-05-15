@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useSelector } from 'react-redux'
-import { useRegistrationsByUser } from 'graphql/queries/registrations'
+import { useRegistrationsByUser } from '@/graphql/queries/registrations'
 
-import PageHeader from 'components/generic/PageHeader'
-import NewEventCard from 'components/events/NewEventCard'
-import Button from 'components/generic/Button'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import NewEventCard from '@/components/events/NewEventCard'
+import Button from '@/components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
 import { useTranslation } from 'react-i18next'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as UserActions from 'redux/user/actions'
-import * as UserSelectors from 'redux/user/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as UserActions from '@/redux/user/actions'
+import * as UserSelectors from '@/redux/user/selectors'
 
 import { Box, Grid } from '@material-ui/core'
 
@@ -67,8 +67,8 @@ export default () => {
                                                 dispatch(
                                                     push(
                                                         '/events/' +
-                                                            registration.event
-                                                                .slug,
+                                                        registration.event
+                                                            .slug,
                                                     ),
                                                 )
                                             }
@@ -81,7 +81,7 @@ export default () => {
                                             onClick={() => {
                                                 console.log(
                                                     '/dashboard/event/' +
-                                                        registration.event.slug,
+                                                    registration.event.slug,
                                                 )
                                                 dispatch(
                                                     UserActions.setAccessRight(

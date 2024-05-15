@@ -1,10 +1,10 @@
 import React from 'react'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import Footer from 'components/layouts/Footer'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import Footer from '@/components/layouts/Footer'
 
-import Container from 'components/generic/Container'
+import Container from '@/components/generic/Container'
 
 import NewHackerpackForm from './NewHackerpackForm'
 import HackerpackList from './HackerpackList'

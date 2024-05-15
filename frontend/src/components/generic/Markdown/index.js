@@ -1,11 +1,12 @@
 import React from 'react'
 
 import ReactMarkdown from 'react-markdown'
-import breaks from 'remark-breaks'
+import rehypeRaw from 'rehype-raw'
+import remarkBreaks from 'remark-breaks'
 import { Link } from 'react-router-dom'
-import LineDivider from 'components/generic/LineDivider'
-import Divider from 'components/generic/Divider'
-import ExternalLink from 'components/generic/ExternalLink'
+import LineDivider from '@/components/generic/LineDivider'
+import Divider from '@/components/generic/Divider'
+import ExternalLink from '@/components/generic/ExternalLink'
 import { Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -58,47 +59,41 @@ const Markdown = React.memo(
         const classes = useStyles({ light, alignCenter })
         return (
             <ReactMarkdown
-                source={source}
-                plugins={[breaks]}
+                rehypePlugins={[rehypeRaw]}
+                remarkPlugins={[remarkBreaks]}
                 className={classes.wrapper}
-                renderers={{
-                    heading: ({ level, children }) => {
-                        switch (level) {
-                            case 1:
-                                return (
-                                    <Typography
-                                        className={classes.heading1}
-                                        variant="h1"
-                                    >
-                                        {children}
-                                    </Typography>
-                                )
-                            case 2:
-                                return (
-                                    <Typography
-                                        className={classes.heading2}
-                                        variant="h2"
-                                    >
-                                        {children}
-                                    </Typography>
-                                )
-                            case 3:
-                            case 4:
-                            case 5:
-                            case 6:
-                                return (
-                                    <Typography
-                                        className={classes.heading3}
-                                        variant="h3"
-                                    >
-                                        {children}
-                                    </Typography>
-                                )
-                            default:
-                                return null
-                        }
+                components={{
+                    h1: ({ children }) => {
+                        return (
+                            <Typography
+                                className={classes.heading1}
+                                variant="h1"
+                            >
+                                {children}
+                            </Typography>
+                        )
                     },
-                    paragraph: ({ children }) => {
+                    h2: ({ children }) => {
+                        return (
+                            <Typography
+                                className={classes.heading2}
+                                variant="h2"
+                            >
+                                {children}
+                            </Typography>
+                        )
+                    },
+                    h3: ({ children }) => {
+                        return (
+                            <Typography
+                                className={classes.heading3}
+                                variant="h3"
+                            >
+                                {children}
+                            </Typography>
+                        )
+                    },
+                    p: ({ children }) => {
                         return (
                             <Typography
                                 variant="body1"
@@ -108,7 +103,7 @@ const Markdown = React.memo(
                             </Typography>
                         )
                     },
-                    emphasis: ({ children }) => {
+                    em: ({ children }) => {
                         return (
                             <Typography
                                 variant="body1"
@@ -159,48 +154,10 @@ const Markdown = React.memo(
                             )
                         }
                     },
-                    linkReference: props => {
-                        if (props.href.indexOf('http') === -1) {
-                            return (
-                                <Link to={props.href}>
-                                    <Typography
-                                        className={classes.hyperlink}
-                                        display="inline"
-                                        component={'span'}
-                                        variant="body1"
-                                        color="primary"
-                                    >
-                                        {props.children}
-                                    </Typography>
-                                </Link>
-                            )
-                        } else {
-                            return (
-                                <ExternalLink href={props.href}>
-                                    <Typography
-                                        className={classes.hyperlink}
-                                        display="inline"
-                                        component={'span'}
-                                        variant="body1"
-                                        color="primary"
-                                    >
-                                        {props.children}
-                                    </Typography>
-                                </ExternalLink>
-                            )
-                        }
-                    },
-                    thematicBreak: props => {
-                        return (
-                            <>
-                                <Divider size={2} />
-                                <LineDivider />
-                                <Divider size={2} />
-                            </>
-                        )
-                    },
                 }}
-            />
+            >
+                {source}
+            </ReactMarkdown>
         )
     },
 )

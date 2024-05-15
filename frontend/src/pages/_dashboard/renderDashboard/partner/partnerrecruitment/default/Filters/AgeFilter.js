@@ -4,8 +4,8 @@ import { Box, Slider, Typography } from '@material-ui/core'
 
 import FilterItem from './FilterItem'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
 
 export default () => {
     const dispatch = useDispatch()

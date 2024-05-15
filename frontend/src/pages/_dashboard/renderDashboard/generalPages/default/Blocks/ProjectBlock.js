@@ -7,10 +7,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Grid, Typography } from '@material-ui/core'
 import { RegistrationStatuses, EventHelpers } from '@novel-systems/shared'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
-import Button from 'components/generic/Button'
-import GradientBox from 'components/generic/GradientBox'
+import Button from '@/components/generic/Button'
+import GradientBox from '@/components/generic/GradientBox'
 
 import { useTranslation } from 'react-i18next'
 

@@ -2,9 +2,10 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
-import Image from 'components/generic/Image'
-import PageWrapper from 'components/layouts/PageWrapper'
-import { useHighlightedEvents } from 'graphql/queries/events'
+import Image from '@/components/generic/Image'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import { useHighlightedEvents } from '@/graphql/queries/events'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -67,7 +68,7 @@ export default () => {
                         publicId={
                             event.coverImage ? event.coverImage.publicId : ''
                         }
-                        defaultImage={require('assets/images/default_cover_image.png')}
+                        defaultImage={CoverImage}
                         transformation={{
                             width: '100%',
                         }}

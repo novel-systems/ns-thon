@@ -3,7 +3,7 @@ import React, { useCallback } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
-import BooleanInput from 'components/inputs/BooleanInput'
+import BooleanInput from '@/components/inputs/BooleanInput'
 
 const useStyles = makeStyles(theme => ({
     label: {
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     hint: {},
 }))
 
-const TeamOptionInput = ({ value, onChange, onBlur = () => {}, autoFocus }) => {
+const TeamOptionInput = ({ value, onChange, onBlur = () => { }, autoFocus }) => {
     const classes = useStyles()
     const { t } = useTranslation()
     const handleChange = useCallback(

@@ -6,14 +6,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Typography, Box } from '@material-ui/core'
 import Countdown from 'react-countdown-now'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import PageHeader from 'components/generic/PageHeader'
-import GradientBox from 'components/generic/GradientBox'
-import Button from 'components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import PageHeader from '@/components/generic/PageHeader'
+import GradientBox from '@/components/generic/GradientBox'
+import Button from '@/components/generic/Button'
 import SubmissionForm from './SubmissionForm'
 import ProjectsList from './ProjectsList'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 export default () => {
     const dispatch = useDispatch()
@@ -234,13 +234,12 @@ export default () => {
         <Box>
             <PageHeader
                 heading="Project submission"
-                subheading={`Here's where you submit your project for ${
-                    event.name
-                }. As soon as you have a general idea of what you're building, please make a draft submission here - you'll be able to make edits to it until the final submission deadline on ${moment(
-                    event.submissionsEndTime,
-                ).format(
-                    'LLLL',
-                )}. All of the members in your team can edit your team's project submission.`}
+                subheading={`Here's where you submit your project for ${event.name
+                    }. As soon as you have a general idea of what you're building, please make a draft submission here - you'll be able to make edits to it until the final submission deadline on ${moment(
+                        event.submissionsEndTime,
+                    ).format(
+                        'LLLL',
+                    )}. All of the members in your team can edit your team's project submission.`}
             />
             {renderContent()}
         </Box>

@@ -5,15 +5,15 @@ import { Box, CircularProgress, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { RegistrationStatuses } from '@novel-systems/shared'
 
-import PageHeader from 'components/generic/PageHeader'
-import Button from 'components/generic/Button'
+import PageHeader from '@/components/generic/PageHeader'
+import Button from '@/components/generic/Button'
 import Reader from './Reader'
 
-import RegistrationsService from 'services/registrations'
+import RegistrationsService from '@/services/registrations'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 const useStyles = makeStyles(theme => ({
     card: {

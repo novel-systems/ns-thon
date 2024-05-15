@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { groupBy } from 'lodash-es'
 import { useQuery, useSubscription, useMutation } from '@apollo/client'
-import PageWrapper from 'components/layouts/PageWrapper'
-import { MY_MESSAGES_QUERY } from 'graphql/queries/messages'
-import { MY_MESSAGES_SUBSCRIPTION } from 'graphql/subscriptions/messages'
-import { SEND_MESSAGE_MUTATION } from 'graphql/mutations/messageOps'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import { MY_MESSAGES_QUERY } from '@/graphql/queries/messages'
+import { MY_MESSAGES_SUBSCRIPTION } from '@/graphql/subscriptions/messages'
+import { SEND_MESSAGE_MUTATION } from '@/graphql/mutations/messageOps'
 import { faOldRepublic } from '@fortawesome/free-brands-svg-icons'
 import { TextField } from '@material-ui/core'
 import { Formik } from 'formik'
@@ -12,7 +12,7 @@ import schema from '@novel-systems/shared/schemas/validation/messageSchema'
 import { fieldNameFromStoreName } from '@apollo/client/cache'
 import { Button } from 'antd'
 import { useSelector } from 'react-redux'
-import { userProfile } from 'redux/user/selectors'
+import { userProfile } from '@/redux/user/selectors'
 
 /**
  * Functioncomponent that renders a chat

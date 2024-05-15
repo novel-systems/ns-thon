@@ -8,19 +8,19 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Formik, FastField, FieldArray } from 'formik'
 import * as yup from 'yup'
 
-import ImageUpload from 'components/inputs/ImageUpload'
-import TextInput from 'components/inputs/TextInput'
-import BottomBar from 'components/inputs/BottomBar'
+import ImageUpload from '@/components/inputs/ImageUpload'
+import TextInput from '@/components/inputs/TextInput'
+import BottomBar from '@/components/inputs/BottomBar'
 
-import BannerService from 'services/banner'
+import BannerService from '@/services/banner'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as AdminActions from 'redux/admin/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as AdminActions from '@/redux/admin/actions'
 
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 import { useTranslation } from 'react-i18next'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 const useStyles = makeStyles(theme => ({
     topWrapper: {
         display: 'flex',

@@ -6,19 +6,19 @@ import { useSelector, useDispatch } from 'react-redux'
 
 import SearchResults from './SearchResults'
 import Filters from './Filters'
-import Container from 'components/generic/Container'
-import PageWrapper from 'components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as UserSelectors from 'redux/user/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 import ToggleFavorites from './ToggleFavorites'
 import { useTranslation } from 'react-i18next'
-import { useToggle } from 'hooks/customHooks'
-import { debugGroup } from 'utils/debuggingTools'
+import { useToggle } from '@/hooks/customHooks'
+import { debugGroup } from '@/utils/debuggingTools'
 
 // const useStyles = makeStyles(theme => ({
 //     root: {

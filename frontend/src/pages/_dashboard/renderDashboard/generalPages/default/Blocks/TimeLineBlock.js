@@ -3,10 +3,10 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Grid, Typography } from '@material-ui/core'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 
-import EventTimeline from 'pages/_events/slug/default/EventTimeline'
+import EventTimeline from '@/pages/_events/slug/default/EventTimeline'
 
 export default () => {
     const event = useSelector(DashboardSelectors.event)

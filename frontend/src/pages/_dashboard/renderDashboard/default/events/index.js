@@ -4,9 +4,9 @@ import { useRouteMatch, useLocation } from 'react-router'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
-import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
-import PageWrapper from 'components/layouts/PageWrapper'
-import * as AuthSelectors from 'redux/auth/selectors'
+import MaterialTabsLayout from '@/components/layouts/MaterialTabsLayout'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 import Organizer from './Organizer'
 import Participant from './Participant'

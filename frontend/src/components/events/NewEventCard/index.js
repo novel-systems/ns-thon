@@ -9,14 +9,15 @@ import {
     Box,
 } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
-import Image from 'components/generic/Image'
-import Markdown from 'components/generic/Markdown'
+import Image from '@/components/generic/Image'
+import Markdown from '@/components/generic/Markdown'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
-import ProgressBar from 'components/generic/ProgressBar'
-import CardTag from 'components/generic/CardTag'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import ProgressBar from '@/components/generic/ProgressBar'
+import CardTag from '@/components/generic/CardTag'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 
 
@@ -126,7 +127,7 @@ const NewEventCard = ({ event, buttons }) => {
                 <div className="tw-h-40 tw-w-full tw-my-0 tw-mx-auto tw-relative tw-flex tw-justify-end tw-items-end">
                     <Image
                         className={classes.image}
-                        defaultImage={require('assets/images/default_cover_image.png')}
+                        defaultImage={CoverImage}
                         publicId={event?.coverImage?.publicId}
                         transformation={{
                             width: 400,
@@ -188,54 +189,6 @@ const NewEventCard = ({ event, buttons }) => {
 
             </CardActions>
         </Card>
-        //     <div className={classes.wrapper}>
-        //         <div className={classes.top}>
-        //             <Image
-        //                 className={classes.image}
-        //                 defaultImage={require('assets/images/default_cover_image.png')}
-        //                 publicId={event?.coverImage?.publicId}
-        //                 transformation={{
-        //                     width: 400,
-        //                 }}
-        //             />
-        //             {organization?.icon && (
-        //                 <Avatar
-        //                     className={classes.organiser}
-        //                     src={organization?.icon}
-        //                 />
-        //             )}
-        //             <Button
-        //                 variant="containedCard"
-        //                 color="theme_lightgray"
-        //                 onClick={() => dispatch(push('/events/' + event.slug))}
-        //             >
-        //                 See more
-        //             </Button>
-        //         </div>
-        //         <div className={classes.bottom}>
-        //             <Box width="100%" height="4em" margin="0">
-        //                 <Typography variant="h6">{event.name}</Typography>
-        //             </Box>
-        //             <Box
-        //                 display="flex"
-        //                 flexDirection="column"
-        //                 flexWrap="wrap"
-        //                 justifyContent="center"
-        //                 mt={2}
-        //                 className={classes.uppercase}
-        //             >
-        //                 <Typography variant="body1" className={classes.bolded}>
-        //                     {event?._eventTimeFormatted}
-        //                 </Typography>
-        //                 <Typography variant="body1">
-        //                     {event?._eventLocationFormatted}
-        //                 </Typography>
-        //                 {buttons?.map((btn, index) => (
-        //                     <Box key={index}>{btn}</Box>
-        //                 ))}
-        //             </Box>
-        //         </div>
-        //     </div>
     )
 
 }

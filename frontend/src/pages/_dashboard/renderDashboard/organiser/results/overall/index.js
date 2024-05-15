@@ -10,9 +10,9 @@ import {
     ListItemText,
 } from '@material-ui/core'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
-import DragDropList from 'components/generic/DragDropList'
+import DragDropList from '@/components/generic/DragDropList'
 
 const getAvatarStyle = index => {
     switch (index) {

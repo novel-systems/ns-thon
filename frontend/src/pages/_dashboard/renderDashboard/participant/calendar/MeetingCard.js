@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import MuiButton from '@material-ui/core/Button'
 import { Grid, Box, IconButton } from '@material-ui/core'
 import { makeStyles, Tooltip, withStyles } from '@material-ui/core'

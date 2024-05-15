@@ -16,9 +16,9 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import EditIcon from '@material-ui/icons/Edit'
 import SaveIcon from '@material-ui/icons/Save'
 import CloseIcon from '@material-ui/icons/Close'
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
-import DateTimeInput from 'components/inputs/DateTimeInput'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
+import DateTimeInput from '@/components/inputs/DateTimeInput'
 
 export default ({ value, onChange }) => {
     const [titleValue, setTitleValue] = useState()
@@ -209,7 +209,7 @@ export default ({ value, onChange }) => {
                                 value
                                     .sort((a, b) =>
                                         Date.parse(a.startTime) <
-                                        Date.parse(b.startTime)
+                                            Date.parse(b.startTime)
                                             ? -1
                                             : 1,
                                     )

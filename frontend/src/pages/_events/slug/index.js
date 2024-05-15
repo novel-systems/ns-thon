@@ -4,9 +4,9 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { useRouteMatch, useLocation } from 'react-router'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import EventFooter from 'components/layouts/EventFooter'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import EventFooter from '@/components/layouts/EventFooter'
 
 import EventDetail from './default'
 import EventRegister from './register'

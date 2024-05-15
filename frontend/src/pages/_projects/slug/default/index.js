@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux'
 
 import { sortBy } from 'lodash-es'
 import { Box } from '@material-ui/core'
-import Container from 'components/generic/Container'
-import EventHeroImage from 'components/events/EventHeroImage'
+import Container from '@/components/generic/Container'
+import EventHeroImage from '@/components/events/EventHeroImage'
 import ProjectsPreview from './ProjectsPreview'
 import Filters from './Filters'
 
-import ProjectsGrid from 'components/projects/ProjectsGrid'
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
 export default ({ event, projects }) => {
     console.log('event :>> ', event)

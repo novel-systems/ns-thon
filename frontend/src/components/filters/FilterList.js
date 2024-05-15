@@ -12,7 +12,7 @@ import {
     Typography,
     Badge,
 } from '@material-ui/core'
-import FilterListItem from 'components/filters/FilterListItem'
+import FilterListItem from '@/components/filters/FilterListItem'
 import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
     },
 }))
-const FilterList = ({ activeItemKey, filters = [], onChange = () => {} }) => {
+const FilterList = ({ activeItemKey, filters = [], onChange = () => { } }) => {
     const classes = useStyles()
     const [expanded, setExpanded] = useState(false)
     const toggleExpanded = useCallback(() => setExpanded(!expanded), [expanded])

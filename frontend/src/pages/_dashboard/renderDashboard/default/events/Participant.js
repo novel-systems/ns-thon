@@ -2,21 +2,21 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useSelector } from 'react-redux'
-import { useRegistrationsByUser } from 'graphql/queries/registrations'
+import { useRegistrationsByUser } from '@/graphql/queries/registrations'
 import { useTranslation } from 'react-i18next'
 import { Box, Grid, Typography } from '@material-ui/core'
 
-//import { useActiveEvents, usePastEvents } from 'graphql/queries/events'
-import PageHeader from 'components/generic/PageHeader'
-import NewEventCard from 'components/events/NewEventCard'
-import EventCardSmall from 'components/events/EventCardSmall'
-import Button from 'components/generic/Button'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
+//import { useActiveEvents, usePastEvents } from '@/graphql/queries/events'
+import PageHeader from '@/components/generic/PageHeader'
+import NewEventCard from '@/components/events/NewEventCard'
+import EventCardSmall from '@/components/events/EventCardSmall'
+import Button from '@/components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as UserActions from 'redux/user/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as UserActions from '@/redux/user/actions'
 
 export default () => {
     const userId = useSelector(AuthSelectors.getUserId)
@@ -108,7 +108,7 @@ export default () => {
                                                     dispatch(
                                                         push(
                                                             '/events/' +
-                                                                event.slug,
+                                                            event.slug,
                                                         ),
                                                     )
                                                 }
@@ -122,8 +122,8 @@ export default () => {
                                                         dispatch(
                                                             push(
                                                                 '/events/' +
-                                                                    event.slug +
-                                                                    '/register/',
+                                                                event.slug +
+                                                                '/register/',
                                                             ),
                                                         )
                                                     }
@@ -132,25 +132,25 @@ export default () => {
                                                 </Button>
                                             ),
                                             event.galleryOpen &&
-                                                eventStarted && (
-                                                    <Button
-                                                        size="small"
-                                                        onClick={() => {
-                                                            console.log(
+                                            eventStarted && (
+                                                <Button
+                                                    size="small"
+                                                    onClick={() => {
+                                                        console.log(
+                                                            '/projects/' +
+                                                            event.slug,
+                                                        )
+                                                        dispatch(
+                                                            push(
                                                                 '/projects/' +
-                                                                    event.slug,
-                                                            )
-                                                            dispatch(
-                                                                push(
-                                                                    '/projects/' +
-                                                                        event.slug,
-                                                                ),
-                                                            )
-                                                        }}
-                                                    >
-                                                        Projects
-                                                    </Button>
-                                                ),
+                                                                event.slug,
+                                                            ),
+                                                        )
+                                                    }}
+                                                >
+                                                    Projects
+                                                </Button>
+                                            ),
                                         ]}
                                     />
                                 )
@@ -190,12 +190,12 @@ export default () => {
                                                 onClick={() => {
                                                     console.log(
                                                         '/projects/' +
-                                                            event.slug,
+                                                        event.slug,
                                                     )
                                                     dispatch(
                                                         push(
                                                             '/projects/' +
-                                                                event.slug,
+                                                            event.slug,
                                                         ),
                                                     )
                                                 }}

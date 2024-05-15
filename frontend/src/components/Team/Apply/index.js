@@ -1,24 +1,24 @@
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import TextAreaInput from 'components/inputs/TextAreaInput'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
 import { Field, Formik } from 'formik'
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 import React, { useCallback, useMemo } from 'react'
 import * as yup from 'yup'
-import * as UserSelectors from 'redux/user/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import BottomBar from 'components/inputs/BottomBar'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import BottomBar from '@/components/inputs/BottomBar'
 import _ from 'lodash'
 import { Box, Typography, Grid } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
-import FormControl from 'components/inputs/FormControl'
-import PageWrapper from 'components/layouts/PageWrapper'
+import FormControl from '@/components/inputs/FormControl'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
 export default ({
     teamRolesData = [],
-    afterSubmitAction = () => {},
+    afterSubmitAction = () => { },
     loading = false,
 }) => {
     const dispatch = useDispatch()
@@ -183,10 +183,10 @@ export default ({
                                                     hint="Briefly explain what motivates you to join this team"
                                                     touched={
                                                         form.touched[
-                                                            field.name
+                                                        field.name
                                                         ] ||
                                                         formikProps.submitCount >
-                                                            0
+                                                        0
                                                     }
                                                     error={
                                                         form.errors[field.name]
@@ -223,7 +223,7 @@ export default ({
                                 onSubmit={formikProps.handleSubmit}
                                 errors={
                                     formikProps.touched?.roles &&
-                                    formikProps.touched?.motivation
+                                        formikProps.touched?.motivation
                                         ? formikProps.errors
                                         : {}
                                 }

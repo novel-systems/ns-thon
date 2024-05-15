@@ -2,11 +2,10 @@ import React, { useCallback } from 'react'
 
 import { Box } from '@material-ui/core'
 
-import Empty from 'components/generic/Empty'
-import Button from 'components/generic/Button'
+import Empty from '@/components/generic/Empty'
+import Button from '@/components/generic/Button'
 import CustomSectionListItem from './CustomSectionListItem'
 import { useTranslation } from 'react-i18next'
-import { now } from 'moment'
 
 export default ({ sections = [], onChange, projectsExist = false }) => {
     const { t } = useTranslation()
@@ -88,7 +87,7 @@ export default ({ sections = [], onChange, projectsExist = false }) => {
             onClick={() =>
                 handleAdd({
                     label: 'New section - click here to edit the name of this section',
-                    name: `section_${now()}`,
+                    name: `section_${new Date().getTime()}`,
                 })
             }
             fullWidth

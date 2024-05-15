@@ -2,27 +2,27 @@ import React, { useEffect, useState } from 'react'
 
 import { useRouteMatch } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
-import PageWrapper from 'components/layouts/PageWrapper'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
 import PartnerDashboard from './partner'
 import ParticipantDashboard from './participant'
 import OrganizerDashboard from './organiser'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserSelectors from 'redux/user/selectors'
-import * as UserActions from 'redux/user/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as UserActions from '@/redux/user/actions'
 
 import { useLazyQuery, useSubscription } from '@apollo/client'
-import { ALERTS_QUERY } from 'graphql/queries/alert'
-import { NEW_ALERTS_SUBSCRIPTION } from 'graphql/subscriptions/alert'
+import { ALERTS_QUERY } from '@/graphql/queries/alert'
+import { NEW_ALERTS_SUBSCRIPTION } from '@/graphql/subscriptions/alert'
 import {
     useMyEvents,
     useActiveEvents,
     usePastEvents,
-} from 'graphql/queries/events'
-// import { Chat } from 'components/messaging/chat'
+} from '@/graphql/queries/events'
+// import { Chat } from '@/components/messaging/chat'
 
 export default role => {
     const match = useRouteMatch()

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import ShowIfPermission from 'hocs/ShowIfPermission'
+import ShowIfPermission from '@/hocs/ShowIfPermission'
 import { Auth as AuthConstants } from '@novel-systems/shared'
-import ExternalLink from 'components/generic/ExternalLink'
+import ExternalLink from '@/components/generic/ExternalLink'
 import { useSelector } from 'react-redux'
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 import {
     CircularProgress,
@@ -15,7 +15,7 @@ import {
     Avatar,
 } from '@material-ui/core'
 
-import UserProfilesService from 'services/userProfiles'
+import UserProfilesService from '@/services/userProfiles'
 
 const RecruitmentLink = ({ memberId }) => {
     return (

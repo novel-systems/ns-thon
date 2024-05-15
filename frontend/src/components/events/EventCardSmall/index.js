@@ -3,7 +3,8 @@ import React, { useCallback } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Paper, Grid, Box, Typography } from '@material-ui/core'
 
-import Image from 'components/generic/Image'
+import Image from '@/components/generic/Image'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -44,7 +45,7 @@ export default ({ event, handleClick }) => {
                 <Grid item xs={12} md={3}>
                     <Image
                         className={classes.image}
-                        defaultImage={require('assets/images/default_cover_image.png')}
+                        defaultImage={CoverImage}
                         publicId={event.coverImage?.publicId}
                         transformation={{
                             width: 400,

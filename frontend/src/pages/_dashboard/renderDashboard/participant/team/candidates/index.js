@@ -1,16 +1,16 @@
-import CandidateCard from 'components/cards/CandidateCard'
+import CandidateCard from '@/components/cards/CandidateCard'
 import { useFormik } from 'formik'
 import _ from 'lodash'
 import React, { useCallback, useEffect, useState } from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useDispatch, useSelector } from 'react-redux'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import Profile from 'components/Participant/Profile'
-import Button from 'components/generic/Button'
-import Filter from 'components/Team/Filter'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import Profile from '@/components/Participant/Profile'
+import Button from '@/components/generic/Button'
+import Filter from '@/components/Team/Filter'
 import {
     FormControlLabel,
     FormLabel,
@@ -18,8 +18,8 @@ import {
     RadioGroup,
     Typography,
 } from '@material-ui/core'
-import FormControl from 'components/inputs/FormControl'
-import placeholderStyle from 'utils/styles'
+import FormControl from '@/components/inputs/FormControl'
+import placeholderStyle from '@/utils/styles'
 
 export default () => {
     const classes = placeholderStyle()

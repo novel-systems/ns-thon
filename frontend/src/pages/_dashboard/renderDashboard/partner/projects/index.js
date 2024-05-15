@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Dialog } from '@material-ui/core'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import ProjectsGrid from 'components/projects/ProjectsGrid'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
-import ProjectsService from 'services/projects'
+import ProjectsService from '@/services/projects'
 import _ from 'lodash'
 
-import ProjectDetail from 'components/projects/ProjectDetail'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as userSelectors from 'redux/user/selectors'
-import ProjectScoresService from 'services/projectScores'
-import EvaluationForm from 'pages/_projects/slug/view/projectId/EvaluationForm'
-import Empty from 'components/generic/Empty'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import ProjectDetail from '@/components/projects/ProjectDetail'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as userSelectors from '@/redux/user/selectors'
+import ProjectScoresService from '@/services/projectScores'
+import EvaluationForm from '@/pages/_projects/slug/view/projectId/EvaluationForm'
+import Empty from '@/components/generic/Empty'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 const projectScoreBase = {
     project: '',
@@ -202,12 +202,11 @@ export default ({ event }) => {
                         heading="Project review"
                         subheading={`Available for review:`}
                         alignment="left"
-                        details={`${inputData?.projects.length} project${
-                            inputData?.projects.length > 1 ||
-                            inputData?.projects.length < 1
+                        details={`${inputData?.projects.length} project${inputData?.projects.length > 1 ||
+                                inputData?.projects.length < 1
                                 ? 's'
                                 : ''
-                        }`}
+                            }`}
                     />
                 </div>
 

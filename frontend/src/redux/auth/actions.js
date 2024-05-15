@@ -2,7 +2,7 @@ import { push } from 'connected-react-router'
 import * as ActionTypes from './actionTypes'
 import * as AuthSelectors from './selectors'
 import * as UserActions from '../user/actions'
-import Auth0Service from 'services/auth0'
+import Auth0Service from '@/services/auth0'
 
 export const login =
     (params, nextRoute = '/') =>

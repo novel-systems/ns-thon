@@ -10,16 +10,16 @@ import {
 } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import ProjectsGridItem from 'components/projects/ProjectsGridItem'
-import Button from 'components/generic/Button'
-import Markdown from 'components/generic/Markdown'
-import ProjectDetail from 'components/projects/ProjectDetail'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import ProjectsGridItem from '@/components/projects/ProjectsGridItem'
+import Button from '@/components/generic/Button'
+import Markdown from '@/components/generic/Markdown'
+import ProjectDetail from '@/components/projects/ProjectDetail'
 
-import GavelService from 'services/reviewing/gavel'
+import GavelService from '@/services/reviewing/gavel'
 
 export default ({ projectId }) => {
     const dispatch = useDispatch()
@@ -124,7 +124,7 @@ export default ({ projectId }) => {
                     <Markdown
                         source={
                             event.eventType === 'physical' ||
-                            event.eventType === 'hybrid'
+                                event.eventType === 'hybrid'
                                 ? t('Gavel_first_project_physical_')
                                 : t('Gavel_first_project_online_')
                         }

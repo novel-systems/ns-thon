@@ -15,10 +15,10 @@ import {
 import getSlug from 'speakingurl'
 import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import EditIcon from '@material-ui/icons/Edit'
-import Button from 'components/generic/Button'
-import MarkdownInput from 'components/inputs/MarkdownInput'
-import ImageUpload from 'components/inputs/ImageUpload'
-import TextInput from 'components/inputs/TextInput'
+import Button from '@/components/generic/Button'
+import MarkdownInput from '@/components/inputs/MarkdownInput'
+import ImageUpload from '@/components/inputs/ImageUpload'
+import TextInput from '@/components/inputs/TextInput'
 import { OutboundLink } from 'react-ga'
 
 export default ({ value, onChange }) => {

@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Typography } from '@material-ui/core'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import PageHeader from 'components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import PageHeader from '@/components/generic/PageHeader'
 
 export default () => {
     return (

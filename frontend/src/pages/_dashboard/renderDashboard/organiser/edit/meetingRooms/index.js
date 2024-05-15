@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Grid } from '@material-ui/core'
-import FormControl from 'components/inputs/FormControl'
-import BooleanInput from 'components/inputs/BooleanInput'
+import FormControl from '@/components/inputs/FormControl'
+import BooleanInput from '@/components/inputs/BooleanInput'
 
 import { FastField, Field } from 'formik'
 import MeetingRoomsForm from './MeetingRoomsForm'

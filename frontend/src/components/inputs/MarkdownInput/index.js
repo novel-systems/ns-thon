@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Box, FormControlLabel, Switch } from '@material-ui/core'
-import Markdown from 'components/generic/Markdown'
-import TextAreaInput from 'components/inputs/TextAreaInput'
+import Markdown from '@/components/generic/Markdown'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
 
 const useStyles = makeStyles(theme => ({
     top: {

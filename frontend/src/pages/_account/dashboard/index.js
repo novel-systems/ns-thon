@@ -5,12 +5,12 @@ import { Grid, Box, Typography } from '@material-ui/core'
 import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
-import EventCardSmall from 'components/events/EventCardSmall'
-import PageWrapper from 'components/layouts/PageWrapper'
+import EventCardSmall from '@/components/events/EventCardSmall'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
-import { useRegistrationsByUser } from 'graphql/queries/registrations'
+import { useRegistrationsByUser } from '@/graphql/queries/registrations'
 import { useTranslation } from 'react-i18next'
 
 export default () => {

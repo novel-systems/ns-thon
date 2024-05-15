@@ -11,14 +11,14 @@ import {
 import { makeStyles } from '@material-ui/core/styles'
 import { useSelector, useDispatch } from 'react-redux'
 
-import TextInput from 'components/inputs/TextInput'
-import Select from 'components/inputs/Select'
-import Button from 'components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import Select from '@/components/inputs/Select'
+import Button from '@/components/generic/Button'
 
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as OrganiserActions from 'redux/organiser/actions'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as OrganiserActions from '@/redux/organiser/actions'
 import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({

@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Box, Typography } from '@material-ui/core'
 
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
 
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 import { useTranslation } from 'react-i18next'
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
 }))
 
-export default ({ onAction = () => {} }) => {
+export default ({ onAction = () => { } }) => {
     const { t } = useTranslation()
 
     const dispatch = useDispatch()
@@ -52,7 +52,7 @@ export default ({ onAction = () => {} }) => {
                     dispatch(
                         SnackbarActions.error(
                             'Unable to join team: ' +
-                                err?.response?.data?.message,
+                            err?.response?.data?.message,
                         ),
                     )
                 } else {

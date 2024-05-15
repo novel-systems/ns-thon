@@ -1,5 +1,5 @@
 import { Typography } from '@material-ui/core'
-import ParticipantPreview from 'components/Participant/ParticipantPreview'
+import ParticipantPreview from '@/components/Participant/ParticipantPreview'
 import React from 'react'
 
 export default ({

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
 import { Box, TextField } from '@material-ui/core'
 

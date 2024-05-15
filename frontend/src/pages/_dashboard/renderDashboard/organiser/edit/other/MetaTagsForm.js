@@ -11,11 +11,11 @@ import {
     Typography,
 } from '@material-ui/core'
 
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { useFormField } from 'hooks/formHooks'
+import { useFormField } from '@/hooks/formHooks'
 
 const useStyles = makeStyles(theme => ({
     errorMessage: {

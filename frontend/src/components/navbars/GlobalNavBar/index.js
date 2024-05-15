@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import UserMenu from 'components/UserMenu'
-import Button from 'components/generic/Button'
+import UserMenu from '@/components/UserMenu'
+import Button from '@/components/generic/Button'
 
-import config from 'constants/config'
-import PlatformLogo from 'assets/logos/JO_wordmark_black.png'
-import WavePattern from 'assets/images/nawbar_waves.svg'
+import config from '@/constants/config'
+import PlatformLogo from '@/assets/logos/JO_wordmark_black.png'
+import WavePattern from '@/assets/images/nawbar_waves.svg'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

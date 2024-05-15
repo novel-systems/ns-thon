@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Grid, Typography } from '@material-ui/core'
 
-import Footer from 'components/layouts/Footer'
-import PageWrapper from 'components/layouts/PageWrapper'
+import Footer from '@/components/layouts/Footer'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
-import Divider from 'components/generic/Divider'
-import Button from 'components/generic/Button'
+import Divider from '@/components/generic/Divider'
+import Button from '@/components/generic/Button'
 
-import Container from 'components/generic/Container'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import PricingCard from 'components/generic/PricingCard'
+import Container from '@/components/generic/Container'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import PricingCard from '@/components/generic/PricingCard'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import { makeStyles } from '@material-ui/core/styles'
 

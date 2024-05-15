@@ -5,13 +5,13 @@ import { useSelector } from 'react-redux'
 import moment from 'moment'
 import { Typography, Grid, Drawer, Box } from '@material-ui/core'
 
-import TextInput from 'components/inputs/TextInput'
-import DateInput from 'components/inputs/DateInput'
-import Button from 'components/generic/Button'
-import { useFormField } from 'hooks/formHooks'
+import TextInput from '@/components/inputs/TextInput'
+import DateInput from '@/components/inputs/DateInput'
+import Button from '@/components/generic/Button'
+import { useFormField } from '@/hooks/formHooks'
 
 import VisaInvitationPDF from './VisaInvitationPDF'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 export default () => {
     const registration = useSelector(DashboardSelectors.registration)

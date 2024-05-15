@@ -6,20 +6,20 @@ import { Grid, Box, Typography } from '@material-ui/core'
 
 import { makeStyles } from '@material-ui/core/styles'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
 import { OutboundLink } from 'react-ga'
 
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 import { IconButton } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit'
-import Divider from 'components/generic/Divider'
+import Divider from '@/components/generic/Divider'
 
 import { useTranslation } from 'react-i18next'
 
-import OrganizationService from 'services/organization'
-import * as AuthSelectors from 'redux/auth/selectors'
+import OrganizationService from '@/services/organization'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 const useStyles = makeStyles(theme => ({
     outboundLink: {

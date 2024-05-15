@@ -22,22 +22,23 @@ import { RegistrationFields } from '@novel-systems/shared'
 import { push } from 'connected-react-router'
 import { useSelector } from 'react-redux'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as UserSelectors from 'redux/user/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as UserSelectors from '@/redux/user/selectors'
 
-import Container from 'components/generic/Container'
-import Image from 'components/generic/Image'
-import FadeInWrapper from 'components/animated/FadeInWrapper'
-import AnalyticsService from 'services/analytics'
+import Container from '@/components/generic/Container'
+import Image from '@/components/generic/Image'
+import CoverImage from '@/assets/images/default_cover_image.png'
+import FadeInWrapper from '@/components/animated/FadeInWrapper'
+import AnalyticsService from '@/services/analytics'
 
-import RequiresPermission from 'hocs/RequiresPermission'
+import RequiresPermission from '@/hocs/RequiresPermission'
 
 import RegistrationSection from './RegistrationSection'
 import RegistrationSectionCustom from './RegistrationSectionCustom'
 import RegistrationSectionLabel from './RegistrationSectionLabel'
-import NewsLetterButton from 'components/inputs/NewsLetterButton'
-import EventNewsLetterButton from 'components/inputs/EventNewsLetterButton'
-import SubmitButton from 'components/inputs/SubmitButton'
+import NewsLetterButton from '@/components/inputs/NewsLetterButton'
+import EventNewsLetterButton from '@/components/inputs/EventNewsLetterButton'
+import SubmitButton from '@/components/inputs/SubmitButton'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { popupCenter } from '../../../../utils/misc'
@@ -45,7 +46,7 @@ import { popupCenter } from '../../../../utils/misc'
 import EventDetailContext from '../context'
 
 import { useTranslation } from 'react-i18next'
-import EventPageScriptIFrame from 'components/events/EventPageScriptIFrame'
+import EventPageScriptIFrame from '@/components/events/EventPageScriptIFrame'
 import { EventPageScripts } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({
@@ -393,7 +394,7 @@ export default RequiresPermission(() => {
             <Image
                 className={classes.backgroundImage}
                 publicId={event?.coverImage?.publicId}
-                default={require('assets/images/default_cover_image.png')}
+                default={CoverImage}
                 transformation={{
                     width: 1920,
                     height: 1080,

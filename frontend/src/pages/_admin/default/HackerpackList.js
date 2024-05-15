@@ -3,16 +3,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 
 import { Grid, Box, Typography } from '@material-ui/core'
-import CompanySection from 'components/hackerpack/CompanySection'
-import Divider from 'components/generic/Divider'
+import CompanySection from '@/components/hackerpack/CompanySection'
+import Divider from '@/components/generic/Divider'
 
 import { useTranslation } from 'react-i18next'
 import { IconButton } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit'
 
-import HackerpackService from 'services/hackerpack'
-import * as AuthSelectors from 'redux/auth/selectors'
+import HackerpackService from '@/services/hackerpack'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 export default ({ data = [] }) => {
     const dispatch = useDispatch()

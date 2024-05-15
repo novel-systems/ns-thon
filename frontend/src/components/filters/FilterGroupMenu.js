@@ -18,7 +18,7 @@ import FilterForm from './FilterForm'
 import FilterList from './FilterList'
 import FilterSaveForm from './FilterSaveForm'
 import { useTranslation } from 'react-i18next'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 const useStyles = makeStyles(theme => ({
     root: {},

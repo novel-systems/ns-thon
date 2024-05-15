@@ -11,11 +11,11 @@ import {
 
 import StarIcon from '@material-ui/icons/Star'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as UserSelectors from 'redux/user/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

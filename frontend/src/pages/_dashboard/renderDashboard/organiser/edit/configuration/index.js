@@ -8,10 +8,10 @@ import {
 import { Grid, Box } from '@material-ui/core'
 import { FastField, Field } from 'formik'
 
-import FormControl from 'components/inputs/FormControl'
-import Select from 'components/inputs/Select'
-import BooleanInput from 'components/inputs/BooleanInput'
-import StreetAddressForm from 'components/inputs/StreetAddressForm'
+import FormControl from '@/components/inputs/FormControl'
+import Select from '@/components/inputs/Select'
+import BooleanInput from '@/components/inputs/BooleanInput'
+import StreetAddressForm from '@/components/inputs/StreetAddressForm'
 
 import TravelGrantConfig from './TravelGrantConfig'
 import TracksForm from './TracksForm'

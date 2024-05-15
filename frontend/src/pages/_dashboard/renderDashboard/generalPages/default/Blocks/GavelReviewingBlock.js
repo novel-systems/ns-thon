@@ -9,10 +9,10 @@ import {
     EventHelpers,
 } from '@novel-systems/shared'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
-import Button from 'components/generic/Button'
-import GradientBox from 'components/generic/GradientBox'
+import Button from '@/components/generic/Button'
+import GradientBox from '@/components/generic/GradientBox'
 
 export default () => {
     const event = useSelector(DashboardSelectors.event)

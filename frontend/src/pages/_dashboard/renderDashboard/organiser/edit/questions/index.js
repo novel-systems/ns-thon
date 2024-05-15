@@ -3,7 +3,7 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 import { FastField } from 'formik'
 import CustomSectionList from './CustomSectionList'
-import FormControl from 'components/inputs/FormControl'
+import FormControl from '@/components/inputs/FormControl'
 
 import QuestionSelect from './QuestionSelect'
 

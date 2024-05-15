@@ -2,9 +2,10 @@ import React from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 
-import Image from 'components/generic/Image'
+import Image from '@/components/generic/Image'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 const useStyles = makeStyles(theme => ({
@@ -69,7 +70,7 @@ const EventImage = ({
                 <Image
                     className={classes.image}
                     publicId={publicId}
-                    defaultImage={require('assets/images/default_cover_image.png')}
+                    defaultImage={CoverImage}
                 />
                 <div className={classes.inner}>
                     {buttons?.map(button =>

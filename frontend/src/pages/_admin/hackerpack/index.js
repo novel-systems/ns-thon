@@ -8,18 +8,18 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Formik, FastField } from 'formik'
 import * as yup from 'yup'
 
-import ImageUpload from 'components/inputs/ImageUpload'
-import TextInput from 'components/inputs/TextInput'
-import BottomBar from 'components/inputs/BottomBar'
+import ImageUpload from '@/components/inputs/ImageUpload'
+import TextInput from '@/components/inputs/TextInput'
+import BottomBar from '@/components/inputs/BottomBar'
 
-import MarkdownInput from 'components/inputs/MarkdownInput'
+import MarkdownInput from '@/components/inputs/MarkdownInput'
 
-import HackerpackService from 'services/hackerpack'
+import HackerpackService from '@/services/hackerpack'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as AdminActions from 'redux/admin/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as AdminActions from '@/redux/admin/actions'
 
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 import { useTranslation } from 'react-i18next'
 const useStyles = makeStyles(theme => ({
@@ -172,8 +172,8 @@ export default () => {
                                                     value={
                                                         field.value
                                                             ? {
-                                                                  url: field.value,
-                                                              }
+                                                                url: field.value,
+                                                            }
                                                             : undefined
                                                     }
                                                     onChange={value =>

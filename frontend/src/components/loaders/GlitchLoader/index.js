@@ -2,6 +2,8 @@ import React from 'react'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import SVG from 'react-inlinesvg'
+import EmblemWhite from '@/assets/logos/emblem_white.png'
+import Emblem from '@/assets/logos/emblem.svg'
 
 export default ({ size, title }) => {
     const classes = useStyles({ size })
@@ -9,20 +11,20 @@ export default ({ size, title }) => {
         <div className={classes.root}>
             <div className={classes.logo}>
                 <SVG
-                    src={require('assets/logos/emblem.svg')}
+                    src={Emblem}
                     className={clsx(classes.svg, classes.svg1)}
                 >
                     <img
-                        src={require('assets/logos/emblem_white.png')}
+                        src={EmblemWhite}
                         alt="logo"
                     />
                 </SVG>
                 <SVG
-                    src={require('assets/logos/emblem.svg')}
+                    src={Emblem}
                     className={clsx(classes.svg, classes.svg2)}
                 ></SVG>
                 <SVG
-                    src={require('assets/logos/emblem.svg')}
+                    src={Emblem}
                     className={clsx(classes.svg, classes.svg3)}
                 ></SVG>
             </div>

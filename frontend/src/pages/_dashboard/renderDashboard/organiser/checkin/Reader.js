@@ -3,9 +3,9 @@ import QrReader from 'react-qr-reader'
 import { useDispatch } from 'react-redux'
 
 import { Box, Typography } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 export default ({ onResult, onError }) => {
     const reader = useRef(null)
     const dispatch = useDispatch()

@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux'
 import { Grid, Typography, Box } from '@material-ui/core'
 import { Rating } from '@material-ui/lab'
 
-import Button from 'components/generic/Button'
-import EventTagsSelect from 'components/inputs/EventTagsSelect'
-import OrganiserSelectModal from 'components/modals/OrganiserSelectModal'
-import RegistrationStatusSelect from 'components/inputs/RegistrationStatusSelect'
+import Button from '@/components/generic/Button'
+import EventTagsSelect from '@/components/inputs/EventTagsSelect'
+import OrganiserSelectModal from '@/components/modals/OrganiserSelectModal'
+import RegistrationStatusSelect from '@/components/inputs/RegistrationStatusSelect'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import { useTranslation } from 'react-i18next'
-import { useFormField } from 'hooks/formHooks'
+import { useFormField } from '@/hooks/formHooks'
 
 export default ({ registration, onSubmit, onCancel }) => {
     const event = useSelector(OrganiserSelectors.event)
@@ -42,7 +42,7 @@ export default ({ registration, onSubmit, onCancel }) => {
         if (errors.length > 0) {
             return
         }
-        
+
         onSubmit(formValues)
     }, [formFields, formValues, onSubmit])
 

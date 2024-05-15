@@ -6,9 +6,9 @@ import { useDispatch } from 'react-redux'
 import { find, sortBy } from 'lodash-es'
 import { Box } from '@material-ui/core'
 
-import Container from 'components/generic/Container'
-import EventHeroImage from 'components/events/EventHeroImage'
-import ProjectsGrid from 'components/projects/ProjectsGrid'
+import Container from '@/components/generic/Container'
+import EventHeroImage from '@/components/events/EventHeroImage'
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
 export default ({ event, projects }) => {
     const dispatch = useDispatch()

@@ -19,7 +19,7 @@ import objectPath from 'object-path'
 
 import TableToolbar from './TableToolbar'
 import TablePaginationActions from './TablePaginationActions'
-import ActionMenu from 'components/generic/ActionMenu'
+import ActionMenu from '@/components/generic/ActionMenu'
 
 const useTableStyles = makeStyles(theme => ({
     root: {

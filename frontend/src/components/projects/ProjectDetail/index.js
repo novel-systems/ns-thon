@@ -5,19 +5,20 @@ import { Box, Typography, Button, Tooltip } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
-import Image from 'components/generic/Image'
-import Container from 'components/generic/Container'
-import Markdown from 'components/generic/Markdown'
+import Image from '@/components/generic/Image'
+import Container from '@/components/generic/Container'
+import Markdown from '@/components/generic/Markdown'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
-import config from 'constants/config'
+import config from '@/constants/config'
 import { Helmet } from 'react-helmet'
 import ReactPlayer from 'react-player'
 import { useDispatch } from 'react-redux'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as DashboardActions from '@/redux/dashboard/actions'
 import ProjectTeam from './ProjectTeam'
 import Pagination from './Pagination'
-import theme from 'material-ui-theme'
-import Tag from 'components/generic/Tag'
+import theme from '@/material-ui-theme'
+import Tag from '@/components/generic/Tag'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
@@ -294,7 +295,7 @@ const ProjectDetail = ({
                                         <Image
                                             className={classes.image}
                                             publicId={image.publicId}
-                                            defaultImage={require('assets/images/default_cover_image.png')}
+                                            defaultImage={CoverImage}
                                         />
                                     </Box>
                                 ))
@@ -303,7 +304,7 @@ const ProjectDetail = ({
                                     <Image
                                         className={classes.placeholderImage}
                                         publicId={event?.coverImage?.logo}
-                                        defaultImage={require('assets/images/default_cover_image.png')}
+                                        defaultImage={CoverImage}
                                     />
                                 </Box>
                             )}

@@ -3,23 +3,24 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { push } from 'connected-react-router'
 import { useDispatch } from 'react-redux'
-import { useActiveEvents, usePastEvents } from 'graphql/queries/events'
+import { useActiveEvents, usePastEvents } from '@/graphql/queries/events'
 
-import config from 'constants/config'
+import config from '@/constants/config'
 import { useTranslation } from 'react-i18next'
 
 import { Box, Grid, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
-import BannerCarousel from 'components/generic/BannerCarousel'
-import Button from 'components/generic/Button'
-import Container from 'components/generic/Container'
-import Divider from 'components/generic/Divider'
-import ExternalLink from 'components/generic/ExternalLink'
-import Footer from 'components/layouts/Footer'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import Image from 'components/generic/Image'
-import PageWrapper from 'components/layouts/PageWrapper'
+import BannerCarousel from '@/components/generic/BannerCarousel'
+import Button from '@/components/generic/Button'
+import Container from '@/components/generic/Container'
+import Divider from '@/components/generic/Divider'
+import ExternalLink from '@/components/generic/ExternalLink'
+import Footer from '@/components/layouts/Footer'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import Image from '@/components/generic/Image'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import EmblemBlack from '@/assets/logos/emblem_black.png'
 
 import EventsGrid from './EventsGrid'
 
@@ -106,7 +107,7 @@ export default () => {
                 <Container center small>
                     <Grid>
                         <Image
-                            defaultImage={require('assets/logos/emblem_black.png')}
+                            defaultImage={EmblemBlack}
                             transformation={{
                                 width: 150,
                             }}

@@ -18,12 +18,12 @@ import {
 import CheckIcon from '@material-ui/icons/Check'
 import BlockIcon from '@material-ui/icons/Block'
 
-import Select from 'components/inputs/Select'
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
+import Select from '@/components/inputs/Select'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { useFormField } from 'hooks/formHooks'
+import { useFormField } from '@/hooks/formHooks'
 import Switch from '../../../../../../components/generic/Switch'
 
 const ACTIONS = ['save', 'remove']

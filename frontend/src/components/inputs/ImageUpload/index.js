@@ -7,8 +7,8 @@ import { Box, Typography, CircularProgress } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

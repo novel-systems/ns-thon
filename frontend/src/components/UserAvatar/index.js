@@ -3,8 +3,8 @@ import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useRouteMatch } from 'react-router'
 import { Avatar, Box, IconButton } from '@material-ui/core'
-import PlaceholderTheme from 'PlaceholderTheme.js'
-import { useMyProfilePreview } from 'graphql/queries/userProfile'
+import PlaceholderTheme from '@/PlaceholderTheme.js'
+import { useMyProfilePreview } from '@/graphql/queries/userProfile'
 
 export default () => {
     const match = useRouteMatch()
@@ -22,19 +22,17 @@ export default () => {
 
     return (
         <Box display="flex" flexDirection="row" alignItems="center">
-            <div className="tw-rounded-full tw-border-8 tw-border-white">
-                <IconButton onClick={handleClick}>
-                    <Avatar
-                        className="tw-rounded-full tw-border-8 tw-border-white tw-w-12 tw-h-12"
-                        src={profile?.avatar}
-                        alt="Avatar"
-                        style={{
-                            border: `2px solid ${color['primary'].main}`,
-                            borderRadius: '50%',
-                        }}
-                    />
-                </IconButton>
-            </div>
+            <IconButton onClick={handleClick}>
+                <Avatar
+                    className="tw-rounded-full tw-border-8 tw-border-white tw-w-12 tw-h-12"
+                    src={profile?.avatar}
+                    alt="Avatar"
+                    style={{
+                        border: `2px solid ${color['primary'].main}`,
+                        borderRadius: '50%',
+                    }}
+                />
+            </IconButton>
         </Box>
     )
 }

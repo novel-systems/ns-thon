@@ -4,10 +4,10 @@ import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 import { Grid, Typography } from '@material-ui/core'
 
-import Container from 'components/generic/Container'
-import EventCard from 'components/events/EventCard'
-import Button from 'components/generic/Button'
-import PageWrapper from 'components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import EventCard from '@/components/events/EventCard'
+import Button from '@/components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
 import { useTranslation } from 'react-i18next'
 
 

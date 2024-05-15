@@ -4,8 +4,8 @@ import { useState, useCallback, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 // import { push } from 'connected-react-router'
 
-// import { useMyEvents, useActiveEvents } from 'graphql/queries/events'
-// import * as UserSelectors from 'redux/user/selectors'
+// import { useMyEvents, useActiveEvents } from '@/graphql/queries/events'
+// import * as UserSelectors from '@/redux/user/selectors'
 
 export const useStateWithReset = initialValue => {
     const [value, setValue] = useState(initialValue)

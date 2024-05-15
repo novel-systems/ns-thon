@@ -4,8 +4,8 @@ import { Box, Typography, Checkbox } from '@material-ui/core'
 import { Misc } from '@novel-systems/shared'
 import FilterItem from './FilterItem'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
 
 const ACTIVELY_LOOKING = Misc.recruitmentStatuses.items['actively-looking']
 const UP_FOR_DISCUSSIONS = Misc.recruitmentStatuses.items['up-for-discussions']

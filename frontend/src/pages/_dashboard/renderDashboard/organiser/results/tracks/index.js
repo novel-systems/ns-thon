@@ -11,7 +11,7 @@ import {
     Typography,
 } from '@material-ui/core'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 import TrackResults from './TrackResults'
 

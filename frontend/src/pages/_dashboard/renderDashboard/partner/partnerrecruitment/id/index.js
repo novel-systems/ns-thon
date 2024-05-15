@@ -4,13 +4,13 @@ import { useRouteMatch } from 'react-router'
 import { makeStyles } from '@material-ui/core/styles'
 import { Dialog } from '@material-ui/core'
 
-import PageWrapper from 'components/layouts/PageWrapper'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
-import UserProfilesService from 'services/userProfiles'
+import UserProfilesService from '@/services/userProfiles'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import Profile from 'components/Participant/Profile'
-import RecruitmentFavorites from 'components/Participant/RecruitmentFavorites'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import Profile from '@/components/Participant/Profile'
+import RecruitmentFavorites from '@/components/Participant/RecruitmentFavorites'
 
 const useStyles = makeStyles(theme => ({
     iconBlue: {

@@ -6,15 +6,15 @@ import { useLocation } from 'react-router-dom'
 
 import { Box } from '@material-ui/core'
 import Rating from '@material-ui/lab/Rating'
-import StatusBadge from 'components/generic/StatusBadge'
-import Tag from 'components/generic/Tag'
+import StatusBadge from '@/components/generic/StatusBadge'
+import Tag from '@/components/generic/Tag'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import EditRegistrationModal from 'components/modals/EditRegistrationModal'
-import BulkEditRegistrationModal from 'components/modals/BulkEditRegistrationModal'
-import BulkEmailModal from 'components/modals/BulkEmailModal'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import EditRegistrationModal from '@/components/modals/EditRegistrationModal'
+import BulkEditRegistrationModal from '@/components/modals/BulkEditRegistrationModal'
+import BulkEmailModal from '@/components/modals/BulkEmailModal'
 
-import { Table, Filters, Sorters } from 'components/generic/_Table'
+import { Table, Filters, Sorters } from '@/components/generic/_Table'
 import { CSVLink } from 'react-csv'
 import _ from 'lodash'
 

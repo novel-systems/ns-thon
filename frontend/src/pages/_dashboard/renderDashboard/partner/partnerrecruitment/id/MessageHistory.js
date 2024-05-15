@@ -12,7 +12,7 @@ import {
     Avatar,
 } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
 
 const useStyles = makeStyles(theme => ({
     root: {

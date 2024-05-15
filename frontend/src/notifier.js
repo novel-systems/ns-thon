@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { withSnackbar } from 'notistack'
 import { Button } from '@material-ui/core'
-import { removeSnackbar } from 'redux/snackbar/actions'
-import * as SnackbarSelectors from 'redux/snackbar/selectors'
+import { removeSnackbar } from '@/redux/snackbar/actions'
+import * as SnackbarSelectors from '@/redux/snackbar/selectors'
 
 class Notifier extends Component {
     displayed = []

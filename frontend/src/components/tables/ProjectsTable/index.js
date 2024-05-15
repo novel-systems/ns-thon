@@ -1,13 +1,13 @@
 import React, { useMemo, useCallback, useState } from 'react'
 import { useSelector } from 'react-redux'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
-import { Table, Filters, Sorters } from 'components/generic/_Table'
-import EditProjectModal from 'components/modals/EditProjectModal'
+import { Table, Filters, Sorters } from '@/components/generic/_Table'
+import EditProjectModal from '@/components/modals/EditProjectModal'
 import _ from 'lodash'
 import { CSVLink } from 'react-csv'
-import { projectURLgenerator } from 'utils/dataModifiers'
+import { projectURLgenerator } from '@/utils/dataModifiers'
 
 const ProjectsTable = ({ projects }) => {
     const teams = useSelector(OrganiserSelectors.teams)

@@ -3,8 +3,8 @@ import React from 'react'
 import { Grid, Box } from '@material-ui/core'
 import { FastField, Field } from 'formik'
 
-import FormControl from 'components/inputs/FormControl'
-import BooleanInput from 'components/inputs/BooleanInput'
+import FormControl from '@/components/inputs/FormControl'
+import BooleanInput from '@/components/inputs/BooleanInput'
 
 import HackerpackForm from './HackerpackForm'
 

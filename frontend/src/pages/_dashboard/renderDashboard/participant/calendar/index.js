@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import ParticipantCalendarView from './ParticipantCalendarView'
 import { useSelector } from 'react-redux'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as UserSelectors from 'redux/user/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
-import Button from 'components/generic/Button'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import Button from '@/components/generic/Button'
 import { Auth } from '@novel-systems/shared'
 
 export default () => {

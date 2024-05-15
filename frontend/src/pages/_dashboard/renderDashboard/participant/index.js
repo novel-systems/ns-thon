@@ -15,9 +15,9 @@ import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted'
 import EventIcon from '@material-ui/icons/Event'
 import PlaceIcon from '@material-ui/icons/Place'
 
-import SidebarLayout from 'components/layouts/SidebarLayout'
-import Image from 'components/generic/Image'
-import BasicNavBar from 'components/navbars/BasicNavBar'
+import SidebarLayout from '@/components/layouts/SidebarLayout'
+import Image from '@/components/generic/Image'
+import BasicNavBar from '@/components/navbars/BasicNavBar'
 
 import DefaultPage from '../generalPages/default'
 import FinalistVotingPage from './finalist-voting'
@@ -43,7 +43,7 @@ import {
     QuestionAnswerSharp,
 } from '@material-ui/icons'
 
-import { Chat } from 'components/messaging/chat'
+import { Chat } from '@/components/messaging/chat'
 import { Grid, Paper } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({

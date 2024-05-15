@@ -12,8 +12,8 @@ import { Upload } from 'antd'
 import { useDispatch, useSelector } from 'react-redux'
 import ClearIcon from '@material-ui/icons/Clear'
 import { useTranslation } from 'react-i18next'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 const useStyles = makeStyles(theme => ({
     uploader: {

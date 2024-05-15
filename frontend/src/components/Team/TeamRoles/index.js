@@ -1,8 +1,8 @@
 import { Typography } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import React from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import theme from 'PlaceholderTheme'
+import theme from '@/PlaceholderTheme'
 
 export default ({
     onRoleClick = () => { },

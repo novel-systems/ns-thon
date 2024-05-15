@@ -5,7 +5,7 @@ import { IconButton, Popper, Paper, Typography, Box } from '@material-ui/core'
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline'
 import CloseIcon from '@material-ui/icons/Close'
 import { useTranslation } from 'react-i18next'
-import MiscUtils from 'utils/misc'
+import MiscUtils from '@/utils/misc'
 
 const useStyles = makeStyles(theme => ({
     errorButton: ({ hasErrors }) => ({

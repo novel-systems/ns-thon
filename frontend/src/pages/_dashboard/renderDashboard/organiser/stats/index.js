@@ -1,29 +1,42 @@
-import React from 'react'
-import config from 'constants/config'
+import React, { useEffect, useState } from 'react'
+import config from '@/constants/config'
 import { Typography } from '@material-ui/core'
 import { useSelector } from 'react-redux'
-import PageWrapper from 'components/layouts/PageWrapper'
-import PageHeader from 'components/generic/PageHeader'
-import * as OrganiseSelectors from 'redux/organiser/selectors'
-var jwt = require('jsonwebtoken')
+import PageWrapper from '@/components/layouts/PageWrapper'
+import PageHeader from '@/components/generic/PageHeader'
+import * as OrganiseSelectors from '@/redux/organiser/selectors'
+import * as jose from 'jose'
 
 
 var METABASE_SITE_URL = config.METABASE_SITE_URL
 var METABASE_SECRET_KEY = config.METABASE_SECRET_KEY
 
-export default () => {
+const StatsPage = () => {
     const event = useSelector(OrganiseSelectors.event)
     var payload = {
         resource: { dashboard: 57 },
         params: { event: event.name },
         exp: Math.round(Date.now() / 1000) + 10 * 60, // 10 minute expiration
     }
-    var token = jwt.sign(payload, METABASE_SECRET_KEY)
-    var iframeUrl =
-        METABASE_SITE_URL +
-        '/embed/dashboard/' +
-        token +
-        '#bordered=false&titled=false'
+    const [iframeUrl, setIframeUrl] = useState('')
+
+    useEffect(() => {
+        const fetchToken = async () => {
+            var token = await new jose.SignJWT(payload)
+                .setProtectedHeader({ alg: 'HS256' })
+                .setIssuedAt()
+                .setIssuer(METABASE_SITE_URL)
+                .setExpirationTime(payload.exp)
+                .sign(METABASE_SECRET_KEY)
+            var url =
+                METABASE_SITE_URL +
+                '/embed/dashboard/' +
+                token +
+                '#bordered=false&titled=false'
+            setIframeUrl(url)
+        }
+        fetchToken()
+    })
 
     return (
         <PageWrapper>
@@ -43,3 +56,5 @@ export default () => {
         </PageWrapper>
     )
 }
+
+export default StatsPage

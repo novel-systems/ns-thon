@@ -3,25 +3,25 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Dialog } from '@material-ui/core'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
-import RegistrationsService from 'services/registrations'
-import MiscUtils from 'utils/misc'
+import RegistrationsService from '@/services/registrations'
+import MiscUtils from '@/utils/misc'
 
 import EditRegistrationActions from './EditRegistrationActions'
 import EditRegistrationContent from './EditRegistrationContent'
 
 export default ({
     registrationId,
-    onClose = () => {},
-    onEdited = () => {},
+    onClose = () => { },
+    onEdited = () => { },
 }) => {
     const dispatch = useDispatch()
     const idToken = useSelector(AuthSelectors.getIdToken)

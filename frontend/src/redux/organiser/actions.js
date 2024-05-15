@@ -1,13 +1,13 @@
 import * as ActionTypes from './actionTypes'
-import * as AuthSelectors from 'redux/auth/selectors'
-import UserProfilesService from 'services/userProfiles'
-import EventsService from 'services/events'
-import RegistrationsService from 'services/registrations'
-import TeamsService from 'services/teams'
-import FilterGroupsService from 'services/filterGroups'
-import ProjectsService from 'services/projects'
-import GavelService from 'services/reviewing/gavel'
-import RankingsService from 'services/rankings'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import UserProfilesService from '@/services/userProfiles'
+import EventsService from '@/services/events'
+import RegistrationsService from '@/services/registrations'
+import TeamsService from '@/services/teams'
+import FilterGroupsService from '@/services/filterGroups'
+import ProjectsService from '@/services/projects'
+import GavelService from '@/services/reviewing/gavel'
+import RankingsService from '@/services/rankings'
 
 /** Update event with loading/error data */
 export const updateEvent = slug => async (dispatch, getState) => {

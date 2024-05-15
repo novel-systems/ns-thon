@@ -6,10 +6,12 @@ import { Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from 'react-i18next'
 import { Box } from '@material-ui/core'
-import Button from 'components/generic/Button'
-import FixedLayout from 'components/layouts/FixedLayout'
+import Button from '@/components/generic/Button'
+import FixedLayout from '@/components/layouts/FixedLayout'
+import CoverImage from '@/assets/images/default_cover_image.png'
+import EmblemWhite from '@/assets/logos/emblem_white.png'
 
-import * as AuthActions from 'redux/auth/actions'
+import * as AuthActions from '@/redux/auth/actions'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -58,7 +60,7 @@ export default () => {
 
     return (
         <FixedLayout
-            background={require('assets/images/default_cover_image.png')}
+            background={CoverImage}
             backgroundOpacity={0.2}
         >
             <Box
@@ -71,7 +73,7 @@ export default () => {
             >
                 <img
                     className={classes.logo}
-                    src={require('../../assets/logos/emblem_white.png')}
+                    src={EmblemWhite}
                     alt="logo"
                 />
                 <Typography variant="h6" className={classes.title}>

@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 
 import { Grid, Box, Typography } from '@material-ui/core'
 import moment from 'moment'
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 
 const DateInput = ({ label, value, onChange, onBlur, disableFutureYears }) => {
     const momentValue = value ? moment(value) : null

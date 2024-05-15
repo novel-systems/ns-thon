@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import PdfUpload from 'components/inputs/PdfUpload'
+import PdfUpload from '@/components/inputs/PdfUpload'
 import { useSelector } from 'react-redux'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
-import TextInput from 'components/inputs/TextInput'
+import TextInput from '@/components/inputs/TextInput'
 
 const CertificateForm = ({
     value = {

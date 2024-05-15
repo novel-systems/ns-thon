@@ -2,7 +2,7 @@ import { FormControl, FormLabel, Radio, RadioGroup } from '@material-ui/core'
 import _ from 'lodash'
 import { toInteger } from 'lodash-es'
 import React, { useState } from 'react'
-import placeholderStyle from 'utils/styles'
+import placeholderStyle from '@/utils/styles'
 
 const scoreArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 

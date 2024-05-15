@@ -10,18 +10,18 @@ import {
 } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import ProjectsGridItem from 'components/projects/ProjectsGridItem'
-import Button from 'components/generic/Button'
-import ConfirmDialog from 'components/generic/ConfirmDialog'
-import Markdown from 'components/generic/Markdown'
-import ProjectDetail from 'components/projects/ProjectDetail'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import ProjectsGridItem from '@/components/projects/ProjectsGridItem'
+import Button from '@/components/generic/Button'
+import ConfirmDialog from '@/components/generic/ConfirmDialog'
+import Markdown from '@/components/generic/Markdown'
+import ProjectDetail from '@/components/projects/ProjectDetail'
 import VoteTimer from './VoteTimer'
 
-import GavelService from 'services/reviewing/gavel'
+import GavelService from '@/services/reviewing/gavel'
 
 export default ({ annotator, prevId, nextId, isFirstChoice }) => {
     const dispatch = useDispatch()

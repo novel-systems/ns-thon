@@ -2,10 +2,10 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography, Grid } from '@material-ui/core'
 
-import Markdown from 'components/generic/Markdown'
+import Markdown from '@/components/generic/Markdown'
 
-import Button from 'components/generic/Button'
-import defaultLogo from 'assets/logos/JunctionPlatform_Emblem_Black.svg'
+import Button from '@/components/generic/Button'
+import defaultLogo from '@/assets/logos/JunctionPlatform_Emblem_Black.svg'
 import { OutboundLink } from 'react-ga'
 
 const useStyles = makeStyles(theme => ({

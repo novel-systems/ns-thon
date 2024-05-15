@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useMutation } from '@apollo/client'
 import { useTranslation } from 'react-i18next'
-import { BOOK_MEETING, CANCEL_MEETING } from 'graphql/mutations/meetings'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import { getMeetingSlotsWithPolling } from 'graphql/queries/meetings'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import { BOOK_MEETING, CANCEL_MEETING } from '@/graphql/mutations/meetings'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import { getMeetingSlotsWithPolling } from '@/graphql/queries/meetings'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import MeetingCard from './MeetingCard'
-import Empty from 'components/generic/Empty'
+import Empty from '@/components/generic/Empty'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
 
@@ -20,7 +20,7 @@ import {
     Select,
 } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
-import PageHeader from 'components/generic/PageHeader'
+import PageHeader from '@/components/generic/PageHeader'
 import MeetingLocationSelection from './MeetingLocationSelection'
 
 const useStyles = makeStyles(theme => ({

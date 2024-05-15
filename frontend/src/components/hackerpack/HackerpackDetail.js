@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Divider } from '@material-ui/core'
 
 import CompanySection from './CompanySection'
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import MiscUtils from 'utils/misc'
+import MiscUtils from '@/utils/misc'
 
 const useStyles = makeStyles(theme => ({
     title: {

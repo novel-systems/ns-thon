@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
 import { useLocation } from 'react-router'
 
-import * as AuthActions from 'redux/auth/actions'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserActions from 'redux/user/actions'
+import * as AuthActions from '@/redux/auth/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserActions from '@/redux/user/actions'
 
-import LoadingOverlay from 'components/loaders/LoadingOverlay'
-import AnalyticsService from 'services/analytics'
+import LoadingOverlay from '@/components/loaders/LoadingOverlay'
+import AnalyticsService from '@/services/analytics'
 
 export default () => {
     const location = useLocation()
@@ -29,7 +29,7 @@ export default () => {
                     dispatch(AuthActions.pushNextRoute())
                 }
             } catch (err) {
-                if (err.response.status === 404) {
+                if (err?.response?.status === 404) {
                     dispatch(push('/login/welcome'))
                 } else {
                     console.error('Login error', err)

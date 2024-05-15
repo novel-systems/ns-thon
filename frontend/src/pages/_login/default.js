@@ -2,11 +2,11 @@ import React, { useEffect, useCallback } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation } from 'react-router'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as AuthActions from 'redux/auth/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as AuthActions from '@/redux/auth/actions'
 
-import LoadingOverlay from 'components/loaders/LoadingOverlay'
-import MiscUtils from 'utils/misc'
+import LoadingOverlay from '@/components/loaders/LoadingOverlay'
+import MiscUtils from '@/utils/misc'
 import { useTranslation } from 'react-i18next'
 
 export default () => {

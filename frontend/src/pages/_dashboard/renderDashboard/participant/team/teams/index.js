@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Box, Typography, IconButton } from '@material-ui/core'
@@ -10,12 +10,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-import Button from 'components/generic/Button'
-import TeamCard from 'components/cards/TeamCard'
-import TeamProfile from 'components/Team/TeamProfile'
-import Apply from 'components/Team/Apply'
-import Filter from 'components/Team/Filter'
-import JoinTeamByCode from 'components/Team/JoinTeamByCode'
+import Button from '@/components/generic/Button'
+import TeamCard from '@/components/cards/TeamCard'
+import TeamProfile from '@/components/Team/TeamProfile'
+import Apply from '@/components/Team/Apply'
+import Filter from '@/components/Team/Filter'
+import JoinTeamByCode from '@/components/Team/JoinTeamByCode'
 
 export default () => {
     const dispatch = useDispatch()

@@ -9,20 +9,20 @@ import {
     DialogContent,
     DialogActions,
 } from '@material-ui/core'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import TextInput from 'components/inputs/TextInput'
-import TextAreaInput from 'components/inputs/TextAreaInput'
-import ConfirmDialog from 'components/generic/ConfirmDialog'
-import Button from 'components/generic/Button'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import TextInput from '@/components/inputs/TextInput'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
+import ConfirmDialog from '@/components/generic/ConfirmDialog'
+import Button from '@/components/generic/Button'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserSelectors from 'redux/user/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import { useFormField } from 'hooks/formHooks'
-import EmailService from 'services/email'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import { useFormField } from '@/hooks/formHooks'
+import EmailService from '@/services/email'
 import { useTranslation } from 'react-i18next'
 
 export default ({ visible, userIds = [], onClose }) => {

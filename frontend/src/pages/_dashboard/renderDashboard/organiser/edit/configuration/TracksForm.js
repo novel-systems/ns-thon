@@ -17,8 +17,8 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff'
 import EditIcon from '@material-ui/icons/Edit'
 import SaveIcon from '@material-ui/icons/Save'
 import CloseIcon from '@material-ui/icons/Close'
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
 
 export default ({ value, onChange }) => {
     const [inputValue, setInputValue] = useState()

@@ -1,12 +1,12 @@
 import * as ActionTypes from './actionTypes'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 import { buildFilterArray } from './helpers'
 
-import RecruitmentService from 'services/recruitment'
-import UserProfilesService from 'services/userProfiles'
-import EventsService from 'services/events'
+import RecruitmentService from '@/services/recruitment'
+import UserProfilesService from '@/services/userProfiles'
+import EventsService from '@/services/events'
 
 export const setFilters = data => dispatch => {
     dispatch({

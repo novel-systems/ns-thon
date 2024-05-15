@@ -3,11 +3,11 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { push } from 'connected-react-router'
 import { Typography, Grid } from '@material-ui/core'
-import NotificationBlock from 'components/generic/NotificationBlock'
-import GradientBox from 'components/generic/GradientBox'
-import Button from 'components/generic/Button'
+import NotificationBlock from '@/components/generic/NotificationBlock'
+import GradientBox from '@/components/generic/GradientBox'
+import Button from '@/components/generic/Button'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 export default () => {
     const dispatch = useDispatch()

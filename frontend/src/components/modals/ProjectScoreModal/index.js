@@ -8,9 +8,9 @@ import {
     DialogContent,
 } from '@material-ui/core'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { useDispatch } from 'react-redux'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as DashboardActions from '@/redux/dashboard/actions'
 
 const ProjectScoreModal = ({ open, onClose, score }) => {
     const dispatch = useDispatch()

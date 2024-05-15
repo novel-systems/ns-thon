@@ -9,8 +9,8 @@ import {
     CircularProgress,
 } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
-import ExternalLink from 'components/generic/ExternalLink'
-import config from 'constants/config'
+import ExternalLink from '@/components/generic/ExternalLink'
+import config from '@/constants/config'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
-import Empty from 'components/generic/Empty'
+import Empty from '@/components/generic/Empty'
 import ResultCard from './ResultCard'
 import { useDispatch, useSelector } from 'react-redux'
 // import { useRouteMatch } from 'react-router'
 import { Grid, Box, Typography, CircularProgress } from '@material-ui/core'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as DashboardActions from '@/redux/dashboard/actions'
 import { useTranslation } from 'react-i18next'
 import Pagination from './Pagination'
 import LoadingCard from './LoadingCard'
-import { debugGroup } from 'utils/debuggingTools'
+import { debugGroup } from '@/utils/debuggingTools'
 
 export default ({ items, organisation }) => {
     const dispatch = useDispatch()
@@ -57,7 +57,7 @@ export default ({ items, organisation }) => {
                                 xs={12}
                                 sm={6}
                                 md={4}
-                                //lg={3}
+                            //lg={3}
                             >
                                 <LoadingCard />
                             </Grid>
@@ -91,7 +91,7 @@ export default ({ items, organisation }) => {
                         xs={12}
                         sm={6}
                         md={4}
-                        //lg={3}
+                    //lg={3}
                     >
                         <ResultCard data={user} organisation={organisation} />
                     </Grid>

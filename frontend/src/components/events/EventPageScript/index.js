@@ -1,5 +1,5 @@
 import React from 'react'
-import EventUtils from 'utils/events'
+import EventUtils from '@/utils/events'
 
 export default ({ event, pageId }) => {
     React.useEffect(() => {

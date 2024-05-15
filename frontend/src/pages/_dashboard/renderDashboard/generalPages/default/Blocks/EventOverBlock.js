@@ -5,10 +5,10 @@ import { push } from 'connected-react-router'
 import moment from 'moment-timezone'
 import { EventHelpers } from '@novel-systems/shared'
 import { Typography, Grid } from '@material-ui/core'
-import GradientBox from 'components/generic/GradientBox'
-import Button from 'components/generic/Button'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import config from 'constants/config'
+import GradientBox from '@/components/generic/GradientBox'
+import Button from '@/components/generic/Button'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import config from '@/constants/config'
 
 export default () => {
     const dispatch = useDispatch()

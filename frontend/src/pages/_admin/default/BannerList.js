@@ -4,15 +4,15 @@ import { push } from 'connected-react-router'
 
 import { Grid, Box, Typography } from '@material-ui/core'
 
-import Divider from 'components/generic/Divider'
+import Divider from '@/components/generic/Divider'
 
 import { useTranslation } from 'react-i18next'
 import { IconButton } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit'
 
-import BannerService from 'services/banner'
-import * as AuthSelectors from 'redux/auth/selectors'
+import BannerService from '@/services/banner'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 export default ({ data = [] }) => {
     const dispatch = useDispatch()

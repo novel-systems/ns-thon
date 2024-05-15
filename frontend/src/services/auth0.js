@@ -1,5 +1,5 @@
 import auth0 from 'auth0-js'
-import config from 'constants/config'
+import config from '@/constants/config'
 
 const Auth0 = new auth0.WebAuth({
     domain: config.AUTH0_DOMAIN,

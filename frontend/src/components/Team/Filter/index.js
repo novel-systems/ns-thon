@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Select from 'components/inputs/Select'
-import Button from 'components/generic/Button'
+import Select from '@/components/inputs/Select'
+import Button from '@/components/generic/Button'
 import _ from 'lodash'
 
 export default ({
     filterArray = [],
     noFilterOption = 'All',
-    onChange = arg => {},
+    onChange = arg => { },
 }) => {
     //TODO use TS to avoid issues with this component, receiving the wrong prop types
     let noFilterObject

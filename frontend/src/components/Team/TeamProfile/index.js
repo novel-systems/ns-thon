@@ -1,16 +1,16 @@
 import { IconButton } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import React from 'react'
 import TeamHeader from '../TeamHeader'
 import TeamDescription from '../TeamDescription'
 import TeamRoles from '../TeamRoles'
 import TeamMembers from '../TeamMembers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import placeholderStyle from 'utils/styles'
-import { popupCenter } from 'utils/misc'
+import placeholderStyle from '@/utils/styles'
+import { popupCenter } from '@/utils/misc'
 import { Email } from '@material-ui/icons'
-import { objToArr } from 'utils/dataModifiers'
-import PageWrapper from 'components/layouts/PageWrapper'
+import { objToArr } from '@/utils/dataModifiers'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
 // TODO add socialLinks component from Damilare (@mrprotocoll)
 

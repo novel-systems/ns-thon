@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Grid } from '@material-ui/core'
-import FormControl from 'components/inputs/FormControl'
+import FormControl from '@/components/inputs/FormControl'
 import { Field } from 'formik'
 import TimelineForm from './TimelineForm'
 

@@ -2,12 +2,12 @@ import React, { useCallback, useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
 import { Grid, Box, Typography } from '@material-ui/core'
-import Divider from 'components/generic/Divider'
+import Divider from '@/components/generic/Divider'
 
 import { useTranslation } from 'react-i18next'
 
-import EventService from 'services/events'
-import * as AuthSelectors from 'redux/auth/selectors'
+import EventService from '@/services/events'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 export default ({ data = [] }) => {
     const { t } = useTranslation()

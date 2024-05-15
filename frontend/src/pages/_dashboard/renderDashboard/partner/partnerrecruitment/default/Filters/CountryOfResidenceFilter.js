@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Box } from '@material-ui/core'
 
 import FilterItem from './FilterItem'
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
 
 import { useTranslation } from 'react-i18next'
 

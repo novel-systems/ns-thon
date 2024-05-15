@@ -15,13 +15,13 @@ import {
     Grid,
 } from '@material-ui/core'
 
-import Button from 'components/generic/Button'
-import GradientBox from 'components/generic/GradientBox'
+import Button from '@/components/generic/Button'
+import GradientBox from '@/components/generic/GradientBox'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import config from 'constants/config'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import config from '@/constants/config'
 
 import { useTranslation } from 'react-i18next'
 

@@ -2,10 +2,10 @@ import React, { useCallback } from 'react'
 
 import { Grid } from '@material-ui/core'
 
-import BooleanInput from 'components/inputs/BooleanInput'
-import TextInput from 'components/inputs/TextInput'
-import FormControl from 'components/inputs/FormControl'
-import Select from 'components/inputs/Select'
+import BooleanInput from '@/components/inputs/BooleanInput'
+import TextInput from '@/components/inputs/TextInput'
+import FormControl from '@/components/inputs/FormControl'
+import Select from '@/components/inputs/Select'
 
 export default ({ value = {}, onChange }) => {
     const { enabled, budget, currency } = value

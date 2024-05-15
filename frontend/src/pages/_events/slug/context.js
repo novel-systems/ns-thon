@@ -4,8 +4,8 @@ import { useRouteMatch } from 'react-router'
 import { useSelector } from 'react-redux'
 import { EventStatuses } from '@novel-systems/shared'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import RegistrationsService from 'services/registrations'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import RegistrationsService from '@/services/registrations'
 
 // TODO move to queries
 const eventQuery = gql`

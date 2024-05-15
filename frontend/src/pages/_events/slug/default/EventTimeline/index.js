@@ -10,8 +10,8 @@ import {
 } from '@material-ui/core'
 import { sortBy } from 'lodash-es'
 import moment from 'moment'
-import MiscUtils from 'utils/misc'
-import TimelineDot from 'components/generic/TimelineDot'
+import MiscUtils from '@/utils/misc'
+import TimelineDot from '@/components/generic/TimelineDot'
 import StepConnector from '@material-ui/core/StepConnector'
 
 const useStyles = makeStyles(theme => ({

@@ -6,10 +6,10 @@ import moment from 'moment-timezone'
 import { useDispatch, useSelector } from 'react-redux'
 import { EventHelpers } from '@novel-systems/shared'
 
-import Button from 'components/generic/Button'
-import GradientBox from 'components/generic/GradientBox'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
+import Button from '@/components/generic/Button'
+import GradientBox from '@/components/generic/GradientBox'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
 
 export default () => {
     const dispatch = useDispatch()

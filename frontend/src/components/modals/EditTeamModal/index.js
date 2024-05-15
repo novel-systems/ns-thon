@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Dialog } from '@material-ui/core'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import AdminTeamEdit from 'components/Team/AdminTeamEdit'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import AdminTeamEdit from '@/components/Team/AdminTeamEdit'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 
 
-import TeamsService from 'services/teams'
+import TeamsService from '@/services/teams'
 
 export default ({
     teamCode,

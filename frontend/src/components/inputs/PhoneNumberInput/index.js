@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react'
 
 import { Grid, InputAdornment, Box, Typography } from '@material-ui/core'
-import Select from 'components/inputs/Select'
-import TextInput from 'components/inputs/TextInput'
+import Select from '@/components/inputs/Select'
+import TextInput from '@/components/inputs/TextInput'
 
 const PhoneNumberInput = React.memo(
     ({ label, value = {}, onChange, onBlur }) => {

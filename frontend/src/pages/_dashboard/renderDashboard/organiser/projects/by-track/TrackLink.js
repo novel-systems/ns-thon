@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
-import ProjectsService from 'services/projects'
+import ProjectsService from '@/services/projects'
 
 export default ({ track }) => {
     const dispatch = useDispatch()

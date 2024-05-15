@@ -6,11 +6,11 @@ import {
     Typography,
     Chip,
 } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import 'react-multi-carousel/lib/styles.css'
-import TeamHeader from 'components/Team/TeamHeader'
-import TeamRoles from 'components/Team/TeamRoles'
-import { gradientRandomizer, stringShortener } from 'utils/stylingHelpers'
+import TeamHeader from '@/components/Team/TeamHeader'
+import TeamRoles from '@/components/Team/TeamRoles'
+import { gradientRandomizer, stringShortener } from '@/utils/stylingHelpers'
 
 function TeamCard({
     teamData = {},
@@ -70,8 +70,8 @@ function TeamCard({
                         </div>
                     )}
                     {teamData?.teamRoles?.length > 0 &&
-                    teamData?.ideaTitle?.length > 20 &&
-                    teamData?.ideaDescription?.length > 20 ? (
+                        teamData?.ideaTitle?.length > 20 &&
+                        teamData?.ideaDescription?.length > 20 ? (
                         <Button
                             color="outlined_button"
                             variant="jOutlinedBox"

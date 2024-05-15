@@ -1,28 +1,28 @@
 import React from 'react'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
-import Footer from 'components/layouts/Footer'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
+import Footer from '@/components/layouts/Footer'
 
-import placeholderStyle from 'utils/styles'
+import placeholderStyle from '@/utils/styles'
 import { Box } from '@material-ui/core'
 
-import FormControl from 'components/inputs/FormControl'
+import FormControl from '@/components/inputs/FormControl'
 
-import ImageUpload from 'components/inputs/ImageUpload'
+import ImageUpload from '@/components/inputs/ImageUpload'
 
 import { Formik, FastField } from 'formik'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 import { useRouteMatch, useLocation } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
 import { useMutation } from '@apollo/client'
-import { UPDATE_EVENT } from 'graphql/mutations/eventOps'
+import { UPDATE_EVENT } from '@/graphql/mutations/eventOps'
 import { forOwn } from 'lodash-es'
 import yupSchema from '@novel-systems/shared/schemas/validation/eventSchema'
 
-import Container from 'components/generic/Container'
+import Container from '@/components/generic/Container'
 
 export default () => {
     const dispatch = useDispatch()

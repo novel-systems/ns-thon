@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { Box, Typography, Divider } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Helmet } from 'react-helmet'
-import HackerpackDetail from 'components/hackerpack/HackerpackDetail'
-import PageHeader from 'components/generic/PageHeader'
-import PageWrapper from 'components/layouts/PageWrapper'
+import HackerpackDetail from '@/components/hackerpack/HackerpackDetail'
+import PageHeader from '@/components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
 import { useRouteMatch, useLocation } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
-import HackerpackService from 'services/hackerpack'
-import config from 'constants/config'
-import EventsService from 'services/events'
+import HackerpackService from '@/services/hackerpack'
+import config from '@/constants/config'
+import EventsService from '@/services/events'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

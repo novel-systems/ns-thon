@@ -4,7 +4,7 @@ import { Box, Typography, ButtonBase, Popover } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 import { useTranslation } from 'react-i18next'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -38,8 +38,8 @@ const FilterItem = ({
     label,
     active,
     children,
-    onClose = () => {},
-    onSubmit = () => {},
+    onClose = () => { },
+    onSubmit = () => { },
 }) => {
     const classes = useStyles({ active })
     const [anchorEl, setAnchorEl] = React.useState(null)

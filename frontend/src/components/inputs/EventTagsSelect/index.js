@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 
 const EventTagsSelect = ({
     value,

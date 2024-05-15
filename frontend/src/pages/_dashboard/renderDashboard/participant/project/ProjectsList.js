@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Paper, Typography, Chip, Box, Grid } from '@material-ui/core'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import _ from 'lodash'
 
 export default props => {
@@ -55,7 +55,7 @@ export default props => {
                                     color="primary"
                                     label={_.truncate(
                                         challengeAndTrackSlugState[
-                                            project.track
+                                        project.track
                                         ],
                                         { length: styling.trackMaxLength },
                                     )}
@@ -67,7 +67,7 @@ export default props => {
                                     <Chip
                                         label={_.truncate(
                                             challengeAndTrackSlugState[
-                                                challenge
+                                            challenge
                                             ],
                                             {
                                                 length: styling.challengeMaxLength,

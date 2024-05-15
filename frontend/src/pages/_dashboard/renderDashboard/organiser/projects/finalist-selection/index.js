@@ -13,20 +13,20 @@ import {
     Paper,
     Typography,
 } from '@material-ui/core'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import PageHeader from 'components/generic/PageHeader'
-import PageWrapper from 'components/layouts/PageWrapper'
+import PageHeader from '@/components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
-import EventsService from 'services/events'
+import EventsService from '@/services/events'
 
-import TextInput from 'components/inputs/TextInput'
-import { useDebounce } from 'hooks/customHooks'
+import TextInput from '@/components/inputs/TextInput'
+import { useDebounce } from '@/hooks/customHooks'
 
 function not(a, b) {
     return a.filter(value => b.indexOf(value) === -1)

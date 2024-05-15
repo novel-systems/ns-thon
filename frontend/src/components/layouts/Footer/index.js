@@ -2,10 +2,10 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 
-import ExternalLink from 'components/generic/ExternalLink'
-import Divider from 'components/generic/Divider'
+import ExternalLink from '@/components/generic/ExternalLink'
+import Divider from '@/components/generic/Divider'
 import { useTranslation } from 'react-i18next'
-import config from 'constants/config'
+import config from '@/constants/config'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

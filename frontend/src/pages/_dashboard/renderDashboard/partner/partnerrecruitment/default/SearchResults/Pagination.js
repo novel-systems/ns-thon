@@ -10,10 +10,10 @@ import {
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
-import { useDebounce } from 'hooks/customHooks'
+import { useDebounce } from '@/hooks/customHooks'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
 
 export default () => {
     const dispatch = useDispatch()

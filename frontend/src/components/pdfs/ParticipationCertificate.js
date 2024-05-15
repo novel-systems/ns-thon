@@ -8,8 +8,8 @@ import {
     StyleSheet,
     Font,
 } from '@react-pdf/renderer'
-import MiscUtils from 'utils/misc'
-import config from 'constants/config'
+import MiscUtils from '@/utils/misc'
+import config from '@/constants/config'
 
 Font.register({
     family: 'Montserrat',

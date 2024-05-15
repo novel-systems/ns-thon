@@ -7,8 +7,8 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
 import ErrorDisplay from './ErrorDisplay'
-import BlockExitIfDirty from 'components/inputs/BlockExitIfDirty'
-import Button from 'components/generic/Button'
+import BlockExitIfDirty from '@/components/inputs/BlockExitIfDirty'
+import Button from '@/components/generic/Button'
 import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({

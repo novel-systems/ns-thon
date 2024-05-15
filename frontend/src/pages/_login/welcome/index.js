@@ -7,19 +7,21 @@ import { Typography, Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import * as yup from 'yup'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserActions from 'redux/user/actions'
-import * as AuthActions from 'redux/auth/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserActions from '@/redux/user/actions'
+import * as AuthActions from '@/redux/auth/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
-import Button from 'components/generic/Button'
-import UserProfilesService from 'services/userProfiles'
+import Button from '@/components/generic/Button'
+import UserProfilesService from '@/services/userProfiles'
 
-import FixedLayout from 'components/layouts/FixedLayout'
+import FixedLayout from '@/components/layouts/FixedLayout'
 import LightTextField from './LightTextField'
 import LightCheckbox from './LightCheckbox'
-import config from 'constants/config'
+import config from '@/constants/config'
 import { useTranslation } from 'react-i18next'
+import CoverImage from '@/assets/images/default_cover_image.png'
+import Laser2016 from '@/assets/images/laser_2016.jpg'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -167,13 +169,13 @@ export default () => {
 
     return (
         <FixedLayout
-            background={require('assets/images/default_cover_image.png')}
+            background={CoverImage}
         >
             <div className={classes.content}>
                 <div className={classes.contentLeft}>
                     <img
                         className={classes.contentLeftBackground}
-                        src={require('assets/images/laser_2016.jpg')}
+                        src={Laser2016}
                         alt="illustration"
                     />
                     <img

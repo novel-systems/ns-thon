@@ -7,8 +7,8 @@ import { Box, Grid, Typography } from '@material-ui/core'
 import * as yup from 'yup'
 import { RegistrationFieldsCustom } from '@novel-systems/shared'
 
-import BooleanInput from 'components/inputs/BooleanInput'
-import Markdown from 'components/generic/Markdown'
+import BooleanInput from '@/components/inputs/BooleanInput'
+import Markdown from '@/components/generic/Markdown'
 
 import RegistrationQuestion from '../RegistrationQuestion'
 import RegistrationBottomBar from '../RegistrationBottomBar'

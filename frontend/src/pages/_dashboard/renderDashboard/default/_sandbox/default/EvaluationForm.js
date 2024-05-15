@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { Box, Typography } from '@material-ui/core'
-import RadioScore from 'components/generic/RadioScore'
-import TextAreaInput from 'components/inputs/TextAreaInput'
-import FormControl from 'components/inputs/FormControl'
-import BottomBar from 'components/inputs/BottomBar'
+import RadioScore from '@/components/generic/RadioScore'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
+import FormControl from '@/components/inputs/FormControl'
+import BottomBar from '@/components/inputs/BottomBar'
 import _ from 'lodash'
 
 const scoreCriteria = [
@@ -31,7 +31,7 @@ const scoreCriteria = [
     },
 ]
 
-const EvaluationForm = ({ event, project, submit = () => {}, score }) => {
+const EvaluationForm = ({ event, project, submit = () => { }, score }) => {
     const allScoresSet = evalScores => {
         const scoreList = evalScores.map(value => {
             return value?.score ? value.score : null

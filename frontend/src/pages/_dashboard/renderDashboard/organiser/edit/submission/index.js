@@ -1,14 +1,14 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { FastField, useFormikContext } from 'formik'
 import { Grid, Typography } from '@material-ui/core'
-import FormControl from 'components/inputs/FormControl'
+import FormControl from '@/components/inputs/FormControl'
 import CustomSectionList from '../questions/CustomSectionList'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import { useSelector } from 'react-redux'
 import _ from 'lodash'
 import { useTranslation } from 'react-i18next'
-import Switch from 'components/generic/Switch'
-import Button from 'components/generic/Button'
+import Switch from '@/components/generic/Switch'
+import Button from '@/components/generic/Button'
 
 export default () => {
     const { t } = useTranslation()
@@ -96,7 +96,7 @@ export default () => {
                                                             touched={true}
                                                             error={
                                                                 form.errors[
-                                                                    field.name
+                                                                field.name
                                                                 ]
                                                             }
                                                         ></FormControl>

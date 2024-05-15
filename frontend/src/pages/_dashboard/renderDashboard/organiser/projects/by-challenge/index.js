@@ -10,10 +10,10 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import ProjectsTable from 'components/tables/ProjectsTable'
+import ProjectsTable from '@/components/tables/ProjectsTable'
 import ChallengeLink from './ChallengeLink'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 export default () => {
     const event = useSelector(OrganiserSelectors.event)

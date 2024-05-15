@@ -17,11 +17,11 @@ import StarIcon from '@material-ui/icons/Star'
 
 import { sortBy } from 'lodash-es'
 import SkillRating from './SkillRating'
-import emblem_black from 'assets/logos/emblem_black.png'
+import emblem_black from '@/assets/logos/emblem_black.png'
 
-import * as RecruitmentSelectors from 'redux/recruitment/selectors'
-import * as RecruitmentActions from 'redux/recruitment/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as RecruitmentSelectors from '@/redux/recruitment/selectors'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 const useStyles = makeStyles(theme => ({
     root: {

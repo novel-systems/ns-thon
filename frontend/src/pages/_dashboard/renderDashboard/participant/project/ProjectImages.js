@@ -5,9 +5,9 @@ import { Grid, Box, MobileStepper, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import SwipeableViews from 'react-swipeable-views'
 
-import ImageUpload from 'components/inputs/ImageUpload'
+import ImageUpload from '@/components/inputs/ImageUpload'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

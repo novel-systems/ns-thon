@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Box, makeStyles, Typography } from '@material-ui/core'
 import { Helmet } from 'react-helmet'
-import PageHeader from 'components/generic/PageHeader'
-import PageWrapper from 'components/layouts/PageWrapper'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import PageHeader from '@/components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
-import ChallengeDetail from 'components/challenges/ChallengeDetail'
+import ChallengeDetail from '@/components/challenges/ChallengeDetail'
 import { useSelector } from 'react-redux'
 import ChallengePage from './ChallengePage'
 export default () => {

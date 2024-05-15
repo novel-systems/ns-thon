@@ -3,19 +3,19 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { Grid, Box, Button, Dialog } from '@material-ui/core'
 import { useSelector, useDispatch } from 'react-redux'
 
-import PageHeader from 'components/generic/PageHeader'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Select from 'components/inputs/Select'
-import ProjectsGridItem from 'components/projects/ProjectsGridItem'
-import ProjectDetail from 'components/projects/ProjectDetail'
+import PageHeader from '@/components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Select from '@/components/inputs/Select'
+import ProjectsGridItem from '@/components/projects/ProjectsGridItem'
+import ProjectDetail from '@/components/projects/ProjectDetail'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
-import EventsService from 'services/events'
+import EventsService from '@/services/events'
 
-import WinnerVoteService from 'services/winnerVote'
+import WinnerVoteService from '@/services/winnerVote'
 
 export default () => {
     const dispatch = useDispatch()

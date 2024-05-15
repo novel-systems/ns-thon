@@ -3,7 +3,7 @@ import QRCode from 'qrcode.react'
 
 import { Box, Typography } from '@material-ui/core'
 
-import Modal from 'components/generic/Modal'
+import Modal from '@/components/generic/Modal'
 
 const QRCodeModal = ({ open, onClose, value, title, message }) => {
     return (

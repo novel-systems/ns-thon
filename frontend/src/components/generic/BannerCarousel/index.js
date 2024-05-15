@@ -1,11 +1,12 @@
 import { Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import EventImage from 'components/generic/EventImage'
+import EventImage from '@/components/generic/EventImage'
 import React, { useState } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
-import BannerService from 'services/banner'
+import BannerService from '@/services/banner'
 import { useEffect } from 'react'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
@@ -92,7 +93,7 @@ const BannerCarousel = (event = null) => {
                                 <EventImage
                                     className={classes.placeholderImage}
                                     publicId={picture.icon}
-                                    defaultImage={require('assets/images/default_cover_image.png')}
+                                    defaultImage={CoverImage}
                                     transformation={{
                                         width: 1440,
                                         height: 465,

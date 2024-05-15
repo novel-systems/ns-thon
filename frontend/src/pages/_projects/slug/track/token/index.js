@@ -4,12 +4,12 @@ import { useDispatch } from 'react-redux'
 import { useRouteMatch } from 'react-router'
 import { push } from 'connected-react-router'
 import { Box } from '@material-ui/core'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import ProjectsGrid from 'components/projects/ProjectsGrid'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
-import ProjectsService from 'services/projects'
+import ProjectsService from '@/services/projects'
 
 //TODO make this and challenge one into a component
 export default ({ event }) => {

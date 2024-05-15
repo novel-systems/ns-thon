@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
 
 import { useRouteMatch, useLocation } from 'react-router'
-import PageWrapper from 'components/layouts/PageWrapper'
-import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
-import PageHeader from 'components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import MaterialTabsLayout from '@/components/layouts/MaterialTabsLayout'
+import PageHeader from '@/components/generic/PageHeader'
 
 import DefaultTab from './default'
 import TeamsTab from './teams'
 import AssignedTab from './assigned'
 // import TravelTab from './travel'
 import AdminTab from './admin'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default () => {

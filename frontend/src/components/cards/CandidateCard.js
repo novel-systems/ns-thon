@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import placeholderStyle from 'utils/styles'
+import placeholderStyle from '@/utils/styles'
 import {
     Card,
     CardContent,
@@ -12,14 +12,14 @@ import {
     Radio,
 } from '@material-ui/core'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import 'react-multi-carousel/lib/styles.css'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
 import { useFormik } from 'formik'
 import { useDispatch, useSelector } from 'react-redux'
-import ParticipantPreview from 'components/Participant/ParticipantPreview'
+import ParticipantPreview from '@/components/Participant/ParticipantPreview'
 
 function CandidateCard({ candidateData = {}, onViewApplication = () => { } }) {
     const classes = placeholderStyle()

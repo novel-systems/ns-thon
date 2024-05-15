@@ -1,16 +1,16 @@
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import * as DashboardActions from 'redux/dashboard/actions'
+import * as DashboardActions from '@/redux/dashboard/actions'
 
 const FileInput = ({
     value = null,
-    handleChange = arg => {},
+    handleChange = arg => { },
     config = null,
 }) => {
     const allowedFileTypes =
         config?.settings?.allowedTypes &&
-        config.settings.allowedTypes.length > 0
+            config.settings.allowedTypes.length > 0
             ? config.settings.allowedTypes.map(type => `.${type}`).join(',')
             : ''
 

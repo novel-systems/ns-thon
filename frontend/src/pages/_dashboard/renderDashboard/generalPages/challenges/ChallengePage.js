@@ -1,8 +1,8 @@
 import { Box, makeStyles } from '@material-ui/core'
 import { ArrowBack } from '@material-ui/icons'
-import Button from 'components/generic/Button'
-import Markdown from 'components/generic/Markdown'
-import PageHeader from 'components/generic/PageHeader'
+import Button from '@/components/generic/Button'
+import Markdown from '@/components/generic/Markdown'
+import PageHeader from '@/components/generic/PageHeader'
 import React from 'react'
 
 const useStyles = makeStyles(theme => ({

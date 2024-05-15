@@ -3,16 +3,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 
 import { Grid, Box, Typography } from '@material-ui/core'
-import EventCardSmall from 'components/events/EventCardSmall'
-import Divider from 'components/generic/Divider'
+import EventCardSmall from '@/components/events/EventCardSmall'
+import Divider from '@/components/generic/Divider'
 
 import { useTranslation } from 'react-i18next'
 import { IconButton } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 
-import EventService from 'services/events'
-import * as AuthSelectors from 'redux/auth/selectors'
+import EventService from '@/services/events'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
 export default ({ data = [] }) => {
     const dispatch = useDispatch()

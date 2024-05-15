@@ -22,7 +22,7 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import Empty from 'components/generic/Empty'
+import Empty from '@/components/generic/Empty'
 
 import Pagination from './Pagination'
 import ActionBar from './ActionBar'

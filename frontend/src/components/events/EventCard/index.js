@@ -3,10 +3,11 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
-import Image from 'components/generic/Image'
-import Button from 'components/generic/Button'
+import Image from '@/components/generic/Image'
+import Button from '@/components/generic/Button'
 import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -71,7 +72,7 @@ const EventCard = ({ event, buttons }) => {//TODO: use neweventcard everywhere
             <div className={classes.top}>
                 <Image
                     className={classes.image}
-                    defaultImage={require('assets/images/default_cover_image.png')}
+                    defaultImage={CoverImage}
                     publicId={event?.coverImage?.publicId}
                     transformation={{
                         width: 400,

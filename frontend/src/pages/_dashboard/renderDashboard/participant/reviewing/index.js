@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Typography } from '@material-ui/core'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import GradientBox from 'components/generic/GradientBox'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import GradientBox from '@/components/generic/GradientBox'
 
 // import Instructions from './Instructions'
 // import FirstProject from './FirstProject'
@@ -12,10 +12,10 @@ import GradientBox from 'components/generic/GradientBox'
 // import Complete from './Complete'
 import Disabled from './Disabled'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import PageHeader from 'components/generic/PageHeader'
-import Button from 'components/generic/Button'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import PageHeader from '@/components/generic/PageHeader'
+import Button from '@/components/generic/Button'
 import Countdown from 'react-countdown-now'
 
 export default () => {

@@ -12,14 +12,15 @@ import {
     Box,
 } from '@material-ui/core'
 
-import TextInput from 'components/inputs/TextInput'
-import Button from 'components/generic/Button'
-import Image from 'components/generic/Image'
+import TextInput from '@/components/inputs/TextInput'
+import Button from '@/components/generic/Button'
+import Image from '@/components/generic/Image'
+import CoverImage from '@/assets/images/default_cover_image.png'
 
-import EventsService from 'services/events'
+import EventsService from '@/services/events'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 import { useTranslation } from 'react-i18next'
 
 const fillerContent = makeStyles({
@@ -180,13 +181,13 @@ export default () => {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             onClick={() => console.log('click')}
-            className={`tw-m-4 tw-text-left tw-rounded-lg tw-shadow-md tw-min-h-600px tw-max-w-xs tw-flex tw-flex-col tw-bg-gray-200 tw-rounded-t-2xl tw-border-8 tw-border-black tw-justify-between ${styling.cardHover}`}
+            className={`tw-m-4 tw-text-left tw-rounded-lg tw-shadow-md tw-min-h-600px tw-max-w-xs tw-flex tw-flex-col tw-bg-gray-100 tw-rounded-t-2xl tw-justify-between ${styling.cardHover}`}
         >
             <CardContent className="tw-flex tw-flex-col tw-p-0">
                 <div className="tw-h-40 tw-w-full tw-my-0 tw-mx-auto tw-relative tw-flex tw-justify-end tw-items-end">
                     <Image
                         className={classes.image}
-                        defaultImage={require('assets/images/default_cover_image.png')}
+                        defaultImage={CoverImage}
                         transformation={{
                             width: 400,
                         }}

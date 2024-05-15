@@ -3,15 +3,15 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { Grid, Box, Dialog } from '@material-ui/core'
 import { useSelector } from 'react-redux'
 
-import PageHeader from 'components/generic/PageHeader'
-import PageWrapper from 'components/layouts/PageWrapper'
-import ProjectsGridItem from 'components/projects/ProjectsGridItem'
-import ProjectDetail from 'components/projects/ProjectDetail'
+import PageHeader from '@/components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import ProjectsGridItem from '@/components/projects/ProjectsGridItem'
+import ProjectDetail from '@/components/projects/ProjectDetail'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 
-import WinnerVoteService from 'services/winnerVote'
+import WinnerVoteService from '@/services/winnerVote'
 import _ from 'lodash'
 
 export default () => {

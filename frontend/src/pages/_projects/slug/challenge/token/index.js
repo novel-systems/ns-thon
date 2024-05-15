@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useRouteMatch } from 'react-router'
 import { push } from 'connected-react-router'
 import { Box } from '@material-ui/core'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
-import ProjectsGrid from 'components/projects/ProjectsGrid'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
-import ProjectsService from 'services/projects'
-import Filter from 'components/Team/Filter'
+import ProjectsService from '@/services/projects'
+import Filter from '@/components/Team/Filter'
 import _ from 'lodash'
 
 //TODO make this and track one into a component
@@ -82,12 +82,11 @@ export default ({ event }) => {
                             heading={data?.challenge.name}
                             subheading={`By ${data?.challenge.partner}`}
                             alignment="left"
-                            details={`${data?.projects.length} project${
-                                data?.projects.length > 1 ||
+                            details={`${data?.projects.length} project${data?.projects.length > 1 ||
                                 data?.projects.length < 1
-                                    ? 's'
-                                    : ''
-                            }`}
+                                ? 's'
+                                : ''
+                                }`}
                         />
                         <Filter
                             noFilterOption={baseFilter}

@@ -5,18 +5,18 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { sumBy } from 'lodash-es'
 import { Typography, Grid, Box, Slider, Paper } from '@material-ui/core'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import Select from 'components/inputs/SelectOld'
-import BulkEditRegistrationModal from 'components/modals/BulkEditRegistrationModal'
-import BulkEmailModal from 'components/modals/BulkEmailModal'
-import EditTeamModal from 'components/modals/EditTeamModal'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import Select from '@/components/inputs/SelectOld'
+import BulkEditRegistrationModal from '@/components/modals/BulkEditRegistrationModal'
+import BulkEmailModal from '@/components/modals/BulkEmailModal'
+import EditTeamModal from '@/components/modals/EditTeamModal'
 
 
-import { Table, Sorters } from 'components/generic/_Table'
+import { Table, Sorters } from '@/components/generic/_Table'
 import AttendeeTable from '../AttendeeTable'
-import * as AuthSelectors from 'redux/auth/selectors'
-import CsvExporterService from 'services/csvExporter'
-import TeamsService from 'services/teams'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import CsvExporterService from '@/services/csvExporter'
+import TeamsService from '@/services/teams'
 
 export default ({ loading, teams = [], simplifiedView = false }) => {
     const dispatch = useDispatch()

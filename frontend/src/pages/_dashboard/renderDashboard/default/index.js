@@ -6,22 +6,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 
 
-import SidebarLayout from 'components/layouts/SidebarLayout' //TODO: make normal sidepar work with default view
-import BasicNavBar from 'components/navbars/BasicNavBar'
-import PageWrapper from 'components/layouts/PageWrapper'
-import defaultImage from 'assets/images/dashboardDefault.jpg'
+import SidebarLayout from '@/components/layouts/SidebarLayout' //TODO: make normal sidepar work with default view
+import BasicNavBar from '@/components/navbars/BasicNavBar'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import defaultImage from '@/assets/images/dashboardDefault.jpg'
 
 
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as UserSelectors from 'redux/user/selectors'
-import * as UserActions from 'redux/user/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as UserActions from '@/redux/user/actions'
 
 import { useTranslation } from 'react-i18next'
-import { useMyEvents, useActiveEvents, usePastEvents } from 'graphql/queries/events'
-// import { Chat } from 'components/messaging/chat'
+import { useMyEvents, useActiveEvents, usePastEvents } from '@/graphql/queries/events'
+// import { Chat } from '@/components/messaging/chat'
 
 const useStyles = makeStyles(theme => ({
     sidebarTop: {

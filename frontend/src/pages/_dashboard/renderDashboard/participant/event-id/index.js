@@ -4,11 +4,11 @@ import QRCode from 'qrcode.react'
 import { useSelector } from 'react-redux'
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography } from '@material-ui/core'
-import GradientBox from 'components/generic/GradientBox'
-import PageHeader from 'components/generic/PageHeader'
+import GradientBox from '@/components/generic/GradientBox'
+import PageHeader from '@/components/generic/PageHeader'
 
-import * as UserSelectors from 'redux/user/selectors'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 const useStyles = makeStyles(theme => ({
     root: {

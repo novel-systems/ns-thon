@@ -1,10 +1,10 @@
 import LogRocket from 'logrocket'
 
 import * as ActionTypes from './actionTypes'
-import * as AuthSelectors from 'redux/auth/selectors'
-import config from 'constants/config'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import config from '@/constants/config'
 import { getCookieConsentValue } from 'react-cookie-consent'
-import UserProfilesService from 'services/userProfiles'
+import UserProfilesService from '@/services/userProfiles'
 
 export const setUserProfile = profile => dispatch => {
     dispatch({

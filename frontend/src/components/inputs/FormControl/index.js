@@ -52,9 +52,8 @@ const FormControl = ({ label, hint, touched, error, children }) => {
                 {label}
             </Typography>
             <ReactMarkdown
-                source={renderHintOrError()}
-                renderers={{
-                    paragraph: ({ children }) => (
+                components={{
+                    p: ({ children }) => (
                         <Typography
                             className={classes.hint}
                             variant="subtitle2"
@@ -64,7 +63,7 @@ const FormControl = ({ label, hint, touched, error, children }) => {
                         </Typography>
                     ),
                 }}
-            />
+            >{renderHintOrError()}</ReactMarkdown>
             {children}
         </Box>
     )

@@ -8,7 +8,7 @@ import {
 import { GraphQLWsLink } from '@apollo/client/link/subscriptions'
 import { onError } from '@apollo/client/link/error'
 import { setContext } from '@apollo/client/link/context'
-import config from 'constants/config'
+import config from '@/constants/config'
 import { createClient } from 'graphql-ws'
 import { getMainDefinition } from '@apollo/client/utilities'
 

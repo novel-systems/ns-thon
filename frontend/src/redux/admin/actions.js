@@ -3,12 +3,12 @@ import { filter, concat } from 'lodash-es'
 import * as ActionTypes from './actionTypes'
 import { getUsersFiltersRoles } from './selectors'
 
-import { getIdToken } from 'redux/auth/selectors'
-import AdminService from 'services/admin'
+import { getIdToken } from '@/redux/auth/selectors'
+import AdminService from '@/services/admin'
 
-import HackerpackService from 'services/hackerpack'
-import BannerService from 'services/banner'
-import OrganizationService from 'services/organization'
+import HackerpackService from '@/services/hackerpack'
+import BannerService from '@/services/banner'
+import OrganizationService from '@/services/organization'
 
 export const updateUsers = () => (dispatch, getState) => {
     const idToken = getIdToken(getState())

@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux'
 import React, { useState, useEffect, useMemo } from 'react'
 
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 import {
     Dialog,
     List,
@@ -21,20 +21,20 @@ import {
     MenuItem,
     Checkbox,
 } from '@material-ui/core'
-import PageWrapper from 'components/layouts/PageWrapper'
-import Container from 'components/generic/Container'
-import PageHeader from 'components/generic/PageHeader'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import Container from '@/components/generic/Container'
+import PageHeader from '@/components/generic/PageHeader'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import TeamsTable from 'components/tables/TeamsTable'
-import ProjectScoresService from 'services/projectScores'
-import EventsService from 'services/events'
+import TeamsTable from '@/components/tables/TeamsTable'
+import ProjectScoresService from '@/services/projectScores'
+import EventsService from '@/services/events'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import Button from 'components/generic/Button'
-import { projectURLgenerator } from 'utils/dataModifiers'
+import Button from '@/components/generic/Button'
+import { projectURLgenerator } from '@/utils/dataModifiers'
 
-export default ({ project, onClose = () => {}, onEdited = () => {} }) => {
+export default ({ project, onClose = () => { }, onEdited = () => { } }) => {
     const dispatch = useDispatch()
     const idToken = useSelector(AuthSelectors.getIdToken)
     const event = useSelector(OrganiserSelectors.event)
@@ -240,11 +240,11 @@ export default ({ project, onClose = () => {}, onEdited = () => {} }) => {
                                                                     Status{' '}
                                                                     {projectScore.track
                                                                         ? 'in track ' +
-                                                                          projectScore.track
+                                                                        projectScore.track
                                                                         : null}{' '}
                                                                     {projectScore.challenge
                                                                         ? 'in challenge ' +
-                                                                          projectScore.challenge
+                                                                        projectScore.challenge
                                                                         : null}
                                                                 </InputLabel>
                                                                 <Select
@@ -324,7 +324,7 @@ export default ({ project, onClose = () => {}, onEdited = () => {} }) => {
                                 </ExpansionPanelDetails>
                             </ExpansionPanel>
                             {event.overallReviewMethod ===
-                            'finalsManualSelection' ? (
+                                'finalsManualSelection' ? (
                                 <Box
                                     display="flex"
                                     flexDirection="column"

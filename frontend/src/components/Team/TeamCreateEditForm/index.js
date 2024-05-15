@@ -1,22 +1,22 @@
-import FormControl from 'components/inputs/FormControl'
+import FormControl from '@/components/inputs/FormControl'
 import { FastField, Formik } from 'formik'
-import Select from 'components/inputs/Select'
+import Select from '@/components/inputs/Select'
 
-import TextInput from 'components/inputs/TextInput'
-import TextAreaInput from 'components/inputs/TextAreaInput'
-import BottomBar from 'components/inputs/BottomBar'
+import TextInput from '@/components/inputs/TextInput'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
+import BottomBar from '@/components/inputs/BottomBar'
 
 import * as yup from 'yup'
 
 import React from 'react'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { Typography } from '@material-ui/core'
-import { debugGroup } from 'utils/debuggingTools'
+import { debugGroup } from '@/utils/debuggingTools'
 
 export default ({
     initialData = {},
-    formikSubmitAction = () => {},
-    onBack = () => {},
+    formikSubmitAction = () => { },
+    onBack = () => { },
     challengeOptions = [],
 }) => {
     const TeamSchema = {
@@ -489,7 +489,7 @@ export default ({
                         onSubmit={formikProps.handleSubmit}
                         errors={
                             formikProps.touched?.name &&
-                            formikProps.touched?.description
+                                formikProps.touched?.description
                                 ? formikProps.errors
                                 : {}
                         }

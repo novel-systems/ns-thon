@@ -12,12 +12,12 @@ import {
 import { useDispatch, useSelector } from 'react-redux'
 import { RegistrationStatuses } from '@novel-systems/shared'
 
-import Modal from 'components/generic/Modal'
-import StatusBadge from 'components/generic/StatusBadge'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as OrganiserActions from 'redux/organiser/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import UserProfilesService from 'services/userProfiles'
+import Modal from '@/components/generic/Modal'
+import StatusBadge from '@/components/generic/StatusBadge'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as OrganiserActions from '@/redux/organiser/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import UserProfilesService from '@/services/userProfiles'
 
 const useStyles = makeStyles(theme => ({
     avatar: {

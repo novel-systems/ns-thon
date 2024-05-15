@@ -1,5 +1,5 @@
 import moment from 'moment'
-import EventConstants from 'constants/events'
+import EventConstants from '@/constants/events'
 
 const EventUtils = {
     getEventStatus: event => {

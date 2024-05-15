@@ -4,13 +4,13 @@ import FormGroup from '@material-ui/core/FormGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import { useDispatch, useSelector } from 'react-redux'
-import PageHeader from 'components/generic/PageHeader'
-import GradientBox from 'components/generic/GradientBox'
+import PageHeader from '@/components/generic/PageHeader'
+import GradientBox from '@/components/generic/GradientBox'
 import { Grid, Typography } from '@material-ui/core'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as DashboardActions from 'redux/dashboard/actions'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as DashboardActions from '@/redux/dashboard/actions'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 export default () => {
     const dispatch = useDispatch()

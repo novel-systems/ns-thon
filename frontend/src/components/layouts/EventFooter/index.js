@@ -5,13 +5,13 @@ import { useDispatch } from 'react-redux'
 import Hidden from '@material-ui/core/Hidden'
 import { push } from 'connected-react-router'
 
-import ExternalLink from 'components/generic/ExternalLink'
+import ExternalLink from '@/components/generic/ExternalLink'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import Divider from 'components/generic/Divider'
-import Button from 'components/generic/Button'
+import Divider from '@/components/generic/Divider'
+import Button from '@/components/generic/Button'
 import { useTranslation } from 'react-i18next'
-import config from 'constants/config'
+import config from '@/constants/config'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {

@@ -3,10 +3,10 @@ import { useMutation } from '@apollo/client'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
-import { MEETINGS_BULK_ACTION } from 'graphql/mutations/meetings'
-import * as SnackbarActions from 'redux/snackbar/actions'
-import * as UserSelectors from 'redux/user/selectors'
-import { getMeetingSlots } from 'graphql/queries/meetings'
+import { MEETINGS_BULK_ACTION } from '@/graphql/mutations/meetings'
+import * as SnackbarActions from '@/redux/snackbar/actions'
+import * as UserSelectors from '@/redux/user/selectors'
+import { getMeetingSlots } from '@/graphql/queries/meetings'
 import PartnerMeetingCard from './PartnerMeetingCard'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos'
@@ -18,9 +18,9 @@ import {
     Select,
     CircularProgress,
 } from '@material-ui/core'
-import Button from 'components/generic/Button'
-import Empty from 'components/generic/Empty'
-import PageHeader from 'components/generic/PageHeader'
+import Button from '@/components/generic/Button'
+import Empty from '@/components/generic/Empty'
+import PageHeader from '@/components/generic/PageHeader'
 
 const useStyles = makeStyles(theme => ({
     formWrapper: {

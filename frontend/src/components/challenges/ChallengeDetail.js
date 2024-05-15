@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Divider } from '@material-ui/core'
 
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 import ChallengeSection from './ChallengeSection'
 
 const makeBoxStyles = focus => ({

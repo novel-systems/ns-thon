@@ -19,9 +19,9 @@ import {
     Typography,
 } from '@material-ui/core'
 import { useTranslation } from 'react-i18next'
-import Select from 'components/inputs/SelectOld'
+import Select from '@/components/inputs/SelectOld'
 import FilterValueInput from './FilterValueInput'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 const useStyles = makeStyles(theme => ({
     paper: {

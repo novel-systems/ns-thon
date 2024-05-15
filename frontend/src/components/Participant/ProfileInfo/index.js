@@ -2,7 +2,7 @@ import React from 'react'
 import { Roles, Misc } from '@novel-systems/shared'
 import { Box, Chip, Typography, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 import SkillRating from '../../../pages/_dashboard/renderDashboard/partner/partnerrecruitment/default/SearchResults/SkillRating'
 
 const useStyles = makeStyles(theme => ({

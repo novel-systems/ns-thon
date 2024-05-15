@@ -1,5 +1,5 @@
 import ReactPixel from 'react-facebook-pixel'
-import config from 'constants/config'
+import config from '@/constants/config'
 
 const advancedMatching = {}
 const options = {

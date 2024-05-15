@@ -3,8 +3,8 @@ import { Box, Typography, Grid } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { popupCenter } from '../../../utils/misc'
 import { makeStyles } from '@material-ui/core/styles'
-import Container from 'components/generic/Container'
-import { projectURLgenerator } from 'utils/dataModifiers'
+import Container from '@/components/generic/Container'
+import { projectURLgenerator } from '@/utils/dataModifiers'
 
 const useStyles = makeStyles(theme => ({
     socialIcon: {

@@ -3,16 +3,16 @@ import React, { useMemo } from 'react'
 import { useRouteMatch, useLocation } from 'react-router'
 import { useSelector } from 'react-redux'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import PageHeader from 'components/generic/PageHeader'
-import MaterialTabsLayout from 'components/layouts/MaterialTabsLayout'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import PageHeader from '@/components/generic/PageHeader'
+import MaterialTabsLayout from '@/components/layouts/MaterialTabsLayout'
 
 import DefaultTab from './default'
 import OverallTab from './overall'
 import TracksTab from './tracks'
 import ChallengesTab from './challenges'
 
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 export default () => {
     console.log('THIS IS THE RESULTS PAGE')

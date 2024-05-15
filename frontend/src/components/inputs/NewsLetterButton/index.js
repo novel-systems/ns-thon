@@ -4,8 +4,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Typography, Button, Box } from '@material-ui/core'
 import { motion } from 'framer-motion'
 
-import NewsletterService from 'services/newsletter'
-import config from 'constants/config'
+import NewsletterService from '@/services/newsletter'
+import config from '@/constants/config'
 import { useTranslation } from 'react-i18next'
 
 const useStyles = makeStyles(theme => ({

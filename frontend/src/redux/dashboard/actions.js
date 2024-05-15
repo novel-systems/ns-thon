@@ -3,15 +3,15 @@ import { push } from 'connected-react-router'
 import * as ActionTypes from './actionTypes'
 import * as AuthSelectors from '../auth/selectors'
 import * as DashboardSelectors from './selectors'
-import EventsService from 'services/events'
-import ProjectsService from 'services/projects'
-import RegistrationsService from 'services/registrations'
-import TeamsService from 'services/teams'
-import UserProfilesService from 'services/userProfiles'
+import EventsService from '@/services/events'
+import ProjectsService from '@/services/projects'
+import RegistrationsService from '@/services/registrations'
+import TeamsService from '@/services/teams'
+import UserProfilesService from '@/services/userProfiles'
 
-import ProjectScoresService from 'services/projectScores'
+import ProjectScoresService from '@/services/projectScores'
 
-import GavelService from 'services/reviewing/gavel'
+import GavelService from '@/services/reviewing/gavel'
 import _ from 'lodash'
 
 export const updateEvent = slug => dispatch => {

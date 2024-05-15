@@ -11,11 +11,11 @@ import RateReviewIcon from '@material-ui/icons/RateReview'
 import { makeStyles } from '@material-ui/core/styles'
 import { Typography } from '@material-ui/core'
 
-import SidebarLayout from 'components/layouts/SidebarLayout'
-import BasicNavBar from 'components/navbars/BasicNavBar'
-import DefaultImage from 'assets/images/dashboardDefault.jpg'
+import SidebarLayout from '@/components/layouts/SidebarLayout'
+import BasicNavBar from '@/components/navbars/BasicNavBar'
+import DefaultImage from '@/assets/images/dashboardDefault.jpg'
 
-import Image from 'components/generic/Image'
+import Image from '@/components/generic/Image'
 import DefaultPage from '../generalPages/default'
 import HackerpackPage from '../generalPages/hackerpack'
 import ChallengesIndex from '../generalPages/challenges'
@@ -27,7 +27,7 @@ import Badge from '@material-ui/core/Badge'
 
 import ProjectsPage from './projects'
 import { QuestionAnswerSharp } from '@material-ui/icons'
-import { Chat } from 'components/messaging/chat'
+import { Chat } from '@/components/messaging/chat'
 // import PartnerReviewingBlock from '../generalPages/default/Blocks/PartnerReviewingBlock'
 
 const useStyles = makeStyles(theme => ({

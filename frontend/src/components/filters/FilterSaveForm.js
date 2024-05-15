@@ -12,11 +12,11 @@ import {
     CircularProgress,
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import TextInput from 'components/inputs/TextInput'
-import { useFormField } from 'hooks/formHooks'
-import * as OrganiserActions from 'redux/organiser/actions'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as SnackbarActions from 'redux/snackbar/actions'
+import TextInput from '@/components/inputs/TextInput'
+import { useFormField } from '@/hooks/formHooks'
+import * as OrganiserActions from '@/redux/organiser/actions'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as SnackbarActions from '@/redux/snackbar/actions'
 
 export default ({ filters, activeItem, reservedLabels, onSave, onDelete }) => {
     const dispatch = useDispatch()

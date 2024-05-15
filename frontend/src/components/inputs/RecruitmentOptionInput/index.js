@@ -3,9 +3,9 @@ import React, { useCallback } from 'react'
 import { Misc } from '@novel-systems/shared'
 import { Grid, Typography } from '@material-ui/core'
 
-import Select from 'components/inputs/Select'
-import BooleanInput from 'components/inputs/BooleanInput'
-import config from 'constants/config'
+import Select from '@/components/inputs/Select'
+import BooleanInput from '@/components/inputs/BooleanInput'
+import config from '@/constants/config'
 import { useTranslation } from 'react-i18next'
 
 const STATUS_OPTIONS = Misc.recruitmentStatuses.asArray.map(

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box } from '@material-ui/core'
-import TextInput from 'components/inputs/TextInput'
+import TextInput from '@/components/inputs/TextInput'
 
 const TextSearchFilter = () => {
     return (

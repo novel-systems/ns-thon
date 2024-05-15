@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import * as DashboardSelectors from 'redux/dashboard/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import { stringShortener } from 'utils/stylingHelpers'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import { stringShortener } from '@/utils/stylingHelpers'
 
 export default ({
     teamName,
@@ -49,11 +49,10 @@ export default ({
     return (
         <div className="tw-flex tw-flex-col tw-gap-2">
             <div
-                className={`tw-flex ${
-                    challengeName?.length > 10 || teamName?.length > 6
-                        ? 'tw-flex-col'
-                        : 'tw-items-center'
-                } tw-gap-4`}
+                className={`tw-flex ${challengeName?.length > 10 || teamName?.length > 6
+                    ? 'tw-flex-col'
+                    : 'tw-items-center'
+                    } tw-gap-4`}
             >
                 <Typography
                     className="tw-font-bold tw-tracking-tight tw-break-words-overflow"

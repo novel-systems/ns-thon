@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconButton, Typography } from '@material-ui/core'
 import { Email } from '@material-ui/icons'
 import React from 'react'
-import { popupCenter } from 'utils/misc'
-import placeholderStyle from 'utils/styles'
+import { popupCenter } from '@/utils/misc'
+import placeholderStyle from '@/utils/styles'
 
 export default ({ viewMode = '' }) => {
     const classes = placeholderStyle()

@@ -11,8 +11,8 @@ import {
 } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-import DescriptionItem from 'components/generic/DescriptionItem'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
+import DescriptionItem from '@/components/generic/DescriptionItem'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 export default React.memo(({ registration }) => {
     const event = useSelector(OrganiserSelectors.event)

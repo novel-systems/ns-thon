@@ -7,7 +7,8 @@ import {
     StyleSheet,
     Font,
 } from '@react-pdf/renderer'
-import config from 'constants/config'
+import config from '@/constants/config'
+import VisaSignature from '@/assets/images/visa_signature.jpg'
 // TODO: Make dynamic
 Font.register({
     family: 'Montserrat',
@@ -112,7 +113,7 @@ const VisaInvitationPDF = ({
             <Text style={styles.paragraph}>Sincerely,</Text>
             <Image
                 style={styles.signature}
-                src={require('assets/images/visa_signature.jpg')}
+                src={VisaSignature}
             />
             <Text style={styles.paragraph}>{hostName}</Text>
             <Text style={styles.paragraph}>

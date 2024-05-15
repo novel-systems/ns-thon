@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux'
 import { CircularProgress, Typography, Grid } from '@material-ui/core'
 
 import { RegistrationStatuses, EventTypes } from '@novel-systems/shared'
-import GradientBox from 'components/generic/GradientBox'
+import GradientBox from '@/components/generic/GradientBox'
 
-import * as DashboardSelectors from 'redux/dashboard/selectors'
+import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 const STATUSES = RegistrationStatuses.asObject
 const VisaInvitationDrawer = React.lazy(() =>
-    import('components/modals/VisaInvitationDrawer'),
+    import('@/components/modals/VisaInvitationDrawer'),
 )
 
 export default () => {

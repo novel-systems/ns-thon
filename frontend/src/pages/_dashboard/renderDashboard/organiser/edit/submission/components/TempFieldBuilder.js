@@ -15,7 +15,7 @@ import {
 import Dropdown from './section/Dropdown'
 import Switch from '../../../../../../../components/generic/Switch'
 import TextInput from './inputs/TextInput'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import Checkbox from './section/Checkbox'
 import EditableOptions from './EditableOptions'
 

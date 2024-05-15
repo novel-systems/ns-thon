@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import { makeStyles, IconButton, Box } from '@material-ui/core'
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown'
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp'

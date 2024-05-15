@@ -7,8 +7,8 @@ import { Formik, FastField } from 'formik'
 import * as yup from 'yup'
 import { useSelector } from 'react-redux'
 
-import * as UserSelectors from 'redux/user/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
+import * as UserSelectors from '@/redux/user/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
 import RegistrationQuestion from '../RegistrationQuestion'
 import RegistrationBottomBar from '../RegistrationBottomBar'
 

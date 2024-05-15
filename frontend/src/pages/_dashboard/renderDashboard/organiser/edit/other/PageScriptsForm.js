@@ -15,16 +15,16 @@ import {
     FormControlLabel,
     Checkbox,
 } from '@material-ui/core'
-import * as AuthSelectors from 'redux/auth/selectors'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import EventService from 'services/events'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import EventService from '@/services/events'
 
-import Select from 'components/inputs/Select'
-import Button from 'components/generic/Button'
+import Select from '@/components/inputs/Select'
+import Button from '@/components/generic/Button'
 
 import { makeStyles } from '@material-ui/core/styles'
-import { useFormField } from 'hooks/formHooks'
-import TextAreaInput from 'components/inputs/TextAreaInput'
+import { useFormField } from '@/hooks/formHooks'
+import TextAreaInput from '@/components/inputs/TextAreaInput'
 import { EventPageScripts } from '@novel-systems/shared'
 
 const useStyles = makeStyles(theme => ({

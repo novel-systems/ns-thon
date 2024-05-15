@@ -1,4 +1,4 @@
-import Container from 'components/generic/Container'
+import Container from '@/components/generic/Container'
 import React from 'react'
 import ProfileTop from '../ProfileTop'
 import ProfileInfo from '../ProfileInfo'

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import EventDetailContext, { EventDetailProvider } from '../context'
-import EventPageScript from 'components/events/EventPageScript'
+import EventPageScript from '@/components/events/EventPageScript'
 import { useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 

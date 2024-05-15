@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
-import GlitchLoader from 'components/loaders/GlitchLoader'
+import CoverImage from '@/assets/images/default_cover_image.png'
+import GlitchLoader from '@/components/loaders/GlitchLoader'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -36,7 +37,7 @@ const LoadingOverlay = ({ text }) => {
         <div className={classes.wrapper}>
             <img
                 className={classes.backgroundImage}
-                src={require('assets/images/default_cover_image.png')}
+                src={CoverImage}
                 alt="background"
             />
             <GlitchLoader title={text} size={200} />

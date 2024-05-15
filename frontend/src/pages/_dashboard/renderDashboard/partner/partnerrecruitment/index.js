@@ -9,10 +9,10 @@ import {
     useParams,
 } from 'react-router-dom'
 
-import PageWrapper from 'components/layouts/PageWrapper'
-import * as RecruitmentActions from 'redux/recruitment/actions'
-/*import BasicNavBar from 'components/navbars/BasicNavBar'*/
-import GlobalNavBar from 'components/navbars/GlobalNavBar'
+import PageWrapper from '@/components/layouts/PageWrapper'
+import * as RecruitmentActions from '@/redux/recruitment/actions'
+/*import BasicNavBar from '@/components/navbars/BasicNavBar'*/
+import GlobalNavBar from '@/components/navbars/GlobalNavBar'
 
 import SearchPage from './default'
 // import AdminPage from './admin'
@@ -50,8 +50,8 @@ export default () => {
 // import FormControlLabel from '@material-ui/core/FormControlLabel'
 // import Checkbox from '@material-ui/core/Checkbox'
 // import { useDispatch, useSelector } from 'react-redux'
-// import PageHeader from 'components/generic/PageHeader'
-// import GradientBox from 'components/generic/GradientBox'
+// import PageHeader from '@/components/generic/PageHeader'
+// import GradientBox from '@/components/generic/GradientBox'
 // import { Grid, Typography } from '@material-ui/core'
 
 // export default () => {

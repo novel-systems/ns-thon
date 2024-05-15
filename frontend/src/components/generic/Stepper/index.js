@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 
 import { Stepper, Step, StepLabel, StepContent } from '@material-ui/core'
 
-import StepButtons from 'components/buttons/StepButtons'
+import StepButtons from '@/components/buttons/StepButtons'
 
 const _Stepper = ({
     steps = [],

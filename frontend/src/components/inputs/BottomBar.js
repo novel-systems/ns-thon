@@ -14,8 +14,8 @@ import {
 } from '@material-ui/core'
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline'
 
-import Button from 'components/generic/Button'
-import BlockExitIfDirty from 'components/inputs/BlockExitIfDirty/index'
+import Button from '@/components/generic/Button'
+import BlockExitIfDirty from '@/components/inputs/BlockExitIfDirty/index'
 import { isArray } from 'lodash-es'
 
 const useStyles = makeStyles(theme => ({
@@ -109,18 +109,18 @@ const BottomBar = ({
                 {loading && (//TODO: fix the looks
                     <Grid container spacing={6}>
                         <Grid item xs={8}>
-                <Typography className={classes.loadingText}> 
-                {loadingText}
-                </Typography>
-                </Grid>
-                <Grid item xs={4}>
+                            <Typography className={classes.loadingText}>
+                                {loadingText}
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={4}>
 
-                    <CircularProgress className={classes.loader} />
-                    </Grid>
+                            <CircularProgress className={classes.loader} />
+                        </Grid>
 
                     </Grid>
-                  )}  
-                 {dirty && !hasErrors && ( 
+                )}
+                {dirty && !hasErrors && (
                     <Button
                         color="theme_white"
                         variant="contained"
@@ -129,7 +129,7 @@ const BottomBar = ({
                     >
                         {submitLabel}
                     </Button>
-                 )} 
+                )}
                 {!loading && hasErrors && renderErrorsButton()}
             </Box>
             {dirty && <BlockExitIfDirty dirty={dirty} />}

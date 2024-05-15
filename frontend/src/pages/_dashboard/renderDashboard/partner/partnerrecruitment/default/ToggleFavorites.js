@@ -2,7 +2,7 @@ import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Button as MuiButton, Badge } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
 const useStyles = makeStyles(theme => ({
     padding: {

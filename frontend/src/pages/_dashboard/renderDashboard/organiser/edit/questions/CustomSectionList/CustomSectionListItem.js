@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 
 import { makeStyles } from '@material-ui/core/styles'
 import { Box, Typography } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 import TextInput from '../../submission/components/inputs/TextInput'
 import EditableText from '../../submission/components/section/EditableText'
 import Dropdown from '../../submission/components/section/Dropdown'
@@ -17,9 +17,8 @@ import {
     faPlusCircle,
     faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons'
-import Empty from 'components/generic/Empty'
-import { now } from 'moment'
-import { debugGroup } from 'utils/debuggingTools'
+import Empty from '@/components/generic/Empty'
+import { debugGroup } from '@/utils/debuggingTools'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -503,7 +502,7 @@ export default ({
                     onClick={() =>
                         handleAdd({
                             label: 'New question - click here to edit the question name',
-                            name: `${section.name}_question_${now()}`,
+                            name: `${section.name}_question_${new Date().getTime()}`,
                             fieldType: 'text',
                             fieldRequired: false,
                             settings: {

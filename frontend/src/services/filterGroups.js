@@ -1,4 +1,4 @@
-import _axios from 'services/axios'
+import _axios from '@/services/axios'
 
 const FilterGroupsService = {}
 

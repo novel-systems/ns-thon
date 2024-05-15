@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import * as OrganiserSelectors from 'redux/organiser/selectors'
-import * as AuthSelectors from 'redux/auth/selectors'
-import RankingsService from 'services/rankings'
-import GavelService from 'services/reviewing/gavel'
-import { debugGroup } from 'utils/debuggingTools'
+import * as OrganiserSelectors from '@/redux/organiser/selectors'
+import * as AuthSelectors from '@/redux/auth/selectors'
+import RankingsService from '@/services/rankings'
+import GavelService from '@/services/reviewing/gavel'
+import { debugGroup } from '@/utils/debuggingTools'
 
 export default () => {
     const dispatch = useDispatch()

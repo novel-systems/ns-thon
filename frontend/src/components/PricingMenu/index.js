@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { push } from 'connected-react-router'
 
 import { Box } from '@material-ui/core'
-import Button from 'components/generic/Button'
+import Button from '@/components/generic/Button'
 
 export default () => {
     const dispatch = useDispatch()
