@@ -98,7 +98,7 @@ const RegistrationHelpers = {
         /** Match the event id first to reduce results */
         aggregationSteps.push({
             $match: {
-                event: mongoose.Types.ObjectId(eventId.toString()),
+                event: new mongoose.Types.ObjectId(eventId.toString()),
             },
         })
 

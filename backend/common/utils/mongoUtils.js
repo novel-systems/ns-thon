@@ -16,7 +16,7 @@ const MongoUtils = {
                 })
             }
         } else if (value.length === 24 && ObjectId.isValid(value)) {
-            return mongoose.Types.ObjectId(value)
+            return new mongoose.Types.ObjectId(value)
         }
         return value
     },
