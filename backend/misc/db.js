@@ -3,8 +3,6 @@ const Promise = require('bluebird')
 
 const logger = require('./logger')
 
-mongoose.Promise = Promise
-
 // let gfs
 
 const connect = () => {
