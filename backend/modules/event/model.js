@@ -24,13 +24,14 @@ const EventThemeSchema = require('@novel-systems/shared/schemas/EventTheme')
 const EventTimelineSchema = require('@novel-systems/shared/schemas/EventTimeline')
 const MeetingRoomSchema = require('@novel-systems/shared/schemas/MeetingRoom')
 const EventPageScriptSchema = require('@novel-systems/shared/schemas/EventPageScript')
-const allowPublishPlugin = require('../../common/plugins/allowPublish')
-const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
-const uploadHelper = require('../upload/helper')
 const ProjectDefaultFields = require('@novel-systems/shared/constants/project-default-fields')
 const SubmissionDefaultFieldsSchema = require('@novel-systems/shared/schemas/SubmissionDefaultFields')
 const SubmissionDefaultFields = require('@novel-systems/shared/constants/submission-default-fields')
 const ScoreCriteriaSettingsSchema = require('@novel-systems/shared/schemas/ScoreCriteriaSettings')
+const uploadHelper = require('../upload/helper')
+const updateAllowedPlugin = require('../../common/plugins/updateAllowed')
+const allowPublishPlugin = require('../../common/plugins/allowPublish')
+const EventSettings = require('./settings')
 
 const EventSchema = new mongoose.Schema({
     /** Event info */
@@ -93,7 +94,7 @@ const EventSchema = new mongoose.Schema({
     coverImage: CloudinaryImageSchema.mongoose,
     logo: CloudinaryImageSchema.mongoose,
     certificate: Certificate.mongoose,
-    //map: mongoFile.mongoose,
+    // map: mongoFile.mongoose,
     /** Event configuration */
     eventType: {
         type: String,
@@ -113,13 +114,16 @@ const EventSchema = new mongoose.Schema({
             `is required for physical or hydrid events`,
         ],
     },
-    tracksEnabled: false,
+    tracksEnabled: {
+        type: Boolean,
+        default: EventSettings.tracksEnabled,
+    },
     tracks: {
         type: [TrackSchema.mongoose],
         default: [],
         validate: [
             function (val) {
-                if (this.tracksEnabled) {
+                if (EventSettings.tracksEnabled) {
                     return val.length > 0
                 }
                 return true
@@ -128,18 +132,21 @@ const EventSchema = new mongoose.Schema({
         ],
         required: [
             function () {
-                return this.tracksEnabled
+                return EventSettings.tracksEnabled
             },
             'is required if tracks are enabled',
         ],
     },
-    challengesEnabled: false,
+    challengesEnabled: {
+        type: Boolean,
+        default: EventSettings.challengesEnabled,
+    },
     challenges: {
         type: [ChallengeSchema.mongoose],
         default: [],
         validate: [
             function (val) {
-                if (this.challengesEnabled) {
+                if (EventSettings.challengesEnabled) {
                     return val.length > 0
                 }
                 return true
@@ -147,7 +154,10 @@ const EventSchema = new mongoose.Schema({
             'must have at least one item if challenges are enabled',
         ],
     },
-    hackerpacksEnabled: false,
+    hackerpacksEnabled: {
+        type: Boolean,
+        default: EventSettings.hackerpacksEnabled,
+    },
     hackerpacks: {
         type: [HackerpackSchema.mongoose],
         default: [],
@@ -176,7 +186,7 @@ const EventSchema = new mongoose.Schema({
         enum: Object.keys(OverallReviewingMethods),
         required: [
             function () {
-                return this.tracksEnabled
+                return EventSettings.tracksEnabled
             },
             'is required if tracks are enabled',
         ],
@@ -320,7 +330,7 @@ const EventSchema = new mongoose.Schema({
             default: 'noreply@novel.systems',
             trim: true,
             validate: {
-                validator: function (v) {
+                validator(v) {
                     return /\S+@\S+\.\S+/.test(v)
                 },
                 message: props =>
@@ -407,7 +417,10 @@ const EventSchema = new mongoose.Schema({
         type: [EventPageScriptSchema.mongoose],
         default: [],
     },
-    meetingsEnabled: false,
+    meetingsEnabled: {
+        type: Boolean,
+        default: EventSettings.meetingsEnabled,
+    },
     meetingRooms: {
         type: [MeetingRoomSchema.mongoose],
         default: [],
@@ -423,7 +436,7 @@ const EventSchema = new mongoose.Schema({
         type: SubmissionDefaultFieldsSchema.mongoose,
         default: SubmissionDefaultFields,
     },
-    //New fields for score criteria and score settings
+    // New fields for score criteria and score settings
     scoreCriteriaSettings: {
         type: ScoreCriteriaSettingsSchema.mongoose,
     },
