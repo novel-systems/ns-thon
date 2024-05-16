@@ -118,20 +118,20 @@ export default () => {
                         <title>{config.PLATFORM_OWNER_NAME}</title>
                         <meta
                             name="keywords"
-                            content="Hackathon, hackathon platform, Placeholder-1"
+                            content="Hackathon, hackathon platform, NSThon"
                         />
                         <meta
                             name="title"
-                            content="Placeholder-1 App || Contact us"
+                            content="NSThon App || Contact us"
                         />
                         <meta
                             property="og:title"
-                            content="Placeholder-1 App || Contact us"
+                            content="NSThon App || Contact us"
                         />
 
                         <meta
                             name="twitter:title"
-                            content="Placeholder-1 App || Contact us"
+                            content="NSThon App || Contact us"
                         />
                         <meta
                             name="description"

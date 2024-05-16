@@ -386,7 +386,7 @@ export default RequiresPermission(() => {
         })
     }
 
-    const shareurl = 'https://placeholder-1.novel.systems/events/' + event.slug // TODO: remove hard coded base URL
+    const shareurl = 'https://thon.novel.systems/events/' + event.slug // TODO: remove hard coded base URL
     const sharetext = `I just applied to ${event.name}!`
 
     return (

@@ -18,7 +18,7 @@ const HackerpackDetail = ({ hackerpack, redeemable = false }) => {
                         logo={hackerpack.logo}
                         partner={hackerpack.partner}
                         link={hackerpack.link}
-                        //TODO: remove this after placeholder-12021
+                        //TODO: remove this after ns-thon2021
                         redeemable
                     />
                 </GradientBox>

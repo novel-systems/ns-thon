@@ -1,5 +1,5 @@
 function (user, context, callback) {
-  const namespace = 'https://placeholder-1.novel.systems/'
+  const namespace = 'https://thon.novel.systems/'
   const assignedRoles = (context.authorization || {}).roles || []
 
   context.idToken[namespace + 'country'] = context.request.geoip.country_name

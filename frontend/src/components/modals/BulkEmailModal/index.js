@@ -116,7 +116,7 @@ export default ({ visible, userIds = [], onClose }) => {
         setLoading(true)
         const fromObject = {
             email: event.emailConfig.senderEmail ? event.emailConfig.senderEmail : 'noreply@novel.systems',
-            name: event.emailConfig.senderName ? event.emailConfig.senderName : 'Placeholder-1',
+            name: event.emailConfig.senderName ? event.emailConfig.senderName : 'NSThon',
         }
         EmailService.sendPreviewEmail({ idToken: idToken, slug: event.slug, to: user.email, params: params, from: fromObject })
             .then(() => {

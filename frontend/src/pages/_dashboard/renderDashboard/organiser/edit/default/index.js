@@ -328,7 +328,7 @@ export default () => {
                     {({ field, form }) => (
                         <FormControl
                             label="Newsletter subscription link"
-                            hint="Set this if you want a subscription button to appear when people register. It will appear after the Placeholder-1 newsletter and should link to an external subscription form."
+                            hint="Set this if you want a subscription button to appear when people register. It will appear after the NSThon newsletter and should link to an external subscription form."
                             error={form.errors[field.name]}
                             touched={form.touched[field.name]}
                         >

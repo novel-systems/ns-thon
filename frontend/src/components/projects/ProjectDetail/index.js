@@ -214,24 +214,24 @@ const ProjectDetail = ({
                 <title>{config.PLATFORM_OWNER_NAME}</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Placeholder-1"
+                    content="Hackathon, hackathon platform, NSThon"
                 />
                 <meta
                     name="title"
                     content={
-                        project ? `${project.name} - Placeholder-1 Platform` : ''
+                        project ? `${project.name} - NSThon Platform` : ''
                     }
                 />
                 <meta
                     property="og:title"
                     content={
-                        project ? `${project.name} - Placeholder-1 Platform` : ''
+                        project ? `${project.name} - NSThon Platform` : ''
                     }
                 />
                 <meta
                     name="twitter:title"
                     content={
-                        project ? `${project.name} - Placeholder-1 Platform` : ''
+                        project ? `${project.name} - NSThon Platform` : ''
                     }
                 />
                 <meta

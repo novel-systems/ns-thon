@@ -156,7 +156,7 @@ const EventFooter = props => {
                 <div className={classes.copyright}>
                     <Divider size={1} />
                     <span className={classes.copyright}>
-                        Designed and developed with ❤️ and ☕ by the Placeholder-1
+                        Designed and developed with ❤️ and ☕ by the NSThon
                         team, with the help of:
                     </span>
                     <Divider size={1} />

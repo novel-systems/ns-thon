@@ -8,16 +8,16 @@ const TOKEN_PATH = `${__dirname}/token.json`
 const install = {
     client_id:
         '752565208443-0g0ui7afokfi2b1t1von4qankq1vh62h.apps.googleusercontent.com', // "758477701769-hasb17jt161beprjr34kgqjma0sb815h.apps.googleusercontent.com",//global.gConfig.GOOGLE_CLIENT_ID,
-    project_id: 'prod-calendar-386407', // "placeholder-1-calendar-375014",//global.gConfig.GOOGLE_PROJECT_ID,
+    project_id: 'prod-calendar-386407', // "ns-thon-calendar-375014",//global.gConfig.GOOGLE_PROJECT_ID,
     auth_uri: 'https://accounts.google.com/o/oauth2/auth', // "https://accounts.google.com/o/oauth2/auth", //global.gConfig.GOOGLE_AUTH_URI,
     token_uri: 'https://oauth2.googleapis.com/token', // "https://oauth2.googleapis.com/token", //global.gConfig.GOOGLE_TOKEN_URI,
     auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs', // "https://www.googleapis.com/oauth2/v1/certs", //global.gConfig.GOOGLE_AUTH_PROVIDER,
     client_secret: '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', // "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", //global.gConfig.GOOGLE_CLIENT_SECRET,
     redirect_uris: [
         'http://localhost',
-        'https://placeholder-1.novel.systems',
-        'https://eu.placeholder-1platform.com',
-    ], // ["http://localhost","https://placeholder-1.novel.systems"], //[ global.gConfig.GOOGLE_REDIRECT]
+        'https://thon.novel.systems',
+        'https://eu.ns-thonplatform.com',
+    ], // ["http://localhost","https://thon.novel.systems"], //[ global.gConfig.GOOGLE_REDIRECT]
 }
 const credentialsJ = {
     installed: install,
@@ -137,7 +137,7 @@ const createGoogleEvent = event => {
         const googleEvent = {
             summary:
                 `${event.title} ||  ${event.desc}` ||
-                'Placeholder-1: meeting with challenge partner',
+                'NSThon: meeting with challenge partner',
             location: event.location || '',
             description: event.description || '',
             start: event.start,

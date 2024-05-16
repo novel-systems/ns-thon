@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
 
 const VisaInvitationPDF = ({
     hostName = 'Karoliina Pellinen',
-    hostAddress = 'Placeholder-1 Oy (2823785-1)',
+    hostAddress = 'NSThon Oy (2823785-1)',
     hostAddress2 = 'PL1188, 00101 Helsinki',
     hostPhone = '+358 45 2318287',
     hostEmail = 'karoliina.pellinen@novel.systems',
     hostTitle = 'Head of Participants',
-    hostCompany = 'Placeholder-1 Oy',
+    hostCompany = 'NSThon Oy',
     date = '',
     granteeFirstName = '',
     granteeLastName = '',
@@ -93,19 +93,19 @@ const VisaInvitationPDF = ({
                 During their stay in {arrivalCountry}, {granteeFirstName} will
                 be hosted at the Aalto University campus (Väre & School of
                 Business Building), Otaniementie 14, 02150 Espoo, and will be
-                attending the following events organised by Placeholder-1:
+                attending the following events organised by NSThon:
             </Text>
             <Text style={styles.paragraph}>
-                1) Placeholder-1 2019, from November 15th to 17th 2019
+                1) NSThon 2019, from November 15th to 17th 2019
             </Text>
             <Text style={styles.paragraph}>
-                2) Optional Placeholder-1 2019 pre-events (networking & conferences),
+                2) Optional NSThon 2019 pre-events (networking & conferences),
                 from November 11th to 15th 2019
             </Text>
             <Text style={styles.paragraph}>
                 We have arranged accommodation for {granteeFirstName} for the
                 duration of the above events, and participation in the events is
-                supported by Placeholder-1. We also invite {granteeFirstName} to get
+                supported by NSThon. We also invite {granteeFirstName} to get
                 to know {arrivalCity} at their leisure and attend complementary
                 events such as those organised by Slush during the week after,
                 November 18th to 25th.

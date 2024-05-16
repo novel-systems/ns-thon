@@ -39,7 +39,7 @@ export default () => {
                 <title>{config.PLATFORM_OWNER_NAME}</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Placeholder-1"
+                    content="Hackathon, hackathon platform, NSThon"
                 />
                 <meta name="title" content={config.SEO_PAGE_TITLE} />
                 <meta property="og:title" content={config.SEO_PAGE_TITLE} />
@@ -135,7 +135,7 @@ export default () => {
                     align="center"
                     style={{ fontSize: '24px' }}
                 >
-                    {t('Placeholder-1_info_', {
+                    {t('NSThon_info_', {
                         owner: config.PLATFORM_OWNER_NAME,
                     })}
                 </Typography>

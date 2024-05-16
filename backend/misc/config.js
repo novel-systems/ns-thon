@@ -75,7 +75,7 @@ const settings = {
     },
     PLATFORM_OWNER_NAME: {
         required: true,
-        value: process.env.PLATFORM_OWNER_NAME || 'Placeholder-1',
+        value: process.env.PLATFORM_OWNER_NAME || 'NSThon',
     },
     PORT: {
         required: true,
@@ -91,7 +91,7 @@ const settings = {
     },
     SENDGRID_FROM_NAME: {
         required: true,
-        value: process.env.SENDGRID_FROM_NAME || 'Placeholder-1',
+        value: process.env.SENDGRID_FROM_NAME || 'NSThon',
     },
     SENDGRID_GENERIC_TEMPLATE: {
         required: true,

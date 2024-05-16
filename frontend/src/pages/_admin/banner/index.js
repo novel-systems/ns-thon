@@ -155,12 +155,12 @@ export default () => {
                                                 now only tested inside the
                                                 platform, but should be used so
                                                 that you take everything after
-                                                "placeholder-1.novel.systems",
+                                                "thon.novel.systems",
                                                 including the last slash, and
                                                 add it there. For example
                                                 "/pricing" at the push
                                                 destiation would lead to
-                                                placeholder-1.novel.systems/pricing
+                                                thon.novel.systems/pricing
                                             </Typography>
                                         </Grid>
                                     </Grid>

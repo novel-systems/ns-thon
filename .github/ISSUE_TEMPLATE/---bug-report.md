@@ -1,6 +1,6 @@
 ---
 name: "\U0001F41B Bug Report"
-about: Create a report to help Placeholder-1 App improve
+about: Create a report to help NSThon App improve
 title: 'BUG: '
 labels: bug
 assignees: ''
@@ -9,7 +9,7 @@ assignees: ''
 ## 🐛 Bug Report
 
 <!--
-    Thank you for using Placeholder-1 App and taking time to report a bug.
+    Thank you for using NSThon App and taking time to report a bug.
 
     Please try to spend some time to understand the bug and reproduce it.
     Take a look at our template and try to add as much detail as possible.

@@ -25,7 +25,7 @@ export default () => {
     if (!EventHelpers.isEventOver(event, moment)) return null
     if (registration?.status !== RegistrationStatuses.asObject.checkedIn.id)
         return null
-    if (event.slug == "placeholder-1-2023" || ('certificate' in event && event.certificate.url !== '')) {//TODO: fix certificate upload
+    if (event.slug == "ns-thon-2023" || ('certificate' in event && event.certificate.url !== '')) {//TODO: fix certificate upload
         return (
             <Grid item xs={12}>
                 <GradientBox p={3} color="secondary">
@@ -44,7 +44,7 @@ export default () => {
                         <Button
                             onClick={() => {
                                 modifyPdf(
-                                    'https://res.cloudinary.com/novel.systems/image/upload/v1699734274/placeholder-1-app/events/placeholder-1-2023/hubqdmfoo1xcy5a2jl8c.pdf',
+                                    'https://res.cloudinary.com/novel.systems/image/upload/v1699734274/ns-thon-app/events/ns-thon-2023/hubqdmfoo1xcy5a2jl8c.pdf',
                                     0,
                                     0,
                                     `${userProfile.firstName} ${userProfile.lastName}`,

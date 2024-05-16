@@ -95,10 +95,10 @@ class MeetingContorller {
             location: meeting.location || '',
             title:
                 meeting.title ||
-                `Placeholder-1: ${challenge.name} partner meeting`,
+                `NSThon: ${challenge.name} partner meeting`,
             description:
                 meeting.description ||
-                `Placeholder-1: ${challenge.name}\nmeeting between participants and partner, ${challenge.partner}. `,
+                `NSThon: ${challenge.name}\nmeeting between participants and partner, ${challenge.partner}. `,
             attendees: [],
             startTime: meeting.startTime,
             endTime: meeting.endTime,

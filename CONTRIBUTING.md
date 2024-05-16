@@ -7,14 +7,14 @@ To contribute to the development of this app, you should follow these steps:
 3. Once you think you're ready, make sure to merge the latest code from the upstream repository (`dev` branch) into your fork (https://hackernoon.com/sync-a-fork-from-upstream-repo-in-github-c2c29c8eca3b)
 4. Make a Pull Request into this repository, link the related issue there and add a few comments on what you've made.
 
-For further details and guidance, please reach out to the Placeholder-1 tech team at dev@novel.systems or start a discussion on our github discussions page.
+For further details and guidance, please reach out to the NSThon tech team at dev@novel.systems or start a discussion on our github discussions page.
 
 ### Branch structure / CI
 
 We have the following branch structure for this project:
 
-| Branch name | Purpose                                                                                                                                                                             | CI                                                           | Other notes                                                                                   |     |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------- | --- |
-| `dev`       | Represents the latest stage of development for the app. All pull requests are merged here.                                                                                          | Automatically deploys to dev.placeholder-1.novel.systems     | This branch can be used to experiment with new features and can contain broken/crashing code. |     |
-| `master`    | Contains the production code of the app. All changes to `master` should be introduced in the form of Pull Requests from `dev`, and have been tested in the development environment. | Automatically deploys to staging.placeholder-1.novel.systems | This branch should only contain production-ready code, which has been sufficiently tested.    |     |
+| Branch name | Purpose                                                                                                                                                                             | CI                                                  | Other notes                                                                                   |     |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------- | --- |
+| `dev`       | Represents the latest stage of development for the app. All pull requests are merged here.                                                                                          | Automatically deploys to dev.thon.novel.systems     | This branch can be used to experiment with new features and can contain broken/crashing code. |     |
+| `master`    | Contains the production code of the app. All changes to `master` should be introduced in the form of Pull Requests from `dev`, and have been tested in the development environment. | Automatically deploys to staging.thon.novel.systems | This branch should only contain production-ready code, which has been sufficiently tested.    |     |
 |             |

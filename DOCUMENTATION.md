@@ -1,14 +1,14 @@
 <!-- TOC ignore:true -->
 
-# Placeholder-1 App event organizer guidebook
+# NSThon App event organizer guidebook
 
-This is a work-in-progress documentation on how to use Placeholder-1 App. This guidebook is open-source and we hope that you comment and create additions to the content here.
+This is a work-in-progress documentation on how to use NSThon App. This guidebook is open-source and we hope that you comment and create additions to the content here.
 
 **Table of contents**
 
 <!-- TOC -->
 
--   [Placeholder-1 App event organizer guidebook](#placeholder-1-app-event-organizer-guidebook)
+-   [NSThon App event organizer guidebook](#ns-thon-app-event-organizer-guidebook)
 -   [Creating an event](#creating-an-event)
 -   [Managing an event](#managing-an-event)
 -   [Editing an event](#editing-an-event)
@@ -28,7 +28,7 @@ This is a work-in-progress documentation on how to use Placeholder-1 App. This g
 
 # Terminology
 
-In Placeholder-1 App, there are a lot of different stakeholders with different permissions and roles in the event.
+In NSThon App, there are a lot of different stakeholders with different permissions and roles in the event.
 
 -   Participant
 -   Partner

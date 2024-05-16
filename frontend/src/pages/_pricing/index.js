@@ -43,8 +43,8 @@ export default () => {
     const body2 = [
         'Event registration and organization through platform',
         'Tech Support during event',
-        'Full Access to the Placeholder-1 App',
-        'Consulting from the Placeholder-1 Team',
+        'Full Access to the NSThon App',
+        'Consulting from the NSThon Team',
         'Statistics',
         'Price is negotiable',
     ]

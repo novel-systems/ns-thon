@@ -31,17 +31,17 @@ export default ({ alerts }) => {
             <PageHeader heading="Dashboard" />
 
             <Helmet>
-                <title>Placeholder-1 App || Dashboard</title>
+                <title>NSThon App || Dashboard</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Placeholder-1, placeholder-1 dashboard"
+                    content="Hackathon, hackathon platform, NSThon, ns-thon dashboard"
                 />
-                <meta name="title" content="Placeholder-1 App || Dashboard" />
-                <meta property="og:title" content="Placeholder-1 App || Dashboard" />
+                <meta name="title" content="NSThon App || Dashboard" />
+                <meta property="og:title" content="NSThon App || Dashboard" />
 
                 <meta
                     name="twitter:title"
-                    content="Placeholder-1 App || Dashboard"
+                    content="NSThon App || Dashboard"
                 />
                 <meta
                     name="description"

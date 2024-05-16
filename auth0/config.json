@@ -9,8 +9,8 @@
             "http://localhost:3000"
         ],
         "AUDIENCE": "https://novel-systems.eu.auth0.com/api/v2/",
-        "APP_NAME_BACKEND": "Placeholder-1 App Backend",
-        "APP_NAME_FRONTEND": "Placeholder-1 SSO",
+        "APP_NAME_BACKEND": "NSThon App Backend",
+        "APP_NAME_FRONTEND": "NSThon SSO",
         "AUTHZ_URL": "https://novel-systems..eu.webtask.io/adf6e2f2b84784b57522e3b19dfc9201",
         "URL": "https://localhost:3000"
     },

@@ -339,7 +339,7 @@ const EventSchema = new mongoose.Schema({
         },
         senderName: {
             type: String,
-            default: 'Placeholder-1 team',
+            default: 'NSThon team',
             trim: true,
             maxLength: 100,
         },

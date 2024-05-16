@@ -56,17 +56,17 @@ export default () => {
                 <title>{config.PLATFORM_OWNER_NAME}</title>
                 <meta
                     name="keywords"
-                    content="Hackathon, hackathon platform, Placeholder-1, hackerpack, novel.systems"
+                    content="Hackathon, hackathon platform, NSThon, hackerpack, novel.systems"
                 />
-                <meta name="title" content="Placeholder-1 App || Hackerpack" />
+                <meta name="title" content="NSThon App || Hackerpack" />
                 <meta
                     property="og:title"
-                    content="Placeholder-1 App || Hackerpack"
+                    content="NSThon App || Hackerpack"
                 />
 
                 <meta
                     name="twitter:title"
-                    content="Placeholder-1 App || Hackerpack"
+                    content="NSThon App || Hackerpack"
                 />
                 <meta
                     name="description"

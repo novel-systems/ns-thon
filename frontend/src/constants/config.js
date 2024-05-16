@@ -38,7 +38,7 @@ const settings = {
     ID_TOKEN_NAMESPACE: {
         required: true,
         value:
-            import.meta.env.VITE_ID_TOKEN_NAMESPACE || 'https://eu.placeholder-1platform.com/',
+            import.meta.env.VITE_ID_TOKEN_NAMESPACE || 'https://eu.ns-thonplatform.com/',
     },
     IS_DEBUG: {
         default: import.meta.env.VITE_IS_DEBUG === 'true',
@@ -49,18 +49,18 @@ const settings = {
         required: true,
         value:
             import.meta.env.VITE_LOGO_DARK_URL ||
-            //'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419636/Placeholder-1%20Logos/wordmark_black.png',
-            'https://res.cloudinary.com/novel.systems/image/upload/v1606900986/Placeholder-1%20Logos/app.svg',
+            //'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419636/NSThon%20Logos/wordmark_black.png',
+            'https://res.cloudinary.com/novel.systems/image/upload/v1606900986/NSThon%20Logos/app.svg',
     },
     LOGO_LIGHT_URL: {
         required: true,
         value:
             import.meta.env.VITE_LOGO_LIGHT_URL ||
-            'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419635/Placeholder-1%20Logos/wordmark_white.png',
+            'https://res.cloudinary.com/novel.systems/image/upload/c_scale,w_500/v1581419635/NSThon%20Logos/wordmark_white.png',
     },
     EMBLEM_DARK_URL: {
         required: true,
-        value: 'https://res.cloudinary.com/novel.systems/image/upload/v1581419640/Placeholder-1%20Logos/emblem_black.png',
+        value: 'https://res.cloudinary.com/novel.systems/image/upload/v1581419640/NSThon%20Logos/emblem_black.png',
     },
     LOGROCKET_ID: {
         required: false,
@@ -68,7 +68,7 @@ const settings = {
     },
     PLATFORM_OWNER_NAME: {
         required: true,
-        value: import.meta.env.VITE_PLATFORM_OWNER_NAME || 'Placeholder-1',
+        value: import.meta.env.VITE_PLATFORM_OWNER_NAME || 'NSThon',
     },
     PLATFORM_OWNER_NAME_CAPS: {
         required: true,
@@ -96,7 +96,7 @@ const settings = {
         required: true,
         value:
             import.meta.env.VITE_SEO_PAGE_DESCRIPTION ||
-            'Organized in the Helsinki Area, Finland, Placeholder-1 is a meeting place for thousands of developers, designers, and entrepreneurs. A weekend-long experience, gathering tech enthusiasts from all over the world to create with the latest technology in a unique environment and atmosphere.',
+            'Organized in the Helsinki Area, Finland, NSThon is a meeting place for thousands of developers, designers, and entrepreneurs. A weekend-long experience, gathering tech enthusiasts from all over the world to create with the latest technology in a unique environment and atmosphere.',
     },
     SEO_PAGE_TITLE: {
         required: true,
@@ -106,7 +106,7 @@ const settings = {
     },
     SEO_TWITTER_HANDLE: {
         required: false,
-        value: import.meta.env.VITE_SEO_TWITTER_HANDLE || '@hackPlaceholder-1',
+        value: import.meta.env.VITE_SEO_TWITTER_HANDLE || '@hackNSThon',
     },
     TERMS_URL: {
         required: false,

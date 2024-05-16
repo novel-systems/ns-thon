@@ -150,8 +150,8 @@ export default ({ value = [], fieldName, setFieldValue }) => {
                                 }
                                 label={
                                     item.approved
-                                        ? 'This script was approved by Placeholder-1'
-                                        : 'This script is not yet approved by Placeholder-1. Request approval by getting in touch with the platform maintainers..'
+                                        ? 'This script was approved by NSThon'
+                                        : 'This script is not yet approved by NSThon. Request approval by getting in touch with the platform maintainers..'
                                 }
                             />
                         </FormGroup>

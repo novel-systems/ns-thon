@@ -80,7 +80,7 @@ export default ({ history, location }) => {
                                 <title>{config.PLATFORM_OWNER_NAME}</title>
                                 <meta
                                     name="keywords"
-                                    content="Hackathon, hackathon platform, Placeholder-1"
+                                    content="Hackathon, hackathon platform, NSThon"
                                 />
                                 <meta
                                     name="title"

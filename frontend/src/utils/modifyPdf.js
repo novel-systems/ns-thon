@@ -1,7 +1,7 @@
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib'
 import download from 'downloadjs'
 
-// TODO: This is hardcoded at the moment for Placeholder-12021 certificate. Make this modular for all certificates
+// TODO: This is hardcoded at the moment for NSThon2021 certificate. Make this modular for all certificates
 
 const modifyPdf = async (url, x, y, name, slug, color) => {
     const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())

@@ -14,8 +14,8 @@ Regarding your development environment: _I highly recommend you to use VSCode wi
 ## Clone the repository
 
 ```
-git clone https://github.com/novel-systems/placeholder-1.git
-cd Placeholder-1 App
+git clone https://github.com/novel-systems/ns-thon.git
+cd NSThon App
 ```
 
 ## Install dependencies
@@ -29,7 +29,7 @@ npm run setup
 
 ## Auth0 tenant set up
 
-Placeholder-1 App uses Auth0 for user authentication and authorization. To set up Auth0 for local development:
+NSThon App uses Auth0 for user authentication and authorization. To set up Auth0 for local development:
 
 1. Create an Auth0 account
 2. Follow [this](https://auth0.com/docs/deploy/deploy-cli-tool/create-and-configure-the-deploy-cli-application) tutorial to create a `auth0-deploy-cli-extension` in Auth0
@@ -52,7 +52,7 @@ Placeholder-1 App uses Auth0 for user authentication and authorization. To set u
 
 -   In your auth0 tenant there should be now 5 new applications.
 
-7. Copy and paste Placeholder-1 App SSO Client ID to every `applicationId` field in `authzExtConfig.json`
+7. Copy and paste NSThon App SSO Client ID to every `applicationId` field in `authzExtConfig.json`
 8. Import `authzExtConfig.json` file to the Authorization Extensions
 9. In Authorization Extension click PUBLISH RULES
 
@@ -66,7 +66,7 @@ Placeholder-1 App uses Auth0 for user authentication and authorization. To set u
 
 ### Environment variables for development usage
 
-Here are working environment variables for all of the services we use in the Placeholder-1 App. These environment variables are connected to sandbox accounts, which can be used while developing the platform. The accounts used in production are entirely separate, and should not be used in development, as a general rule of thumb.
+Here are working environment variables for all of the services we use in the NSThon App. These environment variables are connected to sandbox accounts, which can be used while developing the platform. The accounts used in production are entirely separate, and should not be used in development, as a general rule of thumb.
 
 ### Frontend environment variables
 
@@ -105,7 +105,7 @@ AUTH0_DOMAIN=
 AUTH0_CLIENT_ID=
 AUTH0_CLIENT_SECRET=
 AUTH0_AUTHORIZATION_EXTENSION_URL=
-ID_TOKEN_NAMESPACE=https://placeholder-1.novel.systems/
+ID_TOKEN_NAMESPACE=https://thon.novel.systems/
 CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=

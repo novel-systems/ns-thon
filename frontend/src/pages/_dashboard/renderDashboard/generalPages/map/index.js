@@ -75,7 +75,7 @@ export default () => {
             {/* <div className="App">
                 <h3>Map of dipoli</h3>
                 <iframe
-                    src="https://placeholder-1.desk.me"
+                    src="https://ns-thon.desk.me"
                     width="100%;"
                     height="600px;"
                     frameborder="0"

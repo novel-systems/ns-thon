@@ -25,7 +25,7 @@ export default () => {
     return (
         <>
             <Helmet>
-                <title>Placeholder-1 App || Dashboard</title>
+                <title>NSThon App || Dashboard</title>
             </Helmet>
             <PageHeader
                 heading="Challenges"

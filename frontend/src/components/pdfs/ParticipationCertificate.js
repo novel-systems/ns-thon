@@ -228,7 +228,7 @@ const ParticipationCertificate = ({ event, project, userProfile }) => {
                             />
                         </View>
                         <Text style={styles.footer}>
-                            <strong style={styles.placeholder - 1}>Placeholder-1</strong> is
+                            <strong style={styles.placeholder - 1}>NSThon</strong> is
                             the world’s leading hackathon organizer and a global
                             community of hackers. Our mission is to bridge the
                             gap between creators by making everyone fall in love
