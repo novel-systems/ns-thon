@@ -1,8 +1,22 @@
 version: '3.8'
 services:
+    backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: backend_stag
+        ports:
+            - 2222:2222
+        env_file:
+            - ./backend/.env
+        environment:
+            - MONGODB_URI=mongodb://mongodb:27017/test
+            - REDISCLOUD_URL=redis://redis:6379
+        depends_on:
+            - mongodb
+            - redis
     mongodb:
         image: mongo:7.0.9
-        container_name: mongodb_stag
         ports:
             - 27017:27017
         volumes:
@@ -10,7 +24,6 @@ services:
         restart: unless-stopped
     redis:
         image: redis
-        container_name: redis_stag
         environment:
             - PUID=1000
             - PGID=1000
