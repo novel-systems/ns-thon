@@ -1,27 +1,41 @@
-# Use the official Node.js 16 image as the base image
-FROM node:16.20.2-alpine3.18
+FROM node:18.20.2-alpine3.18 as shared
+WORKDIR /app
+
+COPY shared/package*.json ./shared/
+WORKDIR /app/shared
+RUN npm ci
+
+COPY shared /app/shared
+
+FROM node:18.20.2-alpine3.18 as frontend-builder
+WORKDIR /app
+
+COPY frontend/package*.json ./frontend/
+WORKDIR /app/frontend
+# TODO: resolve peer dependencies
+RUN npm ci --legacy-peer-deps
+
+COPY frontend /app/frontend
+COPY --from=shared /app/shared /app/shared
+RUN npm run build
+
+# Use the official Node.js 18 image as the base image
+FROM node:18.20.2-alpine3.18
 
 # Set the working directory to /app
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files for 'shared' and 'backend' folders
-COPY shared/package*.json ./shared/
+# Copy the package.json and package-lock.json files for backend
 COPY backend/package*.json ./backend/
 
-# Install dependencies for 'shared'
-WORKDIR /app/shared
-RUN npm ci
-
-# Install dependencies for 'backend'
+# Set the working directory to 'backend' and install dependencies for backend
 WORKDIR /app/backend
 RUN npm ci
 
-# Copy the entire 'shared' and 'backend' directories to the container
-COPY shared /app/shared
+# Copy the entire 'backend', 'shared' and 'frontend' directories to the container
 COPY backend /app/backend
-
-# Set the working directory to 'backend'
-WORKDIR /app/backend
+COPY --from=shared /app/shared /app/shared
+COPY --from=frontend-builder /app/frontend/dist /app/backend/build
 
 # Expose the port that the app runs on
 EXPOSE 2222

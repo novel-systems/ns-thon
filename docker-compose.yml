@@ -4,12 +4,19 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+            args:
+                - VITE_BASE_URL=http://localhost:2222
+                - VITE_CLOUDINARY_CLOUD_NAME=novel.systems-dev
+                - VITE_AUTH0_DOMAIN=novel-systems.eu.auth0.com
+                - VITE_AUTH0_CLIENT_ID=aGQtv9eM6yWOsMBfn9TMr6gLyxyvCoGp
+                - VITE_IS_DEBUG=false
         container_name: backend_stag
         ports:
             - 2222:2222
         env_file:
             - ./backend/.env
         environment:
+            - NODE_ENV=production
             - MONGODB_URI=mongodb://mongodb:27017/test
             - REDISCLOUD_URL=redis://redis:6379
         depends_on:
