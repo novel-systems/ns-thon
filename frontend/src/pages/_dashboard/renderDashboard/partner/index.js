@@ -13,7 +13,6 @@ import { Typography } from '@material-ui/core'
 
 import SidebarLayout from '@/components/layouts/SidebarLayout'
 import BasicNavBar from '@/components/navbars/BasicNavBar'
-import DefaultImage from '@/assets/images/dashboardDefault.jpg'
 
 import Image from '@/components/generic/Image'
 import DefaultPage from '../generalPages/default'
@@ -64,16 +63,6 @@ export default ({
             location={location}
             sidebarTopContent={
                 <div className={classes.sidebarTop}>
-                    <Image
-                        className={classes.sidebarLogo}
-                        // publicId={
-                        //     event && event.logo ? event.logo.publicId : ''
-                        // }
-                        transformation={{
-                            width: 200,
-                        }}
-                        defaultImage={DefaultImage}
-                    />
                     <Typography variant="button" style={{ color: 'white' }}>
                         Partner
                     </Typography>

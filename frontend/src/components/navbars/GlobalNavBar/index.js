@@ -7,6 +7,7 @@ import Button from '@/components/generic/Button'
 import config from '@/constants/config'
 import PlatformLogo from '@/assets/logos/JO_wordmark_black.png'
 import WavePattern from '@/assets/images/nawbar_waves.svg'
+import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
     wrapper: {
@@ -23,13 +24,6 @@ const useStyles = makeStyles(theme => ({
         margin: '0',
         height: '100%',
     },
-    wordmark: {
-        height: '70px',
-        paddingLeft: '20px',
-        paddingTop: '5px',
-        paddingBottom: '5px',
-        backgroundColor: 'white',
-    },
 }))
 
 export default () => {
@@ -40,11 +34,11 @@ export default () => {
             className="tw-w-full tw-py-2 tw-bg-wave-pattern "
         >
             <div className={classes.wrapper}>
-                <div className={classes.inner}>
-                    <a href="/home">
+                <div className={clsx(classes.inner, 'tw-flex')}>
+                    <a href="/home" className="tw-mr-4 tw-flex-shrink-0">
                         <img
                             src={PlatformLogo}
-                            className={classes.wordmark}
+                            className="tw-h-10 tw-content-start tw-object-contain"
                             alt={config.PLATFORM_OWNER_NAME + ' logo'}
                         />
                     </a>

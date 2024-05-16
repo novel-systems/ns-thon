@@ -54,14 +54,6 @@ const useStyles = makeStyles(theme => ({
 
         transform: 'rotate(0)',
     },
-    wordmark: {
-        display: 'block',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        padding: '5px',
-        top: 0,
-        height: '70px',
-    },
     drawerToggle: {
         padding: '10px',
         position: 'fixed',
@@ -206,17 +198,16 @@ export default React.memo(
 
         const drawerContent = (
             <>
-                <Box >
-                    <a href="/home">
+                <Box className='tw-h-20'>
+                    <a href="/home" className='tw-h-10'>
                         <img
-                            src={PlatformLogo/*config.LOGO_LIGHT_URL TODO: switch this to cloudinary*/}
-
-                            className={classes.wordmark}
+                            src={PlatformLogo/*TODO: switch this to cloudinary*/}
+                            className='tw-h-10 tw-w-auto tw-ml-5 tw-my-5'
                             alt={config.PLATFORM_OWNER_NAME + ' logo'}
                         />
                     </a>
                 </Box>
-                <Box p={2}>{sidebarTopContent}</Box>
+                <Box px={2}>{sidebarTopContent}</Box>
                 <List>
                     {routes
                         .filter(route => !route.hidden)
@@ -259,7 +250,9 @@ export default React.memo(
                                 </ListItem>
                             )
                         })}
-                    <hr className="tw-h-px tw-my-8 tw-w-4/5 tw-bg-gray-500 tw-border-0 tw-dark:bg-gray-900"></hr>
+                    {!!sidebarTopContent && (
+                        <hr className="tw-h-px tw-my-8 tw-w-4/5 tw-bg-gray-500 tw-border-0 tw-dark:bg-gray-900"></hr>
+                    )}
                     <div className='tw-grid tw-place-items-center'>
                         <ListItem
 

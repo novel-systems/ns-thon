@@ -31,7 +31,7 @@ const BasicNavBar = ({ text }) => {
     return (
 
         // <div className={classes.wrapper}>
-        <div className='tw-w-full tw-px-0 tw-py-2 tw-pr-32 tw-bg-wave-pattern tw-bg-black ' >
+        <div className='tw-w-full tw-h-20 tw-px-0 tw-py-2 tw-pr-32 tw-bg-wave-pattern tw-bg-black' >
             <div className={classes.inner}>
                 <UserAvatar />
                 {/* <LanguageMenu /> */}

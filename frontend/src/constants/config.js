@@ -70,10 +70,6 @@ const settings = {
         required: true,
         value: import.meta.env.VITE_PLATFORM_OWNER_NAME || 'NSThon',
     },
-    PLATFORM_OWNER_NAME_CAPS: {
-        required: true,
-        value: import.meta.env.VITE_PLATFORM_OWNER_NAME || 'PLACEHOLDER-1',
-    },
     PLATFORM_OWNER_WEBSITE: {
         required: true,
         value:

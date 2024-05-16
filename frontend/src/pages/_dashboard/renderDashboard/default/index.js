@@ -9,7 +9,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import SidebarLayout from '@/components/layouts/SidebarLayout' //TODO: make normal sidepar work with default view
 import BasicNavBar from '@/components/navbars/BasicNavBar'
 import PageWrapper from '@/components/layouts/PageWrapper'
-import defaultImage from '@/assets/images/dashboardDefault.jpg'
 
 
 
@@ -185,19 +184,7 @@ export default () => {
             <SidebarLayout
                 baseRoute={match.url}
                 location={location}
-                sidebarTopContent={<img src={defaultImage} width={250} height={250} ></img>
-                    // <div className={classes.sidebarTop}>
-                    //     <Image
-                    //         className={classes.sidebarLogo || waves}
-                    //         publicId={
-                    //             defaultPage && defaultPage['logo'] ? defaultPage['logo']['publicId'] : ''
-                    //         }
-                    //         transformation={{
-                    //             width: 200,
-                    //         }}
-                    //     />
-                    // </div>
-                }
+                sidebarTopContent={null}
                 topContent={<BasicNavBar text={""} />}
                 routes={[
                     // {

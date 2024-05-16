@@ -105,20 +105,22 @@ export default () => {
                 </Container>
                 <Divider size={20} />
                 <Container center small>
-                    <Grid>
-                        <Image
-                            defaultImage={EmblemBlack}
-                            transformation={{
-                                width: 150,
-                            }}
-                        />
+                    <Grid justifyContent="center" alignItems="center">
+                        <Box className='tw-flex tw-justify-center tw-items-center tw-p-4'>
+                            <Image
+                                defaultImage={EmblemBlack}
+                                transformation={{
+                                    width: 150,
+                                }}
+                            />
+                        </Box>
                         <Typography variant="h4" align="center">
                             {t('Platform_organise_hack_', {
                                 owner: config.PLATFORM_OWNER_NAME,
                             })}
                         </Typography>
                     </Grid>
-                    <Grid container justify="center" alignItems="center">
+                    <Grid container justifyContent="center" alignItems="center">
                         <Button
                             color="theme_lightgray"
                             variant="outlinedNew"
@@ -143,7 +145,7 @@ export default () => {
                     <Divider size={1} />
                     <Typography variant="h3" align="center">
                         {t('New_to_', {
-                            owner: config.PLATFORM_OWNER_NAME_CAPS,
+                            owner: config.PLATFORM_OWNER_NAME.toUpperCase(),
                         })}
                     </Typography>
                     <Divider size={3} />
@@ -186,12 +188,6 @@ export default () => {
                     </Button>
                 </Container>
                 <Divider size={20} />
-                <Container center>
-                    <img
-                        src="https://i.imgur.com/R7pG4Ln.png"
-                        style={{ width: '10em' }}
-                    />
-                </Container>
             </div>
         </PageWrapper>
     )
