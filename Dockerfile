@@ -17,6 +17,13 @@ RUN npm ci --legacy-peer-deps
 
 COPY frontend /app/frontend
 COPY --from=shared /app/shared /app/shared
+
+ARG VITE_CLOUDINARY_CLOUD_NAME
+ARG VITE_AUTH0_DOMAIN
+ARG VITE_AUTH0_CLIENT_ID
+ARG VITE_BASE_URL
+ARG VITE_IS_DEBUG=true
+
 RUN npm run build
 
 # Use the official Node.js 18 image as the base image
