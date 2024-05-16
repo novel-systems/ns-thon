@@ -5,7 +5,7 @@ import FormControl from '@/components/inputs/FormControl'
 import CustomSectionList from '../questions/CustomSectionList'
 import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import { useSelector } from 'react-redux'
-import _ from 'lodash'
+
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/generic/Button'
 import Switch from '../../../../../../components/generic/Switch'

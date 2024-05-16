@@ -1,6 +1,5 @@
 import CandidateCard from '@/components/cards/CandidateCard'
 import { useFormik } from 'formik'
-import _ from 'lodash'
 import React, { useCallback, useEffect, useState } from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 import { useDispatch, useSelector } from 'react-redux'

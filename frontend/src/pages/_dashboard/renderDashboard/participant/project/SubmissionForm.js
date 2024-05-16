@@ -15,7 +15,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import SubmissionFormCustomInput from '@/components/inputs/SubmissionFormCustomInput'
 import BottomBar from '@/components/inputs/BottomBar'
 import NameField from '@/components/projects/ProjectSubmissionFields/NameField'
-import _ from 'lodash'
+
 import StatusField from '@/components/projects/ProjectSubmissionFields/StatusField'
 import ProjectFieldsComponents from '@/constants/projectFields'
 import { projectURLgenerator } from '@/utils/dataModifiers'

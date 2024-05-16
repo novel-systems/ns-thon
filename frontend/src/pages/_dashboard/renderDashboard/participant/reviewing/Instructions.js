@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { Box, Typography } from '@material-ui/core'
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown'
 import * as DashboardSelectors from '@/redux/dashboard/selectors'
 import * as DashboardActions from '@/redux/dashboard/actions'
 import * as SnackbarActions from '@/redux/snackbar/actions'

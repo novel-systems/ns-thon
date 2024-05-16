@@ -15,7 +15,7 @@ import { truncate } from 'lodash-es'
 
 import Image from '@/components/generic/Image'
 import Button from '@/components/generic/Button'
-import _ from 'lodash'
+
 import { EventHelpers } from '@novel-systems/shared'
 import moment from 'moment-timezone'
 import CoverImage from '@/assets/images/default_cover_image.png'

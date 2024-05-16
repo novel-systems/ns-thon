@@ -14,6 +14,8 @@ import AnalyticsService from '@/services/analytics'
 import { getCookieConsentValue } from 'react-cookie-consent'
 import CookieConsentBar from '@/components/layouts/CookieConsentBar'
 import * as SnackbarActions from '@/redux/snackbar/actions'
+import { MotionConfig } from "framer-motion"
+import isValidProp from "@emotion/is-prop-valid"
 
 export default ({ history, location }) => {
     const dispatch = useDispatch()
@@ -63,84 +65,87 @@ export default ({ history, location }) => {
                 ) /*TODO: fails to fetch when renewing session causing a loop. fix! */
             }
         >
-            <ConnectedRouter history={history}>
-                <Suspense fallback={null}>
-                    {!loading && (
-                        <Switch>
-                            {routeConfig.routes.map(route => (
-                                <Route key={route.path} {...route} />
-                            ))}
-                            {/**
+            <MotionConfig isValidProp={isValidProp}>
+                <ConnectedRouter history={history}>
+                    <Suspense fallback={null}>
+                        {!loading && (
+                            <Switch>
+                                {routeConfig.routes.map(route => (
+                                    <Route key={route.path} {...route} />
+                                ))}
+                                {/**
                              * Miscellaneous
                              * TODO: 404 page
                              */}
-                            <title>{config.PLATFORM_OWNER_NAME}</title>
-                            <meta
-                                name="keywords"
-                                content="Hackathon, hackathon platform, Placeholder-1"
-                            />
-                            <meta
-                                name="title"
-                                content={config.SEO_PAGE_TITLE}
-                            />
-                            <meta
-                                property="og:title"
-                                content={config.SEO_PAGE_TITLE}
-                            />
+                                <title>{config.PLATFORM_OWNER_NAME}</title>
+                                <meta
+                                    name="keywords"
+                                    content="Hackathon, hackathon platform, Placeholder-1"
+                                />
+                                <meta
+                                    name="title"
+                                    content={config.SEO_PAGE_TITLE}
+                                />
+                                <meta
+                                    property="og:title"
+                                    content={config.SEO_PAGE_TITLE}
+                                />
 
-                            <meta
-                                name="twitter:title"
-                                content={config.SEO_PAGE_TITLE}
-                            />
-                            <meta
-                                name="description"
-                                content={config.SEO_PAGE_DESCRIPTION}
-                            />
-                            <meta
-                                property="og:description"
-                                content={config.SEO_PAGE_DESCRIPTION}
-                            />
-                            <meta
-                                name="twitter:description"
-                                content={config.SEO_PAGE_DESCRIPTION}
-                            />
+                                <meta
+                                    name="twitter:title"
+                                    content={config.SEO_PAGE_TITLE}
+                                />
+                                <meta
+                                    name="description"
+                                    content={config.SEO_PAGE_DESCRIPTION}
+                                />
+                                <meta
+                                    property="og:description"
+                                    content={config.SEO_PAGE_DESCRIPTION}
+                                />
+                                <meta
+                                    name="twitter:description"
+                                    content={config.SEO_PAGE_DESCRIPTION}
+                                />
 
-                            <meta name="og:type" content="website" />
-                            <meta
-                                property="og:image"
-                                content={config.SEO_IMAGE_URL}
-                            />
-                            <meta
-                                name="twitter:image"
-                                content={config.SEO_IMAGE_URL}
-                            />
-                            <meta property="og:image:width" content="1200" />
-                            <meta property="og:image:height" content="630" />
-                            <meta
-                                name="twitter:card"
-                                content="summary_large_image"
-                            />
-                            <meta
-                                name="twitter:site"
-                                content={config.SEO_TWITTER_HANDLE}
-                            />
-                            <meta
-                                name="twitter:creator"
-                                content={config.SEO_TWITTER_HANDLE}
-                            />
-                            <script
-                                type="text/javascript"
-                                async
-                                src="https://platform.twitter.com/widgets.js"
-                            ></script>
-                            {/* {isAuthenticated ?
+                                <meta name="og:type" content="website" />
+                                <meta
+                                    property="og:image"
+                                    content={config.SEO_IMAGE_URL}
+                                />
+                                <meta
+                                    name="twitter:image"
+                                    content={config.SEO_IMAGE_URL}
+                                />
+                                <meta property="og:image:width" content="1200" />
+                                <meta property="og:image:height" content="630" />
+                                <meta
+                                    name="twitter:card"
+                                    content="summary_large_image"
+                                />
+                                <meta
+                                    name="twitter:site"
+                                    content={config.SEO_TWITTER_HANDLE}
+                                />
+                                <meta
+                                    name="twitter:creator"
+                                    content={config.SEO_TWITTER_HANDLE}
+                                />
+                                <script
+                                    type="text/javascript"
+                                    async
+                                    src="https://platform.twitter.com/widgets.js"
+                                ></script>
+                                {/* {isAuthenticated ?
                                 <Redirect to="/dashboard" /> :} */}
-                            <Redirect to="/" />
-                        </Switch>
-                    )}
-                </Suspense>
-            </ConnectedRouter>
-            <CookieConsentBar />
+                                <Redirect to="/" />
+                            </Switch>
+                        )}
+
+                    </Suspense>
+                </ConnectedRouter>
+                <CookieConsentBar />
+            </MotionConfig>
         </ApolloProvider>
     )
 }

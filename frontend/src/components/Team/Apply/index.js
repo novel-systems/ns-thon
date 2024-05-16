@@ -10,7 +10,7 @@ import * as DashboardActions from '@/redux/dashboard/actions'
 import * as DashboardSelectors from '@/redux/dashboard/selectors'
 import * as SnackbarActions from '@/redux/snackbar/actions'
 import BottomBar from '@/components/inputs/BottomBar'
-import _ from 'lodash'
+
 import { Box, Typography, Grid } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
 import FormControl from '@/components/inputs/FormControl'

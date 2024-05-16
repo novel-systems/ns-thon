@@ -7,7 +7,6 @@ import PageHeader from '@/components/generic/PageHeader'
 import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
 import ProjectsService from '@/services/projects'
-import _ from 'lodash'
 
 import ProjectDetail from '@/components/projects/ProjectDetail'
 import * as AuthSelectors from '@/redux/auth/selectors'

@@ -10,7 +10,7 @@ import ProjectScoresService from '@/services/projectScores'
 import { useSelector } from 'react-redux'
 
 import * as AuthSelectors from '@/redux/auth/selectors'
-import _ from 'lodash'
+
 import Filter from '@/components/Team/Filter'
 
 const ProjectsGrid = ({

@@ -5,7 +5,7 @@ import * as OrganiserSelectors from '@/redux/organiser/selectors'
 
 import { Table, Filters, Sorters } from '@/components/generic/_Table'
 import EditProjectModal from '@/components/modals/EditProjectModal'
-import _ from 'lodash'
+
 import { CSVLink } from 'react-csv'
 import { projectURLgenerator } from '@/utils/dataModifiers'
 

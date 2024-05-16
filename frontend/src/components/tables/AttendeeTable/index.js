@@ -16,7 +16,7 @@ import BulkEmailModal from '@/components/modals/BulkEmailModal'
 
 import { Table, Filters, Sorters } from '@/components/generic/_Table'
 import { CSVLink } from 'react-csv'
-import _ from 'lodash'
+
 
 export default ({
     emptyRenderer,

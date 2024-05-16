@@ -12,7 +12,7 @@ import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import * as AuthSelectors from '@/redux/auth/selectors'
 
 import WinnerVoteService from '@/services/winnerVote'
-import _ from 'lodash'
+
 
 export default () => {
     const event = useSelector(OrganiserSelectors.event)

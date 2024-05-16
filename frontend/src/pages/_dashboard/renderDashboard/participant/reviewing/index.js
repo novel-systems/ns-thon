@@ -16,7 +16,7 @@ import * as DashboardSelectors from '@/redux/dashboard/selectors'
 import * as DashboardActions from '@/redux/dashboard/actions'
 import PageHeader from '@/components/generic/PageHeader'
 import Button from '@/components/generic/Button'
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown'
 
 export default () => {
     const dispatch = useDispatch()

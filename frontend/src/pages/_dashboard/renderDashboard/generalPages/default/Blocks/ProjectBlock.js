@@ -1,7 +1,7 @@
 import React from 'react'
 
 import moment from 'moment-timezone'
-import Countdown from 'react-countdown-now'
+import Countdown from 'react-countdown'
 import { push } from 'connected-react-router'
 import { useSelector, useDispatch } from 'react-redux'
 import { Grid, Typography } from '@material-ui/core'
