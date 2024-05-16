@@ -11,6 +11,7 @@ import {
     Tooltip,
     Typography,
 } from '@material-ui/core'
+import { truncate } from 'lodash-es'
 
 import Image from '@/components/generic/Image'
 import Button from '@/components/generic/Button'
@@ -176,13 +177,13 @@ const ProjectsGridItem = ({
                                 variant="body1"
                                 component="p"
                             >
-                                {_.truncate(project.name, { length: 20 })}
+                                {truncate(project.name, { length: 20 })}
                             </Typography>
                             <div className="tw-flex tw-gap-1">
                                 {project.challenges.map((challenge, index) => (
                                     <Chip
                                         key={index}
-                                        label={_.truncate(
+                                        label={truncate(
                                             challenge.replaceAll('-', ' '),
                                             {
                                                 length: styling.challengeMaxLength,
@@ -193,7 +194,7 @@ const ProjectsGridItem = ({
                             </div>
                             {project?.punchline && (
                                 <Typography variant="body1" component="p">
-                                    {_.truncate(project.punchline, {
+                                    {truncate(project.punchline, {
                                         length: styling.punchlineMaxLength,
                                     })}
                                 </Typography>
@@ -221,7 +222,7 @@ const ProjectsGridItem = ({
                                 </div>
                                 {message && (
                                     <Typography variant="body1">
-                                        {_.truncate(message, { length: 20 })}
+                                        {truncate(message, { length: 20 })}
                                     </Typography>
                                 )}
                             </div>

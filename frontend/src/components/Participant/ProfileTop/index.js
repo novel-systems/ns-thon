@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import _ from 'lodash'
+import { isEmpty } from 'lodash-es'
 
 import { goBack } from 'connected-react-router'
 import { useSelector, useDispatch } from 'react-redux'
@@ -123,7 +123,7 @@ export default ({ user = {} }) => {
                         </div>
                     )}
 
-                    {(profile.email || !_.isEmpty(social)) && (
+                    {(profile.email || !isEmpty(social)) && (
                         <div className="tw-flex tw-content-center tw-justify-start">
                             {social.github && (
                                 <Tooltip title="GitHub" placement="bottom">

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Auth } from '@novel-systems/shared'
 import { Typography, Dialog } from '@material-ui/core'
-import RequiresPermission from 'hocs/RequiresPermission'
+import RequiresPermission from '@/hocs/RequiresPermission'
 
 import Container from '@/components/generic/Container'
 import PageHeader from '@/components/generic/PageHeader'

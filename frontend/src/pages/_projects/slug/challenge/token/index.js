@@ -10,7 +10,6 @@ import ProjectsGrid from '@/components/projects/ProjectsGrid'
 
 import ProjectsService from '@/services/projects'
 import Filter from '@/components/Team/Filter'
-import _ from 'lodash'
 
 //TODO make this and track one into a component
 export default ({ event }) => {

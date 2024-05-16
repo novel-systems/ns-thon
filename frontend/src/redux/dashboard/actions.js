@@ -12,7 +12,7 @@ import UserProfilesService from '@/services/userProfiles'
 import ProjectScoresService from '@/services/projectScores'
 
 import GavelService from '@/services/reviewing/gavel'
-import _ from 'lodash'
+import { forOwn } from 'lodash-es'
 
 export const updateEvent = slug => dispatch => {
     dispatch({
@@ -506,7 +506,7 @@ export const createProject = (slug, data) => async (dispatch, getState) => {
 const fileAttachmentFinder = async (Projectdata, idToken) => {
     console.log('Project data to check for files', Projectdata)
     const fileKeys = []
-    _.forOwn(Projectdata, (value, key) => {
+    forOwn(Projectdata, (value, key) => {
         console.log(key, value)
         if (value && Object.getPrototypeOf(value) === File.prototype) {
             console.log('File found: ', value)

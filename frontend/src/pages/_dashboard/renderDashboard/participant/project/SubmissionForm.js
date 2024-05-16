@@ -19,6 +19,7 @@ import _ from 'lodash'
 import StatusField from '@/components/projects/ProjectSubmissionFields/StatusField'
 import ProjectFieldsComponents from '@/constants/projectFields'
 import { projectURLgenerator } from '@/utils/dataModifiers'
+import { intersection } from 'lodash-es'
 
 const useStyles = makeStyles(theme => ({
     uppercase: { 'text-transform': 'uppercase' },
@@ -120,7 +121,7 @@ const SubmissionForm = props => {
     }
 
     const enabledFieldProcessor = (defaultFields, enabledFields) => {
-        return _.intersection(
+        return intersection(
             Object.keys(defaultFields).filter(
                 key => defaultFields[key] === true,
             ),

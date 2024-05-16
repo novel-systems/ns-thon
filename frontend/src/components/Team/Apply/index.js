@@ -15,6 +15,7 @@ import { Box, Typography, Grid } from '@material-ui/core'
 import { useDispatch, useSelector } from 'react-redux'
 import FormControl from '@/components/inputs/FormControl'
 import PageWrapper from '@/components/layouts/PageWrapper'
+import { includes, filter } from 'lodash-es'
 
 export default ({
     teamRolesData = [],
@@ -23,7 +24,7 @@ export default ({
 }) => {
     const dispatch = useDispatch()
     if (
-        !_.includes(
+        !includes(
             teamRolesData.map(teamRole => teamRole.role),
             'Open application',
         )
@@ -82,8 +83,8 @@ export default ({
             const submittionData = {}
             console.log('values from application', values)
             console.log('teamRolesData from application', teamRolesData)
-            submittionData.roles = _.filter(teamRolesData, role =>
-                _.includes(values.roles, role.role),
+            submittionData.roles = filter(teamRolesData, role =>
+                includes(values.roles, role.role),
             )
             submittionData.motivation = values.motivation
             submittionData.userId = userProfile.userId

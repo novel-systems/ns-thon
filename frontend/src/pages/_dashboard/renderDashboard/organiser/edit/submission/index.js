@@ -5,7 +5,7 @@ import FormControl from '@/components/inputs/FormControl'
 import CustomSectionList from '../questions/CustomSectionList'
 import * as OrganiserSelectors from '@/redux/organiser/selectors'
 import { useSelector } from 'react-redux'
-import _ from 'lodash'
+import { intersection } from 'lodash-es'
 import { useTranslation } from 'react-i18next'
 import Switch from '@/components/generic/Switch'
 import Button from '@/components/generic/Button'
@@ -30,7 +30,7 @@ export default () => {
         event.submissionFormDefaultFields &&
         event.submissionFormEnabledFields
     ) {
-        renderDefaultFields = _.intersection(
+        renderDefaultFields = intersection(
             Object.keys(event.submissionFormDefaultFields),
             event.submissionFormEnabledFields,
         )

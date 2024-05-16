@@ -16,6 +16,7 @@ import ProjectScoresService from '@/services/projectScores'
 import EvaluationForm from '@/pages/_projects/slug/view/projectId/EvaluationForm'
 import Empty from '@/components/generic/Empty'
 import * as SnackbarActions from '@/redux/snackbar/actions'
+import { find } from 'lodash-es'
 
 const projectScoreBase = {
     project: '',
@@ -90,7 +91,7 @@ export default ({ event }) => {
         submissionValues.event = event._id
         let reviewerData
         if (userId) {
-            reviewerData = _.find(
+            reviewerData = find(
                 submissionValues.reviewers,
                 reviewer => reviewer.userId === userId,
             )
@@ -164,7 +165,7 @@ export default ({ event }) => {
                 selected._id,
             ).then(score => {
                 if (score[0]) {
-                    const reviewerData = _.find(
+                    const reviewerData = find(
                         score[0].reviewers,
                         reviewer => reviewer.userId === userId,
                     )
@@ -203,9 +204,9 @@ export default ({ event }) => {
                         subheading={`Available for review:`}
                         alignment="left"
                         details={`${inputData?.projects.length} project${inputData?.projects.length > 1 ||
-                                inputData?.projects.length < 1
-                                ? 's'
-                                : ''
+                            inputData?.projects.length < 1
+                            ? 's'
+                            : ''
                             }`}
                     />
                 </div>

@@ -4,6 +4,7 @@ import moment from 'moment-timezone'
 import { Grid } from '@material-ui/core'
 import { EventHelpers } from '@novel-systems/shared'
 import ProjectsGridItem from '../ProjectsGridItem'
+import { sortBy } from 'lodash-es'
 
 import ProjectScoresService from '@/services/projectScores'
 import { useSelector } from 'react-redux'
@@ -81,12 +82,12 @@ const ProjectsGrid = ({
         })
         let sortedProjects
         if (reviewerGrid) {
-            sortedProjects = _.sortBy(
+            sortedProjects = sortBy(
                 returnProjects,
                 p => -(p.scoreData?.score || 0),
             )
         } else if (showScore) {
-            sortedProjects = _.sortBy(
+            sortedProjects = sortBy(
                 returnProjects,
                 p => -(p.scoreData?.averageScore || 0),
             )

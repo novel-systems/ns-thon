@@ -27,6 +27,9 @@ export default defineConfig({
             '/graphql': 'http://localhost:2222',
         },
     },
+    preview: {
+        port: 3000,
+    },
     optimizeDeps: {
         force: true,
         include: ['@novel-systems/shared'],

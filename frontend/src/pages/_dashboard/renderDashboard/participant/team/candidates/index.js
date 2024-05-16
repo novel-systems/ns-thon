@@ -20,6 +20,7 @@ import {
 } from '@material-ui/core'
 import FormControl from '@/components/inputs/FormControl'
 import placeholderStyle from '@/utils/styles'
+import { includes, isEmpty } from 'lodash-es'
 
 export default () => {
     const classes = placeholderStyle()
@@ -86,7 +87,7 @@ export default () => {
     let candidateCards = []
     if (roleFilter !== 'All roles') {
         candidateCards = team.candidates.filter(candidate =>
-            _.includes(
+            includes(
                 candidate.roles.map(role => role.role),
                 roleFilter,
             ),
@@ -194,7 +195,7 @@ export default () => {
                 ))}
             {selected &&
                 !loadingCandidate &&
-                !_.isEmpty(candidateSelectedData) && (
+                !isEmpty(candidateSelectedData) && (
                     <>
                         <div className="tw-mb-4">
                             <Button

@@ -5,7 +5,7 @@ import { Paper, Typography, Chip, Box, Grid } from '@material-ui/core'
 import * as DashboardSelectors from '@/redux/dashboard/selectors'
 
 import Button from '@/components/generic/Button'
-import _ from 'lodash'
+import tuncate from 'lodash-es'
 
 export default props => {
     const event = useSelector(DashboardSelectors.event)
@@ -44,7 +44,7 @@ export default props => {
                 <Paper elevation={1}>
                     <Box p={2}>
                         <Typography variant="h4" gutterBottom>
-                            {_.truncate(project.name, {
+                            {tuncate(project.name, {
                                 length: styling.projectNameMaxLength,
                             })}
                         </Typography>
@@ -53,7 +53,7 @@ export default props => {
                             {project.track && (
                                 <Chip
                                     color="primary"
-                                    label={_.truncate(
+                                    label={tuncate(
                                         challengeAndTrackSlugState[
                                         project.track
                                         ],
@@ -65,7 +65,7 @@ export default props => {
                             {project.challenges &&
                                 project.challenges.map(challenge => (
                                     <Chip
-                                        label={_.truncate(
+                                        label={tuncate(
                                             challengeAndTrackSlugState[
                                             challenge
                                             ],

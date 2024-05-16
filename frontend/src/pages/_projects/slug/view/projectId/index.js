@@ -8,7 +8,6 @@ import ShareProject from '@/components/projects/ProjectDetail/ShareProject'
 import moment from 'moment-timezone'
 import { EventHelpers } from '@novel-systems/shared'
 import ProjectsService from '@/services/projects'
-import _ from 'lodash'
 
 export default ({ event, showFullTeam }) => {
     const dispatch = useDispatch()

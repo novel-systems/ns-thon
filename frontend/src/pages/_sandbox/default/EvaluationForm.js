@@ -6,7 +6,7 @@ import RadioScore from '@/components/generic/RadioScore'
 import TextAreaInput from '@/components/inputs/TextAreaInput'
 import FormControl from '@/components/inputs/FormControl'
 import BottomBar from '@/components/inputs/BottomBar'
-import _ from 'lodash'
+import { every, isNumber } from 'lodash-es'
 
 const scoreCriteria = [
     {
@@ -36,7 +36,7 @@ const EvaluationForm = ({ event, project, submit = () => { }, score }) => {
         const scoreList = evalScores.map(value => {
             return value?.score ? value.score : null
         })
-        return _.every(scoreList, _.isNumber)
+        return every(scoreList, isNumber)
     }
 
     const calculateScore = criterias => {

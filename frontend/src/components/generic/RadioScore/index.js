@@ -1,6 +1,5 @@
 import { FormControl, FormLabel, Radio, RadioGroup } from '@material-ui/core'
-import _ from 'lodash'
-import { toInteger } from 'lodash-es'
+import { toInteger, includes } from 'lodash-es'
 import React, { useState } from 'react'
 import placeholderStyle from '@/utils/styles'
 
@@ -11,7 +10,7 @@ export default ({ category, label, onSelectionChange, value = null }) => {
     const [selectedValue, setSelectedValue] = useState(value)
     const [selectedIndex, setSelectedIndex] = useState(null)
 
-    if (value && selectedIndex === null && _.includes(scoreArray, value)) {
+    if (value && selectedIndex === null && includes(scoreArray, value)) {
         setSelectedIndex(scoreArray.indexOf(value))
     }
 

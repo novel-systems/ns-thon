@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Select from '@/components/inputs/Select'
 import Button from '@/components/generic/Button'
-import _ from 'lodash'
+import { isObject, isString } from 'lodash-es'
 
 export default ({
     filterArray = [],
@@ -11,9 +11,9 @@ export default ({
 }) => {
     //TODO use TS to avoid issues with this component, receiving the wrong prop types
     let noFilterObject
-    if (_.isObject(noFilterOption)) {
+    if (isObject(noFilterOption)) {
         noFilterObject = noFilterOption
-    } else if (_.isString(noFilterOption)) {
+    } else if (isString(noFilterOption)) {
         noFilterObject = { value: noFilterOption, label: noFilterOption }
     }
 

@@ -5,14 +5,14 @@ import RadioScore from '@/components/generic/RadioScore'
 import TextAreaInput from '@/components/inputs/TextAreaInput'
 import FormControl from '@/components/inputs/FormControl'
 import BottomBar from '@/components/inputs/BottomBar'
-import _ from 'lodash'
+import { every, isNumber, includes } from 'lodash-es'
 
 const EvaluationForm = ({ submit = () => { }, score, scoreCriteria }) => {
     const allScoresSet = evalScores => {
         const scoreList = evalScores.map(value => {
             return value?.score ? value.score : null
         })
-        return _.every(scoreList, _.isNumber)
+        return every(scoreList, isNumber)
     }
 
     const calculateScore = (criterias, decimalPlaces) => {
@@ -33,7 +33,7 @@ const EvaluationForm = ({ submit = () => { }, score, scoreCriteria }) => {
         score.scoreCriteria.length > 0
     ) {
         const scoreFiltered = score.scoreCriteria.filter(criteria =>
-            _.includes(
+            includes(
                 scoreCriteria.map(crit => crit.criteria),
                 criteria.criteria,
             ),
