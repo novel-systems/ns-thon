@@ -93,13 +93,13 @@ controller.deleteTeam = (eventId, userId) => {
                 'Only the team owner can delete a team.',
             )
         }
-        return team.remove()
+        return team.deleteOne()
     })
 }
 
 controller.deleteTeamByCode = (eventId, code) => {
     return controller.getTeamByCode(eventId, code).then(team => {
-        return team.remove()
+        return team.deleteOne()
     })
 }
 
@@ -456,7 +456,7 @@ controller.attachMeta = async team => {
                 team.members = team.members.slice(1)
             } else {
                 // If there are no members left either, delete the team
-                team.remove()
+                team.deleteOne()
                 // Throw not found error
                 throw new NotFoundError(
                     'No team exists for this user and event',

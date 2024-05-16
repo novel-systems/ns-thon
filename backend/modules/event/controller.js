@@ -141,7 +141,7 @@ controller.deleteEventBySlug = slug => {
         if (!event) {
             throw new NotFoundError(`Event with slug ${slug} does not exist`)
         }
-        return event.remove()
+        return event.deleteOne()
     })
 }
 

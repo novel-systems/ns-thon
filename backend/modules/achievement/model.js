@@ -37,10 +37,12 @@ AchievementSchema.index({
 
 AchievementSchema.set('timestamps', true)
 
+const Achievement = mongoose.model('Achievement', AchievementSchema)
+
 AchievementSchema.statics.clearTrackPlacementAchievements = async function (
     event,
 ) {
-    return Achievement.remove({
+    return Achievement.deleteMany({
         event: event._id,
         type: AchievementTypes.trackPlacement.id,
     })
@@ -71,7 +73,7 @@ AchievementSchema.statics.createTrackPlacementAchievements = async function (
 AchievementSchema.statics.clearOverallPlacementAchievements = async function (
     event,
 ) {
-    return Achievement.remove({
+    return Achievement.deleteMany({
         event: event._id,
         type: AchievementTypes.overallPlacement.id,
     })
@@ -96,7 +98,5 @@ AchievementSchema.statics.createOverallPlacementAchievements = async function (
         return achievement.save()
     })
 }
-
-const Achievement = mongoose.model('Achievement', AchievementSchema)
 
 module.exports = Achievement
