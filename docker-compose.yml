@@ -1,10 +1,12 @@
 version: '3.8'
 services:
     mongodb:
-        image: mongo:3.6.23
+        image: mongo:5.0.26
         container_name: mongodb_stag
         ports:
             - 27017:27017
+        volumes:
+            - data:/data/db
         restart: unless-stopped
     redis:
         image: redis
@@ -15,3 +17,6 @@ services:
         ports:
             - 6379:6379
         restart: unless-stopped
+
+volumes:
+    data:

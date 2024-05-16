@@ -33,7 +33,7 @@ const errorHandler = (error, request, response, next) => {
                 status: 400,
             })
         }
-        case 'MongoError': {
+        case 'MongoServerError': {
             if (error.code === 11000) {
                 return response.status(400).json({
                     type: 'unique-violation',

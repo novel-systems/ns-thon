@@ -102,8 +102,8 @@ controller.removeOrganiser = (event, organiserId) => {
 
 controller.addRecruiter = (event, recruiterId, organization) => {
     event.recruiters = _.concat(event.recruiters, {
-        recruiterId: recruiterId,
-        organization: organization,
+        recruiterId,
+        organization,
     })
     return event.save()
 }

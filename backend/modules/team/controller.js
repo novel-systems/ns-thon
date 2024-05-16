@@ -221,9 +221,8 @@ controller.joinTeam = (eventId, userId, code) => {
             })
     })
 }
-//TODO: optimize this process, slow with over 200 teams
+// TODO: optimize this process, slow with over 200 teams
 controller.acceptCandidateToTeam = (eventId, userId, code, candidateId) => {
-
     let teamToReturn
     return controller
         .getTeamByCode(eventId, code)
@@ -485,15 +484,14 @@ controller.attachUserApplicant = (teams, userId) => {
             const result = team.toJSON()
             result.userIsApplicant = true
             return result
-        } else {
-            return team
         }
+        return team
     })
 }
 
 controller.getTeamsForEvent = async (eventId, userId, page, size, filter) => {
     if (page && size) {
-        console.log("filter", filter)
+        console.log('filter', filter)
         if (filter) {
             const found = await Team.find({
                 event: eventId,
@@ -507,44 +505,45 @@ controller.getTeamsForEvent = async (eventId, userId, page, size, filter) => {
                         return controller.attachUserApplicant(teams, userId)
                     }
                 })
-            const count = await Team.find({ event: eventId, challenge: filter }).countDocuments()
-            console.log("with filter", { data: found, count: count })
-            return { data: found, count: count }
-        } else {
-            const found = await Team.find({
+            const count = await Team.find({
                 event: eventId,
-            })
-                .sort({ createdAt: 'desc' })
-                .skip(parseInt(size * page))
-                .limit(parseInt(size))
-                .then(teams => {
-                    if (userId) {
-                        return controller.attachUserApplicant(teams, userId)
-                    }
-                })
-            const count = await Team.find({ event: eventId }).countDocuments()
-            return { data: found, count: count }
+                challenge: filter,
+            }).countDocuments()
+            console.log('with filter', { data: found, count })
+            return { data: found, count }
         }
-    } else {
         const found = await Team.find({
             event: eventId,
         })
             .sort({ createdAt: 'desc' })
+            .skip(parseInt(size * page))
+            .limit(parseInt(size))
             .then(teams => {
                 if (userId) {
                     return controller.attachUserApplicant(teams, userId)
                 }
-                return teams
             })
         const count = await Team.find({ event: eventId }).countDocuments()
-        console.log("getting all teams", count)
-        return { data: found, count: count }
+        return { data: found, count }
     }
+    const found = await Team.find({
+        event: eventId,
+    })
+        .sort({ createdAt: 'desc' })
+        .then(teams => {
+            if (userId) {
+                return controller.attachUserApplicant(teams, userId)
+            }
+            return teams
+        })
+    const count = await Team.find({ event: eventId }).countDocuments()
+    console.log('getting all teams', count)
+    return { data: found, count }
+
     // TODO make the code not visible to participants on Redux store
 }
 
 controller.getAllTeamsForEvent = async (eventId, userId, page, size) => {
-
     return await Team.find({
         event: eventId,
     })
@@ -590,26 +589,31 @@ controller.convertToFlatExportData = teamWithMeta => {
     }
 }
 
-controller.organiserRemoveMemberFromTeam = (eventId, teamCode, userToRemove) => {
-    console.log("removing ", eventId, teamCode, userToRemove)
+controller.organiserRemoveMemberFromTeam = (
+    eventId,
+    teamCode,
+    userToRemove,
+) => {
+    console.log('removing ', eventId, teamCode, userToRemove)
     return controller.getTeamByCode(eventId, teamCode).then(team => {
-
         if (team.members.length === 0 && team.owner === userToRemove) {
-            console.log("deleting team")
+            console.log('deleting team')
             controller.deleteTeamByCode(eventId, teamCode)
         } else {
             if (team.owner === userToRemove) {
-                console.log("new owner", team.members[0])
+                console.log('new owner', team.members[0])
                 team.owner = team.members[0]
                 team.members = team.members.slice(1)
             } else {
-                console.log("removing member")
-                team.members = team.members.filter(member => member !== userToRemove)
+                console.log('removing member')
+                team.members = team.members.filter(
+                    member => member !== userToRemove,
+                )
             }
-            console.log("deleted ", team.members)
+            console.log('deleted ', team.members)
             return team.save()
         }
-        console.log("deleted team", team.members)
+        console.log('deleted team', team.members)
         return team.save()
     })
 }

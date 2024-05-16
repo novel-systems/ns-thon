@@ -1,4 +1,3 @@
-
 const { Auth } = require('@novel-systems/shared')
 const DataLoader = require('dataloader')
 const Meeting = require('./model')
@@ -42,7 +41,6 @@ const updateRoomSlotReservedStatus = async (
             if (slot.reserved && reserved) return false
             slot.reserved = reserved
             event.meetingRooms = roomsClone
-            event.markModified('meetingRooms')
             event.save()
             return true
         }
@@ -62,8 +60,8 @@ class MeetingContorller {
             overrideChecks ||
             PermissionUtils.userHasPermission(
                 requestingUser,
-                Auth.Permissions.ACCESS_RECRUITMENT
-                //Auth.Permissions.MANAGE_EVENT,
+                Auth.Permissions.ACCESS_RECRUITMENT,
+                // Auth.Permissions.MANAGE_EVENT,
                 // TODO fix this to check for approriate right, ie partner rights
             )
     }
@@ -89,7 +87,6 @@ class MeetingContorller {
             c => c._id.toString() === meeting.challenge,
         )
 
-
         if (!(challenge && partnerEmail)) return null
         const newMeetingSlot = new Meeting({
             event: meeting.event,
@@ -97,7 +94,8 @@ class MeetingContorller {
             organizerEmail: partnerEmail,
             location: meeting.location || '',
             title:
-                meeting.title || `Placeholder-1: ${challenge.name} partner meeting`,
+                meeting.title ||
+                `Placeholder-1: ${challenge.name} partner meeting`,
             description:
                 meeting.description ||
                 `Placeholder-1: ${challenge.name}\nmeeting between participants and partner, ${challenge.partner}. `,
@@ -117,7 +115,7 @@ class MeetingContorller {
             try {
                 const meetingToCancel = await Meeting.findOne({
                     _id: meetingId,
-                    organizerEmail: partnerEmail
+                    organizerEmail: partnerEmail,
                 })
                 if (!meetingToCancel) return null
                 if (
@@ -150,7 +148,6 @@ class MeetingContorller {
     }
 
     async createMany(meetings) {
-
         if (!(this.isChallengePartner && meetings.length > 0)) return []
         const partner = this.requestingUser
         const event = await Event.findOne({ _id: meetings[0].event })
@@ -158,7 +155,6 @@ class MeetingContorller {
         const challenge = event.challenges.find(
             c => c._id.toString() === meetings[0].challenge,
         )
-
 
         if (!(challenge && partner.email))
             return new Error(
@@ -201,7 +197,7 @@ class MeetingContorller {
                 }
             }
         }
-        console.log("created", created)
+        console.log('created', created)
         return created
     }
 
@@ -225,7 +221,6 @@ class MeetingContorller {
             )
         }
 
-
         const newLocation =
             // eslint-disable-next-line no-nested-ternary
             location === 'ONLINE'
@@ -233,9 +228,13 @@ class MeetingContorller {
                 : roomBookedSuccessfully
                     ? location
                     : ''
-        console.log("meetingToBook.description", meetingToBook.description)
-        const newDescription = meetingToBook.description.concat(...attendeeProfiles.map(a => ` ${a.firstName} ${a.lastName},`)).replace(/.$/, ".")
-        console.log("newDescription", newDescription)
+        console.log('meetingToBook.description', meetingToBook.description)
+        const newDescription = meetingToBook.description
+            .concat(
+                ...attendeeProfiles.map(a => ` ${a.firstName} ${a.lastName},`),
+            )
+            .replace(/.$/, '.')
+        console.log('newDescription', newDescription)
         const googleEvent = {
             title: meetingToBook.title,
             description: newDescription,
@@ -263,7 +262,7 @@ class MeetingContorller {
             meetingId,
             desc: partiComment,
         }
-        console.log("meetingToBook", meetingToBook.toObject())
+        console.log('meetingToBook', meetingToBook.toObject())
 
         // create google calednar event and meets link
         createGoogleEvent(googleEvent)
