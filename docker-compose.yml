@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     mongodb:
-        image: mongo:5.0.26
+        image: mongo:7.0.9
         container_name: mongodb_stag
         ports:
             - 27017:27017
