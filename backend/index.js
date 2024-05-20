@@ -25,6 +25,7 @@ app.use(
                     "'self'",
                     'https://novel-systems.eu.auth0.com/.well-known/jwks.json',
                 ],
+                'frame-src': ["'self'", 'https://novel-systems.eu.auth0.com'],
             },
         },
     }),
