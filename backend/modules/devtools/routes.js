@@ -4,7 +4,6 @@ const _ = require('lodash')
 const router = express.Router()
 const Registration = require('../registration/model')
 const { UserProfile } = require('../user-profile/model')
-const DiscordService = require('../../common/services/discord')
 
 router.route('/').get((req, res) => {
     return res.status(200).send('DEVTOOLS HERE')
@@ -54,12 +53,6 @@ router.route('/anonymize-db').get(async (req, res) => {
     await UserProfile.bulkWrite(userUpdates)
 
     return res.status(200).send('OK')
-})
-
-// This isn't in use at the moment
-router.route('/test-discord').get(async (req, res) => {
-    await DiscordService.initialize()
-    res.status(200).send('Initialized')
 })
 
 router.route('/sync-user-profiles').get(async (req, res) => {

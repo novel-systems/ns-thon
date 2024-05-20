@@ -4,10 +4,6 @@ const Meeting = require('./model')
 const PermissionUtils = require('../../utils/permissions')
 const Event = require('../event/model')
 const UsersController = require('../user-profile/controller')
-const {
-    createGoogleEvent,
-    deleteGoogleEvent,
-} = require('../../common/services/google-calendar/google-calendar')
 
 async function batchGetMeetingsByIds(ids) {
     const results = await Meeting.find({
@@ -50,7 +46,7 @@ const updateRoomSlotReservedStatus = async (
     }
 }
 
-class MeetingContorller {
+class MeetingController {
     constructor(requestingUser, overrideChecks = false) {
         this.requestingUser = requestingUser
         this.overrideChecks = overrideChecks
@@ -130,7 +126,7 @@ class MeetingContorller {
                     )
                 }
                 if (meetingToCancel.googleEventId) {
-                    deleteGoogleEvent(meetingToCancel.googleEventId)
+                    // TODO: delete google calendar event
                 }
             } catch (err) {
                 console.error(
@@ -264,8 +260,7 @@ class MeetingContorller {
         }
         console.log('meetingToBook', meetingToBook.toObject())
 
-        // create google calednar event and meets link
-        createGoogleEvent(googleEvent)
+        // TODO: create google calednar event and meets link
 
         return this._cleanOne(
             Meeting.findOneAndUpdate(
@@ -297,9 +292,8 @@ class MeetingContorller {
             )
         }
 
-        // remove google calendar event
         if (meetingToCancel.googleEventId) {
-            deleteGoogleEvent(meetingToCancel.googleEventId)
+            // TODO: delete google calendar event
         }
         meetingToCancel.attendees = []
         meetingToCancel.googleEventId = ''
@@ -335,4 +329,4 @@ class MeetingContorller {
     }
 }
 
-module.exports = MeetingContorller
+module.exports = MeetingController

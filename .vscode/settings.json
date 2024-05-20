@@ -13,11 +13,6 @@
             "directory": "./shared"
         }
     ],
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "editor.formatOnType": true,
     "javascript.format.semicolons": "remove",
     "typescript.format.semicolons": "remove"
 }

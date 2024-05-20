@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const { errors } = require('celebrate')
 const path = require('path')
 const helmet = require('helmet')
-const sslRedirect = require('heroku-ssl-redirect')
 
 /** Create Express application */
 const app = express()
@@ -17,17 +16,6 @@ const logger = require('./misc/logger')
 // Enable route logging by uncommenting this line
 /** Use helmet for some basic security measures */
 app.use(helmet())
-
-/* Prerender */
-app.use(
-    require('prerender-node').set(
-        'prerenderToken',
-        process.env.PRERENDER_TOKEN,
-    ),
-)
-
-/* Force SSL Redirect in production */
-// app.use(sslRedirect(['production'], 301))
 
 /* Enable body-parser */
 app.use(bodyParser.json())
@@ -81,7 +69,7 @@ const memoryUsage = () => {
 
     const memoryData = process.memoryUsage()
 
-    const memoryUsage = {
+    console.log({
         rss: `${formatMemoryUsage(
             memoryData.rss,
         )} -> Resident Set Size - total memory allocated for the process execution`,
@@ -94,9 +82,7 @@ const memoryUsage = () => {
         external: `${formatMemoryUsage(
             memoryData.external,
         )} -> V8 external memory`,
-    }
-
-    console.log(memoryUsage)
+    })
 }
 
 throng({
@@ -117,7 +103,8 @@ throng({
 
         httpServer.listen(PORT, () => {
             logger.info(
-                `Worker ${process.pid} started, listening on port ${httpServer.address().port
+                `Worker ${process.pid} started, listening on port ${
+                    httpServer.address().port
                 }`,
             )
         })
