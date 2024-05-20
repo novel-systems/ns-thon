@@ -15,7 +15,20 @@ const logger = require('./misc/logger')
 
 // Enable route logging by uncommenting this line
 /** Use helmet for some basic security measures */
-app.use(helmet())
+app.use(
+    helmet({
+        contentSecurityPolicy: {
+            directives: {
+                ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+                'script-src': [
+                    "'self'",
+                    "'unsafe-inline'",
+                    'novel-systems.eu.auth0.com',
+                ],
+            },
+        },
+    }),
+)
 
 /* Enable body-parser */
 app.use(bodyParser.json())
@@ -103,8 +116,7 @@ throng({
 
         httpServer.listen(PORT, () => {
             logger.info(
-                `Worker ${process.pid} started, listening on port ${
-                    httpServer.address().port
+                `Worker ${process.pid} started, listening on port ${httpServer.address().port
                 }`,
             )
         })
