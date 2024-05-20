@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "composite": true,
+      "skipLibCheck": true,
+      "module": "Node16",
+      "target": "ESNext",
+      "moduleResolution": "Node16",
+      "esModuleInterop": true,
+      "allowJs": true,
+      "checkJs": true,
+      "outDir": "./dist",
+  },
+  "include": ["./common/**/*.js", "./misc/**/*.js", "./utils/**/*.js", "./modules/**/*.js"]
+}
