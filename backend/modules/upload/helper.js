@@ -2,22 +2,10 @@ const cloudinary = require('cloudinary')
 const cloudinaryStorage = require('multer-storage-cloudinary')
 const multer = require('multer')
 
-const { mongoose } = require('@novel-systems/shared')
-const {
-    AlreadyExistsError,
-    NotFoundError,
-} = require('../../common/errors/errors')
+const { AlreadyExistsError } = require('../../common/errors/errors')
 const File = require('../files/model')
 
-// initialize stream
-// let gfs = new mongoose.mongo.GridFSBucket(mongoose.connection, {
-//     bucketName: "uploads"
-// })
-
-const { storage } = require('../../misc/gridfs')
-const { upload } = require('../../misc/gridfs')
-
-cloudinary.config({
+cloudinary.v2.config({
     cloud_name: global.gConfig.CLOUDINARY_CLOUD_NAME,
     api_key: global.gConfig.CLOUDINARY_API_KEY,
     api_secret: global.gConfig.CLOUDINARY_API_SECRET,

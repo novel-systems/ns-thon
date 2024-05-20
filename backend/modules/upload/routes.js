@@ -1,6 +1,5 @@
 const express = require('express')
 const { mongoose } = require('@novel-systems/shared')
-const { GridFsStorage } = require('multer-gridfs-storage')
 const {
     Types: { ObjectId },
 } = require('mongoose')
@@ -13,7 +12,6 @@ const { hasPermission } = require('../../common/middleware/permissions')
 const { hasToken } = require('../../common/middleware/token')
 const { ForbiddenError, NotFoundError } = require('../../common/errors/errors')
 
-const { storage } = require('../../misc/gridfs')
 const { upload } = require('../../misc/gridfs')
 
 // console.log(mongoose.connections[0].db)
