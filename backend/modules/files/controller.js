@@ -11,9 +11,6 @@ let gfs = new mongoose.mongo.GridFSBucket(db, {
 })
 
 controller.updateMetadata = async (userId, updates) => {
-    // const user = await auth0.getUser({ id: userId })
-    // const metadata = { ...user.user_metadata, ...updates }
-    // const updatedUser = await auth0.updateUserMetadata({ id: userId }, metadata)
     return "updatedUser"
 }
 

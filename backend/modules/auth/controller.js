@@ -10,7 +10,6 @@ const auth0 = new ManagementClient({
     domain: global.gConfig.AUTH0_DOMAIN,
     clientId: global.gConfig.AUTH0_CLIENT_ID,
     clientSecret: global.gConfig.AUTH0_CLIENT_SECRET,
-    scope: 'read:users update:users read:roles',
 })
 
 const controller = {}
@@ -39,45 +38,45 @@ function getAuthorizationToken() {
     })
 }
 
-function config(access_token) {
+function config(accessToken) {
     return {
         headers: {
-            Authorization: `Bearer ${access_token}`,
+            Authorization: `Bearer ${accessToken}`,
         },
     }
 }
 
-function getRoles(access_token) {
+function getRoles(accessToken) {
     return axios
         .get(
             `${global.gConfig.AUTH0_AUTHORIZATION_EXTENSION_URL}/roles`,
-            config(access_token),
+            config(accessToken),
         )
         .then(res => res.data.roles)
 }
 
-function getRoleByName(access_token, role) {
-    return getRoles(access_token).then(roles => {
+function getRoleByName(accessToken, role) {
+    return getRoles(accessToken).then(roles => {
         return _.find(roles, r => r.name === role)
     })
 }
 
-function assignRole(access_token, userId, roleId) {
+function assignRole(accessToken, userId, roleId) {
     return axios
         .patch(
             `${global.gConfig.AUTH0_AUTHORIZATION_EXTENSION_URL}/users/${userId}/roles`,
             [roleId],
-            config(access_token),
+            config(accessToken),
         )
         .then(res => res.data)
 }
 
-function removeRole(access_token, userId, roleId) {
+function removeRole(accessToken, userId, roleId) {
     return axios
         .delete(
             `${global.gConfig.AUTH0_AUTHORIZATION_EXTENSION_URL}/users/${userId}/roles`,
             {
-                ...config(access_token),
+                ...config(accessToken),
                 data: [roleId],
             },
         )
@@ -85,50 +84,47 @@ function removeRole(access_token, userId, roleId) {
 }
 
 controller.grantAssistantOrganiser = async userId => {
-    const { access_token } = await getAuthorizationToken()
+    const { accessToken } = await getAuthorizationToken()
     const role = await getRoleByName(
-        access_token,
+        accessToken,
         AuthConstants.Roles.ASSISTANT_ORGANISER,
     )
-    return assignRole(access_token, userId, role._id)
+    return assignRole(accessToken, userId, role._id)
 }
 
 controller.revokeAssistantOrganiser = async userId => {
-    const { access_token } = await getAuthorizationToken()
+    const { accessToken } = await getAuthorizationToken()
     const role = await getRoleByName(
-        access_token,
+        accessToken,
         AuthConstants.Roles.ASSISTANT_ORGANISER,
     )
-    return removeRole(access_token, userId, role._id)
+    return removeRole(accessToken, userId, role._id)
 }
 
 controller.grantRecruiterPermission = async userId => {
-    const { access_token } = await getAuthorizationToken()
-    const role = await getRoleByName(
-        access_token,
-        AuthConstants.Roles.RECRUITER,
-    )
-    return assignRole(access_token, userId, role._id)
+    const { accessToken } = await getAuthorizationToken()
+    const role = await getRoleByName(accessToken, AuthConstants.Roles.RECRUITER)
+    return assignRole(accessToken, userId, role._id)
 }
 
 controller.revokeRecruiterPermission = async userId => {
-    const { access_token } = await getAuthorizationToken()
-    const role = await getRoleByName(
-        access_token,
-        AuthConstants.Roles.RECRUITER,
-    )
-    return removeRole(access_token, userId, role._id)
+    const { accessToken } = await getAuthorizationToken()
+    const role = await getRoleByName(accessToken, AuthConstants.Roles.RECRUITER)
+    return removeRole(accessToken, userId, role._id)
 }
 
 controller.updateMetadata = async (userId, updates) => {
-    const user = await auth0.getUser({ id: userId })
-    const metadata = { ...user.user_metadata, ...updates }
-    const updatedUser = await auth0.updateUserMetadata({ id: userId }, metadata)
+    const user = await auth0.users.get({ id: userId })
+    const metadata = { ...user.data.user_metadata, ...updates }
+    const updatedUser = await auth0.users.update(
+        { id: userId },
+        { user_metadata: metadata },
+    )
     return updatedUser
 }
 
 controller.deleteUser = async userId => {
-    const deletedUser = await auth0.deleteUser({ id: userId })
+    const deletedUser = await auth0.users.delete({ id: userId })
     return deletedUser
 }
 
