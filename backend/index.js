@@ -20,10 +20,10 @@ app.use(
         contentSecurityPolicy: {
             directives: {
                 ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-                'script-src': [
+                'script-src': ["'self'"],
+                'connect-src': [
                     "'self'",
-                    "'unsafe-inline'",
-                    'novel-systems.eu.auth0.com',
+                    'https://novel-systems.eu.auth0.com/.well-known/jwks.json',
                 ],
             },
         },
