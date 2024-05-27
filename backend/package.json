@@ -22,7 +22,7 @@
         "@novel-systems/shared": "file:../shared",
         "@sendgrid/client": "^8.1.3",
         "@sendgrid/mail": "^8.1.3",
-        "@stdlib/math": "^0.0.11",
+        "@stdlib/math": "^0.2.1",
         "apollo-server-core": "^3.13.0",
         "apollo-server-express": "^3.13.0",
         "auth0": "^4.4.0",
